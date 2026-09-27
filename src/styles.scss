@@ -105,6 +105,11 @@ a {
   background: var(--mat-sys-surface-container-high);
 }
 
+// Tooltips whose text has line breaks (matTooltipClass="multiline-tooltip").
+.multiline-tooltip {
+  white-space: pre-line;
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px;

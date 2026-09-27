@@ -179,6 +179,9 @@
             @if (r.conflict) {
               <mat-icon class="st conflict" matTooltip="Conflicts with another command in the same context" aria-hidden="false" aria-label="Conflict">error</mat-icon>
             }
+            @if (r.shared && !r.conflict) {
+              <mat-icon class="st shared" [matTooltip]="r.shared" matTooltipClass="multiline-tooltip" aria-hidden="false" aria-label="Shared by design">info</mat-icon>
+            }
             @if (r.changed) {
               <mat-icon class="st changed" matTooltip="Changed since the file was opened" aria-hidden="false" aria-label="Changed">edit</mat-icon>
             }

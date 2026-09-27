@@ -119,6 +119,36 @@ export type WarningsPanelResult = { edit: string; slot?: SlotName } | { device: 
           </ul>
         </section>
       }
+
+      @if (shared().length) {
+        <section class="w info">
+          <h3><mat-icon inline>info</mat-icon>Shared by design ({{ shared().length }})</h3>
+          <p class="muted">
+            Not conflicts: these commands share an input on purpose, and the game picks one from what you're doing.
+            Frontier's own default presets bind them this way.
+          </p>
+          <ul>
+            @for (c of shared(); track c.key) {
+              <li>
+                <div class="input">
+                  @if (c.binding) {
+                    <app-slot-view [binding]="c.binding" />
+                  }
+                  <span class="muted">in {{ c.group }}</span>
+                </div>
+                <div class="links">
+                  @for (u of c.uses; track u.code + u.slot) {
+                    <button matButton type="button" class="small" (click)="edit(u.code, u.slot)" [attr.title]="u.code">
+                      {{ name(u.code) }}
+                    </button>
+                  }
+                </div>
+                <div class="why muted">{{ c.reasons.join('; ') }}</div>
+              </li>
+            }
+          </ul>
+        </section>
+      }
     </mat-dialog-content>
     <mat-dialog-actions>
       <button matButton="filled" type="button" mat-dialog-close>Close</button>
@@ -145,6 +175,13 @@ export type WarningsPanelResult = { edit: string; slot?: SlotName } | { device: 
     }
     h3 mat-icon {
       color: var(--edb-warning);
+    }
+    .info h3 mat-icon {
+      color: var(--edb-muted);
+    }
+    .why {
+      flex-basis: 100%;
+      font-size: 0.9em;
     }
     ul {
       margin: 0;
@@ -188,9 +225,17 @@ export class WarningsPanel {
   protected readonly conflicts = computed(() =>
     this.report().conflicts.map((c) => ({
       ...c,
-      key: `${c.group}|${c.input}|${c.modifiers}`,
+      key: `${c.group}|${c.input}|${c.modifiers}|${c.hold}`,
       binding: c.uses[0]?.binding ?? parseDescribedSlot(c.input),
       dupNames: new Set(c.uses.map((u) => this.name(u.code))).size < c.uses.length,
+    })),
+  );
+
+  protected readonly shared = computed(() =>
+    this.report().shared.map((c) => ({
+      ...c,
+      key: `${c.input}|${c.modifiers}|${c.hold}`,
+      binding: c.uses[0]?.binding ?? parseDescribedSlot(c.input),
     })),
   );
 

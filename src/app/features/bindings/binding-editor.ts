@@ -18,6 +18,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { conflictsFor } from '../../core/binds/analysis';
+import { CONTEXT_LABELS, GameContext } from '../../core/binds/contexts';
 import { ActionState, InputRef, SlotBinding, SlotName, isBound } from '../../core/binds/binds-document';
 import { CatalogService } from '../../core/data/catalog.service';
 import { InputService } from '../../core/input/input.service';
@@ -42,6 +43,7 @@ import {
   slotsEqual,
   withInput,
 } from './editor-model';
+import { applyLinks, linkKey, linkSections, linkWrites } from './link-model';
 import { SlotView } from './slot-view';
 
 export interface BindingEditorData {
@@ -146,6 +148,89 @@ export class BindingEditor implements OnDestroy {
         return b && isBound(b) && conflictsFor(actions, this.view.meta, this.orig.code, s, b).length > 0;
       });
   });
+
+  // ------------------------------------------------------------ also apply to…
+
+  /** User choices for "Also apply to" rows, by linkKey; absent = the suggested default. */
+  private readonly linkChoices = signal<ReadonlyMap<string, boolean>>(new Map());
+  /** Group expanded/collapsed overrides, by group key. */
+  private readonly groupOpen = signal<ReadonlyMap<string, boolean>>(new Map());
+
+  private readonly sections = computed(() => linkSections(this.orig, this.draft(), this.store.actionMap()));
+  protected readonly linkedWrites = computed(() => linkWrites(this.sections(), (k, d) => this.isLinked(k, d)));
+
+  /** Sections for the template, with labels, outcomes and conflict warnings resolved. */
+  protected readonly links = computed(() => {
+    const choices = this.linkChoices();
+    const open = this.groupOpen();
+    const actions = actionsWithDraft(this.store.actions(), this.orig, this.draft());
+    return this.sections().map((section) => ({
+      slot: section.slot,
+      after: section.after,
+      groups: section.groups.map((g, gi) => {
+        const key = `${section.slot}|${gi}|${g.kind}`;
+        const items = g.items.map((item) => {
+          const k = linkKey(section.slot, item);
+          const clash = section.after ? conflictsFor(actions, this.view.meta, item.code, item.slot, section.after) : [];
+          return {
+            ...item,
+            key: k,
+            on: choices.get(k) ?? item.checked,
+            name: this.catalog.action(item.code).longName,
+            mode: this.modeOf(item.code),
+            outcome: this.outcome(g.kind === 'shared' ? g.relation : 'equivalent', item.slot, section.after, item.replaces),
+            clash: clash.map((u) => this.catalog.action(u.code).longName),
+          };
+        });
+        const title =
+          g.kind === 'equivalent'
+            ? `Equivalent commands (${g.family.label})`
+            : g.relation === 'replacing'
+              ? `Also using ${this.catalog.inputLabel(g.via)}: move them too`
+              : `Also using ${this.catalog.inputLabel(g.via)}: give them the same ${SLOT_LABELS[section.slot].toLowerCase()}`;
+        const defaultOpen = items.some((i) => i.checked) || items.length <= 6;
+        return { key, title, items, open: open.get(key) ?? defaultOpen, checked: items.filter((i) => i.on).length };
+      }),
+    }));
+  });
+
+  protected isLinked(key: string, suggested: boolean): boolean {
+    return this.linkChoices().get(key) ?? suggested;
+  }
+
+  protected setLinked(key: string, on: boolean): void {
+    this.linkChoices.update((m) => new Map(m).set(key, on));
+  }
+
+  protected setGroupLinked(items: readonly { key: string }[], on: boolean): void {
+    this.linkChoices.update((m) => {
+      const next = new Map(m);
+      for (const i of items) next.set(i.key, on);
+      return next;
+    });
+  }
+
+  protected toggleGroup(key: string, open: boolean): void {
+    this.groupOpen.update((m) => new Map(m).set(key, !open));
+  }
+
+  private modeOf(code: string): string {
+    const ctx = this.catalog.action(code).contexts ?? [];
+    return ctx.map((c) => CONTEXT_LABELS[c as GameContext] ?? c).join(', ');
+  }
+
+  private outcome(
+    relation: 'replacing' | 'alongside' | 'equivalent',
+    slot: SlotName,
+    after: SlotBinding | null,
+    replaces: SlotBinding | null,
+  ): string {
+    const slotLabel = SLOT_LABELS[slot].toLowerCase();
+    if (!after) return `clears its ${slotLabel}`;
+    const to = this.catalog.inputLabel(after);
+    if (replaces) return `replaces ${this.catalog.inputLabel(replaces)} with ${to}`;
+    return relation === 'replacing' ? `moves its ${slotLabel} to ${to}` : `sets its ${slotLabel} to ${to}`;
+  }
 
   protected readonly held = computed(() => (this.capturing() ? this.liveInput.held() : []));
   protected readonly pctLabel = (v: number) => `${v}%`;
@@ -329,7 +414,13 @@ export class BindingEditor implements OnDestroy {
     this.cancelCapture();
     const draft = this.draft();
     if (this.edits().length) {
-      this.store.mutate(`Edit ${this.info.longName}`, (doc) => applyDraft(doc, this.orig, draft));
+      const writes = this.linkedWrites();
+      const actions = this.store.actionMap();
+      const label = writes.length ? `Edit ${this.info.longName} (+${writes.length} linked)` : `Edit ${this.info.longName}`;
+      this.store.mutate(label, (doc) => {
+        applyDraft(doc, this.orig, draft);
+        applyLinks(doc, writes, actions, this.orig, draft);
+      });
     }
     this.ref.close(true);
   }

@@ -246,3 +246,85 @@ mat-button-toggle {
 .summary {
   margin-right: auto;
 }
+
+.links {
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--edb-border);
+}
+
+.links-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0;
+  font-size: 1rem;
+}
+
+.links-slot {
+  margin: 8px 0 0;
+}
+
+.link-group {
+  margin-top: 6px;
+}
+
+.link-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+}
+
+.link-title {
+  font-weight: 500;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.link-list {
+  margin: 0;
+  padding: 0 0 0 8px;
+  list-style: none;
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 12px;
+    min-height: 40px;
+  }
+
+  li.off .link-outcome {
+    opacity: 0.55;
+  }
+}
+
+.link-name {
+  margin-right: 8px;
+}
+
+.link-mode {
+  font-size: 0.85em;
+}
+
+.link-outcome {
+  font-size: 0.9em;
+  color: var(--edb-muted);
+
+  &.replaces {
+    color: var(--edb-warning);
+  }
+}
+
+.link-clash {
+  color: var(--edb-danger);
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+.small-icon {
+  --mat-icon-button-state-layer-size: 32px;
+  padding: 4px;
+}

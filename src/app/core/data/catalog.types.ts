@@ -39,6 +39,8 @@ export interface ActionInfo {
   short?: string;
   /** Known from older game versions; not in the current template. */
   legacy?: boolean;
+  /** Game contexts the action is live in (computed by contextsFor at load). */
+  contexts?: string[];
 }
 
 export interface SettingInfo {

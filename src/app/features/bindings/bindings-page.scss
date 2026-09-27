@@ -122,6 +122,10 @@ th.mat-mdc-header-cell:first-child {
   &.changed {
     color: var(--edb-accent);
   }
+
+  &.shared {
+    color: var(--edb-muted);
+  }
 }
 
 .c-area {

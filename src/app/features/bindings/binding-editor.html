@@ -255,11 +255,61 @@
       </mat-checkbox>
     </section>
   }
+  @if (links().length) {
+    <section class="links" aria-label="Also apply to">
+      <h3 class="links-title"><mat-icon inline>link</mat-icon>Also apply to…</h3>
+      @for (sec of links(); track sec.slot) {
+        @if (links().length > 1) {
+          <p class="links-slot muted">For the {{ SLOT_LABELS[sec.slot].toLowerCase() }} change:</p>
+        }
+        @for (g of sec.groups; track g.key) {
+          <div class="link-group" [attr.data-group]="g.key">
+            <div class="link-head">
+              <button
+                matIconButton
+                type="button"
+                class="small-icon"
+                (click)="toggleGroup(g.key, g.open)"
+                [attr.aria-expanded]="g.open"
+                [attr.aria-label]="(g.open ? 'Collapse ' : 'Expand ') + g.title"
+              >
+                <mat-icon>{{ g.open ? 'expand_less' : 'expand_more' }}</mat-icon>
+              </button>
+              <strong class="link-title">{{ g.title }}</strong>
+              <span class="muted">{{ g.checked }}/{{ g.items.length }}</span>
+              <span class="spacer"></span>
+              <button matButton type="button" class="small" (click)="setGroupLinked(g.items, true)">All</button>
+              <button matButton type="button" class="small" (click)="setGroupLinked(g.items, false)">None</button>
+            </div>
+            @if (g.open) {
+              <ul class="link-list">
+                @for (i of g.items; track i.key) {
+                  <li [class.off]="!i.on">
+                    <mat-checkbox [checked]="i.on" (change)="setLinked(i.key, $event.checked)" [attr.data-code]="i.code">
+                      <span class="link-name">{{ i.name }}</span>
+                      <span class="muted link-mode">{{ i.mode }}</span>
+                    </mat-checkbox>
+                    <span class="link-outcome" [class.replaces]="i.replaces">{{ i.outcome }}</span>
+                    @if (i.clash.length && i.on) {
+                      <mat-icon class="link-clash" [matTooltip]="'Would conflict with: ' + i.clash.join(', ')" aria-hidden="false" [attr.aria-label]="'Would conflict with ' + i.clash.join(', ')">error</mat-icon>
+                    }
+                  </li>
+                }
+              </ul>
+            }
+          </div>
+        }
+      }
+    </section>
+  }
 </mat-dialog-content>
 <mat-dialog-actions class="footer">
   <span class="muted summary">
     @if (edits().length) {
       {{ edits().length }} change{{ edits().length === 1 ? '' : 's' }} to apply
+      @if (linkedWrites().length) {
+        + {{ linkedWrites().length }} linked
+      }
     } @else {
       No changes
     }

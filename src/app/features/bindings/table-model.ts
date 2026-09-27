@@ -69,6 +69,8 @@ export interface BindingRow {
   variable: string;
   bound: boolean;
   conflict: boolean;
+  /** Set when a binding is shared on purpose with another action (why, for a tooltip). */
+  shared: string | null;
   changed: boolean;
   /** `device::index` of every device the action uses (slots and modifiers). */
   devices: string[];
@@ -97,6 +99,8 @@ export function buildRows(
   label: (ref: InputRef) => string,
   conflicts: ReadonlySet<string>,
   changed: ReadonlySet<string>,
+  /** Code -> note for inputs this action shares on purpose with another action. */
+  shared: ReadonlyMap<string, string> = new Map(),
 ): BindingRow[] {
   return actions.map((a, index) => {
     const meta = info(a.code);
@@ -140,6 +144,7 @@ export function buildRows(
       variable,
       bound: !!(primary || secondary),
       conflict: conflicts.has(a.code),
+      shared: shared.get(a.code) ?? null,
       changed: changed.has(a.code),
       devices: [...devices],
       haystack,

@@ -1,5 +1,6 @@
 import { Injectable, computed, signal } from '@angular/core';
 import { InputRef } from '../binds/binds-document';
+import { contextsFor } from '../binds/contexts';
 import {
   ActionInfo,
   DeviceDefinition,
@@ -103,7 +104,7 @@ export class CatalogService {
         fetchJson<GenericControl[]>('data/generic-device.json'),
         fetchJson<DeviceSummary[]>('data/devices.index.json'),
       ]);
-      this.actions.set(new Map(actions.map((a) => [a.code, a])));
+      this.actions.set(new Map(actions.map((a) => [a.code, { ...a, contexts: contextsFor(a) }])));
       this.settings.set(new Map(settings.map((s) => [s.code, s])));
       this.keys.set(new Map(keys.map((k) => [k.key, k])));
       this.namedIds.set(namedIds);
@@ -119,19 +120,20 @@ export class CatalogService {
   // ------------------------------------------------------------ actions
 
   action(code: string): ActionInfo {
-    return (
-      this.actions().get(code) ?? {
-        code,
-        name: humanizeKey(code),
-        longName: humanizeKey(code),
-        group: 'Misc',
-        category: 'General',
-        area: 'Other',
-        section: 'Other',
-        type: 'digital',
-        order: 10_000,
-      }
-    );
+    const known = this.actions().get(code);
+    if (known) return known;
+    const info: ActionInfo = {
+      code,
+      name: humanizeKey(code),
+      longName: humanizeKey(code),
+      group: 'Misc',
+      category: 'General',
+      area: 'Other',
+      section: 'Other',
+      type: 'digital',
+      order: 10_000,
+    };
+    return { ...info, contexts: contextsFor(info) };
   }
 
   // ------------------------------------------------------------ devices

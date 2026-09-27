@@ -21,6 +21,19 @@ export class BindingsView {
   });
 
   readonly conflictCodes = computed(() => conflictCodes(this.warnings().conflicts));
+
+  /** Code -> tooltip for actions sharing an input with another action by design. */
+  readonly sharedNotes = computed(() => {
+    const notes = new Map<string, string[]>();
+    for (const s of this.warnings().shared) {
+      for (const u of s.uses) {
+        const others = s.uses.filter((o) => o.code !== u.code).map((o) => this.catalog.action(o.code).longName);
+        const line = `Shares ${this.catalog.inputLabel(u.binding)} with ${[...new Set(others)].join(', ')} on purpose: ${s.reasons.join('; ')}`;
+        notes.set(u.code, [...(notes.get(u.code) ?? []), line]);
+      }
+    }
+    return new Map([...notes].map(([code, lines]) => [code, lines.join('\n')]));
+  });
   readonly changedCodes = computed(() => new Set(this.store.changes().map((c) => c.code)));
 
   readonly rows = computed(() => {
@@ -33,6 +46,7 @@ export class BindingsView {
       (r: InputRef) => this.catalog.inputLabel(r),
       this.conflictCodes(),
       this.changedCodes(),
+      this.sharedNotes(),
     );
   });
 

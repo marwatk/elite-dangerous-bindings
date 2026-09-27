@@ -22,6 +22,7 @@ container exec edb-dev sh -c 'cd /workspace && npm test'
 ## Layout
 
 - `src/app/core/binds/` – lossless `.binds` engine. `BindsDocument` edits the XML in place; an unedited file serialises byte-for-byte identical (tested). Never rewrite files through DOMParser/XMLSerializer.
+- `src/app/core/binds/contexts.ts` – which game context (ship, SRV, SRV turret, on foot, FSS, free camera, …) each action is live in, plus `SHARED_BY_DESIGN` pairs. Conflicts = same input + modifiers + hold/tap, overlapping contexts, not shared by design. `src/testing/fixtures/X52.4.2.binds` (nearly default) must report zero conflicts.
 - `src/app/core/data/` – `CatalogService`: actions (`public/data/actions.json`), keys, named device IDs, device index + lazily loaded `devices/<id>/device.json`, labels (`inputLabel`, `controlLabel`).
 - `src/app/core/state/` – `BindingsStore` (open file, `mutate()` for every edit = undo step + autosave, `changes`), `FileActions` (open/save/download).
 - `src/app/core/input/` – `InputService`: WebHID first, Gamepad API fallback, keyboard; emits Elite-named inputs. Public API in `input.service.ts` is a contract used by other features.
