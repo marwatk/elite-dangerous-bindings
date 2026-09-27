@@ -114,6 +114,15 @@ test('layout editor: image, identify, controls, place, export', async ({ page })
 
   // 7. Export
   await page.getByRole('button', { name: /Export/ }).first().click();
+  // The page says what the .buttonMap is for and where the game reads it.
+  const game = page.locator('#game-names');
+  await expect(game).toContainText('not for the repository');
+  await expect(game).toContainText('\\Options\\Bindings\\DeviceButtonMaps\\');
+  await expect(game).toContainText('12345678.buttonMap');
+  await expect(page.locator('.tree')).toContainText('buttonmaps/                ← for the game, not the repository');
+  if (process.env['SHOTS']) await game.screenshot({ path: 'test-results/shots/devices/export-buttonmap.png' });
+  const [mapDownload] = await Promise.all([page.waitForEvent('download'), page.getByTestId('download-buttonmap').click()]);
+  expect(mapDownload.suggestedFilename()).toBe('12345678.buttonMap');
   const [download] = await Promise.all([page.waitForEvent('download'), page.getByTestId('download-zip').click()]);
   expect(download.suggestedFilename()).toBe('Test-Stick.zip');
   const zip = await JSZip.loadAsync(readFileSync((await download.path())!));

@@ -105,12 +105,12 @@ the browser, so a refresh doesn't lose it.
    on your own images, boxes without a leader line. The preview shows the image as
    it will be exported.
 7. **Export.**
-   - **Download .zip** gives you the files in the repository's layout:
+   - **Download .zip** gives you:
      ```
-     devices/<id>/device.json
-     devices/<id>/<id>.webp
-     buttonmaps/<bindsId>.buttonMap
-     CONTRIBUTING-DEVICE.md
+     devices/<id>/device.json         <- goes into the repository
+     devices/<id>/<id>.webp           <- goes into the repository
+     buttonmaps/<bindsId>.buttonMap   <- for the game, not the repository
+     CONTRIBUTING-DEVICE.md           <- how to use all of the above
      ```
    - **Save to this browser** makes the device usable in the app straight away
      (cards, live input, the table). Saved devices are listed under *Mine* in the
@@ -249,6 +249,10 @@ source, so your fixes survive future re-imports.
   request.
 - Data adapted from EDRefCard and EDCD stays under their MIT licences (see
   [LICENSE](../LICENSE)).
-- The exported `.buttonMap` also works in-game (copy it to Elite's
-  `ControlSchemes/DeviceButtonMaps` folder) and can be offered upstream to
+- The exported `.buttonMap` files are not part of a pull request (the labels are
+  already in `device.json`). They make the game show your labels: copy them to
+  `%LOCALAPPDATA%\Frontier Developments\Elite Dangerous\Options\Bindings\DeviceButtonMaps\`
+  (not `ControlSchemes\DeviceButtonMaps` in the install folder, which updates
+  overwrite). They can also be offered upstream to
   [EDCD/EliteCustomButtonNames](https://github.com/EDCD/EliteCustomButtonNames).
+  `CONTRIBUTING-DEVICE.md` in the zip has the details.

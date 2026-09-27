@@ -341,19 +341,34 @@ export interface DeviceImageFile {
   blob: Blob;
 }
 
+/** Where Elite Dangerous reads custom button names (.buttonMap files) that survive game updates. */
+export const DEVICE_BUTTON_MAPS_DIR =
+  '%LOCALAPPDATA%\\Frontier Developments\\Elite Dangerous\\Options\\Bindings\\DeviceButtonMaps\\';
+
 export function contributingNote(def: DeviceDefinition): string {
   const ids = [...new Set(def.ids.map((i) => i.bindsId))];
-  return `# Contributing ${def.name}
+  const maps = ids.filter((id) => controlsForBindsId(def, id).length);
+  const mapList = maps.map((id) => `- \`buttonmaps/${id}.buttonMap\``).join('\n');
+  return `# ${def.name}
 
-This archive was made with the Elite Dangerous Bindings layout editor. It is laid
-out like the repository, so it can be added with a pull request.
+This archive was made with the Elite Dangerous Bindings layout editor.
+
+## What's in this archive
+
+- \`devices/${def.id}/\`: the device definition (\`device.json\`) and its artwork.
+  This is what goes into the Elite Dangerous Bindings repository.
+${mapList}
+  Your control labels as Elite Dangerous button-name files, for use in the game.
+  **Not** part of the repository (see "In-game button names" below).
+- \`CONTRIBUTING-DEVICE.md\`: this file.
 
 ## Add the device to the repository
 
 1. Fork and clone the Elite Dangerous Bindings repository.
 2. Copy the folder \`devices/${def.id}/\` from this archive into the repository's
    \`devices/\` folder. If you edited a device that already exists, replace its
-   folder completely.
+   folder completely. Don't copy \`buttonmaps/\`: the labels are already in
+   \`device.json\`.
 3. Check it (inside the dev container, see CLAUDE.md):
 
    \`\`\`sh
@@ -374,9 +389,34 @@ redistributed.
 
 ## In-game button names (optional)
 
-\`buttonmaps/<device-id>.buttonMap\` holds your control labels in the format of
-EDCD's EliteCustomButtonNames. Copy it to Elite's \`ControlSchemes/DeviceButtonMaps\`
-folder to see the names in-game, and consider offering it upstream:
+Elite Dangerous can show your own names for a controller's buttons and axes,
+for example "Pinky trigger" instead of "Joy 3", in **Options › Controls** and in
+its on-screen prompts. The \`.buttonMap\` files in \`buttonmaps/\` hold the labels
+you gave each control, one file per device ID, named after the ID the game uses.
+
+To use them:
+
+1. Quit the game.
+2. Copy the \`.buttonMap\` file(s) into this folder, creating
+   \`DeviceButtonMaps\` if it doesn't exist:
+
+   \`\`\`
+   ${DEVICE_BUTTON_MAPS_DIR}
+   \`\`\`
+
+   Keep the file names exactly as they are (for example \`${maps[0] ?? ids[0]}.buttonMap\`):
+   the game matches them to the device ID in your bindings file.
+3. Start the game. It reads the names when you open **Options › Controls**.
+
+Use this folder, not \`ControlSchemes\\DeviceButtonMaps\` in the game's install
+folder: game updates overwrite that one. If a file contains invalid XML the game
+silently ignores it, so re-export it from the editor rather than hand-editing
+where possible. Labels can include Elite's icon tokens such as \`[x52prox]\`; see
+the EliteCustomButtonNames project for the list.
+
+These files use the same format as EDCD's EliteCustomButtonNames project, which
+collects button names for many controllers. If yours isn't there, consider
+offering them upstream so every player benefits:
 https://github.com/EDCD/EliteCustomButtonNames
 `;
 }

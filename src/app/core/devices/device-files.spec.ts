@@ -265,7 +265,15 @@ describe('device zip', () => {
     expect(validate(JSON.parse(json))).toBe(true);
     const img = await zip.file('devices/My-Stick/My-Stick.webp')!.async('uint8array');
     expect(Array.from(img)).toEqual([137, 80, 78, 71, 1, 2, 3]);
-    expect(await zip.file('CONTRIBUTING-DEVICE.md')!.async('string')).toContain('npm run devices:check');
+    const readme = await zip.file('CONTRIBUTING-DEVICE.md')!.async('string');
+    expect(readme).toContain('npm run devices:check');
+    // It explains the .buttonMap files: listed, not for the repo, where the game reads them, upstream.
+    expect(readme).toContain('- `buttonmaps/231D0200.buttonMap`');
+    expect(readme).toContain('- `buttonmaps/MyStickNamed.buttonMap`');
+    expect(readme).toContain("Don't copy `buttonmaps/`");
+    expect(readme).toContain('%LOCALAPPDATA%\\Frontier Developments\\Elite Dangerous\\Options\\Bindings\\DeviceButtonMaps\\');
+    expect(readme).toContain('game updates overwrite that one');
+    expect(readme).toContain('https://github.com/EDCD/EliteCustomButtonNames');
 
     const back = await readDeviceZip(blob);
     expect(back.definition.id).toBe('My-Stick');

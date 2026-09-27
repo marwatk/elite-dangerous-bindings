@@ -16,7 +16,14 @@
       <a matButton="filled" [routerLink]="['/devices', def.id, 'edit']" [matTooltip]="isLocal() ? 'Open in the layout editor' : 'Opens a copy in the layout editor; export the result to replace this device in a pull request'">
         <mat-icon>edit</mat-icon>Edit layout
       </a>
-      <button matButton="tonal" type="button" (click)="exportButtonMaps()"><mat-icon>label</mat-icon>Export button names (.buttonMap)</button>
+      <button
+        matButton="tonal"
+        type="button"
+        (click)="exportButtonMaps()"
+        matTooltip="Elite Dangerous button-name files: put them in Options\Bindings\DeviceButtonMaps and the game shows these labels in Options › Controls and its prompts"
+      >
+        <mat-icon>label</mat-icon>Export button names for the game (.buttonMap)
+      </button>
       <button matButton type="button" (click)="downloadJson()"><mat-icon>data_object</mat-icon>Download device.json</button>
       @if (isLocal()) {
         <button matButton type="button" (click)="exportZip()"><mat-icon>folder_zip</mat-icon>Export .zip</button>

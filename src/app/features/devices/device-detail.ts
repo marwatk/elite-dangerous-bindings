@@ -10,7 +10,7 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { map } from 'rxjs';
 import { CatalogService } from '../../core/data/catalog.service';
 import { DeviceDefinition } from '../../core/data/catalog.types';
-import { buildButtonMapExport, deviceJson, formatUsb } from '../../core/devices/device-files';
+import { DEVICE_BUTTON_MAPS_DIR, buildButtonMapExport, deviceJson, formatUsb } from '../../core/devices/device-files';
 import { LocalDeviceStore } from '../../core/devices/local-device-store.service';
 import { BindingsStore } from '../../core/state/bindings-store.service';
 import { DeviceDiagram, controlKey } from '../../shared/device-diagram';
@@ -109,8 +109,18 @@ export class DeviceDetail {
     const def = this.definition();
     if (!def) return;
     const out = await buildButtonMapExport(def);
-    if (out) downloadBlob(out.blob, out.filename);
-    else this.snack.open('This device has no labelled controls.', undefined, { duration: 3000 });
+    if (!out) {
+      this.snack.open('This device has no labelled controls.', undefined, { duration: 3000 });
+      return;
+    }
+    downloadBlob(out.blob, out.filename);
+    const what = out.filename.endsWith('.zip') ? 'the .buttonMap files from the zip' : out.filename;
+    this.snack
+      .open(`To see these names in the game, copy ${what} to ${DEVICE_BUTTON_MAPS_DIR} (keep the file names) and reopen Options › Controls.`, 'Copy folder path', {
+        duration: 15_000,
+      })
+      .onAction()
+      .subscribe(() => void navigator.clipboard?.writeText(DEVICE_BUTTON_MAPS_DIR));
   }
 
   protected downloadJson(): void {
