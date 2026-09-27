@@ -1,0 +1,372 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-3344425C",
+  "name": "RIGHT VPC Control Panel 3",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "3344425C",
+      "usb": {
+        "vid": "3344",
+        "pid": "425C"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_XAxis",
+      "label": "CP3 [x52prou] Black",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_YAxis",
+      "label": "CP3 [x52prou] Yellow",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_RXAxis",
+      "label": "CP3 [x52prou] Blue",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_RYAxis",
+      "label": "CP3 [x52prou] Red",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Pos_Joy_XAxis",
+      "label": "CP3 [x52prou+] Black",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Pos_Joy_YAxis",
+      "label": "CP3 [x52prou+] Yellow",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Pos_Joy_RXAxis",
+      "label": "CP3 [x52prou+] Blue",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Pos_Joy_RYAxis",
+      "label": "CP3 [x52prou+] Red",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Neg_Joy_XAxis",
+      "label": "CP3 [x52prou-] Black",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Neg_Joy_YAxis",
+      "label": "CP3 [x52prou-] Yellow",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Neg_Joy_RXAxis",
+      "label": "CP3 [x52prou-] Blue",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Neg_Joy_RYAxis",
+      "label": "CP3 [x52prou-] Red",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_1",
+      "label": "CP3 B1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_2",
+      "label": "CP3 B2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_3",
+      "label": "CP3 B3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_4",
+      "label": "CP3 B4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_5",
+      "label": "CP3 B5",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_6",
+      "label": "CP3 B6",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_7",
+      "label": "CP3 B7",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_8",
+      "label": "CP3 B8",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_9",
+      "label": "CP3 B9",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_10",
+      "label": "CP3 B10",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_11",
+      "label": "CP3 B11",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_12",
+      "label": "CP3 B12",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_13",
+      "label": "CP3 B13",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_14",
+      "label": "CP3 T1 - Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_15",
+      "label": "CP3 T1 - Mid",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_16",
+      "label": "CP3 T1 - Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_17",
+      "label": "CP3 T2 - Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_18",
+      "label": "CP3 T2 - Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_19",
+      "label": "CP3 T3 - Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_20",
+      "label": "CP3 T3 - Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_21",
+      "label": "CP3 T4 - Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_22",
+      "label": "CP3 T4 - Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_23",
+      "label": "CP3 T5 - Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_24",
+      "label": "CP3 T5 - Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_25",
+      "label": "CP3 T6 - Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_26",
+      "label": "CP3 T6 - Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_27",
+      "label": "CP3 T7 - Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_28",
+      "label": "CP3 T7 - Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_29",
+      "label": "CP3 T8 - Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_30",
+      "label": "CP3 T8 - Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_31",
+      "label": "CP3 TH - L",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_32",
+      "label": "CP3 TH - |",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_33",
+      "label": "CP3 TH - R",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_34",
+      "label": "CP3 MASTER ARM - Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_35",
+      "label": "CP3 MASTER ARM - Mid",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_36",
+      "label": "CP3 MASTER ARM - Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_37",
+      "label": "CP3 [x52prob8] 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_38",
+      "label": "CP3 [x52prory-] 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_39",
+      "label": "CP3 [x52prory+] 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_40",
+      "label": "CP3 [x52prob8] 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_41",
+      "label": "CP3 [x52prory-] 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_42",
+      "label": "CP3 [x52prory+] 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_43",
+      "label": "CP3 MODE - 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_44",
+      "label": "CP3 MODE - 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_45",
+      "label": "CP3 MODE - 3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_46",
+      "label": "CP3 MODE - 4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344425C",
+      "key": "Joy_47",
+      "label": "CP3 MODE - 5",
+      "kind": "button"
+    }
+  ]
+}

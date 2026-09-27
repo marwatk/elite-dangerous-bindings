@@ -1,0 +1,63 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "LogitechG940Pedals",
+  "name": "Logitech G940 Pedals",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "LogitechG940Pedals",
+      "usb": {
+        "vid": "046D",
+        "pid": "C2AA"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "g940pedals.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "LogitechG940Pedals",
+      "key": "Joy_XAxis",
+      "label": "Right pedal (unconfirmed)",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2264,
+        "y": 588,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "LogitechG940Pedals",
+      "key": "Joy_YAxis",
+      "label": "Left pedal (unconfirmed)",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 168,
+        "y": 591,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "LogitechG940Pedals",
+      "key": "Joy_RZAxis",
+      "label": "Rudder",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1208,
+        "y": 331,
+        "w": 1314,
+        "h": 151
+      }
+    }
+  ]
+}

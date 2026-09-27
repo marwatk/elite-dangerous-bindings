@@ -1,0 +1,295 @@
+<div class="page">
+  @if (!store.isOpen()) {
+    <div class="page-header"><h1>Bindings</h1></div>
+    <section class="empty">
+      <mat-icon class="empty-icon">table_rows</mat-icon>
+      <h2>No bindings file is open</h2>
+      <p class="muted">Open your <code>.binds</code> file to see and edit every command, or start from an empty preset.</p>
+      <div class="empty-actions">
+        <button matButton="filled" type="button" (click)="files.pickAndOpen()">
+          <mat-icon>folder_open</mat-icon>Open a file
+        </button>
+        <button matButton="outlined" type="button" (click)="files.openTemplate()">
+          <mat-icon>note_add</mat-icon>New empty file
+        </button>
+        <a matButton routerLink="/">
+          <mat-icon>home</mat-icon>Home
+        </a>
+      </div>
+    </section>
+  } @else {
+    <div class="page-header">
+      <h1>Bindings</h1>
+      @if (fileInfo(); as fi) {
+        <span class="muted file-info">
+          <span>{{ fi.preset }}</span>
+          @if (fi.version) {
+            <span>· v{{ fi.version }}</span>
+          }
+          @if (fi.layout) {
+            <span>· {{ fi.layout }}</span>
+          }
+        </span>
+      }
+      <span class="spacer"></span>
+      <div class="tools" role="toolbar" aria-label="Bindings tools">
+        <button
+          matButton
+          type="button"
+          (click)="dialogs.openChanges()"
+          matTooltip="Changes since the file was opened"
+          [matBadge]="store.changes().length || null"
+          [attr.aria-label]="'Changes (' + store.changes().length + ')'"
+        >
+          <mat-icon>difference</mat-icon><span class="lbl">Changes</span>
+        </button>
+        <button
+          matButton
+          type="button"
+          (click)="openWarnings()"
+          matTooltip="Conflicts and other problems"
+          [matBadge]="view.warnings().count || null"
+          matBadgeColor="warn"
+          [attr.aria-label]="'Warnings (' + view.warnings().count + ')'"
+        >
+          <mat-icon>warning</mat-icon><span class="lbl">Warnings</span>
+        </button>
+        <button matButton type="button" [matMenuTriggerFor]="bulkMenu" aria-label="Bulk actions" matTooltip="Bulk actions">
+          <mat-icon>checklist</mat-icon><span class="lbl">Bulk</span>
+        </button>
+        <mat-menu #bulkMenu="matMenu">
+          <button mat-menu-item (click)="dialogs.openBulk('clear')"><mat-icon>delete_sweep</mat-icon>Clear a device…</button>
+          <button mat-menu-item (click)="dialogs.openBulk('move')"><mat-icon>move_down</mat-icon>Move a device's bindings…</button>
+        </mat-menu>
+        <button matButton type="button" (click)="dialogs.openSettings()" aria-label="Settings" matTooltip="Settings stored in the file">
+          <mat-icon>tune</mat-icon><span class="lbl">Settings</span>
+        </button>
+        <button matButton type="button" (click)="dialogs.openMerge()" aria-label="Merge" matTooltip="Merge from another file">
+          <mat-icon>merge</mat-icon><span class="lbl">Merge</span>
+        </button>
+        <button matButton type="button" [matMenuTriggerFor]="csvMenu" aria-label="Export CSV" matTooltip="Export the table as CSV">
+          <mat-icon>csv</mat-icon><span class="lbl">CSV</span>
+        </button>
+        <mat-menu #csvMenu="matMenu">
+          <button mat-menu-item (click)="exportCsv(false)" [disabled]="!sorted().length">
+            <mat-icon>filter_alt</mat-icon>Shown rows ({{ sorted().length }})
+          </button>
+          <button mat-menu-item (click)="exportCsv(true)"><mat-icon>table</mat-icon>All rows ({{ view.rows().length }})</button>
+        </mat-menu>
+        <button matButton="filled" type="button" (click)="dialogs.openExport()" aria-label="Export / install">
+          <mat-icon>ios_share</mat-icon><span class="lbl">Export</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="filters">
+      <mat-form-field appearance="outline" subscriptSizing="dynamic" class="search">
+        <mat-icon matPrefix>search</mat-icon>
+        <mat-label>Filter commands</mat-label>
+        <input
+          matInput
+          type="search"
+          [value]="filter().text"
+          (input)="patchFilter({ text: $any($event.target).value })"
+          placeholder="Name, code, category or control"
+          autocomplete="off"
+        />
+        @if (filter().text) {
+          <button matIconButton matSuffix type="button" (click)="patchFilter({ text: '' })" aria-label="Clear text filter">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+      <mat-form-field appearance="outline" subscriptSizing="dynamic" class="facet">
+        <mat-label>Group</mat-label>
+        <mat-select [value]="filter().group" (valueChange)="patchFilter({ group: $event })">
+          <mat-option value="">All groups</mat-option>
+          @for (g of view.groups(); track g) {
+            <mat-option [value]="g">{{ g }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" subscriptSizing="dynamic" class="facet">
+        <mat-label>Device</mat-label>
+        <mat-select [value]="filter().device" (valueChange)="patchFilter({ device: $event })">
+          <mat-option value="">All devices</mat-option>
+          @for (d of view.deviceOptions(); track d.key) {
+            <mat-option [value]="d.key">{{ d.label }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" subscriptSizing="dynamic" class="facet">
+        <mat-label>Status</mat-label>
+        <mat-select [value]="filter().status" (valueChange)="patchFilter({ status: $event })">
+          @for (s of STATUSES; track s.value) {
+            <mat-option [value]="s.value">
+              {{ s.label }}
+              @switch (s.value) {
+                @case ('bound') {
+                  <span class="muted">({{ counts().bound }})</span>
+                }
+                @case ('conflicts') {
+                  <span class="muted">({{ counts().conflicts }})</span>
+                }
+                @case ('changed') {
+                  <span class="muted">({{ counts().changed }})</span>
+                }
+              }
+            </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <div class="filter-tools">
+        <button matIconButton type="button" [matMenuTriggerFor]="colMenu" aria-label="Show or hide columns" matTooltip="Columns">
+          <mat-icon>view_column</mat-icon>
+        </button>
+        <mat-menu #colMenu="matMenu">
+          @for (c of ALL_COLUMNS; track c) {
+            @if (!FIXED_COLUMNS.includes(c)) {
+              <div class="col-item" (click)="$event.stopPropagation()" (keydown)="$event.stopPropagation()">
+                <mat-checkbox [checked]="!hidden().has(c)" (change)="toggleColumn(c, $event.checked)">{{ COLUMN_LABELS[c] }}</mat-checkbox>
+              </div>
+            }
+          }
+        </mat-menu>
+        @if (filtering()) {
+          <button matButton type="button" (click)="clearFilters()"><mat-icon>filter_alt_off</mat-icon>Reset</button>
+        }
+      </div>
+    </div>
+    <p class="count muted" aria-live="polite">
+      {{ sorted().length }} of {{ view.rows().length }} commands{{ filtering() ? ' match' : '' }}
+    </p>
+
+    <div class="table-wrap">
+      <table
+        mat-table
+        [dataSource]="page()"
+        [trackBy]="trackRow"
+        matSort
+        [matSortActive]="sort().active"
+        [matSortDirection]="sort().direction"
+        (matSortChange)="onSort($event)"
+        class="table"
+        aria-label="Bindings"
+      >
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="c-status"><span class="visually-hidden">Status</span></th>
+          <td mat-cell *matCellDef="let r" class="c-status">
+            @if (r.conflict) {
+              <mat-icon class="st conflict" matTooltip="Conflicts with another command in the same context" aria-hidden="false" aria-label="Conflict">error</mat-icon>
+            }
+            @if (r.changed) {
+              <mat-icon class="st changed" matTooltip="Changed since the file was opened" aria-hidden="false" aria-label="Changed">edit</mat-icon>
+            }
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="area">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Group / Area</th>
+          <td mat-cell *matCellDef="let r" class="c-area">
+            <div>{{ r.area }}</div>
+            <div class="muted small">{{ r.group }}</div>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="section">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>
+          <td mat-cell *matCellDef="let r" class="c-section">{{ r.section }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+          <td mat-cell *matCellDef="let r" class="c-action">
+            <div class="name">{{ r.name }}</div>
+            <code class="code">{{ r.code }}</code>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="primary">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Primary</th>
+          <td mat-cell *matCellDef="let r" class="c-slot">
+            @if (r.kind === 'axis') {
+              <span class="axis-tag" matTooltip="Analogue command: one axis binding">axis</span>
+            }
+            <app-slot-view [binding]="r.primary?.binding" [emptyText]="r.kind === 'axis' ? 'no axis' : '–'" />
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="secondary">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Secondary</th>
+          <td mat-cell *matCellDef="let r" class="c-slot">
+            @if (r.kind !== 'axis') {
+              <app-slot-view [binding]="r.secondary?.binding" emptyText="–" />
+            }
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="flags">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Flags</th>
+          <td mat-cell *matCellDef="let r" class="c-flags">
+            @if (r.toggleOn) {
+              <span class="flag">Toggle</span>
+            }
+            @if (r.hold) {
+              <span class="flag">Hold</span>
+            }
+            @if (r.inverted) {
+              <span class="flag">Inverted</span>
+            }
+            @if (r.deadzone) {
+              <span class="flag">DZ {{ r.deadzone * 100 | number: '1.0-1' }}%</span>
+            }
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="variable">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>VoiceAttack</th>
+          <td mat-cell *matCellDef="let r" class="c-var">
+            <code>{{ r.variable }}</code>
+            <button
+              matIconButton
+              type="button"
+              class="copy"
+              (click)="copy($event, r.variable)"
+              (keydown.enter)="$event.stopPropagation()"
+              [attr.aria-label]="'Copy ' + r.variable"
+              matTooltip="Copy bindED variable"
+            >
+              <mat-icon>content_copy</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columns(); sticky: true"></tr>
+        <tr
+          mat-row
+          *matRowDef="let r; columns: columns()"
+          class="row"
+          [class.is-conflict]="r.conflict"
+          [class.is-changed]="r.changed"
+          tabindex="0"
+          [attr.aria-label]="'Edit ' + r.name"
+          (click)="edit(r)"
+          (keydown.enter)="rowKey($event, r)"
+        ></tr>
+        <tr class="mat-row no-rows" *matNoDataRow>
+          <td class="mat-cell" [attr.colspan]="columns().length">
+            No commands match.
+            @if (filtering()) {
+              <button matButton type="button" (click)="clearFilters()">Clear filters</button>
+            }
+          </td>
+        </tr>
+      </table>
+    </div>
+    <mat-paginator
+      [length]="sorted().length"
+      [pageSize]="pageSize()"
+      [pageIndex]="currentPageIndex()"
+      [pageSizeOptions]="PAGE_SIZES"
+      (page)="onPage($event)"
+      aria-label="Table pages"
+    />
+  }
+</div>

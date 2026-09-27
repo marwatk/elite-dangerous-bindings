@@ -1,0 +1,674 @@
+[
+ {
+  "key": "Key_Backspace",
+  "label": "Backspace"
+ },
+ {
+  "key": "Key_Tab",
+  "label": "Tab"
+ },
+ {
+  "key": "Key_Enter",
+  "label": "Enter"
+ },
+ {
+  "key": "Key_Pause",
+  "label": "Pause"
+ },
+ {
+  "key": "Key_CapsLock",
+  "label": "Caps"
+ },
+ {
+  "key": "Key_Kana",
+  "label": "Kana"
+ },
+ {
+  "key": "Key_Kanji",
+  "label": "Kanji"
+ },
+ {
+  "key": "Key_Escape",
+  "label": "Esc"
+ },
+ {
+  "key": "Key_Convert",
+  "label": "Convert"
+ },
+ {
+  "key": "Key_NoConvert",
+  "label": "NoConvert"
+ },
+ {
+  "key": "Key_Space",
+  "label": "Space"
+ },
+ {
+  "key": "Key_PageUp",
+  "label": "PgUp"
+ },
+ {
+  "key": "Key_PageDown",
+  "label": "PgDn"
+ },
+ {
+  "key": "Key_End",
+  "label": "End"
+ },
+ {
+  "key": "Key_Home",
+  "label": "Home"
+ },
+ {
+  "key": "Key_LeftArrow",
+  "label": "Left"
+ },
+ {
+  "key": "Key_UpArrow",
+  "label": "Up"
+ },
+ {
+  "key": "Key_RightArrow",
+  "label": "Right"
+ },
+ {
+  "key": "Key_DownArrow",
+  "label": "Down"
+ },
+ {
+  "key": "Key_SYSRQ",
+  "label": "SYSRQ"
+ },
+ {
+  "key": "Key_Insert",
+  "label": "Insert"
+ },
+ {
+  "key": "Key_Delete",
+  "label": "Delete"
+ },
+ {
+  "key": "Key_0",
+  "label": "0"
+ },
+ {
+  "key": "Key_1",
+  "label": "1"
+ },
+ {
+  "key": "Key_2",
+  "label": "2"
+ },
+ {
+  "key": "Key_3",
+  "label": "3"
+ },
+ {
+  "key": "Key_4",
+  "label": "4"
+ },
+ {
+  "key": "Key_5",
+  "label": "5"
+ },
+ {
+  "key": "Key_6",
+  "label": "6"
+ },
+ {
+  "key": "Key_7",
+  "label": "7"
+ },
+ {
+  "key": "Key_8",
+  "label": "8"
+ },
+ {
+  "key": "Key_9",
+  "label": "9"
+ },
+ {
+  "key": "Key_A",
+  "label": "A"
+ },
+ {
+  "key": "Key_B",
+  "label": "B"
+ },
+ {
+  "key": "Key_C",
+  "label": "C"
+ },
+ {
+  "key": "Key_D",
+  "label": "D"
+ },
+ {
+  "key": "Key_E",
+  "label": "E"
+ },
+ {
+  "key": "Key_F",
+  "label": "F"
+ },
+ {
+  "key": "Key_G",
+  "label": "G"
+ },
+ {
+  "key": "Key_H",
+  "label": "H"
+ },
+ {
+  "key": "Key_I",
+  "label": "I"
+ },
+ {
+  "key": "Key_J",
+  "label": "J"
+ },
+ {
+  "key": "Key_K",
+  "label": "K"
+ },
+ {
+  "key": "Key_L",
+  "label": "L"
+ },
+ {
+  "key": "Key_M",
+  "label": "M"
+ },
+ {
+  "key": "Key_N",
+  "label": "N"
+ },
+ {
+  "key": "Key_O",
+  "label": "O"
+ },
+ {
+  "key": "Key_P",
+  "label": "P"
+ },
+ {
+  "key": "Key_Q",
+  "label": "Q"
+ },
+ {
+  "key": "Key_R",
+  "label": "R"
+ },
+ {
+  "key": "Key_S",
+  "label": "S"
+ },
+ {
+  "key": "Key_T",
+  "label": "T"
+ },
+ {
+  "key": "Key_U",
+  "label": "U"
+ },
+ {
+  "key": "Key_V",
+  "label": "V"
+ },
+ {
+  "key": "Key_W",
+  "label": "W"
+ },
+ {
+  "key": "Key_X",
+  "label": "X"
+ },
+ {
+  "key": "Key_Y",
+  "label": "Y"
+ },
+ {
+  "key": "Key_Z",
+  "label": "Z"
+ },
+ {
+  "key": "Key_LeftWin",
+  "label": "LeftWin"
+ },
+ {
+  "key": "Key_RightWin",
+  "label": "RightWin"
+ },
+ {
+  "key": "Key_Apps",
+  "label": "Apps"
+ },
+ {
+  "key": "Key_Sleep",
+  "label": "Sleep"
+ },
+ {
+  "key": "Key_Numpad_0",
+  "label": "Num 0"
+ },
+ {
+  "key": "Key_Numpad_1",
+  "label": "Num 1"
+ },
+ {
+  "key": "Key_Numpad_2",
+  "label": "Num 2"
+ },
+ {
+  "key": "Key_Numpad_3",
+  "label": "Num 3"
+ },
+ {
+  "key": "Key_Numpad_4",
+  "label": "Num 4"
+ },
+ {
+  "key": "Key_Numpad_5",
+  "label": "Num 5"
+ },
+ {
+  "key": "Key_Numpad_6",
+  "label": "Num 6"
+ },
+ {
+  "key": "Key_Numpad_7",
+  "label": "Num 7"
+ },
+ {
+  "key": "Key_Numpad_8",
+  "label": "Num 8"
+ },
+ {
+  "key": "Key_Numpad_9",
+  "label": "Num 9"
+ },
+ {
+  "key": "Key_Numpad_Multiply",
+  "label": "Num *"
+ },
+ {
+  "key": "Key_Numpad_Add",
+  "label": "Num +"
+ },
+ {
+  "key": "Key_Numpad_Subtract",
+  "label": "Num -"
+ },
+ {
+  "key": "Key_Numpad_Decimal",
+  "label": "Num ."
+ },
+ {
+  "key": "Key_Numpad_Comma",
+  "label": "Num ,"
+ },
+ {
+  "key": "Key_Numpad_Divide",
+  "label": "Num /"
+ },
+ {
+  "key": "Key_Numpad_Enter",
+  "label": "Num Enter"
+ },
+ {
+  "key": "Key_F1",
+  "label": "F1"
+ },
+ {
+  "key": "Key_F2",
+  "label": "F2"
+ },
+ {
+  "key": "Key_F3",
+  "label": "F3"
+ },
+ {
+  "key": "Key_F4",
+  "label": "F4"
+ },
+ {
+  "key": "Key_F5",
+  "label": "F5"
+ },
+ {
+  "key": "Key_F6",
+  "label": "F6"
+ },
+ {
+  "key": "Key_F7",
+  "label": "F7"
+ },
+ {
+  "key": "Key_F8",
+  "label": "F8"
+ },
+ {
+  "key": "Key_F9",
+  "label": "F9"
+ },
+ {
+  "key": "Key_F10",
+  "label": "F10"
+ },
+ {
+  "key": "Key_F11",
+  "label": "F11"
+ },
+ {
+  "key": "Key_F12",
+  "label": "F12"
+ },
+ {
+  "key": "Key_F13",
+  "label": "F13"
+ },
+ {
+  "key": "Key_F14",
+  "label": "F14"
+ },
+ {
+  "key": "Key_F15",
+  "label": "F15"
+ },
+ {
+  "key": "Key_F16",
+  "label": "F16"
+ },
+ {
+  "key": "Key_F17",
+  "label": "F17"
+ },
+ {
+  "key": "Key_F18",
+  "label": "F18"
+ },
+ {
+  "key": "Key_F19",
+  "label": "F19"
+ },
+ {
+  "key": "Key_F20",
+  "label": "F20"
+ },
+ {
+  "key": "Key_F21",
+  "label": "F21"
+ },
+ {
+  "key": "Key_F22",
+  "label": "F22"
+ },
+ {
+  "key": "Key_F23",
+  "label": "F23"
+ },
+ {
+  "key": "Key_F24",
+  "label": "F24"
+ },
+ {
+  "key": "Key_NumLock",
+  "label": "Num\\nLock"
+ },
+ {
+  "key": "Key_ScrollLock",
+  "label": "ScrollLock"
+ },
+ {
+  "key": "Key_LeftShift",
+  "label": "Left Shift"
+ },
+ {
+  "key": "Key_RightShift",
+  "label": "Right Shift"
+ },
+ {
+  "key": "Key_LeftControl",
+  "label": "Left Ctrl"
+ },
+ {
+  "key": "Key_RightControl",
+  "label": "Right Ctrl"
+ },
+ {
+  "key": "Key_LeftAlt",
+  "label": "Left Alt"
+ },
+ {
+  "key": "Key_RightAlt",
+  "label": "Right Alt"
+ },
+ {
+  "key": "Key_WebBack",
+  "label": "WebBack"
+ },
+ {
+  "key": "Key_WebForward",
+  "label": "WebForward"
+ },
+ {
+  "key": "Key_WebRefresh",
+  "label": "WebRefresh"
+ },
+ {
+  "key": "Key_WebStop",
+  "label": "WebStop"
+ },
+ {
+  "key": "Key_WebSearch",
+  "label": "WebSearch"
+ },
+ {
+  "key": "Key_WebFavourites",
+  "label": "WebFavourites"
+ },
+ {
+  "key": "Key_WebHome",
+  "label": "WebHome"
+ },
+ {
+  "key": "Key_Mute",
+  "label": "Mute"
+ },
+ {
+  "key": "Key_VolumeDown",
+  "label": "VolumeDown"
+ },
+ {
+  "key": "Key_VolumeUp",
+  "label": "VolumeUp"
+ },
+ {
+  "key": "Key_NextTrack",
+  "label": "NextTrack"
+ },
+ {
+  "key": "Key_PrevTrack",
+  "label": "PrevTrack"
+ },
+ {
+  "key": "Key_MediaStop",
+  "label": "MediaStop"
+ },
+ {
+  "key": "Key_Stop",
+  "label": "Stop"
+ },
+ {
+  "key": "Key_PlayPause",
+  "label": "PlayPause"
+ },
+ {
+  "key": "Key_Mail",
+  "label": "Mail"
+ },
+ {
+  "key": "Key_MediaSelect",
+  "label": "MediaSelect"
+ },
+ {
+  "key": "Key_SemiColon",
+  "label": ";"
+ },
+ {
+  "key": "Key_Plus",
+  "label": "+"
+ },
+ {
+  "key": "Key_Equals",
+  "label": "="
+ },
+ {
+  "key": "Key_Comma",
+  "label": ","
+ },
+ {
+  "key": "Key_Minus",
+  "label": "-"
+ },
+ {
+  "key": "Key_Period",
+  "label": "."
+ },
+ {
+  "key": "Key_Slash",
+  "label": "/"
+ },
+ {
+  "key": "Key_Grave",
+  "label": "`"
+ },
+ {
+  "key": "Key_LeftBracket",
+  "label": "["
+ },
+ {
+  "key": "Key_BackSlash",
+  "label": "\\"
+ },
+ {
+  "key": "Key_RightBracket",
+  "label": "]"
+ },
+ {
+  "key": "Key_Apostrophe",
+  "label": "'"
+ },
+ {
+  "key": "Key_OEM_102",
+  "label": "OEM 102"
+ },
+ {
+  "key": "Key_ä",
+  "label": "ä"
+ },
+ {
+  "key": "Key_ö",
+  "label": "ö"
+ },
+ {
+  "key": "Key_ü",
+  "label": "ü"
+ },
+ {
+  "key": "Key_ß",
+  "label": "ß"
+ },
+ {
+  "key": "Key_Acute",
+  "label": "Acute"
+ },
+ {
+  "key": "Key_LessThan",
+  "label": "<"
+ },
+ {
+  "key": "Key_Circumflex",
+  "label": "Circumflex"
+ },
+ {
+  "key": "Key_Hash",
+  "label": "#"
+ },
+ {
+  "key": "Key_Colon",
+  "label": "Colon"
+ },
+ {
+  "key": "Key_ABNT_C1",
+  "label": "ABNT C1"
+ },
+ {
+  "key": "Key_Yen",
+  "label": "Yen"
+ },
+ {
+  "key": "Key_ABNT_C2",
+  "label": "ABNT C2"
+ },
+ {
+  "key": "Key_Numpad_Equals",
+  "label": "Num ="
+ },
+ {
+  "key": "Key_Underline",
+  "label": "Underline"
+ },
+ {
+  "key": "Key_AX",
+  "label": "AX"
+ },
+ {
+  "key": "Key_Unlabeled",
+  "label": "Unlabeled"
+ },
+ {
+  "key": "Key_Calculator",
+  "label": "Calculator"
+ },
+ {
+  "key": "Key_AT",
+  "label": "AT"
+ },
+ {
+  "key": "Key_Power",
+  "label": "Power"
+ },
+ {
+  "key": "Key_Wake",
+  "label": "Wake"
+ },
+ {
+  "key": "Key_MyComputer",
+  "label": "MyComputer"
+ },
+ {
+  "key": "Key_GreenModifier",
+  "label": "GreenModifier"
+ },
+ {
+  "key": "Key_OrangeModifier",
+  "label": "OrangeModifier"
+ },
+ {
+  "key": "Key_GreaterThan",
+  "label": ">"
+ },
+ {
+  "key": "Key_LeftParenthesis",
+  "label": "("
+ },
+ {
+  "key": "Key_RightParenthesis",
+  "label": ")"
+ },
+ {
+  "key": "Key_Numpad_Period",
+  "label": "Num ."
+ }
+]

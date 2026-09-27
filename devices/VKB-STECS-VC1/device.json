@@ -1,0 +1,543 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "VKB-STECS-VC1",
+  "name": "VKB STECS (virtual controller 1)",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "usb": {
+        "vid": "231D",
+        "pid": "012D"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "vkb-stecs-1.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_1",
+      "label": "LSTECS Sys",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 388,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_2",
+      "label": "LSTECS Start",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 466,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_3",
+      "label": "LSTECS Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 544,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_4",
+      "label": "LSTECS Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 622,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_5",
+      "label": "LSTECS Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 700,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_6",
+      "label": "LSTECS Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 788,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_7",
+      "label": "LSTECS Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 856,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_8",
+      "label": "LSTECS Back TrigL",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 934,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_9",
+      "label": "LSTECS Front TrigL",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1012,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_10",
+      "label": "LSTECS Weapon Select",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1090,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_11",
+      "label": "LSTECS RST",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1168,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_12",
+      "label": "LSTECS ENC WH [ps4PadU]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1246,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_13",
+      "label": "LSTECS ENC WH [ps4PadD]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1324,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_14",
+      "label": "LSTECS ENC WH-side [ps4PadU]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1402,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_15",
+      "label": "LSTECS ENC WH-side [ps4PadD]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1480,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_16",
+      "label": "LSTECS Back TrigR",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1558,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_17",
+      "label": "LSTECS Front TrigR",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1636,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_18",
+      "label": "LSTECS ENT",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1714,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_19",
+      "label": "LSTECS OTS Click",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1792,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_20",
+      "label": "LSTECS BRK Click",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1870,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_21",
+      "label": "LSTECS MB1 Click",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1948,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_22",
+      "label": "LSTECS RADIO Click",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 2026,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_23",
+      "label": "LSTECS MB2 Click",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 2104,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_24",
+      "label": "LSTECS OP EXEC [x360LThumb]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 2182,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_25",
+      "label": "LSTECS BRK [ps4PadU]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 2260,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_26",
+      "label": "LSTECS BRK [ps4PadD]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 2338,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_27",
+      "label": "LSTECS BRK [ps4PadR]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 2416,
+        "w": 902,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_28",
+      "label": "LSTECS BRK [ps4PadL]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 2494,
+        "w": 902,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_29",
+      "label": "LSTECS RADIO [ps4PadD]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 2572,
+        "w": 902,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_30",
+      "label": "LSTECS RADIO [ps4PadU]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 2650,
+        "w": 902,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_31",
+      "label": "LSTECS MB2 [ps4PadL]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 2728,
+        "w": 902,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_32",
+      "label": "LSTECS MB2 [ps4PadR]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 2806,
+        "w": 902,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_XAxis",
+      "label": "LSTECS Throttle L [x52proy]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 2884,
+        "w": 758,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_YAxis",
+      "label": "LSTECS Throttle R [x52proy]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 2962,
+        "w": 758,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_ZAxis",
+      "label": "LSTECS Thumb WH",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 3040,
+        "w": 758,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_RXAxis",
+      "label": "LSTECS MB1 [x52prox]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 3118,
+        "w": 758,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D012D",
+      "deviceIndex": 0,
+      "key": "Joy_RYAxis",
+      "label": "LSTECS MB1 [x52proy]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 3196,
+        "w": 758,
+        "h": 56
+      }
+    }
+  ]
+}

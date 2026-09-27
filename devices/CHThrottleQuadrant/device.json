@@ -1,0 +1,258 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "CHThrottleQuadrant",
+  "name": "CH Throttle Quadrant",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "068E00FA",
+      "usb": {
+        "vid": "068E",
+        "pid": "00FA"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "chquadrant.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_XAxis",
+      "label": "Throttle 1",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 354,
+        "y": 804,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_YAxis",
+      "label": "Throttle 2",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 554,
+        "y": 564,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_ZAxis",
+      "label": "Throttle 3",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 754,
+        "y": 324,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_RXAxis",
+      "label": "Throttle 4",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2214,
+        "y": 324,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_RYAxis",
+      "label": "Throttle 5",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2414,
+        "y": 564,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_RZAxis",
+      "label": "Throttle 6",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2614,
+        "y": 804,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_1",
+      "label": "Switch 1 up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 354,
+        "y": 1484,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_2",
+      "label": "Switch 1 down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 354,
+        "y": 1540,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_3",
+      "label": "Switch 2 up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 554,
+        "y": 1724,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_4",
+      "label": "Switch 2 down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 554,
+        "y": 1780,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_5",
+      "label": "Switch 3 up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 754,
+        "y": 1964,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_6",
+      "label": "Switch 3 down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 754,
+        "y": 2020,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_7",
+      "label": "Switch 4 up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2214,
+        "y": 1964,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_8",
+      "label": "Switch 4 down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2214,
+        "y": 2020,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_9",
+      "label": "Switch 5 up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2414,
+        "y": 1724,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_10",
+      "label": "Switch 5 down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2414,
+        "y": 1780,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_11",
+      "label": "Switch 6 up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2614,
+        "y": 1484,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068E00FA",
+      "key": "Joy_12",
+      "label": "Switch 6 down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2614,
+        "y": 1540,
+        "w": 932,
+        "h": 54
+      }
+    }
+  ]
+}

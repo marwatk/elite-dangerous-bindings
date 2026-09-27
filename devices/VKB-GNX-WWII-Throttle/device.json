@@ -1,0 +1,596 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "VKB-GNX-WWII-Throttle",
+  "name": "VKB Gladiator NXT WWII Throttle",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "231D2214",
+      "usb": {
+        "vid": "231D",
+        "pid": "2214"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "vkb-gnx-ww2-throttle.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_1",
+      "label": "A1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3152,
+        "y": 932,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_2",
+      "label": "A2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3152,
+        "y": 986,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_3",
+      "label": "B1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2292,
+        "y": 638,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_4",
+      "label": "B2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2292,
+        "y": 692,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_5",
+      "label": "B3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2292,
+        "y": 742,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_6",
+      "label": "White Right Rocker Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3152,
+        "y": 1134,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_7",
+      "label": "White Right Rocker Middle",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3152,
+        "y": 1186,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_8",
+      "label": "White Right Rocker Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3152,
+        "y": 1240,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_9",
+      "label": "White Left Rocker Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3152,
+        "y": 1388,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_10",
+      "label": "White Left Rocker Middle",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3152,
+        "y": 1442,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_11",
+      "label": "White Left Rocker Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3152,
+        "y": 1496,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_12",
+      "label": "Red Start",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3152,
+        "y": 778,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_13",
+      "label": "Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3152,
+        "y": 630,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_14",
+      "label": "Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3152,
+        "y": 576,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_15",
+      "label": "Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3152,
+        "y": 522,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_16",
+      "label": "Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3152,
+        "y": 470,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_17",
+      "label": "C1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2292,
+        "y": 472,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_18",
+      "label": "Flaps 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1350,
+        "y": 878,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_19",
+      "label": "Flaps 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1350,
+        "y": 824,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_20",
+      "label": "Flaps 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1350,
+        "y": 772,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_21",
+      "label": "Flaps 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1350,
+        "y": 720,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_22",
+      "label": "Landing Gear Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1350,
+        "y": 572,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_23",
+      "label": "Landing Gear Middle",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1350,
+        "y": 520,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_24",
+      "label": "Landing Gear Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1350,
+        "y": 468,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_25",
+      "label": "A1 (THQ)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 412,
+        "y": 1336,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_26",
+      "label": "A2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 412,
+        "y": 1388,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_27",
+      "label": "A3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 412,
+        "y": 1440,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_28",
+      "label": "A4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 412,
+        "y": 1492,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_29",
+      "label": "B1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 412,
+        "y": 1636,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_30",
+      "label": "C1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 412,
+        "y": 1828,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_31",
+      "label": "C2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 412,
+        "y": 1880,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_32",
+      "label": "B2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 412,
+        "y": 1686,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_33",
+      "label": "<",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 412,
+        "y": 472,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_34",
+      "label": ">",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 412,
+        "y": 522,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_35",
+      "label": "V",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 412,
+        "y": 712,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_36",
+      "label": "^",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 412,
+        "y": 662,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_37",
+      "label": "Black",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 412,
+        "y": 856,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_38",
+      "label": "Red",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 412,
+        "y": 1002,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_XAxis",
+      "label": "X Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1328,
+        "y": 1942,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_ZAxis",
+      "label": "Not used for THQ-WW2",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1328,
+        "y": 1994,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_YAxis",
+      "label": "Y Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1328,
+        "y": 2046,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_RXAxis",
+      "label": "RX Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2304,
+        "y": 1944,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_RZAxis",
+      "label": "RZ Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2304,
+        "y": 1996,
+        "w": 548,
+        "h": 44
+      }
+    },
+    {
+      "bindsId": "231D2214",
+      "key": "Joy_RYAxis",
+      "label": "RY Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2304,
+        "y": 2048,
+        "w": 548,
+        "h": 44
+      }
+    }
+  ]
+}

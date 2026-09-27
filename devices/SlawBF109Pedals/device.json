@@ -1,0 +1,63 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "SlawBF109Pedals",
+  "name": "Slaw BF-109 Pedals",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "SlawFlightControlRudder",
+      "usb": {
+        "vid": "04D8",
+        "pid": "0011"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "slawbf109pedals.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "SlawFlightControlRudder",
+      "key": "Joy_XAxis",
+      "label": "Left pedal (unconfirmed)",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 164,
+        "y": 588,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "SlawFlightControlRudder",
+      "key": "Joy_YAxis",
+      "label": "Right pedal (unconfirmed)",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2264,
+        "y": 588,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "SlawFlightControlRudder",
+      "key": "Joy_RZAxis",
+      "label": "Rudder",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1208,
+        "y": 331,
+        "w": 1332,
+        "h": 162
+      }
+    }
+  ]
+}

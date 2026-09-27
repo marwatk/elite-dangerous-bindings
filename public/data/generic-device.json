@@ -1,0 +1,362 @@
+[
+  {
+    "key": "Joy_RXAxis",
+    "label": "Stick RXAxis",
+    "kind": "axis"
+  },
+  {
+    "key": "Joy_RYAxis",
+    "label": "Stick RYAxis",
+    "kind": "axis"
+  },
+  {
+    "key": "Joy_RZAxis",
+    "label": "Stick RZAxis",
+    "kind": "axis"
+  },
+  {
+    "key": "Joy_UAxis",
+    "label": "Stick UAxis",
+    "kind": "axis"
+  },
+  {
+    "key": "Joy_VAxis",
+    "label": "Stick VAxis",
+    "kind": "axis"
+  },
+  {
+    "key": "Joy_XAxis",
+    "label": "Stick XAxis",
+    "kind": "axis"
+  },
+  {
+    "key": "Joy_YAxis",
+    "label": "Stick YAxis",
+    "kind": "axis"
+  },
+  {
+    "key": "Joy_ZAxis",
+    "label": "Stick ZAxis",
+    "kind": "axis"
+  },
+  {
+    "key": "Pos_Joy_RXAxis",
+    "label": "Stick RXAxis+",
+    "kind": "axis"
+  },
+  {
+    "key": "Pos_Joy_RYAxis",
+    "label": "Stick RYAxis+",
+    "kind": "axis"
+  },
+  {
+    "key": "Pos_Joy_RZAxis",
+    "label": "Stick RZAxis+",
+    "kind": "axis"
+  },
+  {
+    "key": "Pos_Joy_UAxis",
+    "label": "Stick UAxis+",
+    "kind": "axis"
+  },
+  {
+    "key": "Pos_Joy_VAxis",
+    "label": "Stick VAxis+",
+    "kind": "axis"
+  },
+  {
+    "key": "Pos_Joy_XAxis",
+    "label": "Stick XAxis+",
+    "kind": "axis"
+  },
+  {
+    "key": "Pos_Joy_YAxis",
+    "label": "Stick YAxis+",
+    "kind": "axis"
+  },
+  {
+    "key": "Pos_Joy_ZAxis",
+    "label": "Stick ZAxis+",
+    "kind": "axis"
+  },
+  {
+    "key": "Neg_Joy_RXAxis",
+    "label": "Stick RXAxis-",
+    "kind": "axis"
+  },
+  {
+    "key": "Neg_Joy_RYAxis",
+    "label": "Stick RYAxis-",
+    "kind": "axis"
+  },
+  {
+    "key": "Neg_Joy_RZAxis",
+    "label": "Stick RZAxis-",
+    "kind": "axis"
+  },
+  {
+    "key": "Neg_Joy_UAxis",
+    "label": "Stick UAxis-",
+    "kind": "axis"
+  },
+  {
+    "key": "Neg_Joy_VAxis",
+    "label": "Stick VAxis-",
+    "kind": "axis"
+  },
+  {
+    "key": "Neg_Joy_XAxis",
+    "label": "Stick XAxis-",
+    "kind": "axis"
+  },
+  {
+    "key": "Neg_Joy_YAxis",
+    "label": "Stick YAxis-",
+    "kind": "axis"
+  },
+  {
+    "key": "Neg_Joy_ZAxis",
+    "label": "Stick ZAxis-",
+    "kind": "axis"
+  },
+  {
+    "key": "Joy_POV1Up",
+    "label": "Stick POV1Up",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_POV1Right",
+    "label": "Stick POV1Right",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_POV1Down",
+    "label": "Stick POV1Down",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_POV1Left",
+    "label": "Stick POV1Left",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_POV2Up",
+    "label": "Stick POV2Up",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_POV2Right",
+    "label": "Stick POV2Right",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_POV2Down",
+    "label": "Stick POV2Down",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_POV2Left",
+    "label": "Stick POV2Left",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_POV3Up",
+    "label": "Stick POV3Up",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_POV3Right",
+    "label": "Stick POV3Right",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_POV3Down",
+    "label": "Stick POV3Down",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_POV3Left",
+    "label": "Stick POV3Left",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_POV4Up",
+    "label": "Stick POV4Up",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_POV4Right",
+    "label": "Stick POV4Right",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_POV4Down",
+    "label": "Stick POV4Down",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_POV4Left",
+    "label": "Stick POV4Left",
+    "kind": "hat"
+  },
+  {
+    "key": "Joy_1",
+    "label": "Stick 1",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_2",
+    "label": "Stick 2",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_3",
+    "label": "Stick 3",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_4",
+    "label": "Stick 4",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_5",
+    "label": "Stick 5",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_6",
+    "label": "Stick 6",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_7",
+    "label": "Stick 7",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_8",
+    "label": "Stick 8",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_9",
+    "label": "Stick 9",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_10",
+    "label": "Stick 10",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_11",
+    "label": "Stick 11",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_12",
+    "label": "Stick 12",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_13",
+    "label": "Stick 13",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_14",
+    "label": "Stick 14",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_15",
+    "label": "Stick 15",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_16",
+    "label": "Stick 16",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_17",
+    "label": "Stick 17",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_18",
+    "label": "Stick 18",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_19",
+    "label": "Stick 19",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_20",
+    "label": "Stick 20",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_21",
+    "label": "Stick 21",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_22",
+    "label": "Stick 22",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_23",
+    "label": "Stick 23",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_24",
+    "label": "Stick 24",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_25",
+    "label": "Stick 25",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_26",
+    "label": "Stick 26",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_27",
+    "label": "Stick 27",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_28",
+    "label": "Stick 28",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_29",
+    "label": "Stick 29",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_30",
+    "label": "Stick 30",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_31",
+    "label": "Stick 31",
+    "kind": "button"
+  },
+  {
+    "key": "Joy_32",
+    "label": "Stick 32",
+    "kind": "button"
+  }
+]

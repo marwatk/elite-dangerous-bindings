@@ -1,0 +1,1166 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "CHCombatStick",
+  "name": "CH Combatstick + Pro Throttle",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "CHCombatStick",
+      "usb": {
+        "vid": "068E",
+        "pid": "C0F4"
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "usb": {
+        "vid": "068E",
+        "pid": "00F1"
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "usb": {
+        "vid": "068E",
+        "pid": "C0F1"
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "usb": {
+        "vid": "068E",
+        "pid": "C010"
+      }
+    }
+  ],
+  "keyBindsIds": [
+    "CHCombatStick"
+  ],
+  "images": [
+    {
+      "file": "chcombat.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_1",
+      "label": "Primary trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1974,
+        "y": 854,
+        "w": 592,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_2",
+      "label": "Thumb button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2984,
+        "y": 944,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_3",
+      "label": "Top button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2964,
+        "y": 654,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_4",
+      "label": "Pinky trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2084,
+        "y": 1159,
+        "w": 592,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_5",
+      "label": "Side trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1754,
+        "y": 234,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_6",
+      "label": "Top trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1664,
+        "y": 334,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_7",
+      "label": "PoV hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1689,
+        "y": 464,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_8",
+      "label": "PoV hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1689,
+        "y": 520,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_9",
+      "label": "PoV hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1689,
+        "y": 576,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_10",
+      "label": "PoV hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1689,
+        "y": 632,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_POV1Up",
+      "label": "Right hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2964,
+        "y": 212,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_POV1Right",
+      "label": "Right hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2964,
+        "y": 268,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_POV1Down",
+      "label": "Right hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2964,
+        "y": 324,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_POV1Left",
+      "label": "Right hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2964,
+        "y": 380,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_XAxis",
+      "label": "Stick X axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3124,
+        "y": 1168,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_YAxis",
+      "label": "Stick Y axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3124,
+        "y": 1112,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHCombatStick",
+      "key": "Joy_ZAxis",
+      "label": "Wheel on left of base",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2254,
+        "y": 1894,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_1",
+      "label": "CH Throttle - Castle right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1114,
+        "y": 966,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_2",
+      "label": "CH Throttle - Castle down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1114,
+        "y": 1022,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_3",
+      "label": "CH Throttle - Castle left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1114,
+        "y": 1078,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_4",
+      "label": "CH Throttle - Castle up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1114,
+        "y": 910,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_5",
+      "label": "CH Throttle - Saddle right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1189,
+        "y": 1696,
+        "w": 1032,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_6",
+      "label": "CH Throttle - Saddle down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1189,
+        "y": 1752,
+        "w": 1032,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_7",
+      "label": "CH Throttle - Saddle left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1189,
+        "y": 1808,
+        "w": 1032,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_8",
+      "label": "CH Throttle - Saddle up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1189,
+        "y": 1640,
+        "w": 1032,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_9",
+      "label": "CH Throttle - Cross down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1198,
+        "y": 1275,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_10",
+      "label": "CH Throttle - Cross right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1198,
+        "y": 1219,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_11",
+      "label": "CH Throttle - Cross up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1198,
+        "y": 1163,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_12",
+      "label": "CH Throttle - Cross left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1198,
+        "y": 1331,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_13",
+      "label": "Mouse button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1261,
+        "y": 1549,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_14",
+      "label": "CH Throttle - Right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1042,
+        "y": 814,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_15",
+      "label": "CH Throttle - Center button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 904,
+        "y": 724,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_16",
+      "label": "CH Throttle - Left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 684,
+        "y": 634,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_POV1Up",
+      "label": "CH Throttle - Cone up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 132,
+        "y": 1896,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_POV1Right",
+      "label": "CH Throttle - Cone right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 132,
+        "y": 1952,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_POV1Down",
+      "label": "CH Throttle - Cone down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 132,
+        "y": 2008,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_POV1Left",
+      "label": "CH Throttle - Cone left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 132,
+        "y": 1840,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_XAxis",
+      "label": "CH Throttle - Mini stick horizontal",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1261,
+        "y": 1493,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_YAxis",
+      "label": "CH Throttle - Mini stick vertical",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1261,
+        "y": 1437,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle1",
+      "key": "Joy_ZAxis",
+      "label": "CH Throttle [hts4ThrottleY]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 80,
+        "y": 714,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_1",
+      "label": "Mouse button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1261,
+        "y": 1549,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_2",
+      "label": "Right back",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1042,
+        "y": 814,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_3",
+      "label": "Middle back",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 904,
+        "y": 724,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_4",
+      "label": "Left back",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 684,
+        "y": 634,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_5",
+      "label": "Rear hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1198,
+        "y": 1275,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_6",
+      "label": "Rear hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1198,
+        "y": 1219,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_7",
+      "label": "Rear hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1198,
+        "y": 1163,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_8",
+      "label": "Rear hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1198,
+        "y": 1331,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_9",
+      "label": "Castle hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1114,
+        "y": 966,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_10",
+      "label": "Castle hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1114,
+        "y": 1022,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_11",
+      "label": "Castle hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1114,
+        "y": 1078,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_12",
+      "label": "Castle hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1114,
+        "y": 910,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_13",
+      "label": "Bottom hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1189,
+        "y": 1696,
+        "w": 1032,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_14",
+      "label": "Bottom hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1189,
+        "y": 1752,
+        "w": 1032,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_15",
+      "label": "Bottom hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1189,
+        "y": 1808,
+        "w": 1032,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_16",
+      "label": "Bottom hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1189,
+        "y": 1640,
+        "w": 1032,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_POV1Up",
+      "label": "PoV hat up (looks like witch hat)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 132,
+        "y": 1896,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_POV1Right",
+      "label": "PoV hat right (looks like witch hat)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 132,
+        "y": 1952,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_POV1Down",
+      "label": "PoV hat down (looks like witch hat)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 132,
+        "y": 2008,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_POV1Left",
+      "label": "PoV hat left (looks like witch hat)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 132,
+        "y": 1840,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_XAxis",
+      "label": "Mouse X axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1261,
+        "y": 1493,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_YAxis",
+      "label": "Mouse Y axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1261,
+        "y": 1437,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "CHProThrottle2",
+      "key": "Joy_ZAxis",
+      "label": "Throttle",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 80,
+        "y": 714,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_1",
+      "label": "Mouse button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1261,
+        "y": 1549,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_2",
+      "label": "Right back",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1042,
+        "y": 814,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_3",
+      "label": "Middle back",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 904,
+        "y": 724,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_4",
+      "label": "Left back",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 684,
+        "y": 634,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_5",
+      "label": "Rear hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1198,
+        "y": 1275,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_6",
+      "label": "Rear hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1198,
+        "y": 1219,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_7",
+      "label": "Rear hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1198,
+        "y": 1163,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_8",
+      "label": "Rear hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1198,
+        "y": 1331,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_9",
+      "label": "Castle hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1114,
+        "y": 966,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_10",
+      "label": "Castle hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1114,
+        "y": 1022,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_11",
+      "label": "Castle hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1114,
+        "y": 1078,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_12",
+      "label": "Castle hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1114,
+        "y": 910,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_13",
+      "label": "Bottom hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1189,
+        "y": 1696,
+        "w": 1032,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_14",
+      "label": "Bottom hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1189,
+        "y": 1752,
+        "w": 1032,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_15",
+      "label": "Bottom hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1189,
+        "y": 1808,
+        "w": 1032,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_16",
+      "label": "Bottom hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1189,
+        "y": 1640,
+        "w": 1032,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_POV1Up",
+      "label": "PoV hat up (looks like witch hat)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 132,
+        "y": 1896,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_POV1Right",
+      "label": "PoV hat right (looks like witch hat)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 132,
+        "y": 1952,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_POV1Down",
+      "label": "PoV hat down (looks like witch hat)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 132,
+        "y": 2008,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_POV1Left",
+      "label": "PoV hat left (looks like witch hat)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 132,
+        "y": 1840,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_XAxis",
+      "label": "Mouse X axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1261,
+        "y": 1493,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_YAxis",
+      "label": "Mouse Y axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1261,
+        "y": 1437,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "068EC010",
+      "key": "Joy_ZAxis",
+      "label": "Throttle",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 80,
+        "y": 714,
+        "w": 692,
+        "h": 54
+      }
+    }
+  ]
+}

@@ -1,0 +1,1136 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "VPC-MongoosT-50CM3-Throttle-32B",
+  "name": "Virpil MongoosT-50CM3 Throttle (32-button mode)",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0"
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1"
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2"
+    }
+  ],
+  "keyBindsIds": [
+    "VPC-MongoosT-50CM3-Throttle-32B0",
+    "VPC-MongoosT-50CM3-Throttle-32B1",
+    "VPC-MongoosT-50CM3-Throttle-32B2"
+  ],
+  "images": [
+    {
+      "file": "vpc-mongoost-50cm3-throttle-32b.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_1",
+      "label": "Throttle Right Back Button Lower",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 842,
+        "y": 894,
+        "w": 380,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_2",
+      "label": "T1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2200,
+        "y": 1731,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_3",
+      "label": "T2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2200,
+        "y": 1914,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_4",
+      "label": "T3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 720,
+        "y": 1046,
+        "w": 370,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_5",
+      "label": "T4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 720,
+        "y": 1238,
+        "w": 370,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_6",
+      "label": "B1 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 340,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_7",
+      "label": "B2 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 340,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_8",
+      "label": "B3 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 340,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_9",
+      "label": "B4 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_10",
+      "label": "B5 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_11",
+      "label": "B6 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_12",
+      "label": "T5 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1464,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_13",
+      "label": "T5 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1518,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_14",
+      "label": "T6 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1660,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_15",
+      "label": "T6 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1716,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_16",
+      "label": "T7 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1856,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_17",
+      "label": "T7 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1910,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_18",
+      "label": "E1 Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1196,
+        "y": 2074,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_19",
+      "label": "E1 Anti-Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1196,
+        "y": 1964,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_20",
+      "label": "E1 Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1196,
+        "y": 2020,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_21",
+      "label": "E2 Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1662,
+        "y": 2076,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_22",
+      "label": "E2 Anti-Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1662,
+        "y": 1966,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_23",
+      "label": "E2 Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1662,
+        "y": 2022,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_24",
+      "label": "B1 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 710,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_25",
+      "label": "B2 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 710,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_26",
+      "label": "B3 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 710,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_27",
+      "label": "B4 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 860,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_28",
+      "label": "B5 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 860,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_29",
+      "label": "B6 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 860,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_30",
+      "label": "B1 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1090,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_31",
+      "label": "B2 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1090,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B0",
+      "key": "Joy_32",
+      "label": "B3 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1090,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_1",
+      "label": "Throttle Left Encoder Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2066,
+        "y": 602,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_2",
+      "label": "Throttle Left Encoder Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2066,
+        "y": 546,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_3",
+      "label": "Throttle Left Encoder Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2066,
+        "y": 492,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_4",
+      "label": "Throttle Left Pinkie Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1440,
+        "y": 622,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_5",
+      "label": "Throttle Left 2W Hat Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1988,
+        "y": 348,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_6",
+      "label": "Throttle Left 2W Hat Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1988,
+        "y": 292,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_7",
+      "label": "Throttle Left 2W Hat Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1988,
+        "y": 238,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_8",
+      "label": "Throttle Middle 4W HAT Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 710,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_9",
+      "label": "Throttle Middle 4W HAT Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 602,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_10",
+      "label": "Throttle Middle 4W HAT Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 546,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_11",
+      "label": "Throttle Middle 4W HAT Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 491,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_12",
+      "label": "Throttle Middle 4W HAT Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 656,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_13",
+      "label": "Throttle Analog Stick Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 170,
+        "y": 480,
+        "w": 474,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_14",
+      "label": "Throttle Right Encoder forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 1016,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_15",
+      "label": "Throttle Right Encoder backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 1070,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_16",
+      "label": "Throttle Right 4W HAT 1 Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 960,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_17",
+      "label": "Throttle Right 4W HAT 1 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 795,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_18",
+      "label": "Throttle Right 4W HAT 1 Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 850,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_19",
+      "label": "Throttle Right 4W HAT 1 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 906,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_20",
+      "label": "Throttle Right 4W HAT 1 Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 740,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_21",
+      "label": "Throttle Right Forward Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2170,
+        "y": 1508,
+        "w": 425,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_22",
+      "label": "Throttle Right 4W HAT 2 Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 974,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_23",
+      "label": "Throttle Right 4W HAT 2 Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 864,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_24",
+      "label": "Throttle Right 4W HAT 2 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 918,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_25",
+      "label": "Throttle Right 4W HAT 2 Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 754,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_26",
+      "label": "Throttle Right 4W HAT 2 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 808,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_27",
+      "label": "Throttle Right 4W HAT 3 Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1432,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_28",
+      "label": "Throttle Right 4W HAT 3 Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1322,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_29",
+      "label": "Throttle Right 4W HAT 3 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1378,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_30",
+      "label": "Throttle Right 4W HAT 3 Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1212,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_31",
+      "label": "Throttle Right 4W HAT 3 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1268,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_32",
+      "label": "Throttle Right Back Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 842,
+        "y": 814,
+        "w": 380,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_XAxis",
+      "label": "Throttle Analog Stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 170,
+        "y": 370,
+        "w": 474,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_YAxis",
+      "label": "Throttle Analog Stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 170,
+        "y": 425,
+        "w": 474,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_ZAxis",
+      "label": "Throttle Handle Slider",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1435,
+        "y": 194,
+        "w": 394,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_RXAxis",
+      "label": "Throttle Left",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1850,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_RYAxis",
+      "label": "Throttle Right",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1900,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B1",
+      "key": "Joy_RZAxis",
+      "label": "Flaps",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2200,
+        "y": 1594,
+        "w": 350,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2",
+      "key": "Joy_1",
+      "label": "B4 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1220,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2",
+      "key": "Joy_2",
+      "label": "B5 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1220,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2",
+      "key": "Joy_3",
+      "label": "B6 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1220,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2",
+      "key": "Joy_4",
+      "label": "B1 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2",
+      "key": "Joy_5",
+      "label": "B2 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2",
+      "key": "Joy_6",
+      "label": "B3 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2",
+      "key": "Joy_7",
+      "label": "B4 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1600,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2",
+      "key": "Joy_8",
+      "label": "B5 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1600,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2",
+      "key": "Joy_9",
+      "label": "B6 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1600,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2",
+      "key": "Joy_10",
+      "label": "B1 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1840,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2",
+      "key": "Joy_11",
+      "label": "B2 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1840,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2",
+      "key": "Joy_12",
+      "label": "B3 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1840,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2",
+      "key": "Joy_13",
+      "label": "B4 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1980,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2",
+      "key": "Joy_14",
+      "label": "B5 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1980,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPC-MongoosT-50CM3-Throttle-32B2",
+      "key": "Joy_15",
+      "label": "B6 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1980,
+        "w": 180,
+        "h": 54
+      }
+    }
+  ]
+}

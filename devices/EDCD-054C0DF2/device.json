@@ -1,0 +1,168 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-054C0DF2",
+  "name": "Sony DualSense Edge",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "054C0DF2",
+      "usb": {
+        "vid": "054C",
+        "pid": "0DF2"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_1",
+      "label": "[ps4Square]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_2",
+      "label": "[ps4Cross]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_3",
+      "label": "[ps4Circle]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_4",
+      "label": "[ps4Triangle]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_5",
+      "label": "[ps4L1]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_6",
+      "label": "[ps4R1]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_7",
+      "label": "[ps4L2]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_8",
+      "label": "[ps4R2]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_9",
+      "label": "[ps4Share]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_10",
+      "label": "[ps4Options]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_11",
+      "label": "[ps4L3]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_12",
+      "label": "[ps4R3]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_13",
+      "label": "PS Button",
+      "kind": "button"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_14",
+      "label": "[ps4Touchpad]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_15",
+      "label": "Mute Button",
+      "kind": "button"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_POV1Up",
+      "label": "[ps4PadU]",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_POV1Right",
+      "label": "[ps4PadR]",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_POV1Down",
+      "label": "[ps4PadD]",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_POV1Left",
+      "label": "[ps4PadL]",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_XAxis",
+      "label": "[ps4LXAxis]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_YAxis",
+      "label": "[ps4LYAxis]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_ZAxis",
+      "label": "[ps4RXAxis]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_RXAxis",
+      "label": "[ps4L2]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_RYAxis",
+      "label": "[ps4R2]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "054C0DF2",
+      "key": "Joy_RZAxis",
+      "label": "[ps4RYAxis]",
+      "kind": "axis"
+    }
+  ]
+}

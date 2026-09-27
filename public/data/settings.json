@@ -1,0 +1,370 @@
+[
+ {
+  "code": "MouseXMode",
+  "name": "Mouse X Mode"
+ },
+ {
+  "code": "MouseXDecay",
+  "name": "Mouse X Decay"
+ },
+ {
+  "code": "MouseYMode",
+  "name": "Mouse Y Mode"
+ },
+ {
+  "code": "MouseYDecay",
+  "name": "Mouse Y Decay"
+ },
+ {
+  "code": "MouseSensitivity",
+  "name": "Mouse Sensitivity"
+ },
+ {
+  "code": "MouseDecayRate",
+  "name": "Mouse Decay Rate"
+ },
+ {
+  "code": "MouseDeadzone",
+  "name": "Mouse Deadzone"
+ },
+ {
+  "code": "MouseLinearity",
+  "name": "Mouse Linearity"
+ },
+ {
+  "code": "MouseGUI",
+  "name": "Mouse GUI"
+ },
+ {
+  "code": "YawToRollMode",
+  "name": "Yaw To Roll Mode"
+ },
+ {
+  "code": "YawToRollSensitivity",
+  "name": "Yaw To Roll Sensitivity"
+ },
+ {
+  "code": "YawToRollMode_FAOff",
+  "name": "Yaw To Roll Mode FA Off"
+ },
+ {
+  "code": "ThrottleRange",
+  "name": "Throttle Range"
+ },
+ {
+  "code": "ThrottleIncrement",
+  "name": "Throttle Increment"
+ },
+ {
+  "code": "YawToRollMode_Landing",
+  "name": "Yaw To Roll Mode Landing"
+ },
+ {
+  "code": "DeployHardpointsOnFire",
+  "name": "Deploy Hardpoints On Fire"
+ },
+ {
+  "code": "MuteButtonMode",
+  "name": "Mute Button Mode"
+ },
+ {
+  "code": "CqcMuteButtonMode",
+  "name": "Cqc Mute Button Mode"
+ },
+ {
+  "code": "EnableRumbleTrigger",
+  "name": "Enable Rumble Trigger"
+ },
+ {
+  "code": "EnableMenuGroups",
+  "name": "Enable Menu Groups"
+ },
+ {
+  "code": "MouseGUI",
+  "name": "Mouse GUI"
+ },
+ {
+  "code": "UIFocusMode",
+  "name": "UI Focus Mode"
+ },
+ {
+  "code": "FocusOnTextEntryField",
+  "name": "Focus On Text Entry Field"
+ },
+ {
+  "code": "LeftPanelFocusOptions",
+  "name": "Left Panel Focus Options"
+ },
+ {
+  "code": "CommsPanelFocusOptions",
+  "name": "Comms Panel Focus Options"
+ },
+ {
+  "code": "RolePanelFocusOptions",
+  "name": "Role Panel Focus Options"
+ },
+ {
+  "code": "RightPanelFocusOptions",
+  "name": "Right Panel Focus Options"
+ },
+ {
+  "code": "EnableCameraLockOn",
+  "name": "Enable Camera Lock On"
+ },
+ {
+  "code": "MouseHeadlook",
+  "name": "Mouse Headlook"
+ },
+ {
+  "code": "MouseHeadlookInvert",
+  "name": "Mouse Headlook Invert"
+ },
+ {
+  "code": "MouseHeadlookSensitivity",
+  "name": "Mouse Headlook Sensitivity"
+ },
+ {
+  "code": "HeadlookDefault",
+  "name": "Headlook Default"
+ },
+ {
+  "code": "HeadlookIncrement",
+  "name": "Headlook Increment"
+ },
+ {
+  "code": "HeadlookMode",
+  "name": "Headlook Mode"
+ },
+ {
+  "code": "HeadlookResetOnToggle",
+  "name": "Headlook Reset On Toggle"
+ },
+ {
+  "code": "HeadlookSensitivity",
+  "name": "Headlook Sensitivity"
+ },
+ {
+  "code": "HeadlookSmoothing",
+  "name": "Headlook Smoothing"
+ },
+ {
+  "code": "MotionHeadlook",
+  "name": "Motion Headlook"
+ },
+ {
+  "code": "HeadlookMotionSensitivity",
+  "name": "Headlook Motion Sensitivity"
+ },
+ {
+  "code": "yawRotateHeadlook",
+  "name": "yaw Rotate Headlook"
+ },
+ {
+  "code": "DriveAssistDefault",
+  "name": "Drive Assist Default"
+ },
+ {
+  "code": "MouseBuggySteeringXMode",
+  "name": "Mouse Buggy Steering X Mode"
+ },
+ {
+  "code": "MouseBuggySteeringXDecay",
+  "name": "Mouse Buggy Steering X Decay"
+ },
+ {
+  "code": "MouseBuggyRollingXMode",
+  "name": "Mouse Buggy Rolling X Mode"
+ },
+ {
+  "code": "MouseBuggyRollingXDecay",
+  "name": "Mouse Buggy Rolling X Decay"
+ },
+ {
+  "code": "MouseBuggyYMode",
+  "name": "Mouse Buggy Y Mode"
+ },
+ {
+  "code": "MouseBuggyYDecay",
+  "name": "Mouse Buggy Y Decay"
+ },
+ {
+  "code": "MouseTurretXMode",
+  "name": "Mouse Turret X Mode"
+ },
+ {
+  "code": "MouseTurretXDecay",
+  "name": "Mouse Turret X Decay"
+ },
+ {
+  "code": "MouseTurretYMode",
+  "name": "Mouse Turret Y Mode"
+ },
+ {
+  "code": "MouseTurretYDecay",
+  "name": "Mouse Turret Y Decay"
+ },
+ {
+  "code": "BuggyTurretMouseSensitivity",
+  "name": "Buggy Turret Mouse Sensitivity"
+ },
+ {
+  "code": "BuggyTurretMouseDeadzone",
+  "name": "Buggy Turret Mouse Deadzone"
+ },
+ {
+  "code": "BuggyTurretMouseLinearity",
+  "name": "Buggy Turret Mouse Linearity"
+ },
+ {
+  "code": "BuggyThrottleRange",
+  "name": "Buggy Throttle Range"
+ },
+ {
+  "code": "BuggyThrottleIncrement",
+  "name": "Buggy Throttle Increment"
+ },
+ {
+  "code": "EnableMenuGroupsSRV",
+  "name": "Enable Menu Groups SRV"
+ },
+ {
+  "code": "MultiCrewThirdPersonMouseXMode",
+  "name": "Multi Crew Third Person Mouse X Mode"
+ },
+ {
+  "code": "MultiCrewThirdPersonMouseXDecay",
+  "name": "Multi Crew Third Person Mouse X Decay"
+ },
+ {
+  "code": "MultiCrewThirdPersonMouseYMode",
+  "name": "Multi Crew Third Person Mouse Y Mode"
+ },
+ {
+  "code": "MultiCrewThirdPersonMouseYDecay",
+  "name": "Multi Crew Third Person Mouse Y Decay"
+ },
+ {
+  "code": "MultiCrewThirdPersonMouseSensitivity",
+  "name": "Multi Crew Third Person Mouse Sensitivity"
+ },
+ {
+  "code": "ThrottleRangeFreeCam",
+  "name": "Throttle Range Free Cam"
+ },
+ {
+  "code": "PitchCameraMouse",
+  "name": "Pitch Camera Mouse"
+ },
+ {
+  "code": "YawCameraMouse",
+  "name": "Yaw Camera Mouse"
+ },
+ {
+  "code": "FreeCamMouseSensitivity",
+  "name": "Free Cam Mouse Sensitivity"
+ },
+ {
+  "code": "FreeCamMouseYDecay",
+  "name": "Free Cam Mouse Y Decay"
+ },
+ {
+  "code": "FreeCamMouseXDecay",
+  "name": "Free Cam Mouse X Decay"
+ },
+ {
+  "code": "FSSTuningSensitivity",
+  "name": "FSS Tuning Sensitivity"
+ },
+ {
+  "code": "FSSMouseXMode",
+  "name": "FSS Mouse X Mode"
+ },
+ {
+  "code": "FSSMouseXDecay",
+  "name": "FSS Mouse X Decay"
+ },
+ {
+  "code": "FSSMouseYMode",
+  "name": "FSS Mouse Y Mode"
+ },
+ {
+  "code": "FSSMouseYDecay",
+  "name": "FSS Mouse Y Decay"
+ },
+ {
+  "code": "FSSMouseSensitivity",
+  "name": "FSS Mouse Sensitivity"
+ },
+ {
+  "code": "FSSMouseDeadzone",
+  "name": "FSS Mouse Deadzone"
+ },
+ {
+  "code": "FSSMouseLinearity",
+  "name": "FSS Mouse Linearity"
+ },
+ {
+  "code": "SAAThirdPersonMouseXMode",
+  "name": "SAA Third Person Mouse X Mode"
+ },
+ {
+  "code": "SAAThirdPersonMouseXDecay",
+  "name": "SAA Third Person Mouse X Decay"
+ },
+ {
+  "code": "SAAThirdPersonMouseYMode",
+  "name": "SAA Third Person Mouse Y Mode"
+ },
+ {
+  "code": "SAAThirdPersonMouseYDecay",
+  "name": "SAA Third Person Mouse Y Decay"
+ },
+ {
+  "code": "SAAThirdPersonMouseSensitivity",
+  "name": "SAA Third Person Mouse Sensitivity"
+ },
+ {
+  "code": "MouseHumanoidXMode",
+  "name": "Mouse Humanoid X Mode"
+ },
+ {
+  "code": "MouseHumanoidYMode",
+  "name": "Mouse Humanoid Y Mode"
+ },
+ {
+  "code": "MouseHumanoidSensitivity",
+  "name": "Mouse Humanoid Sensitivity"
+ },
+ {
+  "code": "HumanoidRotateSensitivity",
+  "name": "Humanoid Rotate Sensitivity"
+ },
+ {
+  "code": "HumanoidPitchSensitivity",
+  "name": "Humanoid Pitch Sensitivity"
+ },
+ {
+  "code": "HumanoidItemWheel_AcceptMouseInput",
+  "name": "Humanoid Item Wheel Accept Mouse Input"
+ },
+ {
+  "code": "EnableMenuGroupsOnFoot",
+  "name": "Enable Menu Groups On Foot"
+ },
+ {
+  "code": "EnableAimAssistOnFoot",
+  "name": "Enable Aim Assist On Foot"
+ },
+ {
+  "code": "PlacementCamMouseSensitivity",
+  "name": "Placement Cam Mouse Sensitivity"
+ },
+ {
+  "code": "PlacementCamMouseXDecay",
+  "name": "Placement Cam Mouse X Decay"
+ },
+ {
+  "code": "PlacementCamMouseYDecay",
+  "name": "Placement Cam Mouse Y Decay"
+ }
+]

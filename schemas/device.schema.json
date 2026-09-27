@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/elite-dangerous-bindings/devices/device.schema.json",
+  "title": "Elite Dangerous Bindings device definition",
+  "description": "One controller (or set of controllers sharing one card): the IDs Elite writes for it, its artwork, and where each control sits on that artwork.",
+  "type": "object",
+  "required": ["id", "name", "source", "ids", "images", "controls"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": {
+      "description": "Folder name under devices/. Letters, digits and dashes.",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9-]*$"
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "source": {
+      "description": "Where the definition came from: imported from EDRefCard 2, EDCD button maps, or made with the layout editor.",
+      "enum": ["edrefcard2", "edcd", "user"]
+    },
+    "ids": {
+      "description": "Device IDs this definition handles, as they appear in the Device attribute of .binds files.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["bindsId"],
+        "additionalProperties": false,
+        "properties": {
+          "bindsId": { "type": "string", "minLength": 1 },
+          "deviceIndex": { "type": "integer", "minimum": 0 },
+          "usb": { "$ref": "#/$defs/usb" }
+        }
+      }
+    },
+    "keyBindsIds": {
+      "description": "If present, the card is only chosen when one of these IDs is used (EDRefCard KeyDevices).",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["file", "width", "height"],
+        "additionalProperties": false,
+        "properties": {
+          "file": { "type": "string", "pattern": "^[^/\\\\]+\\.(webp|png|jpg|jpeg|svg)$" },
+          "width": { "type": "integer", "minimum": 1 },
+          "height": { "type": "integer", "minimum": 1 }
+        }
+      }
+    },
+    "controls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["bindsId", "key", "label", "kind"],
+        "additionalProperties": false,
+        "properties": {
+          "bindsId": { "type": "string" },
+          "deviceIndex": { "type": "integer", "minimum": 0 },
+          "key": {
+            "description": "Elite control name: Joy_N, Joy_XAxis, Joy_POV1Up, Pos_Joy_XAxis, GamePad_FaceDown...",
+            "type": "string",
+            "minLength": 1
+          },
+          "label": { "type": "string" },
+          "kind": { "enum": ["button", "axis", "hat"] },
+          "image": { "type": "integer", "minimum": 0, "description": "Index into images." },
+          "box": {
+            "description": "Label box on the image, in image pixels, top-left origin.",
+            "type": "object",
+            "required": ["x", "y", "w", "h"],
+            "additionalProperties": false,
+            "properties": {
+              "x": { "type": "number" },
+              "y": { "type": "number" },
+              "w": { "type": "number", "exclusiveMinimum": 0 },
+              "h": { "type": "number", "exclusiveMinimum": 0 }
+            }
+          }
+        }
+      }
+    },
+    "inputCorrections": {
+      "description": "Browser live-input numbering fixes for this device, by bindsId.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "buttonOffset": { "type": "integer" },
+          "axisMap": {
+            "description": "Browser axis index -> Elite axis key.",
+            "type": "object",
+            "additionalProperties": { "type": "string" }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "usb": {
+      "type": "object",
+      "required": ["vid", "pid"],
+      "additionalProperties": false,
+      "properties": {
+        "vid": { "type": "string", "pattern": "^[0-9A-F]{4}$" },
+        "pid": { "type": "string", "pattern": "^[0-9A-F]{4}$" }
+      }
+    }
+  }
+}

@@ -1,0 +1,242 @@
+:host {
+  display: block;
+}
+.empty {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  border: 1px dashed var(--edb-border);
+  border-radius: 12px;
+}
+.place {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+.checklist {
+  position: sticky;
+  top: 8px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 120px);
+  border: 1px solid var(--edb-border);
+  border-radius: 12px;
+  background: var(--mat-sys-surface-container-low);
+  overflow: hidden;
+}
+.list-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--edb-border);
+}
+.items {
+  overflow-y: auto;
+}
+.parts {
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--edb-border);
+}
+.part-select {
+  width: 100%;
+  padding: 4px 6px;
+  border: 1px solid var(--edb-border);
+  border-radius: 6px;
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: inherit;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  &:hover {
+    background: var(--mat-sys-surface-container-high);
+  }
+  &.active {
+    border-left-color: var(--edb-accent);
+    background: var(--edb-accent-soft);
+  }
+  &.sel:not(.active) {
+    background: var(--mat-sys-surface-container-highest);
+  }
+  .state {
+    flex: none;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    color: var(--edb-muted);
+  }
+  &.placed .state {
+    color: var(--edb-ok);
+  }
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+.lbl {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lbl-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 2px 6px;
+  border: 1px solid var(--edb-accent);
+  border-radius: 4px;
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: inherit;
+}
+.key {
+  font-family: var(--edb-mono);
+  font-size: 0.75rem;
+  color: var(--edb-muted);
+}
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px;
+  .on {
+    color: var(--edb-accent);
+    background: var(--edb-accent-soft);
+  }
+  .zoom {
+    min-width: 44px;
+    text-align: center;
+  }
+  .sep {
+    width: 1px;
+    height: 24px;
+    margin: 0 6px;
+    background: var(--edb-border);
+  }
+}
+.status {
+  min-height: 24px;
+  margin: 4px 0 8px;
+  .now {
+    font-weight: 600;
+    color: var(--edb-accent);
+    margin-right: 6px;
+  }
+}
+.viewport {
+  min-height: 240px;
+  max-height: max(360px, min(calc(100vh - 300px), 900px));
+  overflow: auto;
+  border: 1px solid var(--edb-border);
+  border-radius: 8px;
+  background: var(--mat-sys-surface-container-lowest);
+  &.panning svg {
+    cursor: grab;
+  }
+}
+svg {
+  display: block;
+  margin: 0 auto;
+  background: #fff;
+  cursor: crosshair;
+  touch-action: none;
+  user-select: none;
+  outline: none;
+}
+.box {
+  cursor: move;
+  rect {
+    fill: rgba(255, 140, 13, 0.12);
+    stroke: rgba(255, 140, 13, 0.9);
+  }
+  text {
+    fill: #111;
+    dominant-baseline: central;
+    font-family: 'Exo 2', Roboto, sans-serif;
+    pointer-events: none;
+  }
+  &.active rect {
+    fill: rgba(255, 140, 13, 0.3);
+    stroke: #b35400;
+  }
+  &.sel rect {
+    stroke: #0077cc;
+    stroke-dasharray: 6 3;
+  }
+}
+.drawing {
+  fill: rgba(0, 119, 204, 0.15);
+  stroke: #0077cc;
+}
+.guide {
+  stroke: #e0007a;
+  pointer-events: none;
+}
+.gridline {
+  stroke: rgba(0, 0, 0, 0.15);
+}
+.handle {
+  fill: #fff;
+  stroke: #0077cc;
+  &.h-n,
+  &.h-s {
+    cursor: ns-resize;
+  }
+  &.h-e,
+  &.h-w {
+    cursor: ew-resize;
+  }
+  &.h-nw,
+  &.h-se {
+    cursor: nwse-resize;
+  }
+  &.h-ne,
+  &.h-sw {
+    cursor: nesw-resize;
+  }
+}
+.hint {
+  font-size: 0.8rem;
+  color: var(--edb-muted);
+}
+.inspector {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--edb-border);
+  border-radius: 8px;
+  label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--edb-mono);
+  }
+  .num {
+    width: 70px;
+    padding: 4px;
+    border: 1px solid var(--edb-border);
+    border-radius: 4px;
+    background: var(--mat-sys-surface);
+    color: var(--mat-sys-on-surface);
+  }
+}
+@media (max-width: 900px) {
+  .place {
+    grid-template-columns: 1fr;
+  }
+  .checklist {
+    position: static;
+    max-height: 220px;
+  }
+}

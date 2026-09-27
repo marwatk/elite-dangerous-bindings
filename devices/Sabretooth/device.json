@@ -1,0 +1,544 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "Sabretooth",
+  "name": "Razer Sabertooth",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "1689FE00",
+      "usb": {
+        "vid": "1689",
+        "pid": "FE00"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "sabretooth.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_LBumper",
+      "label": "Pad L Bumper",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 624,
+        "w": 1392,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_LTrigger",
+      "label": "Pad L Trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 518,
+        "w": 1392,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_RBumper",
+      "label": "Pad R Bumper",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2368,
+        "y": 624,
+        "w": 1442,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_RTrigger",
+      "label": "Pad R Trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2368,
+        "y": 520,
+        "w": 1442,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_Y",
+      "label": "Pad Y",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 894,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_B",
+      "label": "Pad B",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 988,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_A",
+      "label": "Pad A",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 1083,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_X",
+      "label": "Pad X",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 1178,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_Back",
+      "label": "Pad Back",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 786,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_Start",
+      "label": "Pad Start",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 786,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_DPadUp",
+      "label": "Pad D Pad Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1308,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_DPadRight",
+      "label": "Pad D Pad Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1418,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_DPadDown",
+      "label": "Pad D Pad Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1528,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_DPadLeft",
+      "label": "Pad D Pad Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1638,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_RStickY",
+      "label": "Pad R Stick Y",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2765,
+        "y": 1322,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_RStickX",
+      "label": "Pad R Stick X",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2765,
+        "y": 1432,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_RThumb",
+      "label": "Pad R Thumb",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2765,
+        "y": 1542,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_LStickY",
+      "label": "Pad L Stick Y",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 930,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_LStickX",
+      "label": "Pad L Stick X",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1040,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "Pad_LThumb",
+      "label": "Pad L Thumb",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1150,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_LBumper",
+      "label": "Game Pad L Bumper",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 624,
+        "w": 1392,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_LTrigger",
+      "label": "Game Pad L Trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 518,
+        "w": 1392,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_RBumper",
+      "label": "Game Pad R Bumper",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2368,
+        "y": 624,
+        "w": 1442,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_RTrigger",
+      "label": "Game Pad R Trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2368,
+        "y": 520,
+        "w": 1442,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_FaceUp",
+      "label": "Game Pad Face Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 894,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_FaceRight",
+      "label": "Game Pad Face Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 988,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_FaceDown",
+      "label": "Game Pad Face Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 1083,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_FaceLeft",
+      "label": "Game Pad Face Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 1178,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_Back",
+      "label": "Game Pad Back",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 786,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_Start",
+      "label": "Game Pad Start",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 786,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_DPadUp",
+      "label": "Game Pad D Pad Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1308,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_DPadRight",
+      "label": "Game Pad D Pad Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1418,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_DPadDown",
+      "label": "Game Pad D Pad Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1528,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_DPadLeft",
+      "label": "Game Pad D Pad Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1638,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_RStickY",
+      "label": "Game Pad R Stick Y",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2765,
+        "y": 1322,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_RStickX",
+      "label": "Game Pad R Stick X",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2765,
+        "y": 1432,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_RThumb",
+      "label": "Game Pad R Thumb",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2765,
+        "y": 1542,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_LStickY",
+      "label": "Game Pad L Stick Y",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 930,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_LStickX",
+      "label": "Game Pad L Stick X",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1040,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "1689FE00",
+      "key": "GamePad_LThumb",
+      "label": "Game Pad L Thumb",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1150,
+        "w": 1032,
+        "h": 108
+      }
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "SaitekProFlightPedals",
+  "name": "Saitek Pro Flight Pedals",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "SaitekProFlightRudderPedals",
+      "usb": {
+        "vid": "06A3",
+        "pid": "0763"
+      }
+    },
+    {
+      "bindsId": "06A30765",
+      "usb": {
+        "vid": "06A3",
+        "pid": "0765"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "proflightpedals.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "SaitekProFlightRudderPedals",
+      "key": "Joy_XAxis",
+      "label": "Left pedal",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 164,
+        "y": 588,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "SaitekProFlightRudderPedals",
+      "key": "Joy_YAxis",
+      "label": "Right pedal",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2264,
+        "y": 588,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "SaitekProFlightRudderPedals",
+      "key": "Joy_RZAxis",
+      "label": "Rudder",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1208,
+        "y": 331,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "06A30765",
+      "key": "Joy_XAxis",
+      "label": "Left pedal",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 164,
+        "y": 588,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "06A30765",
+      "key": "Joy_YAxis",
+      "label": "Right pedal",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2264,
+        "y": 588,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "06A30765",
+      "key": "Joy_RZAxis",
+      "label": "Rudder",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1208,
+        "y": 331,
+        "w": 1332,
+        "h": 162
+      }
+    }
+  ]
+}

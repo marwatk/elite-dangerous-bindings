@@ -1,0 +1,628 @@
+{
+  "GamePad": [
+    {
+      "vid": "045E",
+      "pid": "028E"
+    },
+    {
+      "vid": "045E",
+      "pid": "028F"
+    },
+    {
+      "vid": "045E",
+      "pid": "02FF"
+    },
+    {
+      "vid": "24C6",
+      "pid": "5D04"
+    },
+    {
+      "vid": "045E",
+      "pid": "02A1"
+    },
+    {
+      "vid": "0738",
+      "pid": "4716"
+    },
+    {
+      "vid": "0E6F",
+      "pid": "0213"
+    },
+    {
+      "vid": "045E",
+      "pid": "0291"
+    },
+    {
+      "vid": "045E",
+      "pid": "0719"
+    },
+    {
+      "vid": "044F",
+      "pid": "0F07"
+    },
+    {
+      "vid": "044F",
+      "pid": "B326"
+    },
+    {
+      "vid": "046D",
+      "pid": "C21D"
+    },
+    {
+      "vid": "046D",
+      "pid": "C21E"
+    },
+    {
+      "vid": "046D",
+      "pid": "C21F"
+    },
+    {
+      "vid": "046D",
+      "pid": "C242"
+    },
+    {
+      "vid": "046D",
+      "pid": "CA84"
+    },
+    {
+      "vid": "0738",
+      "pid": "4540"
+    },
+    {
+      "vid": "0738",
+      "pid": "4556"
+    },
+    {
+      "vid": "0738",
+      "pid": "4718"
+    },
+    {
+      "vid": "0738",
+      "pid": "4726"
+    },
+    {
+      "vid": "0738",
+      "pid": "4728"
+    },
+    {
+      "vid": "0738",
+      "pid": "4738"
+    },
+    {
+      "vid": "0738",
+      "pid": "4740"
+    },
+    {
+      "vid": "0738",
+      "pid": "6040"
+    },
+    {
+      "vid": "0738",
+      "pid": "B726"
+    },
+    {
+      "vid": "0738",
+      "pid": "BEEF"
+    },
+    {
+      "vid": "0738",
+      "pid": "CB02"
+    },
+    {
+      "vid": "0738",
+      "pid": "CB03"
+    },
+    {
+      "vid": "0738",
+      "pid": "F738"
+    },
+    {
+      "vid": "0C12",
+      "pid": "8802"
+    },
+    {
+      "vid": "0C12",
+      "pid": "8809"
+    },
+    {
+      "vid": "0C12",
+      "pid": "880A"
+    },
+    {
+      "vid": "0E6F",
+      "pid": "0005"
+    },
+    {
+      "vid": "0E6F",
+      "pid": "0006"
+    },
+    {
+      "vid": "0E6F",
+      "pid": "0105"
+    },
+    {
+      "vid": "0E6F",
+      "pid": "0113"
+    },
+    {
+      "vid": "0E6F",
+      "pid": "0201"
+    },
+    {
+      "vid": "0E6F",
+      "pid": "021F"
+    },
+    {
+      "vid": "0E6F",
+      "pid": "0301"
+    },
+    {
+      "vid": "0E6F",
+      "pid": "0401"
+    },
+    {
+      "vid": "0E8F",
+      "pid": "0201"
+    },
+    {
+      "vid": "0E8F",
+      "pid": "3008"
+    },
+    {
+      "vid": "0F0D",
+      "pid": "000A"
+    },
+    {
+      "vid": "0F0D",
+      "pid": "000D"
+    },
+    {
+      "vid": "0F0D",
+      "pid": "0016"
+    },
+    {
+      "vid": "0F30",
+      "pid": "0202"
+    },
+    {
+      "vid": "0F30",
+      "pid": "8888"
+    },
+    {
+      "vid": "102C",
+      "pid": "FF0C"
+    },
+    {
+      "vid": "12AB",
+      "pid": "0004"
+    },
+    {
+      "vid": "12AB",
+      "pid": "0301"
+    },
+    {
+      "vid": "12AB",
+      "pid": "8809"
+    },
+    {
+      "vid": "1430",
+      "pid": "4748"
+    },
+    {
+      "vid": "1430",
+      "pid": "8888"
+    },
+    {
+      "vid": "146B",
+      "pid": "0601"
+    },
+    {
+      "vid": "1532",
+      "pid": "0037"
+    },
+    {
+      "vid": "15E4",
+      "pid": "3F00"
+    },
+    {
+      "vid": "15E4",
+      "pid": "3F0A"
+    },
+    {
+      "vid": "15E4",
+      "pid": "3F10"
+    },
+    {
+      "vid": "162E",
+      "pid": "BEEF"
+    },
+    {
+      "vid": "1689",
+      "pid": "FD00"
+    },
+    {
+      "vid": "1689",
+      "pid": "FD01"
+    },
+    {
+      "vid": "1BAD",
+      "pid": "0002"
+    },
+    {
+      "vid": "1BAD",
+      "pid": "0003"
+    },
+    {
+      "vid": "1BAD",
+      "pid": "F016"
+    },
+    {
+      "vid": "1BAD",
+      "pid": "F023"
+    },
+    {
+      "vid": "1BAD",
+      "pid": "F028"
+    },
+    {
+      "vid": "1BAD",
+      "pid": "F038"
+    },
+    {
+      "vid": "1BAD",
+      "pid": "F900"
+    },
+    {
+      "vid": "1BAD",
+      "pid": "F901"
+    },
+    {
+      "vid": "1BAD",
+      "pid": "F903"
+    },
+    {
+      "vid": "24C6",
+      "pid": "5000"
+    },
+    {
+      "vid": "24C6",
+      "pid": "5300"
+    },
+    {
+      "vid": "24C6",
+      "pid": "5303"
+    },
+    {
+      "vid": "24C6",
+      "pid": "5500"
+    },
+    {
+      "vid": "24C6",
+      "pid": "5501"
+    },
+    {
+      "vid": "24C6",
+      "pid": "5506"
+    },
+    {
+      "vid": "24C6",
+      "pid": "5B02"
+    },
+    {
+      "vid": "045E",
+      "pid": "02D1"
+    }
+  ],
+  "BlackWidow": [
+    {
+      "vid": "07B5",
+      "pid": "0317"
+    }
+  ],
+  "SaitekAV8R03": [
+    {
+      "vid": "06A3",
+      "pid": "0C28"
+    },
+    {
+      "vid": "06A3",
+      "pid": "0461"
+    }
+  ],
+  "SaitekX55Joystick": [
+    {
+      "vid": "0738",
+      "pid": "2215"
+    }
+  ],
+  "SaitekX56Joystick": [
+    {
+      "vid": "0738",
+      "pid": "2221"
+    }
+  ],
+  "SaitekX55Throttle": [
+    {
+      "vid": "0738",
+      "pid": "A215"
+    }
+  ],
+  "SaitekX56Throttle": [
+    {
+      "vid": "0738",
+      "pid": "A221"
+    }
+  ],
+  "SaitekX52Pro": [
+    {
+      "vid": "06A3",
+      "pid": "0762"
+    }
+  ],
+  "SaitekX52": [
+    {
+      "vid": "06A3",
+      "pid": "075C"
+    },
+    {
+      "vid": "06A3",
+      "pid": "0255"
+    }
+  ],
+  "LogitechG940Pedals": [
+    {
+      "vid": "046D",
+      "pid": "C2AA"
+    }
+  ],
+  "LogitechG940Joystick": [
+    {
+      "vid": "046D",
+      "pid": "C2A8"
+    }
+  ],
+  "LogitechG940Throttle": [
+    {
+      "vid": "046D",
+      "pid": "C2A9"
+    }
+  ],
+  "ThrustMasterWarthogJoystick": [
+    {
+      "vid": "044F",
+      "pid": "0402"
+    }
+  ],
+  "ThrustMasterWarthogThrottle": [
+    {
+      "vid": "044F",
+      "pid": "0404"
+    }
+  ],
+  "ThrustMasterWarthogCombined": [
+    {
+      "vid": "044F",
+      "pid": "FFFF"
+    }
+  ],
+  "SaitekFLY5": [
+    {
+      "vid": "0738",
+      "pid": "1302"
+    }
+  ],
+  "ThrustMasterTFlightHOTASX": [
+    {
+      "vid": "044F",
+      "pid": "B108"
+    }
+  ],
+  "ThrustMasterHOTAS4": [
+    {
+      "vid": "044F",
+      "pid": "B67C"
+    },
+    {
+      "vid": "044F",
+      "pid": "B67B"
+    }
+  ],
+  "TFlightHotasOne": [
+    {
+      "vid": "044F",
+      "pid": "B68D"
+    }
+  ],
+  "T16000M": [
+    {
+      "vid": "044F",
+      "pid": "B10A"
+    }
+  ],
+  "T16000MTHROTTLE": [
+    {
+      "vid": "044F",
+      "pid": "B687"
+    }
+  ],
+  "T-Rudder": [
+    {
+      "vid": "044F",
+      "pid": "B679"
+    }
+  ],
+  "TMwTARGET": [
+    {
+      "vid": "044F",
+      "pid": "FFFF"
+    }
+  ],
+  "LogitechExtreme3DPro": [
+    {
+      "vid": "046D",
+      "pid": "C215"
+    }
+  ],
+  "GioteckPS3WiredController": [
+    {
+      "vid": "25F0",
+      "pid": "C121"
+    }
+  ],
+  "SaitekX45": [
+    {
+      "vid": "06A3",
+      "pid": "053C"
+    }
+  ],
+  "EDTracker": [
+    {
+      "vid": "2341",
+      "pid": "8037"
+    }
+  ],
+  "Logitech710WirelessGamepad": [
+    {
+      "vid": "046D",
+      "pid": "C219"
+    }
+  ],
+  "LogitechWingManStrikeForce3D": [
+    {
+      "vid": "046D",
+      "pid": "C285"
+    }
+  ],
+  "SaitekP2600RumbleForce": [
+    {
+      "vid": "06A3",
+      "pid": "5F0D"
+    }
+  ],
+  "SaitekP2500RumbleForce": [
+    {
+      "vid": "06A3",
+      "pid": "FF0C"
+    }
+  ],
+  "SaitekCyborgEvoWireless": [
+    {
+      "vid": "06A3",
+      "pid": "353E"
+    }
+  ],
+  "SaitekProFlightCombatRudderPedals": [
+    {
+      "vid": "06A3",
+      "pid": "0764"
+    }
+  ],
+  "SaitekProFlightRudderPedals": [
+    {
+      "vid": "06A3",
+      "pid": "0763"
+    }
+  ],
+  "vJoy": [
+    {
+      "vid": "1234",
+      "pid": "BEAD"
+    }
+  ],
+  "CHProThrottle1": [
+    {
+      "vid": "068E",
+      "pid": "00F1"
+    }
+  ],
+  "CHProThrottle2": [
+    {
+      "vid": "068E",
+      "pid": "C0F1"
+    }
+  ],
+  "CHFighterStick": [
+    {
+      "vid": "068E",
+      "pid": "00F3"
+    }
+  ],
+  "CHProPedals": [
+    {
+      "vid": "068E",
+      "pid": "C0F2"
+    }
+  ],
+  "CHCombatStick": [
+    {
+      "vid": "068E",
+      "pid": "C0F4"
+    },
+    {
+      "vid": "068E",
+      "pid": "00F4"
+    }
+  ],
+  "TrustPredator": [
+    {
+      "vid": "0E8F",
+      "pid": "0003"
+    }
+  ],
+  "Playstation3Controller": [
+    {
+      "vid": "054C",
+      "pid": "0268"
+    }
+  ],
+  "SaitekST290Pro": [
+    {
+      "vid": "06A3",
+      "pid": "0460"
+    }
+  ],
+  "XterminatorDualControl": [
+    {
+      "vid": "047D",
+      "pid": "3001"
+    }
+  ],
+  "SideWinderForceFeedback2": [
+    {
+      "vid": "045E",
+      "pid": "001B"
+    }
+  ],
+  "ArduinoLeonardo": [
+    {
+      "vid": "2341",
+      "pid": "8036"
+    }
+  ],
+  "SlawFlightControlRudder": [
+    {
+      "vid": "04D8",
+      "pid": "0011"
+    }
+  ],
+  "OculusTouch": [
+    {
+      "vid": "2833",
+      "pid": "0211"
+    }
+  ],
+  "DualShock4": [
+    {
+      "vid": "054C",
+      "pid": "0BA0"
+    },
+    {
+      "vid": "054C",
+      "pid": "05C4"
+    },
+    {
+      "vid": "054C",
+      "pid": "09CC"
+    }
+  ]
+}

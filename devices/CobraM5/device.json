@@ -1,0 +1,811 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "CobraM5",
+  "name": "Defender Cobra M5",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "11C05603",
+      "usb": {
+        "vid": "11C0",
+        "pid": "5603"
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "usb": {
+        "vid": "11C0",
+        "pid": "5605"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "cobram5.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_1",
+      "label": "Primary trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 64,
+        "y": 1273,
+        "w": 1392,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_2",
+      "label": "Secondary trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2264,
+        "y": 922,
+        "w": 1392,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_3",
+      "label": "NAV left red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 124,
+        "y": 1124,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_4",
+      "label": "NAV right red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2324,
+        "y": 734,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_5",
+      "label": "NAV witch hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 722,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_6",
+      "label": "NAV witch hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 554,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_7",
+      "label": "NAV witch hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 610,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_8",
+      "label": "NAV witch hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 666,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_9",
+      "label": "NAV pinky trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 124,
+        "y": 1414,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_10",
+      "label": "BVR left red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 124,
+        "y": 1064,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_11",
+      "label": "BVR right red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2324,
+        "y": 674,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_12",
+      "label": "BVR witch hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 492,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_13",
+      "label": "BVR witch hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 324,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_14",
+      "label": "BVR witch hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 380,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_15",
+      "label": "BVR witch hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 436,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_16",
+      "label": "BVR pinky trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 124,
+        "y": 1354,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_17",
+      "label": "VIS left red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 124,
+        "y": 1184,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_18",
+      "label": "VIS right red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2324,
+        "y": 794,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_19",
+      "label": "VIS witch hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 952,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_20",
+      "label": "VIS witch hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 784,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_21",
+      "label": "VIS witch hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 840,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_22",
+      "label": "VIS witch hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 896,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_23",
+      "label": "VIS pinky trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 124,
+        "y": 1474,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_POV1Up",
+      "label": "PoV up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1864,
+        "y": 324,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_POV1Right",
+      "label": "PoV right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1864,
+        "y": 380,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_POV1Down",
+      "label": "PoV down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1864,
+        "y": 436,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_POV1Left",
+      "label": "PoV left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1864,
+        "y": 492,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_XAxis",
+      "label": "X Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2324,
+        "y": 1080,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_YAxis",
+      "label": "Y Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2324,
+        "y": 1024,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05603",
+      "key": "Joy_RZAxis",
+      "label": "RZ Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2324,
+        "y": 1136,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_1",
+      "label": "Primary trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 64,
+        "y": 1273,
+        "w": 1392,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_2",
+      "label": "Secondary trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2264,
+        "y": 922,
+        "w": 1392,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_3",
+      "label": "NAV left red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 124,
+        "y": 1124,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_4",
+      "label": "NAV right red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2324,
+        "y": 734,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_5",
+      "label": "NAV witch hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 722,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_6",
+      "label": "NAV witch hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 554,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_7",
+      "label": "NAV witch hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 610,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_8",
+      "label": "NAV witch hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 666,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_9",
+      "label": "NAV pinky trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 124,
+        "y": 1414,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_10",
+      "label": "BVR left red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 124,
+        "y": 1064,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_11",
+      "label": "BVR right red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2324,
+        "y": 674,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_12",
+      "label": "BVR witch hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 492,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_13",
+      "label": "BVR witch hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 324,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_14",
+      "label": "BVR witch hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 380,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_15",
+      "label": "BVR witch hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 436,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_16",
+      "label": "BVR pinky trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 124,
+        "y": 1354,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_17",
+      "label": "VIS left red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 124,
+        "y": 1184,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_18",
+      "label": "VIS right red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2324,
+        "y": 794,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_19",
+      "label": "VIS witch hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 952,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_20",
+      "label": "VIS witch hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 784,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_21",
+      "label": "VIS witch hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 840,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_22",
+      "label": "VIS witch hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 184,
+        "y": 896,
+        "w": 1272,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_23",
+      "label": "VIS pinky trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 124,
+        "y": 1474,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_POV1Up",
+      "label": "PoV up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1864,
+        "y": 324,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_POV1Right",
+      "label": "PoV right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1864,
+        "y": 380,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_POV1Down",
+      "label": "PoV down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1864,
+        "y": 436,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_POV1Left",
+      "label": "PoV left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1864,
+        "y": 492,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_XAxis",
+      "label": "X Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2324,
+        "y": 1080,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_YAxis",
+      "label": "Y Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2324,
+        "y": 1024,
+        "w": 1332,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "11C05605",
+      "key": "Joy_RZAxis",
+      "label": "RZ Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2324,
+        "y": 1136,
+        "w": 1332,
+        "h": 54
+      }
+    }
+  ]
+}

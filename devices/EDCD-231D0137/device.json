@@ -1,0 +1,300 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-231D0137",
+  "name": "VKB STECS Space Throttle Grip Mini Plus (Left)",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "231D0137",
+      "usb": {
+        "vid": "231D",
+        "pid": "0137"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_RXAxis",
+      "label": "LSTECS SpaceBrake",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_RYAxis",
+      "label": "LSTECS Laser Power",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_XAxis",
+      "label": "LSTECS [x52prox]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_YAxis",
+      "label": "LSTECS [x52proy]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_ZAxis",
+      "label": "LSTECS Throttle",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_1",
+      "label": "LSTECS Sys",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_2",
+      "label": "LSTECS Start",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_3",
+      "label": "LSTECS Mode 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_4",
+      "label": "LSTECS Mode 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_5",
+      "label": "LSTECS Mode 3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_6",
+      "label": "LSTECS Mode 4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_7",
+      "label": "LSTECS Mode 5",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_8",
+      "label": "LSTECS Rot CCW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_9",
+      "label": "LSTECS Rot CW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_10",
+      "label": "LSTECS Safe",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_11",
+      "label": "LSTECS #1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_12",
+      "label": "LSTECS #2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_13",
+      "label": "LSTECS #3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_14",
+      "label": "LSTECS #4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_15",
+      "label": "LSTECS Armed",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_16",
+      "label": "LSTECS Rot [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_17",
+      "label": "LSTECS Rot [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_18",
+      "label": "LSTECS Rot [ps4PadR]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_19",
+      "label": "LSTECS Rot [ps4PadL]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_20",
+      "label": "LSTECS Rot Click",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_21",
+      "label": "LSTECS B1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_22",
+      "label": "LSTECS Trigger",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_23",
+      "label": "LSTECS B2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_24",
+      "label": "LSTECS Speed Lim [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_25",
+      "label": "LSTECS Speed Lim [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_26",
+      "label": "LSTECS Speed Lim [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_27",
+      "label": "LSTECS PHat [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_28",
+      "label": "LSTECS Hat1 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_29",
+      "label": "LSTECS PHat [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_30",
+      "label": "LSTECS PHat [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_31",
+      "label": "LSTECS PHat [ps4PadL]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_32",
+      "label": "LSTECS PHat [ps4PadR]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_33",
+      "label": "LSTECS Hat1 [ps4PadL]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_34",
+      "label": "LSTECS Hat1 [ps4PadR]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_35",
+      "label": "LSTECS Hat1 [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_36",
+      "label": "LSTECS Hat1 [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_37",
+      "label": "LSTECS H1 [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_38",
+      "label": "LSTECS H1 [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_39",
+      "label": "LSTECS H1 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_40",
+      "label": "LSTECS H2 [ps4PadL]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_41",
+      "label": "LSTECS H2 [ps4PadR]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0137",
+      "key": "Joy_42",
+      "label": "LSTECS H2 [x360LThumb]",
+      "kind": "button"
+    }
+  ]
+}

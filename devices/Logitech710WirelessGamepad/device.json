@@ -1,0 +1,284 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "Logitech710WirelessGamepad",
+  "name": "Logitech F710 Wireless Gamepad",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "usb": {
+        "vid": "046D",
+        "pid": "C219"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "f710.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_1",
+      "label": "X",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 1178,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_2",
+      "label": "A",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 1083,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_3",
+      "label": "B",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 988,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_4",
+      "label": "Y",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 894,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_5",
+      "label": "Left bumper",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 510,
+        "w": 1392,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_6",
+      "label": "Right bumper",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2368,
+        "y": 510,
+        "w": 1442,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_7",
+      "label": "Left trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 406,
+        "w": 1392,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_8",
+      "label": "Right trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2368,
+        "y": 406,
+        "w": 1442,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_9",
+      "label": "Back",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 706,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_10",
+      "label": "Start",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 706,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_11",
+      "label": "Left stick button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1542,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_12",
+      "label": "Right stick button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2765,
+        "y": 1542,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_POV1Up",
+      "label": "POV1 Up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 864,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_POV1Right",
+      "label": "POV1 Right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 974,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_POV1Down",
+      "label": "POV1 Down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1084,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_POV1Left",
+      "label": "POV1 Left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1194,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_RZAxis",
+      "label": "RZ Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2765,
+        "y": 1322,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_ZAxis",
+      "label": "Z Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2765,
+        "y": 1432,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_YAxis",
+      "label": "Y Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1322,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "Logitech710WirelessGamepad",
+      "key": "Joy_XAxis",
+      "label": "X Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1432,
+        "w": 1032,
+        "h": 108
+      }
+    }
+  ]
+}

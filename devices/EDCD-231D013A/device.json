@@ -1,0 +1,222 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-231D013A",
+  "name": "VKB STECS Space Throttle Grip Mini (Right)",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "231D013A",
+      "usb": {
+        "vid": "231D",
+        "pid": "013A"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_RXAxis",
+      "label": "STECS SpaceBrake",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_RYAxis",
+      "label": "STECS Laser Power",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_XAxis",
+      "label": "STECS [x52prox]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_YAxis",
+      "label": "STECS [x52proy]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_ZAxis",
+      "label": "STECS [x52z]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_1",
+      "label": "STECS Sys",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_2",
+      "label": "STECS Start",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_3",
+      "label": "STECS Mode 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_4",
+      "label": "STECS Mode 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_5",
+      "label": "STECS Mode 3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_6",
+      "label": "STECS Mode 4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_7",
+      "label": "STECS Mode 5",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_8",
+      "label": "STECS B1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_9",
+      "label": "STECS Trigger",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_10",
+      "label": "STECS B2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_11",
+      "label": "STECS Speed Lim [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_12",
+      "label": "STECS Speed Lim [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_13",
+      "label": "STECS Speed Lim [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_14",
+      "label": "STECS PHat [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_15",
+      "label": "STECS Hat1 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_16",
+      "label": "STECS PHat [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_17",
+      "label": "STECS PHat [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_18",
+      "label": "STECS PHat [ps4PadR]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_19",
+      "label": "STECS PHat [ps4PadL]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_20",
+      "label": "STECS Hat1 [ps4PadR]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_21",
+      "label": "STECS Hat1 [ps4PadL]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_22",
+      "label": "STECS Hat1 [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_23",
+      "label": "STECS Hat1 [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_24",
+      "label": "STECS H1 [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_25",
+      "label": "STECS H1 [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_26",
+      "label": "STECS H1 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_27",
+      "label": "STECS H2 [ps4PadL]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_28",
+      "label": "STECS H2 [ps4PadR]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013A",
+      "key": "Joy_29",
+      "label": "STECS H2 [x360LThumb]",
+      "kind": "button"
+    }
+  ]
+}

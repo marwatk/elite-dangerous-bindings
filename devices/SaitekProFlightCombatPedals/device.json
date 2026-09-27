@@ -1,0 +1,63 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "SaitekProFlightCombatPedals",
+  "name": "Saitek Pro Flight Combat Pedals",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "SaitekProFlightCombatRudderPedals",
+      "usb": {
+        "vid": "06A3",
+        "pid": "0764"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "proflightcombatpedals.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "SaitekProFlightCombatRudderPedals",
+      "key": "Joy_XAxis",
+      "label": "Left pedal (unconfirmed)",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 164,
+        "y": 588,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "SaitekProFlightCombatRudderPedals",
+      "key": "Joy_YAxis",
+      "label": "Right pedal (unconfirmed)",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2264,
+        "y": 588,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "SaitekProFlightCombatRudderPedals",
+      "key": "Joy_RZAxis",
+      "label": "Rudder",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1208,
+        "y": 331,
+        "w": 1332,
+        "h": 162
+      }
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-231D013B",
+  "name": "VKB STECS Space Throttle Grip Mini Plus (Right)",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "231D013B",
+      "usb": {
+        "vid": "231D",
+        "pid": "013B"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_RXAxis",
+      "label": "RSTECS SpaceBrake",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_RYAxis",
+      "label": "RSTECS Laser Power",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_XAxis",
+      "label": "RSTECS [x52prox]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_YAxis",
+      "label": "RSTECS [x52proy]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_ZAxis",
+      "label": "RSTECS Throttle",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_1",
+      "label": "RSTECS Sys",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_2",
+      "label": "RSTECS Start",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_3",
+      "label": "RSTECS Mode 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_4",
+      "label": "RSTECS Mode 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_5",
+      "label": "RSTECS Mode 3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_6",
+      "label": "RSTECS Mode 4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_7",
+      "label": "RSTECS Mode 5",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_8",
+      "label": "RSTECS Rot CCW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_9",
+      "label": "RSTECS Rot CW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_10",
+      "label": "RSTECS Safe",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_11",
+      "label": "RSTECS #1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_12",
+      "label": "RSTECS #2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_13",
+      "label": "RSTECS #3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_14",
+      "label": "RSTECS #4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_15",
+      "label": "RSTECS Armed",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_16",
+      "label": "RSTECS Rot [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_17",
+      "label": "RSTECS Rot [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_18",
+      "label": "RSTECS Rot [ps4PadR]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_19",
+      "label": "RSTECS Rot [ps4PadL]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_20",
+      "label": "RSTECS Rot Click",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_21",
+      "label": "RSTECS B1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_22",
+      "label": "RSTECS Trigger",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_23",
+      "label": "RSTECS B2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_24",
+      "label": "RSTECS Speed Lim [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_25",
+      "label": "RSTECS Speed Lim [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_26",
+      "label": "RSTECS Speed Lim [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_27",
+      "label": "RSTECS PHat [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_28",
+      "label": "RSTECS Hat1 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_29",
+      "label": "RSTECS PHat [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_30",
+      "label": "RSTECS PHat [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_31",
+      "label": "RSTECS PHat [ps4PadR]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_32",
+      "label": "RSTECS PHat [ps4PadL]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_33",
+      "label": "RSTECS Hat1 [ps4PadR]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_34",
+      "label": "RSTECS Hat1 [ps4PadL]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_35",
+      "label": "RSTECS Hat1 [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_36",
+      "label": "RSTECS Hat1 [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_37",
+      "label": "RSTECS H1 [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_38",
+      "label": "RSTECS H1 [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_39",
+      "label": "RSTECS H1 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_40",
+      "label": "RSTECS H2 [ps4PadL]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_41",
+      "label": "RSTECS H2 [ps4PadR]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013B",
+      "key": "Joy_42",
+      "label": "RSTECS H2 [x360LThumb]",
+      "kind": "button"
+    }
+  ]
+}

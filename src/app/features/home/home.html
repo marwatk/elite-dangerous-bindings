@@ -1,0 +1,106 @@
+<div class="page">
+  <section class="hero">
+    <h1>Elite Dangerous Bindings</h1>
+    <p class="lead">
+      Search, edit and print your control bindings, and bind commands by pressing the actual
+      button on your HOTAS. Everything stays in your browser.
+    </p>
+  </section>
+
+  @if (session(); as s) {
+    <mat-card appearance="outlined" class="restore">
+      <mat-card-content>
+        <mat-icon>history</mat-icon>
+        <div>
+          <strong>Unsaved changes to {{ s.name }}</strong>
+          <div class="muted">Autosaved {{ s.savedAt | date: 'medium' }}</div>
+        </div>
+        <span class="spacer"></span>
+        <button matButton="filled" (click)="restore()">Restore</button>
+      </mat-card-content>
+    </mat-card>
+  }
+
+  @if (store.isOpen()) {
+    <mat-card appearance="outlined" class="restore">
+      <mat-card-content>
+        <mat-icon>description</mat-icon>
+        <div>
+          <strong>{{ store.source()?.name }}</strong> is open.
+        </div>
+        <span class="spacer"></span>
+        <a matButton="filled" routerLink="/bindings">Go to bindings</a>
+      </mat-card-content>
+    </mat-card>
+  }
+
+  <div class="start">
+    <button class="drop" type="button" (click)="files.pickAndOpen()">
+      <mat-icon>upload_file</mat-icon>
+      <strong>Open your bindings file</strong>
+      <span class="muted">Click to choose a <code>.binds</code> file, or drop one anywhere on this page</span>
+    </button>
+
+    <div class="side">
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>folder</mat-icon>
+          <mat-card-title>Where is my file?</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Custom bindings are in:</p>
+          <p class="path">
+            <code>{{ bindingsPath }}</code>
+            <button matIconButton (click)="copyPath()" aria-label="Copy path"><mat-icon>content_copy</mat-icon></button>
+          </p>
+          <p class="muted">
+            Paste that into the file dialog's address bar. Files are named like
+            <code>Custom.4.2.binds</code> (preset name, then game version).
+          </p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>note_add</mat-icon>
+          <mat-card-title>Start from scratch</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="muted">Every command, nothing bound. Build a layout by pressing buttons on your controllers.</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button matButton (click)="files.openTemplate()">New empty file</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+  @if (store.recent().length) {
+    <h2>Recent files</h2>
+    <mat-nav-list class="recent">
+      @for (r of store.recent(); track r.name) {
+        <a mat-list-item (click)="openRecent(r)">
+          <mat-icon matListItemIcon>description</mat-icon>
+          <span matListItemTitle>{{ r.name }}</span>
+          <span matListItemLine>Opened {{ r.openedAt | date: 'medium' }}</span>
+          <button
+            matIconButton
+            matListItemMeta
+            aria-label="Forget"
+            (click)="$event.stopPropagation(); store.forgetRecent(r.name)"
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+        </a>
+      }
+    </mat-nav-list>
+  }
+
+  <h2>What you can do</h2>
+  <div class="features">
+    <div><mat-icon>table_rows</mat-icon><strong>Search every binding</strong><span>With your controller's real button names.</span></div>
+    <div><mat-icon>ads_click</mat-icon><strong>Bind by pressing</strong><span>Press the button or move the axis you want. {{ input.webHidSupported ? 'WebHID supported in this browser.' : 'Gamepad API in this browser (Chrome/Edge add WebHID).' }}</span></div>
+    <div><mat-icon>print</mat-icon><strong>Print reference cards</strong><span>Your bindings drawn onto your controllers.</span></div>
+    <div><mat-icon>add_photo_alternate</mat-icon><strong>Map a new controller</strong><span>From your own photo, then share it with everyone.</span></div>
+  </div>
+</div>

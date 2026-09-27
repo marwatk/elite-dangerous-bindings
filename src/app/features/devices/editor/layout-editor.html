@@ -1,0 +1,94 @@
+<div class="page editor">
+  <div class="page-header">
+    <a matIconButton [routerLink]="baseId ? ['/devices', baseId] : ['/devices']" aria-label="Back" matTooltip="Back">
+      <mat-icon>arrow_back</mat-icon>
+    </a>
+    <h1>{{ title() }}</h1>
+    <span class="spacer"></span>
+    <button matIconButton (click)="store.undo()" [disabled]="!store.canUndo()" matTooltip="Undo (Ctrl+Z)" aria-label="Undo">
+      <mat-icon>undo</mat-icon>
+    </button>
+    <button matIconButton (click)="store.redo()" [disabled]="!store.canRedo()" matTooltip="Redo (Ctrl+Shift+Z)" aria-label="Redo">
+      <mat-icon>redo</mat-icon>
+    </button>
+    <button matIconButton [matMenuTriggerFor]="more" aria-label="More" matTooltip="More">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #more="matMenu">
+      <button mat-menu-item (click)="zipInput.click()"><mat-icon>upload_file</mat-icon>Import device .zip…</button>
+      <button mat-menu-item (click)="startOver()"><mat-icon>restart_alt</mat-icon>Start over</button>
+    </mat-menu>
+    <input #zipInput type="file" accept=".zip,application/zip" hidden (change)="importZip($event)" />
+  </div>
+
+  @if (isPhone()) {
+    <p class="note"><mat-icon>info</mat-icon>The layout editor needs a larger screen. On a phone you can look around, but use a tablet or computer to place boxes.</p>
+  }
+  @if (store.loadError(); as err) {
+    <p class="note error"><mat-icon>error</mat-icon>{{ err }}</p>
+  }
+
+  @if (!store.ready()) {
+    <div class="loading"><mat-spinner diameter="40" /></div>
+  } @else {
+    <nav class="steps" aria-label="Editor steps">
+      @for (s of steps; track s.id; let i = $index) {
+        <button
+          type="button"
+          class="step"
+          [class.active]="store.step() === s.id"
+          [class.done]="done()[s.id]"
+          [attr.aria-current]="store.step() === s.id ? 'step' : null"
+          (click)="store.step.set(s.id)"
+        >
+          <span class="num">
+            @if (done()[s.id] && store.step() !== s.id) {
+              <mat-icon>check</mat-icon>
+            } @else {
+              {{ i + 1 }}
+            }
+          </span>
+          <span class="label">{{ s.label }}</span>
+          @if (issueCount()[s.id]; as n) {
+            <span class="err-badge" [attr.aria-label]="n + ' errors'">{{ n }}</span>
+          }
+        </button>
+      }
+    </nav>
+
+    <section class="body">
+      @switch (store.step()) {
+        @case ('image') {
+          <app-step-image />
+        }
+        @case ('identify') {
+          <app-step-identify />
+        }
+        @case ('inventory') {
+          <app-step-inventory />
+        }
+        @case ('place') {
+          <app-step-place />
+        }
+        @case ('name') {
+          <app-step-name />
+        }
+        @case ('check') {
+          <app-step-check />
+        }
+        @case ('export') {
+          <app-step-export />
+        }
+      }
+    </section>
+
+    <div class="footer">
+      <button matButton (click)="go(-1)" [disabled]="stepIndex() === 0"><mat-icon>chevron_left</mat-icon>Back</button>
+      <span class="spacer"></span>
+      <span class="muted autosave">Autosaved in this browser</span>
+      @if (stepIndex() < steps.length - 1) {
+        <button matButton="filled" (click)="go(1)">Next: {{ steps[stepIndex() + 1].label }}<mat-icon iconPositionEnd>chevron_right</mat-icon></button>
+      }
+    </div>
+  }
+</div>

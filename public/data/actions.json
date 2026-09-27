@@ -1,0 +1,5608 @@
+[
+ {
+  "code": "MouseReset",
+  "name": "Reset Mouse",
+  "longName": "Reset Mouse",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Mouse Controls",
+  "type": "digital",
+  "order": 4
+ },
+ {
+  "code": "BlockMouseDecay",
+  "name": "Block Mouse Decay",
+  "longName": "Block Mouse Decay",
+  "group": "Ship",
+  "category": "General",
+  "area": "Other",
+  "section": "Ship",
+  "type": "digital",
+  "order": 10
+ },
+ {
+  "code": "YawAxisRaw",
+  "name": "Yaw",
+  "longName": "Yaw Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Rotation",
+  "type": "analogue",
+  "order": 11
+ },
+ {
+  "code": "YawLeftButton",
+  "name": "Yaw Left",
+  "longName": "Yaw Left",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Rotation",
+  "type": "digital",
+  "order": 12,
+  "hasAnalogue": true
+ },
+ {
+  "code": "YawRightButton",
+  "name": "Yaw Right",
+  "longName": "Yaw Right",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Rotation",
+  "type": "digital",
+  "order": 13,
+  "hasAnalogue": true
+ },
+ {
+  "code": "YawToRollButton",
+  "name": "Yaw To Roll",
+  "longName": "Yaw To Roll",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Other",
+  "section": "Ship",
+  "type": "digital",
+  "order": 17
+ },
+ {
+  "code": "RollAxisRaw",
+  "name": "Roll",
+  "longName": "Roll Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Rotation",
+  "type": "analogue",
+  "order": 18
+ },
+ {
+  "code": "RollLeftButton",
+  "name": "Roll Left",
+  "longName": "Roll Left",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Rotation",
+  "type": "digital",
+  "order": 19,
+  "hasAnalogue": true
+ },
+ {
+  "code": "RollRightButton",
+  "name": "Roll Right",
+  "longName": "Roll Right",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Rotation",
+  "type": "digital",
+  "order": 20,
+  "hasAnalogue": true
+ },
+ {
+  "code": "PitchAxisRaw",
+  "name": "Pitch",
+  "longName": "Pitch Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Rotation",
+  "type": "analogue",
+  "order": 21
+ },
+ {
+  "code": "PitchUpButton",
+  "name": "Pitch Up",
+  "longName": "Pitch Up",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Rotation",
+  "type": "digital",
+  "order": 22,
+  "hasAnalogue": true
+ },
+ {
+  "code": "PitchDownButton",
+  "name": "Pitch Down",
+  "longName": "Pitch Down",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Rotation",
+  "type": "digital",
+  "order": 23,
+  "hasAnalogue": true
+ },
+ {
+  "code": "LateralThrustRaw",
+  "name": "Lateral Thrust",
+  "longName": "Lateral Thrust Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Thrust",
+  "type": "analogue",
+  "order": 24
+ },
+ {
+  "code": "LeftThrustButton",
+  "name": "Thrust Left",
+  "longName": "Thrust Left",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Thrust",
+  "type": "digital",
+  "order": 25,
+  "hasAnalogue": true
+ },
+ {
+  "code": "RightThrustButton",
+  "name": "Thrust Right",
+  "longName": "Thrust Right",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Thrust",
+  "type": "digital",
+  "order": 26,
+  "hasAnalogue": true
+ },
+ {
+  "code": "VerticalThrustRaw",
+  "name": "Vertical Thrust",
+  "longName": "Vertical Thrust Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Thrust",
+  "type": "analogue",
+  "order": 27
+ },
+ {
+  "code": "UpThrustButton",
+  "name": "Thrust Up",
+  "longName": "Thrust Up",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Thrust",
+  "type": "digital",
+  "order": 28,
+  "hasAnalogue": true
+ },
+ {
+  "code": "DownThrustButton",
+  "name": "Thrust Down",
+  "longName": "Thrust Down",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Thrust",
+  "type": "digital",
+  "order": 29,
+  "hasAnalogue": true
+ },
+ {
+  "code": "AheadThrust",
+  "name": "Forward Thrust",
+  "longName": "Thrust Forward and Backward Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Thrust",
+  "type": "analogue",
+  "order": 30
+ },
+ {
+  "code": "ForwardThrustButton",
+  "name": "Forward Thrust",
+  "longName": "Thrust Forward",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Thrust",
+  "type": "digital",
+  "order": 31,
+  "hasAnalogue": true
+ },
+ {
+  "code": "BackwardThrustButton",
+  "name": "Reverse thrust",
+  "longName": "Thrust Backward",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Thrust",
+  "type": "digital",
+  "order": 32,
+  "hasAnalogue": true
+ },
+ {
+  "code": "UseAlternateFlightValuesToggle",
+  "name": "Alternate Controls",
+  "longName": "Alternate Controls Toggle",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Alternate Flight Controls",
+  "type": "digital",
+  "order": 33
+ },
+ {
+  "code": "YawAxisAlternate",
+  "name": "Yaw (Alt)",
+  "longName": "Yaw Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Alternate Flight Controls",
+  "type": "analogue",
+  "order": 34,
+  "hideIfSameAs": [
+   "YawAxisRaw"
+  ]
+ },
+ {
+  "code": "RollAxisAlternate",
+  "name": "Roll (Alt)",
+  "longName": "Roll Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Alternate Flight Controls",
+  "type": "analogue",
+  "order": 35,
+  "hideIfSameAs": [
+   "RollAxisRaw"
+  ]
+ },
+ {
+  "code": "PitchAxisAlternate",
+  "name": "Pitch (Alt)",
+  "longName": "Pitch Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Alternate Flight Controls",
+  "type": "analogue",
+  "order": 36,
+  "hideIfSameAs": [
+   "PitchAxisRaw"
+  ]
+ },
+ {
+  "code": "LateralThrustAlternate",
+  "name": "Lateral Thrust (Alt)",
+  "longName": "Lateral Thrust Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Alternate Flight Controls",
+  "type": "analogue",
+  "order": 37,
+  "hideIfSameAs": [
+   "LateralThrustRaw"
+  ]
+ },
+ {
+  "code": "VerticalThrustAlternate",
+  "name": "Vertical Thrust (Alt)",
+  "longName": "Vertical Thrust Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Alternate Flight Controls",
+  "type": "analogue",
+  "order": 38,
+  "hideIfSameAs": [
+   "VerticalThrustRaw"
+  ]
+ },
+ {
+  "code": "ThrottleAxis",
+  "name": "Throttle",
+  "longName": "Throttle Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Throttle",
+  "type": "analogue",
+  "order": 39
+ },
+ {
+  "code": "ToggleReverseThrottleInput",
+  "name": "Reverse",
+  "longName": "Forward Only Throttle Reverse",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Throttle",
+  "type": "digital",
+  "order": 41
+ },
+ {
+  "code": "ForwardKey",
+  "name": "Forward Thrust",
+  "longName": "Increase Throttle",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Throttle",
+  "type": "digital",
+  "order": 42,
+  "hasAnalogue": true
+ },
+ {
+  "code": "BackwardKey",
+  "name": "Reverse Thrust",
+  "longName": "Decrease Throttle",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Throttle",
+  "type": "digital",
+  "order": 43,
+  "hasAnalogue": true
+ },
+ {
+  "code": "SetSpeedMinus100",
+  "name": "100% Reverse",
+  "longName": "Set Speed to -100%",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Throttle",
+  "type": "digital",
+  "order": 45
+ },
+ {
+  "code": "SetSpeedMinus75",
+  "name": "75% Reverse",
+  "longName": "Set Speed to -75%",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Throttle",
+  "type": "digital",
+  "order": 46
+ },
+ {
+  "code": "SetSpeedMinus50",
+  "name": "50% Reverse",
+  "longName": "Set Speed to -50%",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Throttle",
+  "type": "digital",
+  "order": 47
+ },
+ {
+  "code": "SetSpeedMinus25",
+  "name": "25% Reverse",
+  "longName": "Set Speed to -25%",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Throttle",
+  "type": "digital",
+  "order": 48
+ },
+ {
+  "code": "SetSpeedZero",
+  "name": "All Stop",
+  "longName": "Set Speed to 0%",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Throttle",
+  "type": "digital",
+  "order": 49
+ },
+ {
+  "code": "SetSpeed25",
+  "name": "25% Throttle",
+  "longName": "Set Speed to 25%",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Throttle",
+  "type": "digital",
+  "order": 50
+ },
+ {
+  "code": "SetSpeed50",
+  "name": "50% Throttle",
+  "longName": "Set Speed to 50%",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Throttle",
+  "type": "digital",
+  "order": 51
+ },
+ {
+  "code": "SetSpeed75",
+  "name": "75% Throttle",
+  "longName": "Set Speed to 75%",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Throttle",
+  "type": "digital",
+  "order": 52
+ },
+ {
+  "code": "SetSpeed100",
+  "name": "100% Throttle",
+  "longName": "Set Speed to 100%",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Throttle",
+  "type": "digital",
+  "order": 53
+ },
+ {
+  "code": "YawAxis_Landing",
+  "name": "Yaw",
+  "longName": "Yaw Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "analogue",
+  "order": 54,
+  "hideIfSameAs": [
+   "YawAxisRaw"
+  ]
+ },
+ {
+  "code": "YawLeftButton_Landing",
+  "name": "Yaw Left (Lndg)",
+  "longName": "Yaw Left",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "digital",
+  "order": 55,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawLeftButton"
+  ]
+ },
+ {
+  "code": "YawRightButton_Landing",
+  "name": "Yaw Right (Lndg)",
+  "longName": "Yar Right",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "digital",
+  "order": 56,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawRightButton"
+  ]
+ },
+ {
+  "code": "PitchAxis_Landing",
+  "name": "Pitch (Lndg)",
+  "longName": "Pitch Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "analogue",
+  "order": 58,
+  "hideIfSameAs": [
+   "PitchAxisRaw"
+  ]
+ },
+ {
+  "code": "PitchUpButton_Landing",
+  "name": "Pitch Up (Lndg)",
+  "longName": "Pitch Up",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "digital",
+  "order": 59,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchUpButton"
+  ]
+ },
+ {
+  "code": "PitchDownButton_Landing",
+  "name": "Pitch Down (Lndg)",
+  "longName": "Pitch Down",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "digital",
+  "order": 60,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchDownButton"
+  ]
+ },
+ {
+  "code": "RollAxis_Landing",
+  "name": "Roll (Lndg)",
+  "longName": "Roll Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "analogue",
+  "order": 61,
+  "hideIfSameAs": [
+   "RollAxisRaw"
+  ]
+ },
+ {
+  "code": "RollLeftButton_Landing",
+  "name": "Roll Left (Lndg)",
+  "longName": "Roll Left",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "digital",
+  "order": 62,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "RollLeftButton"
+  ]
+ },
+ {
+  "code": "RollRightButton_Landing",
+  "name": "Roll Right (Lndg)",
+  "longName": "Roll Right",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "digital",
+  "order": 63,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "RollRightButton"
+  ]
+ },
+ {
+  "code": "LateralThrust_Landing",
+  "name": "Lateral Thrust (Lndg)",
+  "longName": "Lateral Thrust Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "analogue",
+  "order": 64,
+  "hideIfSameAs": [
+   "LateralThrustRaw"
+  ]
+ },
+ {
+  "code": "LeftThrustButton_Landing",
+  "name": "Thrust Left (Lndg)",
+  "longName": "Thrust Left",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "digital",
+  "order": 65,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "LeftThrustButton"
+  ]
+ },
+ {
+  "code": "RightThrustButton_Landing",
+  "name": "Thrust Right (Lndg)",
+  "longName": "Thrust Right",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "digital",
+  "order": 66,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "RightThrustButton"
+  ]
+ },
+ {
+  "code": "VerticalThrust_Landing",
+  "name": "Vertical Thrust (Lndg)",
+  "longName": "Verticle Thrust Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "analogue",
+  "order": 67,
+  "hideIfSameAs": [
+   "VerticalThrustRaw"
+  ]
+ },
+ {
+  "code": "UpThrustButton_Landing",
+  "name": "Thrust Up (Lndg)",
+  "longName": "Thrust Up",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "digital",
+  "order": 68,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "UpThrustButton"
+  ]
+ },
+ {
+  "code": "DownThrustButton_Landing",
+  "name": "Thrust Down (Lndg)",
+  "longName": "Thrust Down",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "digital",
+  "order": 69,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "DownThrustButton"
+  ]
+ },
+ {
+  "code": "AheadThrust_Landing",
+  "name": "Forward Thrust (Lndg)",
+  "longName": "Thrust forward and Backward Axis",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "analogue",
+  "order": 70,
+  "hideIfSameAs": [
+   "AheadThrust"
+  ]
+ },
+ {
+  "code": "ForwardThrustButton_Landing",
+  "name": "Forward Thrust (Lndg)",
+  "longName": "Thrust Forward",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "digital",
+  "order": 71,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "ForwardThrustButton"
+  ]
+ },
+ {
+  "code": "BackwardThrustButton_Landing",
+  "name": "Reverse Thrust (Lndg)",
+  "longName": "Thrust Backward",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Landing Overrides",
+  "type": "digital",
+  "order": 72,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "BackwardThrustButton"
+  ]
+ },
+ {
+  "code": "ToggleFlightAssist",
+  "name": "Flight Assist",
+  "longName": "Toggle Flight Assist",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Miscellaneous",
+  "type": "digital",
+  "order": 73
+ },
+ {
+  "code": "UseBoostJuice",
+  "name": "Boost",
+  "longName": "Engine Boost",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Miscellaneous",
+  "type": "digital",
+  "order": 74
+ },
+ {
+  "code": "HyperSuperCombination",
+  "name": "Hyperspace/Supercruise",
+  "longName": "Toggle Frame Shift Drive",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Miscellaneous",
+  "type": "digital",
+  "order": 75,
+  "short": "FSD"
+ },
+ {
+  "code": "Supercruise",
+  "name": "Supercruise",
+  "longName": "Supercruise",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Miscellaneous",
+  "type": "digital",
+  "order": 76,
+  "short": "SCRUISE"
+ },
+ {
+  "code": "Hyperspace",
+  "name": "Hyperspace",
+  "longName": "Hyperspace Jump",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Miscellaneous",
+  "type": "digital",
+  "order": 77,
+  "short": "HYPER"
+ },
+ {
+  "code": "DisableRotationCorrectToggle",
+  "name": "Rotational Correction",
+  "longName": "Rotational Correction",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Flight Miscellaneous",
+  "type": "digital",
+  "order": 78
+ },
+ {
+  "code": "OrbitLinesToggle",
+  "name": "Orbit Lines",
+  "longName": "Toggle Orbit Lines",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Flight Miscellaneous",
+  "type": "digital",
+  "order": 79
+ },
+ {
+  "code": "SelectTarget",
+  "name": "Target Ahead",
+  "longName": "Select Target Ahead",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Targeting",
+  "type": "digital",
+  "order": 80
+ },
+ {
+  "code": "CycleNextTarget",
+  "name": "Next Contact",
+  "longName": "Cycle Next Target",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Targeting",
+  "type": "digital",
+  "order": 81
+ },
+ {
+  "code": "CyclePreviousTarget",
+  "name": "Prev Contact",
+  "longName": "Cycle Previous Ship",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Targeting",
+  "type": "digital",
+  "order": 82
+ },
+ {
+  "code": "SelectHighestThreat",
+  "name": "Highest Threat",
+  "longName": "Select Highest Threat",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Targeting",
+  "type": "digital",
+  "order": 83
+ },
+ {
+  "code": "CycleNextHostileTarget",
+  "name": "Next Hostile",
+  "longName": "Cycle Next Hostile Target",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Targeting",
+  "type": "digital",
+  "order": 84
+ },
+ {
+  "code": "CyclePreviousHostileTarget",
+  "name": "Prev Hostile",
+  "longName": "Cycle Previous Hostile Ship",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Targeting",
+  "type": "digital",
+  "order": 85
+ },
+ {
+  "code": "TargetWingman0",
+  "name": "Wingman 1",
+  "longName": "Select Teammate 1",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Targeting",
+  "type": "digital",
+  "order": 86,
+  "short": "WING 0"
+ },
+ {
+  "code": "TargetWingman1",
+  "name": "Wingman 2",
+  "longName": "Select Teammate 2",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Targeting",
+  "type": "digital",
+  "order": 87,
+  "short": "WING 1"
+ },
+ {
+  "code": "TargetWingman2",
+  "name": "Wingman 3",
+  "longName": "Select Teammate 3",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Targeting",
+  "type": "digital",
+  "order": 88,
+  "short": "WING 2"
+ },
+ {
+  "code": "SelectTargetsTarget",
+  "name": "Wingman's target",
+  "longName": "Select Teammates's Target",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Targeting",
+  "type": "digital",
+  "order": 89
+ },
+ {
+  "code": "WingNavLock",
+  "name": "Wingman Navlock",
+  "longName": "Teammate Nav-Lock",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Targeting",
+  "type": "digital",
+  "order": 90
+ },
+ {
+  "code": "CycleNextSubsystem",
+  "name": "Next Subsystem",
+  "longName": "Cycle Next Subsystem",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Targeting",
+  "type": "digital",
+  "order": 91
+ },
+ {
+  "code": "CyclePreviousSubsystem",
+  "name": "Prev Subsystem",
+  "longName": "Cycle Previous Subsystem",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Targeting",
+  "type": "digital",
+  "order": 92
+ },
+ {
+  "code": "TargetNextRouteSystem",
+  "name": "Next Jump Dest",
+  "longName": "Target Next System In Route",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Targeting",
+  "type": "digital",
+  "order": 93
+ },
+ {
+  "code": "PrimaryFire",
+  "name": "Fire 1",
+  "longName": "Primary Fire",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Weapons",
+  "type": "digital",
+  "order": 94
+ },
+ {
+  "code": "SecondaryFire",
+  "name": "Fire 2",
+  "longName": "Secondary Fire",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Weapons",
+  "type": "digital",
+  "order": 95
+ },
+ {
+  "code": "CycleFireGroupNext",
+  "name": "Next Fire Group",
+  "longName": "Cycle Next Fire Group",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Weapons",
+  "type": "digital",
+  "order": 96
+ },
+ {
+  "code": "CycleFireGroupPrevious",
+  "name": "Prev Fire Group",
+  "longName": "Cycle Previous Firgroup",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Weapons",
+  "type": "digital",
+  "order": 97
+ },
+ {
+  "code": "DeployHardpointToggle",
+  "name": "Hardpoints",
+  "longName": "Deploy Hardpoints",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Weapons",
+  "type": "digital",
+  "order": 98,
+  "short": "HARD PTS"
+ },
+ {
+  "code": "ToggleButtonUpInput",
+  "name": "Silent Running",
+  "longName": "Silent Running",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Cooling",
+  "type": "digital",
+  "order": 100,
+  "short": "BTN UP"
+ },
+ {
+  "code": "DeployHeatSink",
+  "name": "Heatsink",
+  "longName": "Heatsink",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Other",
+  "section": "Ship",
+  "type": "digital",
+  "order": 101,
+  "short": "HEAT SNK"
+ },
+ {
+  "code": "ShipSpotLightToggle",
+  "name": "Lights",
+  "longName": "Ship Lights",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 102,
+  "short": "LITE"
+ },
+ {
+  "code": "RadarRangeAxis",
+  "name": "Sensor Range",
+  "longName": "Sensor Zoom Axis",
+  "group": "Misc",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "analogue",
+  "order": 103
+ },
+ {
+  "code": "RadarIncreaseRange",
+  "name": "Inc Sensor Range",
+  "longName": "Increase Sensor Zoom",
+  "group": "Misc",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 104,
+  "hasAnalogue": true,
+  "short": "SCAN UP"
+ },
+ {
+  "code": "RadarDecreaseRange",
+  "name": "Dec Sensor Range",
+  "longName": "Decrease Sensor Zoom",
+  "group": "Misc",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 105,
+  "hasAnalogue": true,
+  "short": "SCAN DN"
+ },
+ {
+  "code": "IncreaseEnginesPower",
+  "name": "ENG",
+  "longName": "Divert Power to Engines",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 106,
+  "short": "ENG"
+ },
+ {
+  "code": "IncreaseWeaponsPower",
+  "name": "WEP",
+  "longName": "Divert Power to Weapons",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 107,
+  "short": "WEP"
+ },
+ {
+  "code": "IncreaseSystemsPower",
+  "name": "SYS",
+  "longName": "Divert Power to System",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 108,
+  "short": "SYS"
+ },
+ {
+  "code": "ResetPowerDistribution",
+  "name": "RST",
+  "longName": "Balance Power Distribution",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 109,
+  "short": "BAL"
+ },
+ {
+  "code": "HMDReset",
+  "name": "Reset HMD",
+  "longName": "Reset HMD Orientation",
+  "group": "Misc",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 110
+ },
+ {
+  "code": "ToggleCargoScoop",
+  "name": "Cargo Scoop",
+  "longName": "Cargo Scoop",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 111,
+  "short": "C SCOOP"
+ },
+ {
+  "code": "EjectAllCargo",
+  "name": "Eject All Cargo",
+  "longName": "Jettison All Cargo",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 112
+ },
+ {
+  "code": "LandingGearToggle",
+  "name": "Landing Gear",
+  "longName": "Landing Gear",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 113,
+  "short": "GEAR"
+ },
+ {
+  "code": "MicrophoneMute",
+  "name": "Microphone",
+  "longName": "Microphone Mute",
+  "group": "Misc",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 114
+ },
+ {
+  "code": "UseShieldCell",
+  "name": "SCB",
+  "longName": "Use Shield Cell",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 117,
+  "short": "S CELL"
+ },
+ {
+  "code": "FireChaffLauncher",
+  "name": "Chaff",
+  "longName": "Use Chaff Launcher",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 118,
+  "short": "CHAFF"
+ },
+ {
+  "code": "TriggerFieldNeutraliser",
+  "name": "Field Neutraliser",
+  "longName": "Field Neutraliser",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Other",
+  "section": "Ship",
+  "type": "digital",
+  "order": 119
+ },
+ {
+  "code": "ChargeECM",
+  "name": "ECM",
+  "longName": "Charge Ecm",
+  "group": "Ship",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 120,
+  "short": "ECM"
+ },
+ {
+  "code": "WeaponColourToggle",
+  "name": "Weapon Colour",
+  "longName": "Weapon Colour",
+  "group": "Ship",
+  "category": "General",
+  "area": "Other",
+  "section": "Ship",
+  "type": "digital",
+  "order": 123
+ },
+ {
+  "code": "EngineColourToggle",
+  "name": "Engine Colour",
+  "longName": "Engine Color",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 124
+ },
+ {
+  "code": "NightVisionToggle",
+  "name": "Night Vision",
+  "longName": "Night Vision",
+  "group": "Misc",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 125,
+  "short": "NITE VIS"
+ },
+ {
+  "code": "TriggerColonisationModule",
+  "name": "Trigger Colonisation Module",
+  "longName": "Trigger Colonisation Module",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 126
+ },
+ {
+  "code": "UIFocus",
+  "name": "UI Focus",
+  "longName": "UI Focus",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Mode Switches",
+  "type": "digital",
+  "order": 127
+ },
+ {
+  "code": "FocusLeftPanel",
+  "name": "Nav Panel",
+  "longName": "External Panel",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Mode Switches",
+  "type": "digital",
+  "order": 129,
+  "short": "EXT"
+ },
+ {
+  "code": "FocusCommsPanel",
+  "name": "Comms Panel",
+  "longName": "Comms Panel",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Mode Switches",
+  "type": "digital",
+  "order": 130,
+  "short": "COMM"
+ },
+ {
+  "code": "QuickCommsPanel",
+  "name": "Quick Comms",
+  "longName": "Quick Comms",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Mode Switches",
+  "type": "digital",
+  "order": 132
+ },
+ {
+  "code": "FocusRadarPanel",
+  "name": "Role Panel",
+  "longName": "Role Panel",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Mode Switches",
+  "type": "digital",
+  "order": 133,
+  "short": "ROLE"
+ },
+ {
+  "code": "FocusRightPanel",
+  "name": "Systems Panel",
+  "longName": "Internal Panel",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Mode Switches",
+  "type": "digital",
+  "order": 134,
+  "short": "INT"
+ },
+ {
+  "code": "GalaxyMapOpen",
+  "name": "Galaxy Map",
+  "longName": "Open Galaxy Map",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Mode Switches",
+  "type": "digital",
+  "order": 140,
+  "short": "GAL MAP"
+ },
+ {
+  "code": "SystemMapOpen",
+  "name": "System Map",
+  "longName": "Open System Map",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Mode Switches",
+  "type": "digital",
+  "order": 141,
+  "short": "SYS MAP"
+ },
+ {
+  "code": "ShowPGScoreSummaryInput",
+  "name": "CQC Score",
+  "longName": "Show CQC Score Screen",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Mode Switches",
+  "type": "digital",
+  "order": 142
+ },
+ {
+  "code": "HeadLookToggle",
+  "name": "Toggle Headlook",
+  "longName": "Toggle Headlook",
+  "group": "Ship",
+  "category": "General",
+  "area": "Other",
+  "section": "Ship",
+  "type": "digital",
+  "order": 143,
+  "short": "HEADLOOK"
+ },
+ {
+  "code": "Pause",
+  "name": "Main Menu",
+  "longName": "Game Menu",
+  "group": "Misc",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Mode Switches",
+  "type": "digital",
+  "order": 144
+ },
+ {
+  "code": "FriendsMenu",
+  "name": "Friends",
+  "longName": "Friends Menu",
+  "group": "Misc",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Mode Switches",
+  "type": "digital",
+  "order": 145
+ },
+ {
+  "code": "OpenCodexGoToDiscovery",
+  "name": "Codex",
+  "longName": "Open Discovery",
+  "group": "Misc",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Mode Switches",
+  "type": "digital",
+  "order": 146
+ },
+ {
+  "code": "PlayerHUDModeToggle",
+  "name": "HUD Mode",
+  "longName": "Switch Cockpit Mode",
+  "group": "Ship",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Mode Switches",
+  "type": "digital",
+  "order": 147
+ },
+ {
+  "code": "ExplorationFSSEnter",
+  "name": "Enter FSS",
+  "longName": "Enter FSS Mode",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Mode Switches",
+  "type": "digital",
+  "order": 148
+ },
+ {
+  "code": "UI_Up",
+  "name": "UI Up",
+  "longName": "UI Panel Up",
+  "group": "UI",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Interface Mode",
+  "type": "digital",
+  "order": 149
+ },
+ {
+  "code": "UI_Down",
+  "name": "UI Down",
+  "longName": "UI Panel Down",
+  "group": "UI",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Interface Mode",
+  "type": "digital",
+  "order": 150
+ },
+ {
+  "code": "UI_Left",
+  "name": "UI Left",
+  "longName": "UI Panel Left",
+  "group": "UI",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Interface Mode",
+  "type": "digital",
+  "order": 151
+ },
+ {
+  "code": "UI_Right",
+  "name": "UI Right",
+  "longName": "UI Panel Right",
+  "group": "UI",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Interface Mode",
+  "type": "digital",
+  "order": 152
+ },
+ {
+  "code": "UI_Select",
+  "name": "UI Select",
+  "longName": "UI Panel Select",
+  "group": "UI",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Interface Mode",
+  "type": "digital",
+  "order": 153
+ },
+ {
+  "code": "UI_Back",
+  "name": "UI Back",
+  "longName": "UI Panel Back",
+  "group": "UI",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Interface Mode",
+  "type": "digital",
+  "order": 154,
+  "short": "UI BK"
+ },
+ {
+  "code": "UI_Toggle",
+  "name": "UI Toggle",
+  "longName": "UI Nested Toggle",
+  "group": "UI",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Interface Mode",
+  "type": "digital",
+  "order": 155
+ },
+ {
+  "code": "CycleNextPanel",
+  "name": "Next Panel",
+  "longName": "Next Panel Tab",
+  "group": "UI",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Interface Mode",
+  "type": "digital",
+  "order": 156,
+  "short": "NEXT"
+ },
+ {
+  "code": "CyclePreviousPanel",
+  "name": "Prev Panel",
+  "longName": "Previous Panel Tab",
+  "group": "UI",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Interface Mode",
+  "type": "digital",
+  "order": 157,
+  "short": "PREV"
+ },
+ {
+  "code": "CycleNextPage",
+  "name": "Next Page",
+  "longName": "Next Page",
+  "group": "UI",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Interface Mode",
+  "type": "digital",
+  "order": 158
+ },
+ {
+  "code": "CyclePreviousPage",
+  "name": "Prev Page",
+  "longName": "Previous Page",
+  "group": "UI",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Interface Mode",
+  "type": "digital",
+  "order": 159
+ },
+ {
+  "code": "HeadLookReset",
+  "name": "Reset Headlook",
+  "longName": "Reset Headlook",
+  "group": "Head look",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Headlook Mode",
+  "type": "digital",
+  "order": 169
+ },
+ {
+  "code": "HeadLookPitchUp",
+  "name": "Look Up",
+  "longName": "Look Up",
+  "group": "Head look",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Headlook Mode",
+  "type": "digital",
+  "order": 170,
+  "hasAnalogue": true
+ },
+ {
+  "code": "HeadLookPitchDown",
+  "name": "Look Down",
+  "longName": "Look Down",
+  "group": "Head look",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Headlook Mode",
+  "type": "digital",
+  "order": 171,
+  "hasAnalogue": true
+ },
+ {
+  "code": "HeadLookPitchAxisRaw",
+  "name": "Look Up/Down",
+  "longName": "Look Up and Down Axis",
+  "group": "Head look",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Headlook Mode",
+  "type": "analogue",
+  "order": 172
+ },
+ {
+  "code": "HeadLookYawLeft",
+  "name": "Look Left",
+  "longName": "Look Left",
+  "group": "Head look",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Headlook Mode",
+  "type": "digital",
+  "order": 173,
+  "hasAnalogue": true
+ },
+ {
+  "code": "HeadLookYawRight",
+  "name": "Look Right",
+  "longName": "Look Right",
+  "group": "Head look",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Headlook Mode",
+  "type": "digital",
+  "order": 174,
+  "hasAnalogue": true
+ },
+ {
+  "code": "HeadLookYawAxis",
+  "name": "Look Left/Right",
+  "longName": "Look Left and Right Axis",
+  "group": "Head look",
+  "category": "Navigation",
+  "area": "Ship Controls",
+  "section": "Headlook Mode",
+  "type": "analogue",
+  "order": 175
+ },
+ {
+  "code": "CamPitchAxis",
+  "name": "GalMap Pitch",
+  "longName": "Galaxy Cam Pitch Axis",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "analogue",
+  "order": 179,
+  "hideIfSameAs": [
+   "PitchAxisRaw"
+  ]
+ },
+ {
+  "code": "CamPitchUp",
+  "name": "GalMap Pitch Up",
+  "longName": "Galaxy Cam Pitch Up",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "digital",
+  "order": 180,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchUpButton"
+  ]
+ },
+ {
+  "code": "CamPitchDown",
+  "name": "GalMap Pitch Down",
+  "longName": "Galaxy Cam Pitch Down",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "digital",
+  "order": 181,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchDownButton"
+  ]
+ },
+ {
+  "code": "CamYawAxis",
+  "name": "GalMap Yaw",
+  "longName": "Galaxy Cam Yaw Axis",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "analogue",
+  "order": 182,
+  "hideIfSameAs": [
+   "YawAxisRaw"
+  ]
+ },
+ {
+  "code": "CamYawLeft",
+  "name": "GalMap Yaw Left",
+  "longName": "Galaxy Cam Yaw Left",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "digital",
+  "order": 183,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawLeftButton"
+  ]
+ },
+ {
+  "code": "CamYawRight",
+  "name": "GalMap Yaw Right",
+  "longName": "Galaxy Cam Yaw Right",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "digital",
+  "order": 184,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawRightButton"
+  ]
+ },
+ {
+  "code": "CamTranslateYAxis",
+  "name": "GalMap Y",
+  "longName": "Galaxy Cam Translate Y-Axis",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "analogue",
+  "order": 185
+ },
+ {
+  "code": "CamTranslateForward",
+  "name": "GalMap Forward",
+  "longName": "Galaxy Cam Translate Forward",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "digital",
+  "order": 186,
+  "hasAnalogue": true
+ },
+ {
+  "code": "CamTranslateBackward",
+  "name": "GalMap Backward",
+  "longName": "Galaxy Cam Translate Backward",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "digital",
+  "order": 187,
+  "hasAnalogue": true
+ },
+ {
+  "code": "CamTranslateXAxis",
+  "name": "GalMap X",
+  "longName": "Galaxy Cam Translate X-Axis",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "analogue",
+  "order": 188
+ },
+ {
+  "code": "CamTranslateLeft",
+  "name": "GalMap Left",
+  "longName": "Galaxy Cam Translate Left",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "digital",
+  "order": 189,
+  "hasAnalogue": true
+ },
+ {
+  "code": "CamTranslateRight",
+  "name": "GalMap Right",
+  "longName": "Galaxy Cam Translate Right",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "digital",
+  "order": 190,
+  "hasAnalogue": true
+ },
+ {
+  "code": "CamTranslateZAxis",
+  "name": "GalMap Z",
+  "longName": "Galaxy  Cam Translate Z-Axis",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "analogue",
+  "order": 191
+ },
+ {
+  "code": "CamTranslateUp",
+  "name": "GalMap Up",
+  "longName": "Galaxy Cam Translate Up",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "digital",
+  "order": 192,
+  "hasAnalogue": true
+ },
+ {
+  "code": "CamTranslateDown",
+  "name": "GalMap Down",
+  "longName": "Galaxy Cam Translate Down",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "digital",
+  "order": 193,
+  "hasAnalogue": true
+ },
+ {
+  "code": "CamZoomAxis",
+  "name": "GalMap Zoom",
+  "longName": "Galaxy Cam Zoom Axis",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "analogue",
+  "order": 194
+ },
+ {
+  "code": "CamZoomIn",
+  "name": "GalMap Zoom In",
+  "longName": "Galaxy Cam Zoom In",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "digital",
+  "order": 195,
+  "hasAnalogue": true
+ },
+ {
+  "code": "CamZoomOut",
+  "name": "GalMap Zoom Out",
+  "longName": "Galaxy Cam Zoom Out",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "digital",
+  "order": 196,
+  "hasAnalogue": true
+ },
+ {
+  "code": "CamTranslateZHold",
+  "name": "GalMap Z Hold",
+  "longName": "Galaxy Cam Set Y-Axis to Z-Axis",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "digital",
+  "order": 197
+ },
+ {
+  "code": "GalaxyMapHome",
+  "name": "GalMap Home",
+  "longName": "Galaxy Cam Select Current System",
+  "group": "Galaxy map",
+  "category": "UI",
+  "area": "General Controls",
+  "section": "Galaxy Map",
+  "type": "digital",
+  "order": 198
+ },
+ {
+  "code": "ToggleDriveAssist",
+  "name": "Drive Assist",
+  "longName": "Drive Assist",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "digital",
+  "order": 199
+ },
+ {
+  "code": "SteeringAxis",
+  "name": "SRV Steer",
+  "longName": "Steering Axis",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "analogue",
+  "order": 207
+ },
+ {
+  "code": "SteerLeftButton",
+  "name": "Steer Left",
+  "longName": "Steering Left Button",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "digital",
+  "order": 208,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawLeftButton"
+  ]
+ },
+ {
+  "code": "SteerRightButton",
+  "name": "Steer Right",
+  "longName": "Steering Right Button",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "digital",
+  "order": 209,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawRightButton"
+  ]
+ },
+ {
+  "code": "BuggyRollAxisRaw",
+  "name": "Roll",
+  "longName": "Roll Axis",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "analogue",
+  "order": 210,
+  "hideIfSameAs": [
+   "RollAxisRaw"
+  ]
+ },
+ {
+  "code": "BuggyRollLeftButton",
+  "name": "Roll Left",
+  "longName": "Roll Left Button",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "digital",
+  "order": 211,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "RollLeftButton"
+  ]
+ },
+ {
+  "code": "BuggyRollRightButton",
+  "name": "Roll Right",
+  "longName": "Roll Right Button",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "digital",
+  "order": 212,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "RollRightButton"
+  ]
+ },
+ {
+  "code": "BuggyPitchAxis",
+  "name": "Pitch",
+  "longName": "Pitch Axis",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "analogue",
+  "order": 213,
+  "hideIfSameAs": [
+   "PitchAxis",
+   "PitchAxisRaw"
+  ]
+ },
+ {
+  "code": "BuggyPitchUpButton",
+  "name": "Pitch Up",
+  "longName": "Pitch Up Button",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "digital",
+  "order": 214,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchUpButton"
+  ]
+ },
+ {
+  "code": "BuggyPitchDownButton",
+  "name": "Pitch Down",
+  "longName": "Pitch Down Button",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "digital",
+  "order": 215,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchDownButton"
+  ]
+ },
+ {
+  "code": "VerticalThrustersButton",
+  "name": "Vertical Thrusters",
+  "longName": "Verticle Thrusters",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "digital",
+  "order": 216
+ },
+ {
+  "code": "BuggyPrimaryFireButton",
+  "name": "Primary Weapons",
+  "longName": "SRV Primary Fire",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "digital",
+  "order": 217,
+  "hideIfSameAs": [
+   "PrimaryFire"
+  ]
+ },
+ {
+  "code": "BuggySecondaryFireButton",
+  "name": "Secondary Weapons",
+  "longName": "SRV Secondary Fire",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "digital",
+  "order": 218,
+  "hideIfSameAs": [
+   "SecondaryFire"
+  ]
+ },
+ {
+  "code": "AutoBreakBuggyButton",
+  "name": "Handbrake",
+  "longName": "Handbrake",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "digital",
+  "order": 219
+ },
+ {
+  "code": "HeadlightsBuggyButton",
+  "name": "Lights",
+  "longName": "Headlights",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "digital",
+  "order": 220,
+  "hideIfSameAs": [
+   "ShipSpotLightToggle"
+  ]
+ },
+ {
+  "code": "ToggleBuggyTurretButton",
+  "name": "Turret Mode",
+  "longName": "Toggle SRV Turret",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "digital",
+  "order": 221
+ },
+ {
+  "code": "BuggyCycleFireGroupNext",
+  "name": "Next Fire Group",
+  "longName": "Cycle Next Fire Group",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "digital",
+  "order": 222,
+  "hideIfSameAs": [
+   "CycleFireGroupNext"
+  ]
+ },
+ {
+  "code": "BuggyCycleFireGroupPrevious",
+  "name": "Prev Fire Group",
+  "longName": "Cycle Previous Fire Group",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving",
+  "type": "digital",
+  "order": 223,
+  "hideIfSameAs": [
+   "CycleFireGroupPrevious"
+  ]
+ },
+ {
+  "code": "SelectTarget_Buggy",
+  "name": "Target Ahead",
+  "longName": "Select Target Ahead",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving Targeting",
+  "type": "digital",
+  "order": 224,
+  "hideIfSameAs": [
+   "SelectTarget"
+  ]
+ },
+ {
+  "code": "BuggyTurretYawAxisRaw",
+  "name": "Turret Yaw",
+  "longName": "SRV Turret Yaw Axis",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving Turret Controls",
+  "type": "analogue",
+  "order": 229,
+  "hideIfSameAs": [
+   "YawAxisRaw"
+  ]
+ },
+ {
+  "code": "BuggyTurretYawLeftButton",
+  "name": "Turret Left",
+  "longName": "SRV Turret Yaw Left",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving Turret Controls",
+  "type": "digital",
+  "order": 230,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawLeftButton"
+  ]
+ },
+ {
+  "code": "BuggyTurretYawRightButton",
+  "name": "Turret Right",
+  "longName": "SRV Turret Yaw Right",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving Turret Controls",
+  "type": "digital",
+  "order": 231,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawLeftButton"
+  ]
+ },
+ {
+  "code": "BuggyTurretPitchAxisRaw",
+  "name": "Turret Pitch",
+  "longName": "SRV Turret Pitch Axis",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving Turret Controls",
+  "type": "analogue",
+  "order": 232,
+  "hideIfSameAs": [
+   "PitchAxisRaw"
+  ]
+ },
+ {
+  "code": "BuggyTurretPitchUpButton",
+  "name": "Turret Up",
+  "longName": "SRV Turret Pitch Up",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving Turret Controls",
+  "type": "digital",
+  "order": 233,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchUpButton"
+  ]
+ },
+ {
+  "code": "BuggyTurretPitchDownButton",
+  "name": "Turret Down",
+  "longName": "SRV Turret Pitch Down",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving Turret Controls",
+  "type": "digital",
+  "order": 234,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchDownButton"
+  ]
+ },
+ {
+  "code": "DriveSpeedAxis",
+  "name": "Speed",
+  "longName": "Drive Speed Axis",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Drive Throttle",
+  "type": "analogue",
+  "order": 238,
+  "hideIfSameAs": [
+   "ThrottleAxis"
+  ]
+ },
+ {
+  "code": "BuggyToggleReverseThrottleInput",
+  "name": "Reverse",
+  "longName": "Forward Only Throttle Reverse",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Drive Throttle",
+  "type": "digital",
+  "order": 240,
+  "hideIfSameAs": [
+   "ToggleReverseThrottleInput"
+  ]
+ },
+ {
+  "code": "IncreaseSpeedButtonMax",
+  "name": "Maximum Speed",
+  "longName": "Accelerate Button",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Drive Throttle",
+  "type": "digital",
+  "order": 242,
+  "hideIfSameAs": [
+   "SetSpeed100"
+  ]
+ },
+ {
+  "code": "DecreaseSpeedButtonMax",
+  "name": "Zero Speed",
+  "longName": "Decelerate Button",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Drive Throttle",
+  "type": "digital",
+  "order": 243,
+  "hideIfSameAs": [
+   "SetSpeedZero"
+  ]
+ },
+ {
+  "code": "IncreaseSpeedButtonPartial",
+  "name": "Inc Speed",
+  "longName": "Accelerate Axis",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Drive Throttle",
+  "type": "digital",
+  "order": 244,
+  "hasAnalogue": true
+ },
+ {
+  "code": "DecreaseSpeedButtonPartial",
+  "name": "Dec Speed",
+  "longName": "Decelerate Axis",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Drive Throttle",
+  "type": "digital",
+  "order": 245,
+  "hasAnalogue": true
+ },
+ {
+  "code": "IncreaseEnginesPower_Buggy",
+  "name": "ENG",
+  "longName": "Divert Power to Engines",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving Miscellaneous",
+  "type": "digital",
+  "order": 246,
+  "hideIfSameAs": [
+   "IncreaseEnginesPower"
+  ]
+ },
+ {
+  "code": "IncreaseWeaponsPower_Buggy",
+  "name": "WEP",
+  "longName": "Divert Power to Weapons",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving Miscellaneous",
+  "type": "digital",
+  "order": 247,
+  "hideIfSameAs": [
+   "IncreaseWeaponsPower"
+  ]
+ },
+ {
+  "code": "IncreaseSystemsPower_Buggy",
+  "name": "SYS",
+  "longName": "Divert Power to System",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving Miscellaneous",
+  "type": "digital",
+  "order": 248,
+  "hideIfSameAs": [
+   "IncreaseSystemsPower"
+  ]
+ },
+ {
+  "code": "ResetPowerDistribution_Buggy",
+  "name": "RST",
+  "longName": "Balance Power Distribution",
+  "group": "SRV",
+  "category": "Combat",
+  "area": "SRV Controls",
+  "section": "Driving Miscellaneous",
+  "type": "digital",
+  "order": 249,
+  "hideIfSameAs": [
+   "ResetPowerDistribution"
+  ]
+ },
+ {
+  "code": "ToggleCargoScoop_Buggy",
+  "name": "Cargo Scoop",
+  "longName": "Cargo Scoop",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving Miscellaneous",
+  "type": "digital",
+  "order": 250,
+  "hideIfSameAs": [
+   "ToggleCargoScoop"
+  ]
+ },
+ {
+  "code": "EjectAllCargo_Buggy",
+  "name": "Eject All Cargo",
+  "longName": "Jettison All Cargo",
+  "group": "SRV",
+  "category": "General",
+  "area": "SRV Controls",
+  "section": "Driving Miscellaneous",
+  "type": "digital",
+  "order": 251,
+  "hideIfSameAs": [
+   "EjectAllCargo"
+  ]
+ },
+ {
+  "code": "RecallDismissShip",
+  "name": "Recall/Dismiss Ship",
+  "longName": "Recall/Dismiss Ship",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving Miscellaneous",
+  "type": "digital",
+  "order": 252
+ },
+ {
+  "code": "UIFocus_Buggy",
+  "name": "UI Focus",
+  "longName": "UI Focus",
+  "group": "SRV",
+  "category": "General",
+  "area": "SRV Controls",
+  "section": "Driving Mode Switches",
+  "type": "digital",
+  "order": 254,
+  "hideIfSameAs": [
+   "UIFocus"
+  ]
+ },
+ {
+  "code": "FocusLeftPanel_Buggy",
+  "name": "Nav Panel",
+  "longName": "External Panel",
+  "group": "SRV",
+  "category": "General",
+  "area": "SRV Controls",
+  "section": "Driving Mode Switches",
+  "type": "digital",
+  "order": 255,
+  "hideIfSameAs": [
+   "FocusLeftPanel"
+  ]
+ },
+ {
+  "code": "FocusCommsPanel_Buggy",
+  "name": "Comms Panel",
+  "longName": "Comms Panel",
+  "group": "SRV",
+  "category": "General",
+  "area": "SRV Controls",
+  "section": "Driving Mode Switches",
+  "type": "digital",
+  "order": 256,
+  "hideIfSameAs": [
+   "FocusCommsPanel"
+  ]
+ },
+ {
+  "code": "QuickCommsPanel_Buggy",
+  "name": "Quick Comms",
+  "longName": "Quick Comms",
+  "group": "SRV",
+  "category": "General",
+  "area": "SRV Controls",
+  "section": "Driving Mode Switches",
+  "type": "digital",
+  "order": 257,
+  "hideIfSameAs": [
+   "QuickCommsPanel"
+  ]
+ },
+ {
+  "code": "FocusRadarPanel_Buggy",
+  "name": "Role Panel",
+  "longName": "Role Panel",
+  "group": "SRV",
+  "category": "General",
+  "area": "SRV Controls",
+  "section": "Driving Mode Switches",
+  "type": "digital",
+  "order": 258,
+  "hideIfSameAs": [
+   "FocusRadarPanel"
+  ]
+ },
+ {
+  "code": "FocusRightPanel_Buggy",
+  "name": "Systems Panel",
+  "longName": "Internal Panel",
+  "group": "SRV",
+  "category": "General",
+  "area": "SRV Controls",
+  "section": "Driving Mode Switches",
+  "type": "digital",
+  "order": 259,
+  "hideIfSameAs": [
+   "FocusRightPanel"
+  ]
+ },
+ {
+  "code": "GalaxyMapOpen_Buggy",
+  "name": "GalMap",
+  "longName": "Open Galaxy Map",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving Mode Switches",
+  "type": "digital",
+  "order": 260,
+  "hideIfSameAs": [
+   "GalaxyMapOpen"
+  ]
+ },
+ {
+  "code": "SystemMapOpen_Buggy",
+  "name": "SysMap",
+  "longName": "Open System Map",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "SRV Controls",
+  "section": "Driving Mode Switches",
+  "type": "digital",
+  "order": 261,
+  "hideIfSameAs": [
+   "SystemMapOpen"
+  ]
+ },
+ {
+  "code": "OpenCodexGoToDiscovery_Buggy",
+  "name": "Codex",
+  "longName": "Open Discovery",
+  "group": "SRV",
+  "category": "General",
+  "area": "SRV Controls",
+  "section": "Driving Mode Switches",
+  "type": "digital",
+  "order": 262,
+  "hideIfSameAs": [
+   "OpenCodexGoToDiscovery"
+  ]
+ },
+ {
+  "code": "PlayerHUDModeToggle_Buggy",
+  "name": "HUD Mode",
+  "longName": "Switch Cockpit Mode",
+  "group": "SRV",
+  "category": "General",
+  "area": "SRV Controls",
+  "section": "Driving Mode Switches",
+  "type": "digital",
+  "order": 263,
+  "hideIfSameAs": [
+   "PlayerHUDModeToggle"
+  ]
+ },
+ {
+  "code": "HeadLookToggle_Buggy",
+  "name": "Toggle Headlook",
+  "longName": "Headlook",
+  "group": "SRV",
+  "category": "General",
+  "area": "SRV Controls",
+  "section": "Driving Mode Switches",
+  "type": "digital",
+  "order": 264,
+  "hideIfSameAs": [
+   "HeadLookToggle"
+  ]
+ },
+ {
+  "code": "MultiCrewToggleMode",
+  "name": "Multicrew Mode",
+  "longName": "Mode Toggle",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "digital",
+  "order": 265
+ },
+ {
+  "code": "MultiCrewPrimaryFire",
+  "name": "Fire 1",
+  "longName": "Primary Fire",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "digital",
+  "order": 266,
+  "hideIfSameAs": [
+   "PrimaryFire"
+  ]
+ },
+ {
+  "code": "MultiCrewSecondaryFire",
+  "name": "Fire 2",
+  "longName": "Fire 2",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Other",
+  "section": "Multicrew",
+  "type": "digital",
+  "order": 267,
+  "hideIfSameAs": [
+   "SecondaryFire"
+  ]
+ },
+ {
+  "code": "MultiCrewPrimaryUtilityFire",
+  "name": "Primary Utility",
+  "longName": "Primary Utility Fire",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "digital",
+  "order": 268
+ },
+ {
+  "code": "MultiCrewSecondaryUtilityFire",
+  "name": "Secondary Utility",
+  "longName": "Secondary Utility",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Other",
+  "section": "Multicrew",
+  "type": "digital",
+  "order": 269
+ },
+ {
+  "code": "MultiCrewThirdPersonYawAxisRaw",
+  "name": "Yaw",
+  "longName": "Third-Person Yaw Axis",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "analogue",
+  "order": 274,
+  "hideIfSameAs": [
+   "YawAxisRaw"
+  ]
+ },
+ {
+  "code": "MultiCrewThirdPersonYawLeftButton",
+  "name": "Yaw Left",
+  "longName": "Third-Person Yaw Left",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "digital",
+  "order": 275,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawLeftButton"
+  ]
+ },
+ {
+  "code": "MultiCrewThirdPersonYawRightButton",
+  "name": "Yaw Right",
+  "longName": "Third-Person Yaw Right",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "digital",
+  "order": 276,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawRightButton"
+  ]
+ },
+ {
+  "code": "MultiCrewThirdPersonPitchAxisRaw",
+  "name": "Pitch",
+  "longName": "Third-Person Pitch Axis",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "analogue",
+  "order": 277,
+  "hideIfSameAs": [
+   "PitchAxisRaw"
+  ]
+ },
+ {
+  "code": "MultiCrewThirdPersonPitchUpButton",
+  "name": "Pitch Up",
+  "longName": "Third-Person Pitch Up",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "digital",
+  "order": 278,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchUpButton"
+  ]
+ },
+ {
+  "code": "MultiCrewThirdPersonPitchDownButton",
+  "name": "Pitch Down",
+  "longName": "Third-Person Pitch Down",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "digital",
+  "order": 279,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchDownButton"
+  ]
+ },
+ {
+  "code": "MultiCrewThirdPersonFovAxisRaw",
+  "name": "Field of View",
+  "longName": "Third-Person Field of View Axis",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "analogue",
+  "order": 281
+ },
+ {
+  "code": "MultiCrewThirdPersonFovOutButton",
+  "name": "Field of View Out",
+  "longName": "Third-Person Field of View Out",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "digital",
+  "order": 282,
+  "hasAnalogue": true
+ },
+ {
+  "code": "MultiCrewThirdPersonFovInButton",
+  "name": "Field of View In",
+  "longName": "Third-Person Field of View In",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "digital",
+  "order": 283,
+  "hasAnalogue": true
+ },
+ {
+  "code": "MultiCrewCockpitUICycleForward",
+  "name": "UI Forward",
+  "longName": "Cycle Cockpit UI Forwards",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "digital",
+  "order": 284,
+  "hideIfSameAs": [
+   "UI_Right"
+  ]
+ },
+ {
+  "code": "MultiCrewCockpitUICycleBackward",
+  "name": "UI Backward",
+  "longName": "Cycle Cockpit UI Backwards",
+  "group": "Multicrew",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "digital",
+  "order": 285,
+  "hideIfSameAs": [
+   "UI_Left"
+  ]
+ },
+ {
+  "code": "OrderRequestDock",
+  "name": "Dock SLF",
+  "longName": "Recall Fighter",
+  "group": "Fighter",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Fighter Orders",
+  "type": "digital",
+  "order": 286,
+  "short": "RECALL"
+ },
+ {
+  "code": "OrderDefensiveBehaviour",
+  "name": "Be Defensive",
+  "longName": "Defend",
+  "group": "Fighter",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Fighter Orders",
+  "type": "digital",
+  "order": 287,
+  "short": "DFND"
+ },
+ {
+  "code": "OrderAggressiveBehaviour",
+  "name": "Be Aggressive",
+  "longName": "Engage at Will",
+  "group": "Fighter",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Fighter Orders",
+  "type": "digital",
+  "order": 288,
+  "short": "ATTK"
+ },
+ {
+  "code": "OrderFocusTarget",
+  "name": "Attack My Target",
+  "longName": "Attack Target",
+  "group": "Fighter",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Fighter Orders",
+  "type": "digital",
+  "order": 289,
+  "short": "ENGAGE"
+ },
+ {
+  "code": "OrderHoldFire",
+  "name": "Hold Fire",
+  "longName": "Maintain formation",
+  "group": "Fighter",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Fighter Orders",
+  "type": "digital",
+  "order": 290
+ },
+ {
+  "code": "OrderHoldPosition",
+  "name": "Hold Position",
+  "longName": "Hold Position",
+  "group": "Fighter",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Fighter Orders",
+  "type": "digital",
+  "order": 291
+ },
+ {
+  "code": "OrderFollow",
+  "name": "Follow",
+  "longName": "Follow Me",
+  "group": "Fighter",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Fighter Orders",
+  "type": "digital",
+  "order": 292,
+  "short": "FOLLOW"
+ },
+ {
+  "code": "OpenOrders",
+  "name": "Crew Orders",
+  "longName": "Open Orders",
+  "group": "Fighter",
+  "category": "Combat",
+  "area": "Ship Controls",
+  "section": "Fighter Orders",
+  "type": "digital",
+  "order": 293
+ },
+ {
+  "code": "PhotoCameraToggle",
+  "name": "External Cam",
+  "longName": "Ship - Toggle Camera Suite",
+  "group": "Camera",
+  "category": "Camera",
+  "area": "General Controls",
+  "section": "Camera Suite",
+  "type": "digital",
+  "order": 294
+ },
+ {
+  "code": "PhotoCameraToggle_Buggy",
+  "name": "External Cam",
+  "longName": "SRV - Toggle Camera Suite",
+  "group": "Camera",
+  "category": "Camera",
+  "area": "General Controls",
+  "section": "Camera Suite",
+  "type": "digital",
+  "order": 295,
+  "hideIfSameAs": [
+   "PhotoCameraToggle"
+  ]
+ },
+ {
+  "code": "PhotoCameraToggle_Humanoid",
+  "name": "External Cam",
+  "longName": "Command - Toggle Camera Suite",
+  "group": "Camera",
+  "category": "Camera",
+  "area": "General Controls",
+  "section": "Camera Suite",
+  "type": "digital",
+  "order": 296,
+  "hideIfSameAs": [
+   "PhotoCameraToggle"
+  ]
+ },
+ {
+  "code": "VanityCameraScrollLeft",
+  "name": "Prev Cam",
+  "longName": "Previous Camera",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Camera Suite",
+  "type": "digital",
+  "order": 297
+ },
+ {
+  "code": "VanityCameraScrollRight",
+  "name": "Next Cam",
+  "longName": "Next Camera",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Camera Suite",
+  "type": "digital",
+  "order": 298
+ },
+ {
+  "code": "ToggleFreeCam",
+  "name": "Free Cam",
+  "longName": "Enter Free Camera",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Camera Suite",
+  "type": "digital",
+  "order": 299
+ },
+ {
+  "code": "VanityCameraOne",
+  "name": "Cam - Cockpit Front",
+  "longName": "Camera - Cockpit Front",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Camera Suite",
+  "type": "digital",
+  "order": 300
+ },
+ {
+  "code": "VanityCameraTwo",
+  "name": "Cam - Cockpit Back",
+  "longName": "Camera - Cockpit Back",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Camera Suite",
+  "type": "digital",
+  "order": 301
+ },
+ {
+  "code": "VanityCameraThree",
+  "name": "Cam - Commander 1",
+  "longName": "Camera - CMDR 1",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Camera Suite",
+  "type": "digital",
+  "order": 302
+ },
+ {
+  "code": "VanityCameraFour",
+  "name": "Cam - Commander 2",
+  "longName": "Camera - CMDR 2",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Camera Suite",
+  "type": "digital",
+  "order": 303
+ },
+ {
+  "code": "VanityCameraFive",
+  "name": "Cam - Co-Pilot 1",
+  "longName": "Camera - Co-Pilot 1",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Camera Suite",
+  "type": "digital",
+  "order": 304
+ },
+ {
+  "code": "VanityCameraSix",
+  "name": "Cam - Co-Pilot 2",
+  "longName": "Camera - Co-Pilot 2",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Camera Suite",
+  "type": "digital",
+  "order": 305
+ },
+ {
+  "code": "VanityCameraSeven",
+  "name": "Cam - Front",
+  "longName": "Camera - Front",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Camera Suite",
+  "type": "digital",
+  "order": 306
+ },
+ {
+  "code": "VanityCameraEight",
+  "name": "Cam - Back",
+  "longName": "Camera - Back",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Camera Suite",
+  "type": "digital",
+  "order": 307
+ },
+ {
+  "code": "VanityCameraNine",
+  "name": "Cam - Low",
+  "longName": "Camera - Low",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Camera Suite",
+  "type": "digital",
+  "order": 308
+ },
+ {
+  "code": "VanityCameraTen",
+  "name": "Cam - Back Low",
+  "longName": "Cam - Back Low",
+  "group": "Camera",
+  "category": "General",
+  "area": "Other",
+  "section": "Camera",
+  "type": "digital",
+  "order": 309
+ },
+ {
+  "code": "FreeCamToggleHUD",
+  "name": "Toggle HUD",
+  "longName": "Toggle HUD",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 310
+ },
+ {
+  "code": "FreeCamSpeedInc",
+  "name": "Inc Cam Speed",
+  "longName": "Increase Speed",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 311
+ },
+ {
+  "code": "FreeCamSpeedDec",
+  "name": "Dec Cam Speed",
+  "longName": "Decrease Speed",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 312
+ },
+ {
+  "code": "MoveFreeCamY",
+  "name": "Cam Y",
+  "longName": "Forward Axis",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "analogue",
+  "order": 313
+ },
+ {
+  "code": "ToggleReverseThrottleInputFreeCam",
+  "name": "Cam Reverse",
+  "longName": "Forward Only Throttle Reverse",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 315,
+  "hideIfSameAs": [
+   "ToggleReverseThrottleInput",
+   "BuggyToggleReverseThrottleInput"
+  ]
+ },
+ {
+  "code": "MoveFreeCamForward",
+  "name": "Cam Forwards",
+  "longName": "Move Forward",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 316,
+  "hasAnalogue": true
+ },
+ {
+  "code": "MoveFreeCamBackwards",
+  "name": "Cam Backwards",
+  "longName": "Move Backward",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 317,
+  "hasAnalogue": true
+ },
+ {
+  "code": "MoveFreeCamX",
+  "name": "Cam X",
+  "longName": "Lateral Axis",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "analogue",
+  "order": 318
+ },
+ {
+  "code": "MoveFreeCamRight",
+  "name": "Cam Right",
+  "longName": "Move Right",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 319,
+  "hasAnalogue": true
+ },
+ {
+  "code": "MoveFreeCamLeft",
+  "name": "Cam Left",
+  "longName": "Move Left",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 320,
+  "hasAnalogue": true
+ },
+ {
+  "code": "MoveFreeCamZ",
+  "name": "Cam Z",
+  "longName": "Lift Axis",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "analogue",
+  "order": 321
+ },
+ {
+  "code": "MoveFreeCamUpAxis",
+  "name": "Cam Up Axis",
+  "longName": "Move Up (Analogue)",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "analogue",
+  "order": 322
+ },
+ {
+  "code": "MoveFreeCamDownAxis",
+  "name": "Cam Down Axis",
+  "longName": "Move Down (Analogue)",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "analogue",
+  "order": 323
+ },
+ {
+  "code": "MoveFreeCamUp",
+  "name": "Cam Up",
+  "longName": "Move Up",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 324,
+  "hasAnalogue": true
+ },
+ {
+  "code": "MoveFreeCamDown",
+  "name": "Cam Down",
+  "longName": "Move Down",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 325,
+  "hasAnalogue": true
+ },
+ {
+  "code": "PitchCamera",
+  "name": "Cam Pitch",
+  "longName": "Pitch Axis",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "analogue",
+  "order": 328,
+  "hideIfSameAs": [
+   "PitchAxisRaw"
+  ]
+ },
+ {
+  "code": "PitchCameraUp",
+  "name": "Cam Pitch Up",
+  "longName": "Pitch Up",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 331,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchUpButton"
+  ]
+ },
+ {
+  "code": "PitchCameraDown",
+  "name": "Cam Pitch Down",
+  "longName": "Pitch Down",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 332,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchDownButton"
+  ]
+ },
+ {
+  "code": "YawCamera",
+  "name": "Cam Yaw",
+  "longName": "Yaw Axis",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "analogue",
+  "order": 333,
+  "hideIfSameAs": [
+   "YawAxisRaw"
+  ]
+ },
+ {
+  "code": "YawCameraLeft",
+  "name": "Cam Yaw Left",
+  "longName": "Yaw Left",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 335,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawLeftButton"
+  ]
+ },
+ {
+  "code": "YawCameraRight",
+  "name": "Cam Yaw Right",
+  "longName": "Yaw Right",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 336,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawRightButton"
+  ]
+ },
+ {
+  "code": "RollCamera",
+  "name": "Cam Roll",
+  "longName": "Roll Axis",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "analogue",
+  "order": 337,
+  "hideIfSameAs": [
+   "RollAxisRaw"
+  ]
+ },
+ {
+  "code": "RollCameraLeft",
+  "name": "Cam Roll Left",
+  "longName": "Roll Left",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 338,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "RollLeftButton"
+  ]
+ },
+ {
+  "code": "RollCameraRight",
+  "name": "Cam Roll Right",
+  "longName": "Roll Right",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 339,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "RollRightButton"
+  ]
+ },
+ {
+  "code": "ToggleRotationLock",
+  "name": "Cam Rotation Lock",
+  "longName": "Stabiliser On/Off Toggle",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 340
+ },
+ {
+  "code": "FixCameraRelativeToggle",
+  "name": "Lock to Vehicle",
+  "longName": "Lock to Vehicle",
+  "group": "Camera",
+  "category": "General",
+  "area": "Other",
+  "section": "Camera",
+  "type": "digital",
+  "order": 341
+ },
+ {
+  "code": "FixCameraWorldToggle",
+  "name": "Lock to World",
+  "longName": "Attach / Detach Camera",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 342
+ },
+ {
+  "code": "QuitCamera",
+  "name": "Exit free Cam",
+  "longName": "Exit Free Camera",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 343,
+  "hideIfSameAs": [
+   "ToggleFreeCam"
+  ]
+ },
+ {
+  "code": "ToggleAdvanceMode",
+  "name": "Advanced Cam",
+  "longName": "Zoom / Blur Toggle",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 344
+ },
+ {
+  "code": "FreeCamZoomIn",
+  "name": "Zoom In",
+  "longName": "Increase Zoom/Focus",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 345
+ },
+ {
+  "code": "FreeCamZoomOut",
+  "name": "Zoom Out",
+  "longName": "Decrease Zoom/Focus",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 346
+ },
+ {
+  "code": "FStopDec",
+  "name": "Dec Blur",
+  "longName": "Decrease Blur",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 347,
+  "hasAnalogue": true
+ },
+ {
+  "code": "FStopInc",
+  "name": "Inc Blur",
+  "longName": "Increase Blur",
+  "group": "Camera",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 348,
+  "hasAnalogue": true
+ },
+ {
+  "code": "CommanderCreator_Undo",
+  "name": "Undo Holo-Me",
+  "longName": "Undo",
+  "group": "Holo-Me",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Holo-Me",
+  "type": "digital",
+  "order": 349
+ },
+ {
+  "code": "CommanderCreator_Redo",
+  "name": "Redo Holo-Me",
+  "longName": "Redo",
+  "group": "Holo-Me",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Holo-Me",
+  "type": "digital",
+  "order": 350
+ },
+ {
+  "code": "CommanderCreator_Rotation_MouseToggle",
+  "name": "Toggle Holo-Me Rotation",
+  "longName": "Toggle Mouse Rotation",
+  "group": "Holo-Me",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Holo-Me",
+  "type": "digital",
+  "order": 351
+ },
+ {
+  "code": "CommanderCreator_Rotation",
+  "name": "Rotate Holo-Me",
+  "longName": "Rotate Camera",
+  "group": "Holo-Me",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Holo-Me",
+  "type": "digital",
+  "order": 352
+ },
+ {
+  "code": "GalnetAudio_Play_Pause",
+  "name": "Play/Pause Audio",
+  "longName": "Play / Pause",
+  "group": "Misc",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Playlist",
+  "type": "digital",
+  "order": 353
+ },
+ {
+  "code": "GalnetAudio_SkipForward",
+  "name": "Next Audio Track",
+  "longName": "Skip Forward",
+  "group": "Misc",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Playlist",
+  "type": "digital",
+  "order": 354
+ },
+ {
+  "code": "GalnetAudio_SkipBackward",
+  "name": "Prev Audio Track",
+  "longName": "Skip Backward",
+  "group": "Misc",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Playlist",
+  "type": "digital",
+  "order": 355
+ },
+ {
+  "code": "GalnetAudio_ClearQueue",
+  "name": "Clear Audio Queue",
+  "longName": "Clear Queue",
+  "group": "Misc",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Playlist",
+  "type": "digital",
+  "order": 356
+ },
+ {
+  "code": "ExplorationFSSCameraPitch",
+  "name": "FSS Pitch ",
+  "longName": "FSS Pitch ",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Other",
+  "section": "Scanners",
+  "type": "analogue",
+  "order": 357,
+  "hideIfSameAs": [
+   "PitchAxisRaw"
+  ]
+ },
+ {
+  "code": "ExplorationFSSCameraPitchIncreaseButton",
+  "name": "FSS Pitch Up ",
+  "longName": "Camera Pitch Increase",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 358,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchUpButton"
+  ]
+ },
+ {
+  "code": "ExplorationFSSCameraPitchDecreaseButton",
+  "name": "FSS Pitch Down ",
+  "longName": "Camera Pitch Decrease",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 359,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchDownButton"
+  ]
+ },
+ {
+  "code": "ExplorationFSSCameraYaw",
+  "name": "FSS Yaw ",
+  "longName": "Cameray Yaw",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "analogue",
+  "order": 360,
+  "hideIfSameAs": [
+   "YawAxisRaw"
+  ]
+ },
+ {
+  "code": "ExplorationFSSCameraYawIncreaseButton",
+  "name": "FSS Yaw Right ",
+  "longName": "Camera Yaw Increase",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 361,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawRightButton"
+  ]
+ },
+ {
+  "code": "ExplorationFSSCameraYawDecreaseButton",
+  "name": "FSS Yaw Left ",
+  "longName": "Camera Yaw Decrease",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 362,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawLeftButton"
+  ]
+ },
+ {
+  "code": "ExplorationFSSZoomIn",
+  "name": "Zoom FSS In",
+  "longName": "Zoom in to Target",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 363
+ },
+ {
+  "code": "ExplorationFSSZoomOut",
+  "name": "Zoom FSS Out",
+  "longName": "Zoom Out",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 364
+ },
+ {
+  "code": "ExplorationFSSMiniZoomIn",
+  "name": "Step Zoom FSS In",
+  "longName": "Stepped Zoom In",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 365
+ },
+ {
+  "code": "ExplorationFSSMiniZoomOut",
+  "name": "Step Zoom FSS Out",
+  "longName": "Stepped Zoom Out",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 366
+ },
+ {
+  "code": "ExplorationFSSRadioTuningX_Raw",
+  "name": "FSS Tuning",
+  "longName": "FSS Tuning",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Other",
+  "section": "Scanners",
+  "type": "analogue",
+  "order": 367
+ },
+ {
+  "code": "ExplorationFSSRadioTuningX_Increase",
+  "name": "FSS Tune Right",
+  "longName": "Tuning Right",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 368,
+  "hasAnalogue": true
+ },
+ {
+  "code": "ExplorationFSSRadioTuningX_Decrease",
+  "name": "FSS Tune Left",
+  "longName": "Tuning Left",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 369,
+  "hasAnalogue": true
+ },
+ {
+  "code": "ExplorationFSSRadioTuningAbsoluteX",
+  "name": "FSS Tuning",
+  "longName": "Absolute Tuning",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "analogue",
+  "order": 370
+ },
+ {
+  "code": "ExplorationFSSDiscoveryScan",
+  "name": "FSS Honk",
+  "longName": "Discovery Scan",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 372
+ },
+ {
+  "code": "ExplorationFSSQuit",
+  "name": "Exit FSS",
+  "longName": "Leave FSS",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 373
+ },
+ {
+  "code": "ExplorationFSSTarget",
+  "name": "Target FSS",
+  "longName": "Target Current Signal",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 381
+ },
+ {
+  "code": "ExplorationFSSShowHelp",
+  "name": "FSS Help",
+  "longName": "Show Help",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 382
+ },
+ {
+  "code": "ExplorationSAAChangeScannedAreaViewToggle",
+  "name": "Toggle Planet Front/Back",
+  "longName": "Toggle Front/Back View",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Detailed Surface Scanner",
+  "type": "digital",
+  "order": 383
+ },
+ {
+  "code": "ExplorationSAAExitThirdPerson",
+  "name": "Exit DSS",
+  "longName": "Exit Mode",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Detailed Surface Scanner",
+  "type": "digital",
+  "order": 384
+ },
+ {
+  "code": "ExplorationSAANextGenus",
+  "name": "Next Signal (DSS)",
+  "longName": "Next Filter",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Detailed Surface Scanner",
+  "type": "digital",
+  "order": 385
+ },
+ {
+  "code": "ExplorationSAAPreviousGenus",
+  "name": "Prev Signal (DSS)",
+  "longName": "Previous Filter",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Detailed Surface Scanner",
+  "type": "digital",
+  "order": 386
+ },
+ {
+  "code": "SAAThirdPersonYawAxisRaw",
+  "name": "DSS Yaw",
+  "longName": "Third-Person Yaw Axis",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Detailed Surface Scanner",
+  "type": "analogue",
+  "order": 392,
+  "hideIfSameAs": [
+   "YawAxisRaw"
+  ]
+ },
+ {
+  "code": "SAAThirdPersonYawLeftButton",
+  "name": "Yaw Left (DSS)",
+  "longName": "Third-Person Yaw Left",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Detailed Surface Scanner",
+  "type": "digital",
+  "order": 393,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawLeftButton"
+  ]
+ },
+ {
+  "code": "SAAThirdPersonYawRightButton",
+  "name": "Yaw Right (DSS)",
+  "longName": "Third-Person Yaw Right",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Detailed Surface Scanner",
+  "type": "digital",
+  "order": 394,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawRightButton"
+  ]
+ },
+ {
+  "code": "SAAThirdPersonPitchAxisRaw",
+  "name": "Pitch (DSS)",
+  "longName": "Third-Person Pitch Axis",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Detailed Surface Scanner",
+  "type": "analogue",
+  "order": 395,
+  "hideIfSameAs": [
+   "PitchAxisRaw"
+  ]
+ },
+ {
+  "code": "SAAThirdPersonPitchUpButton",
+  "name": "Pitch Up (DSS)",
+  "longName": "Third-Person Pitch Up",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Detailed Surface Scanner",
+  "type": "digital",
+  "order": 396,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchUpButton"
+  ]
+ },
+ {
+  "code": "SAAThirdPersonPitchDownButton",
+  "name": "Pitch Down (DSS)",
+  "longName": "Third-Person Pitch Down",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Detailed Surface Scanner",
+  "type": "digital",
+  "order": 397,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchDownButton"
+  ]
+ },
+ {
+  "code": "SAAThirdPersonFovAxisRaw",
+  "name": "DSS Field of View",
+  "longName": "Third-Person Field of View Axis",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Detailed Surface Scanner",
+  "type": "analogue",
+  "order": 398
+ },
+ {
+  "code": "SAAThirdPersonFovOutButton",
+  "name": "DSS Field of View Out",
+  "longName": "Third-Person Field of View Out",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Detailed Surface Scanner",
+  "type": "digital",
+  "order": 399,
+  "hasAnalogue": true
+ },
+ {
+  "code": "SAAThirdPersonFovInButton",
+  "name": "DSS Field of View In",
+  "longName": "Third-Person Field of View In",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Detailed Surface Scanner",
+  "type": "digital",
+  "order": 400,
+  "hasAnalogue": true
+ },
+ {
+  "code": "HumanoidForwardAxis",
+  "name": "Fwd/Back",
+  "longName": "Forward Axis",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "analogue",
+  "order": 404,
+  "hideIfSameAs": [
+   "ThrottleAxis"
+  ]
+ },
+ {
+  "code": "HumanoidForwardButton",
+  "name": "Fwd",
+  "longName": "Move Forward",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 405,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "ForwardKey"
+  ]
+ },
+ {
+  "code": "HumanoidBackwardButton",
+  "name": "Back",
+  "longName": "Move Backward",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 406,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "BackwardKey"
+  ]
+ },
+ {
+  "code": "HumanoidStrafeAxis",
+  "name": "Strafe",
+  "longName": "Strafe Axis",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "analogue",
+  "order": 407,
+  "hideIfSameAs": [
+   "RollAxisRaw"
+  ]
+ },
+ {
+  "code": "HumanoidStrafeLeftButton",
+  "name": "Strafe Left",
+  "longName": "Strafe Left",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 408,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "RollLeftButton"
+  ]
+ },
+ {
+  "code": "HumanoidStrafeRightButton",
+  "name": "Strafe Right",
+  "longName": "Strafe Right",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 409,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "RollRightButton"
+  ]
+ },
+ {
+  "code": "HumanoidRotateAxis",
+  "name": "Turn",
+  "longName": "Rotate Axis",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "analogue",
+  "order": 410,
+  "hideIfSameAs": [
+   "YawAxisRaw"
+  ]
+ },
+ {
+  "code": "HumanoidRotateLeftButton",
+  "name": "Turn Left",
+  "longName": "Turn Left",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 412,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawLeftButton"
+  ]
+ },
+ {
+  "code": "HumanoidRotateRightButton",
+  "name": "Turn Right",
+  "longName": "Turn Right",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 413,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawRightButton"
+  ]
+ },
+ {
+  "code": "HumanoidPitchAxis",
+  "name": "Pitch",
+  "longName": "Pitch Axis",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "analogue",
+  "order": 414,
+  "hideIfSameAs": [
+   "PitchAxis",
+   "PitchAxisRaw"
+  ]
+ },
+ {
+  "code": "HumanoidPitchUpButton",
+  "name": "Pitch Up",
+  "longName": "Look Up",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 416,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchUpButton"
+  ]
+ },
+ {
+  "code": "HumanoidPitchDownButton",
+  "name": "Pitch Down",
+  "longName": "Look Down",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 417,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchDownButton"
+  ]
+ },
+ {
+  "code": "HumanoidSprintButton",
+  "name": "Sprint",
+  "longName": "Sprint",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 418
+ },
+ {
+  "code": "HumanoidWalkButton",
+  "name": "Walk",
+  "longName": "Walk",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 419
+ },
+ {
+  "code": "HumanoidCrouchButton",
+  "name": "Crouch",
+  "longName": "Crouch",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 420
+ },
+ {
+  "code": "HumanoidJumpButton",
+  "name": "Jump",
+  "longName": "Jump",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 421
+ },
+ {
+  "code": "HumanoidPrimaryInteractButton",
+  "name": "Interact",
+  "longName": "Interact",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 422
+ },
+ {
+  "code": "HumanoidSecondaryInteractButton",
+  "name": "Interact 2",
+  "longName": "Secondary Interact",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 423
+ },
+ {
+  "code": "HumanoidItemWheelButton",
+  "name": "Item Wheel",
+  "longName": "Open Item Wheel",
+  "group": "OnFoot",
+  "category": "General",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 424
+ },
+ {
+  "code": "HumanoidEmoteWheelButton",
+  "name": "Emote Wheel",
+  "longName": "Emote Wheel",
+  "group": "OnFoot",
+  "category": "General",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 425
+ },
+ {
+  "code": "HumanoidUtilityWheelCycleMode",
+  "name": "Utility Wheel",
+  "longName": "Utility Wheel",
+  "group": "OnFoot",
+  "category": "General",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 426
+ },
+ {
+  "code": "HumanoidItemWheelButton_XAxis",
+  "name": "Item L/R",
+  "longName": "Item Wheel Horizontal",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "analogue",
+  "order": 427
+ },
+ {
+  "code": "HumanoidItemWheelButton_XLeft",
+  "name": "Item Left",
+  "longName": "Item Wheel Left",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 428,
+  "hasAnalogue": true
+ },
+ {
+  "code": "HumanoidItemWheelButton_XRight",
+  "name": "Item Right",
+  "longName": "Item Wheel Right",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 429,
+  "hasAnalogue": true
+ },
+ {
+  "code": "HumanoidItemWheelButton_YAxis",
+  "name": "Item Up/Dn",
+  "longName": "Item Wheel Vertical",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "analogue",
+  "order": 430
+ },
+ {
+  "code": "HumanoidItemWheelButton_YUp",
+  "name": "Item Up",
+  "longName": "Item Wheel Up",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 431,
+  "hasAnalogue": true
+ },
+ {
+  "code": "HumanoidItemWheelButton_YDown",
+  "name": "Item Down",
+  "longName": "Item Wheel Down",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 432,
+  "hasAnalogue": true
+ },
+ {
+  "code": "HumanoidPrimaryFireButton",
+  "name": "Fire",
+  "longName": "Fire Weapon/Use Tool",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 434,
+  "hideIfSameAs": [
+   "PrimaryFire"
+  ]
+ },
+ {
+  "code": "HumanoidZoomButton",
+  "name": "ZoomButton",
+  "longName": "Aim Down Sights",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 435
+ },
+ {
+  "code": "HumanoidThrowGrenadeButton",
+  "name": "Throw Grenade",
+  "longName": "Throw Grenade",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 436
+ },
+ {
+  "code": "HumanoidMeleeButton",
+  "name": "Melee",
+  "longName": "Melee Attack",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 437
+ },
+ {
+  "code": "HumanoidReloadButton",
+  "name": "Reload",
+  "longName": "Reload",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 438
+ },
+ {
+  "code": "HumanoidSwitchWeapon",
+  "name": "Switch WEP",
+  "longName": "Switch Weapon",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 439
+ },
+ {
+  "code": "HumanoidSelectPrimaryWeaponButton",
+  "name": "WEP 1",
+  "longName": "Select Primary Weapon",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 440
+ },
+ {
+  "code": "HumanoidSelectSecondaryWeaponButton",
+  "name": "WEP 2",
+  "longName": "Select Secondary Weapon",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 441
+ },
+ {
+  "code": "HumanoidSelectUtilityWeaponButton",
+  "name": "Select Util",
+  "longName": "Select Tool",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 442
+ },
+ {
+  "code": "HumanoidSelectNextWeaponButton",
+  "name": "Next WEP",
+  "longName": "Select Next Weapon",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 443
+ },
+ {
+  "code": "HumanoidSelectPreviousWeaponButton",
+  "name": "Prev WEP",
+  "longName": "Select Previous Weapon",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 444
+ },
+ {
+  "code": "HumanoidHideWeaponButton",
+  "name": "Holster",
+  "longName": "Holster Weapon",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 445
+ },
+ {
+  "code": "HumanoidSelectNextGrenadeTypeButton",
+  "name": "Next Grenade",
+  "longName": "Select Next Grenade Type",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 446
+ },
+ {
+  "code": "HumanoidSelectPreviousGrenadeTypeButton",
+  "name": "Prev Grenade",
+  "longName": "Select Previous Grenade Type",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 447
+ },
+ {
+  "code": "HumanoidToggleFlashlightButton",
+  "name": "Flashlight",
+  "longName": "Toggle Flashlight",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 448
+ },
+ {
+  "code": "HumanoidToggleNightVisionButton",
+  "name": "Night Vision",
+  "longName": "Toggle Night Vision",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 449,
+  "hideIfSameAs": [
+   "NightVisionToggle"
+  ]
+ },
+ {
+  "code": "HumanoidToggleShieldsButton",
+  "name": "Shields",
+  "longName": "Toggle Shields",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 450
+ },
+ {
+  "code": "HumanoidClearAuthorityLevel",
+  "name": "Clear Auth Lvl",
+  "longName": "Clear Authority Level",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 451
+ },
+ {
+  "code": "HumanoidHealthPack",
+  "name": "Health Pack",
+  "longName": "Use Health Pack",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 452
+ },
+ {
+  "code": "HumanoidBattery",
+  "name": "Battery Pack",
+  "longName": "Use Engergy Cell",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 453
+ },
+ {
+  "code": "HumanoidSelectFragGrenade",
+  "name": "Frag Grenade",
+  "longName": "Select Frag Grenade",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 454
+ },
+ {
+  "code": "HumanoidSelectEMPGrenade",
+  "name": "EMP Grenade",
+  "longName": "Select EMP Grenade",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 455
+ },
+ {
+  "code": "HumanoidSelectShieldGrenade",
+  "name": "Shield Grenade",
+  "longName": "Select Shield Grenade",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 456
+ },
+ {
+  "code": "HumanoidSwitchToRechargeTool",
+  "name": "Recharge Tool",
+  "longName": "Select Energylink",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 457
+ },
+ {
+  "code": "HumanoidSwitchToCompAnalyser",
+  "name": "Comp Analyser",
+  "longName": "Select Profile Analyser",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 458
+ },
+ {
+  "code": "HumanoidSwitchToSuitTool",
+  "name": "Suit Tool",
+  "longName": "Select Suit Specific Tool",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 459
+ },
+ {
+  "code": "HumanoidToggleToolModeButton",
+  "name": "Tool Mode",
+  "longName": "Toggle Tool Mode",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 460
+ },
+ {
+  "code": "HumanoidToggleMissionHelpPanelButton",
+  "name": "Mission Help",
+  "longName": "Toggle Help",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot",
+  "type": "digital",
+  "order": 461
+ },
+ {
+  "code": "HumanoidPing",
+  "name": "Humanoid Ping",
+  "longName": "Humanoid Ping",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 462
+ },
+ {
+  "code": "GalaxyMapOpen_Humanoid",
+  "name": "GalMap",
+  "longName": "Open Galaxy Map",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot Mode Switches",
+  "type": "digital",
+  "order": 463,
+  "hideIfSameAs": [
+   "GalaxyMapOpen"
+  ]
+ },
+ {
+  "code": "SystemMapOpen_Humanoid",
+  "name": "SysMap",
+  "longName": "Open System Map",
+  "group": "OnFoot",
+  "category": "Navigation",
+  "area": "On Foot Controls",
+  "section": "On Foot Mode Switches",
+  "type": "digital",
+  "order": 464,
+  "hideIfSameAs": [
+   "SystemMapOpen"
+  ]
+ },
+ {
+  "code": "FocusCommsPanel_Humanoid",
+  "name": "Comms Panel",
+  "longName": "Comms Panel",
+  "group": "OnFoot",
+  "category": "General",
+  "area": "On Foot Controls",
+  "section": "On Foot Mode Switches",
+  "type": "digital",
+  "order": 465,
+  "hideIfSameAs": [
+   "FocusCommsPanel"
+  ]
+ },
+ {
+  "code": "QuickCommsPanel_Humanoid",
+  "name": "Quick Comms",
+  "longName": "Quick Comms",
+  "group": "OnFoot",
+  "category": "General",
+  "area": "On Foot Controls",
+  "section": "On Foot Mode Switches",
+  "type": "digital",
+  "order": 466,
+  "hideIfSameAs": [
+   "QuickCommsPanel"
+  ]
+ },
+ {
+  "code": "HumanoidOpenAccessPanelButton",
+  "name": "Open Access Panel",
+  "longName": "Open Insight Hub",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot Mode Switches",
+  "type": "digital",
+  "order": 467
+ },
+ {
+  "code": "HumanoidConflictContextualUIButton",
+  "name": "Combat UI",
+  "longName": "Open Conflict Zone Battle Stats",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "On Foot Controls",
+  "section": "On Foot Mode Switches",
+  "type": "digital",
+  "order": 468
+ },
+ {
+  "code": "StoreEnableRotation",
+  "name": "Store Cam Rotation",
+  "longName": "Hold to Rotate",
+  "group": "Camera",
+  "category": "Camera",
+  "area": "General Controls",
+  "section": "Store Camera",
+  "type": "digital",
+  "order": 471
+ },
+ {
+  "code": "StorePitchCamera",
+  "name": "Store Cam Pitch",
+  "longName": "Pitch Axis",
+  "group": "Camera",
+  "category": "Camera",
+  "area": "General Controls",
+  "section": "Store Camera",
+  "type": "analogue",
+  "order": 472,
+  "hideIfSameAs": [
+   "PitchAxisRaw"
+  ]
+ },
+ {
+  "code": "StoreYawCamera",
+  "name": "Store Cam Yaw",
+  "longName": "Yaw Axis",
+  "group": "Camera",
+  "category": "Camera",
+  "area": "General Controls",
+  "section": "Store Camera",
+  "type": "analogue",
+  "order": 473,
+  "hideIfSameAs": [
+   "YawAxisRaw"
+  ]
+ },
+ {
+  "code": "StoreCamZoomIn",
+  "name": "Store Cam Zoom In",
+  "longName": "Store Camera Zoom In",
+  "group": "Camera",
+  "category": "Camera",
+  "area": "General Controls",
+  "section": "Store Camera",
+  "type": "digital",
+  "order": 474
+ },
+ {
+  "code": "StoreCamZoomOut",
+  "name": "Store Cam Zoom Out",
+  "longName": "Store Camera Zoom Out",
+  "group": "Camera",
+  "category": "Camera",
+  "area": "General Controls",
+  "section": "Store Camera",
+  "type": "digital",
+  "order": 475
+ },
+ {
+  "code": "StoreToggle",
+  "name": "Store Toggle Preview",
+  "longName": "Store Toggle",
+  "group": "Camera",
+  "category": "Camera",
+  "area": "General Controls",
+  "section": "Store Camera",
+  "type": "digital",
+  "order": 476
+ },
+ {
+  "code": "HumanoidEmoteSlot1",
+  "name": "Emote 1",
+  "longName": "Emote 1",
+  "group": "OnFoot",
+  "category": "General",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 477
+ },
+ {
+  "code": "HumanoidEmoteSlot2",
+  "name": "Emote 2",
+  "longName": "Emote 2",
+  "group": "OnFoot",
+  "category": "General",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 478
+ },
+ {
+  "code": "HumanoidEmoteSlot3",
+  "name": "Emote 3",
+  "longName": "Emote 3",
+  "group": "OnFoot",
+  "category": "General",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 479
+ },
+ {
+  "code": "HumanoidEmoteSlot4",
+  "name": "Emote 4",
+  "longName": "Emote 4",
+  "group": "OnFoot",
+  "category": "General",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 480
+ },
+ {
+  "code": "HumanoidEmoteSlot5",
+  "name": "Emote 5",
+  "longName": "Emote 5",
+  "group": "OnFoot",
+  "category": "General",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 481
+ },
+ {
+  "code": "HumanoidEmoteSlot6",
+  "name": "Emote 6",
+  "longName": "Emote 6",
+  "group": "OnFoot",
+  "category": "General",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 482
+ },
+ {
+  "code": "HumanoidEmoteSlot7",
+  "name": "Emote 7",
+  "longName": "Emote 7",
+  "group": "OnFoot",
+  "category": "General",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 483
+ },
+ {
+  "code": "HumanoidEmoteSlot8",
+  "name": "Emote 8",
+  "longName": "Emote 8",
+  "group": "OnFoot",
+  "category": "General",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 484
+ },
+ {
+  "code": "PlaceSettlement",
+  "name": "Place Settlement",
+  "longName": "Place Settlement",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 485
+ },
+ {
+  "code": "ChangeConstructionOption",
+  "name": "Change Construction Option",
+  "longName": "Change Construction Option",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 486
+ },
+ {
+  "code": "RotateSettlement",
+  "name": "Rotate Settlement",
+  "longName": "Rotate Settlement",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 487
+ },
+ {
+  "code": "RotateSettlementLeft",
+  "name": "Rotate Settlement Left",
+  "longName": "Rotate Settlement Left",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 488
+ },
+ {
+  "code": "RotateSettlementRight",
+  "name": "Rotate Settlement Right",
+  "longName": "Rotate Settlement Right",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 489
+ },
+ {
+  "code": "ExitSettlementPlacementCamera",
+  "name": "Exit Settlement Placement Camera",
+  "longName": "Exit Settlement Placement Camera",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 490
+ },
+ {
+  "code": "MovePlacementCamY",
+  "name": "Move Placement Cam Y",
+  "longName": "Move Placement Cam Y",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 491
+ },
+ {
+  "code": "MovePlacementCamForward",
+  "name": "Move Placement Cam Forward",
+  "longName": "Move Placement Cam Forward",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 492
+ },
+ {
+  "code": "MovePlacementCamBackwards",
+  "name": "Move Placement Cam Backwards",
+  "longName": "Move Placement Cam Backwards",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 493
+ },
+ {
+  "code": "MovePlacementCamX",
+  "name": "Move Placement Cam X",
+  "longName": "Move Placement Cam X",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 494
+ },
+ {
+  "code": "MovePlacementCamRight",
+  "name": "Move Placement Cam Right",
+  "longName": "Move Placement Cam Right",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 495
+ },
+ {
+  "code": "MovePlacementCamLeft",
+  "name": "Move Placement Cam Left",
+  "longName": "Move Placement Cam Left",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 496
+ },
+ {
+  "code": "MovePlacementCamZ",
+  "name": "Move Placement Cam Z",
+  "longName": "Move Placement Cam Z",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 497
+ },
+ {
+  "code": "MovePlacementCamUp",
+  "name": "Move Placement Cam Up",
+  "longName": "Move Placement Cam Up",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 498
+ },
+ {
+  "code": "MovePlacementCamDown",
+  "name": "Move Placement Cam Down",
+  "longName": "Move Placement Cam Down",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 499
+ },
+ {
+  "code": "MovePlacementCamUpAxis",
+  "name": "Move Placement Cam Up Axis",
+  "longName": "Move Placement Cam Up Axis",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 500
+ },
+ {
+  "code": "MovePlacementCamDownAxis",
+  "name": "Move Placement Cam Down Axis",
+  "longName": "Move Placement Cam Down Axis",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 501
+ },
+ {
+  "code": "PitchPlacementCamera",
+  "name": "Pitch Placement Camera",
+  "longName": "Pitch Placement Camera",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 502
+ },
+ {
+  "code": "PitchPlacementCameraUp",
+  "name": "Pitch Placement Camera Up",
+  "longName": "Pitch Placement Camera Up",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 503
+ },
+ {
+  "code": "PitchPlacementCameraDown",
+  "name": "Pitch Placement Camera Down",
+  "longName": "Pitch Placement Camera Down",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 504
+ },
+ {
+  "code": "YawPlacementCamera",
+  "name": "Yaw Placement Camera",
+  "longName": "Yaw Placement Camera",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 505
+ },
+ {
+  "code": "YawPlacementCameraRight",
+  "name": "Yaw Placement Camera Right",
+  "longName": "Yaw Placement Camera Right",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 506
+ },
+ {
+  "code": "YawPlacementCameraLeft",
+  "name": "Yaw Placement Camera Left",
+  "longName": "Yaw Placement Camera Left",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 507
+ },
+ {
+  "code": "PlacementCamSpeedInc",
+  "name": "Placement Cam Speed Inc",
+  "longName": "Placement Cam Speed Inc",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 508
+ },
+ {
+  "code": "PlacementCamSpeedDec",
+  "name": "Placement Cam Speed Dec",
+  "longName": "Placement Cam Speed Dec",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "analogue",
+  "order": 509
+ },
+ {
+  "code": "OculusReset",
+  "name": "Reset Oculus",
+  "longName": "Reset Oculus",
+  "group": "Misc",
+  "category": "General",
+  "area": "Other",
+  "section": "Misc",
+  "type": "digital",
+  "order": 513,
+  "legacy": true
+ },
+ {
+  "code": "HeadLookPitchAxis",
+  "name": "Look Up/Down",
+  "longName": "Look Up/Down",
+  "group": "Head look",
+  "category": "Navigation",
+  "area": "Other",
+  "section": "Head look",
+  "type": "analogue",
+  "order": 514,
+  "legacy": true
+ },
+ {
+  "code": "HeadLookYawAxisRaw",
+  "name": "Look Left/Right",
+  "longName": "Look Left/Right",
+  "group": "Head look",
+  "category": "Navigation",
+  "area": "Other",
+  "section": "Head look",
+  "type": "analogue",
+  "order": 515,
+  "legacy": true
+ },
+ {
+  "code": "BuggyRollLeft",
+  "name": "Roll Left",
+  "longName": "Roll Left",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "Other",
+  "section": "SRV",
+  "type": "digital",
+  "order": 516,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "RollLeftButton"
+  ],
+  "legacy": true
+ },
+ {
+  "code": "BuggyRollRight",
+  "name": "Roll Right",
+  "longName": "Roll Right",
+  "group": "SRV",
+  "category": "Navigation",
+  "area": "Other",
+  "section": "SRV",
+  "type": "digital",
+  "order": 517,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "RollRightButton"
+  ],
+  "legacy": true
+ },
+ {
+  "code": "EngageSupercruise",
+  "name": "Supercruise",
+  "longName": "Supercruise",
+  "group": "Ship",
+  "category": "Navigation",
+  "area": "Other",
+  "section": "Ship",
+  "type": "digital",
+  "order": 518,
+  "legacy": true
+ },
+ {
+  "code": "ExplorationSAAShowHelp",
+  "name": "DSS Help",
+  "longName": "DSS Help",
+  "group": "Scanners",
+  "category": "General",
+  "area": "Other",
+  "section": "Scanners",
+  "type": "digital",
+  "order": 519,
+  "legacy": true
+ },
+ {
+  "code": "FocusDistanceInc",
+  "name": "Focus Further",
+  "longName": "Focus Further",
+  "group": "Camera",
+  "category": "General",
+  "area": "Other",
+  "section": "Camera",
+  "type": "digital",
+  "order": 520,
+  "hasAnalogue": true,
+  "legacy": true
+ },
+ {
+  "code": "FocusDistanceDec",
+  "name": "Focus Nearer",
+  "longName": "Focus Nearer",
+  "group": "Camera",
+  "category": "General",
+  "area": "Other",
+  "section": "Camera",
+  "type": "digital",
+  "order": 521,
+  "hasAnalogue": true,
+  "legacy": true
+ },
+ {
+  "code": "ToggleVanityCamera",
+  "name": "External Cam",
+  "longName": "External Cam",
+  "group": "Camera",
+  "category": "Camera",
+  "area": "Other",
+  "section": "Camera",
+  "type": "digital",
+  "order": 522,
+  "legacy": true
+ },
+ {
+  "code": "ToggleVanityCamera_Buggy",
+  "name": "External Cam",
+  "longName": "External Cam",
+  "group": "Camera",
+  "category": "Camera",
+  "area": "Other",
+  "section": "Camera",
+  "type": "digital",
+  "order": 523,
+  "hideIfSameAs": [
+   "ToggleVanityCamera"
+  ],
+  "legacy": true
+ },
+ {
+  "code": "StorePitchCameraUp",
+  "name": "Store Cam Pitch Up",
+  "longName": "Store Cam Pitch Up",
+  "group": "Camera",
+  "category": "Camera",
+  "area": "Other",
+  "section": "Camera",
+  "type": "digital",
+  "order": 524,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchUpButton"
+  ],
+  "legacy": true
+ },
+ {
+  "code": "StorePitchCameraDown",
+  "name": "Store Cam Pitch Down",
+  "longName": "Store Cam Pitch Down",
+  "group": "Camera",
+  "category": "Camera",
+  "area": "Other",
+  "section": "Camera",
+  "type": "digital",
+  "order": 525,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "PitchDownButton"
+  ],
+  "legacy": true
+ },
+ {
+  "code": "StoreYawCameraLeft",
+  "name": "Store Cam Yaw Left",
+  "longName": "Store Cam Yaw Left",
+  "group": "Camera",
+  "category": "Camera",
+  "area": "Other",
+  "section": "Camera",
+  "type": "digital",
+  "order": 526,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawLeftButton"
+  ],
+  "legacy": true
+ },
+ {
+  "code": "StoreYawCameraRight",
+  "name": "Store Cam Yaw Right",
+  "longName": "Store Cam Yaw Right",
+  "group": "Camera",
+  "category": "Camera",
+  "area": "Other",
+  "section": "Camera",
+  "type": "digital",
+  "order": 527,
+  "hasAnalogue": true,
+  "hideIfSameAs": [
+   "YawRightButton"
+  ],
+  "legacy": true
+ },
+ {
+  "code": "HumanoidActivateSuitAbilityButton",
+  "name": "Suit Tool",
+  "longName": "Suit Tool",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 528,
+  "legacy": true
+ },
+ {
+  "code": "HumanoidConflictContextualUI",
+  "name": "Combat UI",
+  "longName": "Combat UI",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 529,
+  "legacy": true
+ },
+ {
+  "code": "HumanoidPulseScanButton",
+  "name": "Pulse Scan",
+  "longName": "Pulse Scan",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 530,
+  "legacy": true
+ },
+ {
+  "code": "HumanoidToggleJumpAssistModuleButton",
+  "name": "Jump Assist",
+  "longName": "Jump Assist",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 531,
+  "legacy": true
+ },
+ {
+  "code": "HumanoidToggleShieldBoosterModuleButton",
+  "name": "Shield Boost",
+  "longName": "Shield Boost",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 532,
+  "legacy": true
+ },
+ {
+  "code": "HumanoidToggleWeaponBoosterModuleButton",
+  "name": "Weapon Booster",
+  "longName": "Weapon Booster",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 533,
+  "legacy": true
+ },
+ {
+  "code": "HumanoidResetPowerDistributionButton",
+  "name": "RST",
+  "longName": "RST",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 534,
+  "hideIfSameAs": [
+   "ResetPowerDistribution"
+  ],
+  "legacy": true
+ },
+ {
+  "code": "HumanoidIncreaseEnginesPowerButton",
+  "name": "ENG",
+  "longName": "ENG",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 535,
+  "hideIfSameAs": [
+   "IncreaseEnginesPower"
+  ],
+  "legacy": true
+ },
+ {
+  "code": "HumanoidIncreaseSystemsPowerButton",
+  "name": "SYS",
+  "longName": "SYS",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 536,
+  "hideIfSameAs": [
+   "IncreaseSystemsPower"
+  ],
+  "legacy": true
+ },
+ {
+  "code": "HumanoidIncreaseWeaponsPowerButton",
+  "name": "WEP",
+  "longName": "WEP",
+  "group": "OnFoot",
+  "category": "Combat",
+  "area": "Other",
+  "section": "OnFoot",
+  "type": "digital",
+  "order": 537,
+  "hideIfSameAs": [
+   "IncreaseWeaponsPower"
+  ],
+  "legacy": true
+ },
+ {
+  "code": "FixCameraRelativetoggle",
+  "name": "Camera / Ship Controls Toggle",
+  "longName": "Camera / Ship Controls Toggle",
+  "group": "Misc",
+  "category": "General",
+  "area": "General Controls",
+  "section": "Free Camera",
+  "type": "digital",
+  "order": 538,
+  "legacy": true
+ },
+ {
+  "code": "YawtoRollButton",
+  "name": "Yaw Roll Button",
+  "longName": "Yaw Roll Button",
+  "group": "Misc",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Flight Rotation",
+  "type": "digital",
+  "order": 539,
+  "legacy": true
+ },
+ {
+  "code": "DeployHeatsink",
+  "name": "Deploy Heatsink",
+  "longName": "Deploy Heatsink",
+  "group": "Misc",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Cooling",
+  "type": "digital",
+  "order": 540,
+  "legacy": true
+ },
+ {
+  "code": "WEaponColourToggle",
+  "name": "Weapon Color",
+  "longName": "Weapon Color",
+  "group": "Misc",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Miscellaneous",
+  "type": "digital",
+  "order": 541,
+  "legacy": true
+ },
+ {
+  "code": "HeadlookToggle",
+  "name": "Headlook",
+  "longName": "Headlook",
+  "group": "Misc",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Mode Switches",
+  "type": "digital",
+  "order": 542,
+  "legacy": true
+ },
+ {
+  "code": "MultiCrewSEcondaryFire",
+  "name": "Secondary Fire",
+  "longName": "Secondary Fire",
+  "group": "Misc",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "digital",
+  "order": 543,
+  "legacy": true
+ },
+ {
+  "code": "MultiCrewSecondaryUtilityfire",
+  "name": "Secondary Utility Fire",
+  "longName": "Secondary Utility Fire",
+  "group": "Misc",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Multi-crew",
+  "type": "digital",
+  "order": 544,
+  "legacy": true
+ },
+ {
+  "code": "ExplorationFSSCAmeraPitch",
+  "name": "Camera Pitch",
+  "longName": "Camera Pitch",
+  "group": "Misc",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 545,
+  "legacy": true
+ },
+ {
+  "code": "ExplorationFSSRAdioTuningX_Raw",
+  "name": "Tuning",
+  "longName": "Tuning",
+  "group": "Misc",
+  "category": "General",
+  "area": "Ship Controls",
+  "section": "Full Spectrum System Scanner",
+  "type": "digital",
+  "order": 546,
+  "legacy": true
+ }
+]

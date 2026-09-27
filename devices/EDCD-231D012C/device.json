@@ -1,0 +1,258 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-231D012C",
+  "name": "VKB STECS Regular Throttle System Mini Plus (Left)",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "231D012C",
+      "usb": {
+        "vid": "231D",
+        "pid": "012C"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_RXAxis",
+      "label": "LSTECS OTS Vertical [x52prox]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_RYAxis",
+      "label": "LSTECS OTS Horizontal [x52proy]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_XAxis",
+      "label": "LSTECS Right [xb1htsThr]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_YAxis",
+      "label": "LSTECS Left [xb1htsThr]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_ZAxis",
+      "label": "LSTECS Scoll Z [xb1htsThr]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_1",
+      "label": "LSTECS SYS [x360Back]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_2",
+      "label": "LSTECS START [ps4Circle]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_3",
+      "label": "LSTECS Mode 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_4",
+      "label": "LSTECS Mode 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_5",
+      "label": "LSTECS Mode 3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_6",
+      "label": "LSTECS Mode 4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_7",
+      "label": "LSTECS Mode 5",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_8",
+      "label": "LSTECS PUSH CCW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_9",
+      "label": "LSTECS PUSH CW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_10",
+      "label": "LSTECS SAFE [ps4Circle]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_11",
+      "label": "LSTECS #1 [hts4Square]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_12",
+      "label": "LSTECS #2 [hts4Square]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_13",
+      "label": "LSTECS #3 [hts4Square]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_14",
+      "label": "LSTECS #4 [hts4Square]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_15",
+      "label": "LSTECS ARMED [ps4Circle]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_21",
+      "label": "LSTECS Back Trig L [x360LBump]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_22",
+      "label": "LSTECS Front Trig L [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_23",
+      "label": "LSTECS Weapon Select [ps4Circle]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_24",
+      "label": "LSTECS RST",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_25",
+      "label": "LSTECS Enc1 [xb1PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_26",
+      "label": "LSTECS Enc1 [xb1PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_27",
+      "label": "LSTECS Enc2 [xb1PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_28",
+      "label": "LSTECS Enc2 [xb1PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_29",
+      "label": "LSTECS Back Trig R [x360RBump]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_30",
+      "label": "LSTECS Front Trig R [x360RThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_31",
+      "label": "LSTECS ENT",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_33",
+      "label": "LSTECS BRK [hts4HatSwitch]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_34",
+      "label": "LSTECS MB1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_35",
+      "label": "LSTECS RADIO",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_36",
+      "label": "LSTECS MB2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_37",
+      "label": "LSTECS OP EXEC [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_38",
+      "label": "LSTECS BRK [ps4PadL]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_39",
+      "label": "LSTECS BRK [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_40",
+      "label": "LSTECS BRK [ps4PadR]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D012C",
+      "key": "Joy_41",
+      "label": "LSTECS BRK [ps4PadU]",
+      "kind": "button"
+    }
+  ]
+}

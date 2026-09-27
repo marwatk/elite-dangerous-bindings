@@ -1,0 +1,666 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-4098BD64",
+  "name": "Winwing WINCTRL Orion Throttle Base II + F15EX HANDLE L + F15EX HANDLE",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "4098BD64",
+      "usb": {
+        "vid": "4098",
+        "pid": "BD64"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_XAxis",
+      "label": "Handle R - Joystick X",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_YAxis",
+      "label": "Handle R - Joystick Y",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_ZAxis",
+      "label": "Handle R - Left Rotary",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_3",
+      "label": "Handle R - Bottom Switch PULL",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_4",
+      "label": "Handle R - Bottom Switch MID",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_5",
+      "label": "Handle R - Bottom Switch PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_6",
+      "label": "Handle R - Lower Hat UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_7",
+      "label": "Handle R - Lower Hat PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_8",
+      "label": "Handle R - Lower Hat DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_9",
+      "label": "Handle R - Lower Hat PULL",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_10",
+      "label": "Handle R - Lower Hat PRESS",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_11",
+      "label": "Handle R - Side Button",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_12",
+      "label": "Handle R - Middle Back Hat UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_13",
+      "label": "Handle R - Middle Back Hat PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_14",
+      "label": "Handle R - Middle Back Hat DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_15",
+      "label": "Handle R - Middle Back Hat PULL",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_16",
+      "label": "Handle R - Middle Back Hat PRESS",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_17",
+      "label": "Handle R - Middle Front Hat UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_18",
+      "label": "Handle R - Middle Front Hat PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_19",
+      "label": "Handle R - Middle Front Hat DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_20",
+      "label": "Handle R - Middle Front Hat PULL",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_21",
+      "label": "Handle R - Middle Front Hat PRESS",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_22",
+      "label": "Handle R - Top Switch PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_23",
+      "label": "Handle R - Top Switch MID",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_24",
+      "label": "Handle R - Top Switch PULL",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_25",
+      "label": "Handle R - Back Small Rotary UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_26",
+      "label": "Handle R - Back Small Rotary MID",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_27",
+      "label": "Handle R - Back Small Rotary DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_43",
+      "label": "Handle R - Back Small Rotary FULL UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_44",
+      "label": "Handle R - Back Small Rotary FULL DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_28",
+      "label": "Handle R - Back Hat UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_29",
+      "label": "Handle R - Back Hat PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_32",
+      "label": "Handle R - Back Hat DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_33",
+      "label": "Handle R - Back Hat PULL",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_34",
+      "label": "Handle R - Back Hat PRESS",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_35",
+      "label": "Handle R - Analog Stick PRESS",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_36",
+      "label": "Handle R - Analog Stick UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_37",
+      "label": "Handle R - Analog Stick RIGHT",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_38",
+      "label": "Handle R - Analog Stick DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_39",
+      "label": "Handle R - Analog Stick LEFT",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_40",
+      "label": "Handle R - Back Rotary UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_41",
+      "label": "Handle R - Back Rotary MID",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_42",
+      "label": "Handle R - Back Rotary DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_RZAxis",
+      "label": "Handle L - Rotary",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_50",
+      "label": "Handle L - Small Button Right",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_51",
+      "label": "Handle L - Back Hat UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_52",
+      "label": "Handle L - Back Hat RIGHT",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_53",
+      "label": "Handle L - Back Hat DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_54",
+      "label": "Handle L - Back Hat LEFT",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_55",
+      "label": "Handle L - Back Hat PRESS",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_56",
+      "label": "Handle L - Small Button Left",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_57",
+      "label": "Handle L - Side Lever UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_58",
+      "label": "Handle L - Side Lever MID",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_59",
+      "label": "Handle L - Side Lever DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_60",
+      "label": "Handle L - Rotary UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_61",
+      "label": "Handle L - Rotary MID",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_62",
+      "label": "Handle L - Rotary DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_RYAxis",
+      "label": "Left Throttle",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_RXAxis",
+      "label": "Right Throttle",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_UAxis",
+      "label": "Slider",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_VAxis",
+      "label": "Dial",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_65",
+      "label": "Launch bar UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_66",
+      "label": "Launch bar DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_67",
+      "label": "Hook UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_68",
+      "label": "Hook DN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_69",
+      "label": "Wing Fold FOLD",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_70",
+      "label": "Wing Fold HOLD",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_71",
+      "label": "Wing Fold SPREAD",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_72",
+      "label": "Wing Fold PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_73",
+      "label": "LDG Gear UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_74",
+      "label": "LDG Gear DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_75",
+      "label": "Park BRK UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_76",
+      "label": "Park BRK DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_77",
+      "label": "Flap UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_78",
+      "label": "Flap MID",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_79",
+      "label": "Flap DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_80",
+      "label": "Front Red Btn",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_81",
+      "label": "A/G",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_82",
+      "label": "A/A",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_83",
+      "label": "HMD -",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_84",
+      "label": "HMD +",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_85",
+      "label": "HMD Press",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_86",
+      "label": "Roll UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_87",
+      "label": "Roll MID",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_88",
+      "label": "Roll DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_89",
+      "label": "A/P UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_90",
+      "label": "A/P MID",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_91",
+      "label": "A/P DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_92",
+      "label": "Adv Mode",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_93",
+      "label": "Master UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_94",
+      "label": "Master MID",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_95",
+      "label": "Master DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_96",
+      "label": "Jett",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_97",
+      "label": "HDG -",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_98",
+      "label": "HDG +",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_99",
+      "label": "HDG Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_100",
+      "label": "CWS -",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_101",
+      "label": "CWS +",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_102",
+      "label": "CWS Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_103",
+      "label": "Panel LTS -",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_104",
+      "label": "Panel LTS +",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_105",
+      "label": "Panel LTS Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_106",
+      "label": "Slider UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_107",
+      "label": "Slider MID",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_108",
+      "label": "Slider DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_109",
+      "label": "Dial UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_110",
+      "label": "Dial MID",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BD64",
+      "key": "Joy_111",
+      "label": "Dial DOWN",
+      "kind": "button"
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+// Unencapsulated (see CardsPage): keep every rule under app-cards-page,
+// except the print rules that must reach the app shell and @page.
+
+app-cards-page {
+  display: block;
+
+  .cards-wrap {
+    box-sizing: border-box;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 16px 16px 48px;
+  }
+
+  .busy {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--edb-muted);
+  }
+
+  .cards-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &.wide {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      align-items: start;
+    }
+  }
+
+  .cards-options {
+    position: sticky;
+    top: 8px;
+    max-height: calc(100vh - 96px);
+    overflow: auto;
+    padding: 4px 12px 12px;
+    border: 1px solid var(--edb-border);
+    border-radius: 12px;
+    background: var(--mat-sys-surface-container-low);
+  }
+
+  .opt-section {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--edb-border);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    h3 {
+      margin: 4px 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+  }
+
+  .opt-links {
+    display: flex;
+    gap: 4px;
+    margin: 0 0 0 -12px;
+  }
+
+  .opt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  }
+
+  .opt-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hint {
+    margin: 4px 0 0;
+    font-size: 0.8rem;
+  }
+
+  .cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+  }
+
+  .card-sheet {
+    border: 1px solid var(--edb-border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .card-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 12px;
+    padding: 4px 8px 4px 16px;
+    background: var(--mat-sys-surface-container);
+    color: var(--mat-sys-on-surface);
+
+    h2 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+  }
+
+  .card-actions {
+    display: flex;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  .cards-empty,
+  .cards-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 48px 16px;
+    text-align: center;
+    border: 1px dashed var(--edb-border);
+    border-radius: 12px;
+
+    > mat-icon {
+      font-size: 48px;
+      width: 48px;
+      height: 48px;
+      color: var(--edb-accent);
+    }
+  }
+
+  .cards-loading {
+    flex-direction: row;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .unplaced {
+    h2 {
+      margin: 0 0 4px;
+      font-size: 1.2rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 6px 8px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--edb-border);
+    }
+
+    th {
+      font-weight: 600;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .cards-wrap {
+      padding: 8px 8px 32px;
+    }
+
+    .unplaced td:nth-child(3),
+    .unplaced th:nth-child(3) {
+      display: none;
+    }
+  }
+}
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 8mm;
+  }
+
+  // The app shell's side navigation leaves a margin on the content.
+  .mat-drawer-content,
+  .mat-sidenav-content {
+    margin: 0 !important;
+  }
+
+  .mat-drawer-container {
+    background: #fff !important;
+  }
+
+  // Snack bars and other overlays are not part of the cards.
+  .cdk-overlay-container {
+    display: none !important;
+  }
+
+  app-cards-page {
+    .cards-wrap {
+      max-width: none;
+      padding: 0;
+    }
+
+    .cards-layout,
+    .cards-layout.wide {
+      display: block;
+    }
+
+    .cards-list {
+      display: block;
+    }
+
+    .card-sheet {
+      border: 0;
+      border-radius: 0;
+      break-after: page;
+      break-inside: avoid;
+      page-break-after: always;
+
+      &:last-of-type {
+        break-after: auto;
+        page-break-after: auto;
+      }
+    }
+
+    // Fit one card per page: full width, never taller than the printable height.
+    .card-image svg {
+      width: 100% !important;
+      height: auto;
+      max-height: 190mm;
+    }
+  }
+}

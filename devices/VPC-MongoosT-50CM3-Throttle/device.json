@@ -1,0 +1,3356 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "VPC-MongoosT-50CM3-Throttle",
+  "name": "Virpil MongoosT-50CM3 Throttle",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "33448197",
+      "usb": {
+        "vid": "3344",
+        "pid": "8197"
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "usb": {
+        "vid": "3344",
+        "pid": "0197"
+      }
+    },
+    {
+      "bindsId": "33448198",
+      "usb": {
+        "vid": "3344",
+        "pid": "8198"
+      }
+    },
+    {
+      "bindsId": "VPCThrottle"
+    }
+  ],
+  "images": [
+    {
+      "file": "vpc-mongoost-50cm3-throttle.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "33448197",
+      "key": "Joy_1",
+      "label": "Throttle Left Encoder Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2066,
+        "y": 602,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_2",
+      "label": "Throttle Left Encoder Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2066,
+        "y": 546,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_3",
+      "label": "Throttle Left Encoder Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2066,
+        "y": 492,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_4",
+      "label": "Throttle Left Pinkie Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1440,
+        "y": 622,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_5",
+      "label": "Throttle Left 2W Hat Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1988,
+        "y": 348,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_6",
+      "label": "Throttle Left 2W Hat Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1988,
+        "y": 292,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_7",
+      "label": "Throttle Left 2W Hat Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1988,
+        "y": 238,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_8",
+      "label": "Throttle Middle 4W HAT Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 710,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_9",
+      "label": "Throttle Middle 4W HAT Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 602,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_10",
+      "label": "Throttle Middle 4W HAT Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 546,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_11",
+      "label": "Throttle Middle 4W HAT Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 491,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_12",
+      "label": "Throttle Middle 4W HAT Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 656,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_13",
+      "label": "Throttle Analog Stick Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 170,
+        "y": 480,
+        "w": 474,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_14",
+      "label": "Throttle Right Encoder forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 1016,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_15",
+      "label": "Throttle Right Encoder backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 1070,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_16",
+      "label": "Throttle Right 4W HAT 1 Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 960,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_17",
+      "label": "Throttle Right 4W HAT 1 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 795,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_18",
+      "label": "Throttle Right 4W HAT 1 Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 850,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_19",
+      "label": "Throttle Right 4W HAT 1 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 906,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_20",
+      "label": "Throttle Right 4W HAT 1 Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 740,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_21",
+      "label": "Throttle Right Forward Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2170,
+        "y": 1508,
+        "w": 425,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_22",
+      "label": "Throttle Right 4W HAT 2 Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 974,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_23",
+      "label": "Throttle Right 4W HAT 2 Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 864,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_24",
+      "label": "Throttle Right 4W HAT 2 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 918,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_25",
+      "label": "Throttle Right 4W HAT 2 Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 754,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_26",
+      "label": "Throttle Right 4W HAT 2 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 808,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_27",
+      "label": "Throttle Right 4W HAT 3 Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1432,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_28",
+      "label": "Throttle Right 4W HAT 3 Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1322,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_29",
+      "label": "Throttle Right 4W HAT 3 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1378,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_30",
+      "label": "Throttle Right 4W HAT 3 Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1212,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_31",
+      "label": "Throttle Right 4W HAT 3 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1268,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_32",
+      "label": "Throttle Right Back Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 842,
+        "y": 814,
+        "w": 380,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_33",
+      "label": "Throttle Right Back Button Lower",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 842,
+        "y": 894,
+        "w": 380,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_34",
+      "label": "T1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2200,
+        "y": 1731,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_35",
+      "label": "T2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2200,
+        "y": 1914,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_36",
+      "label": "T3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 720,
+        "y": 1046,
+        "w": 370,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_37",
+      "label": "T4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 720,
+        "y": 1238,
+        "w": 370,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_38",
+      "label": "B1 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 340,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_39",
+      "label": "B2 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 340,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_40",
+      "label": "B3 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 340,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_41",
+      "label": "B4 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_42",
+      "label": "B5 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_43",
+      "label": "B6 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_44",
+      "label": "T5 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1464,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_45",
+      "label": "T5 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1518,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_46",
+      "label": "T6 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1660,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_47",
+      "label": "T6 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1716,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_48",
+      "label": "T7 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1856,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_49",
+      "label": "T7 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1910,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_50",
+      "label": "E1 Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1196,
+        "y": 2074,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_51",
+      "label": "E1 Anti-Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1196,
+        "y": 1964,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_52",
+      "label": "E1 Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1196,
+        "y": 2020,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_53",
+      "label": "E2 Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1662,
+        "y": 2076,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_54",
+      "label": "E2 Anti-Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1662,
+        "y": 1966,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_55",
+      "label": "E2 Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1662,
+        "y": 2022,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_56",
+      "label": "B1 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 710,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_57",
+      "label": "B2 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 710,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_58",
+      "label": "B3 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 710,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_59",
+      "label": "B4 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 860,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_60",
+      "label": "B5 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 860,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_61",
+      "label": "B6 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 860,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_62",
+      "label": "B1 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1090,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_63",
+      "label": "B2 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1090,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_64",
+      "label": "B3 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1090,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_65",
+      "label": "B4 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1220,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_66",
+      "label": "B5 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1220,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_67",
+      "label": "B6 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1220,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_68",
+      "label": "B1 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_69",
+      "label": "B2 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_70",
+      "label": "B3 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_71",
+      "label": "B4 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1600,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_72",
+      "label": "B5 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1600,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_73",
+      "label": "B6 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1600,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_74",
+      "label": "B1 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1840,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_75",
+      "label": "B2 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1840,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_76",
+      "label": "B3 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1840,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_77",
+      "label": "B4 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1980,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_79",
+      "label": "B5 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1980,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_80",
+      "label": "B6 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1980,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_XAxis",
+      "label": "Throttle Analog Stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 170,
+        "y": 370,
+        "w": 474,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_YAxis",
+      "label": "Throttle Analog Stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 170,
+        "y": 425,
+        "w": 474,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_ZAxis",
+      "label": "Throttle Handle Slider",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1435,
+        "y": 194,
+        "w": 394,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_RXAxis",
+      "label": "Throttle Left",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1850,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_RYAxis",
+      "label": "Throttle Right",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1900,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33448197",
+      "key": "Joy_RZAxis",
+      "label": "Flaps",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2200,
+        "y": 1594,
+        "w": 350,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_1",
+      "label": "Throttle Left Encoder Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2066,
+        "y": 602,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_2",
+      "label": "Throttle Left Encoder Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2066,
+        "y": 546,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_3",
+      "label": "Throttle Left Encoder Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2066,
+        "y": 492,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_4",
+      "label": "Throttle Left Pinkie Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1440,
+        "y": 622,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_5",
+      "label": "Throttle Left 2W Hat Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1988,
+        "y": 348,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_6",
+      "label": "Throttle Left 2W Hat Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1988,
+        "y": 292,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_7",
+      "label": "Throttle Left 2W Hat Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1988,
+        "y": 238,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_8",
+      "label": "Throttle Middle 4W HAT Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 710,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_9",
+      "label": "Throttle Middle 4W HAT Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 602,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_10",
+      "label": "Throttle Middle 4W HAT Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 546,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_11",
+      "label": "Throttle Middle 4W HAT Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 491,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_12",
+      "label": "Throttle Middle 4W HAT Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 656,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_13",
+      "label": "Throttle Analog Stick Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 170,
+        "y": 480,
+        "w": 474,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_14",
+      "label": "Throttle Right Encoder forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 1016,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_15",
+      "label": "Throttle Right Encoder backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 1070,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_16",
+      "label": "Throttle Right 4W HAT 1 Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 960,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_17",
+      "label": "Throttle Right 4W HAT 1 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 795,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_18",
+      "label": "Throttle Right 4W HAT 1 Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 850,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_19",
+      "label": "Throttle Right 4W HAT 1 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 906,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_20",
+      "label": "Throttle Right 4W HAT 1 Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 740,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_21",
+      "label": "Throttle Right Forward Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2170,
+        "y": 1508,
+        "w": 425,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_22",
+      "label": "Throttle Right 4W HAT 2 Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 974,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_23",
+      "label": "Throttle Right 4W HAT 2 Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 864,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_24",
+      "label": "Throttle Right 4W HAT 2 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 918,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_25",
+      "label": "Throttle Right 4W HAT 2 Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 754,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_26",
+      "label": "Throttle Right 4W HAT 2 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 808,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_27",
+      "label": "Throttle Right 4W HAT 3 Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1432,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_28",
+      "label": "Throttle Right 4W HAT 3 Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1322,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_29",
+      "label": "Throttle Right 4W HAT 3 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1378,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_30",
+      "label": "Throttle Right 4W HAT 3 Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1212,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_31",
+      "label": "Throttle Right 4W HAT 3 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1268,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_32",
+      "label": "Throttle Right Back Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 842,
+        "y": 814,
+        "w": 380,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_33",
+      "label": "Throttle Right Back Button Lower",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 842,
+        "y": 894,
+        "w": 380,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_34",
+      "label": "T1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2200,
+        "y": 1731,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_35",
+      "label": "T2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2200,
+        "y": 1914,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_36",
+      "label": "T3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 720,
+        "y": 1046,
+        "w": 370,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_37",
+      "label": "T4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 720,
+        "y": 1238,
+        "w": 370,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_38",
+      "label": "B1 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 340,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_39",
+      "label": "B2 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 340,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_40",
+      "label": "B3 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 340,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_41",
+      "label": "B4 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_42",
+      "label": "B5 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_43",
+      "label": "B6 - Mode 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_44",
+      "label": "T5 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1464,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_45",
+      "label": "T5 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1518,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_46",
+      "label": "T6 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1660,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_47",
+      "label": "T6 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1716,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_48",
+      "label": "T7 Forwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1856,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_49",
+      "label": "T7 Backwards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1910,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_50",
+      "label": "E1 Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1196,
+        "y": 2074,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_51",
+      "label": "E1 Anti-Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1196,
+        "y": 1964,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_52",
+      "label": "E1 Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1196,
+        "y": 2020,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_53",
+      "label": "E2 Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1662,
+        "y": 2076,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_54",
+      "label": "E2 Anti-Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1662,
+        "y": 1966,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_55",
+      "label": "E2 Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1662,
+        "y": 2022,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_56",
+      "label": "B1 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 710,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_57",
+      "label": "B2 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 710,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_58",
+      "label": "B3 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 710,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_59",
+      "label": "B4 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 860,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_60",
+      "label": "B5 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 860,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_61",
+      "label": "B6 - Mode 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 860,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_62",
+      "label": "B1 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1090,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_63",
+      "label": "B2 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1090,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_64",
+      "label": "B3 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1090,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_65",
+      "label": "B4 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1220,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_66",
+      "label": "B5 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1220,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_67",
+      "label": "B6 - Mode 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1220,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_68",
+      "label": "B1 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_69",
+      "label": "B2 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_70",
+      "label": "B3 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_71",
+      "label": "B4 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1600,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_72",
+      "label": "B5 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1600,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_73",
+      "label": "B6 - Mode 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1600,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_74",
+      "label": "B1 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1840,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_75",
+      "label": "B2 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1840,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_76",
+      "label": "B3 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1840,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_77",
+      "label": "B4 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1980,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_79",
+      "label": "B5 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1980,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_80",
+      "label": "B6 - Mode 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1980,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_XAxis",
+      "label": "Throttle Analog Stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 170,
+        "y": 370,
+        "w": 474,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_YAxis",
+      "label": "Throttle Analog Stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 170,
+        "y": 425,
+        "w": 474,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_ZAxis",
+      "label": "Throttle Handle Slider",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1435,
+        "y": 194,
+        "w": 394,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_RXAxis",
+      "label": "Throttle Left",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1850,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_RYAxis",
+      "label": "Throttle Right",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1900,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440197",
+      "key": "Joy_RZAxis",
+      "label": "Flaps",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2200,
+        "y": 1594,
+        "w": 350,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_1",
+      "label": "L 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2066,
+        "y": 602,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_2",
+      "label": "L Dial - Backward",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2066,
+        "y": 546,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_3",
+      "label": "L Dial - Forward",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2066,
+        "y": 492,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_4",
+      "label": "L POV Press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1440,
+        "y": 622,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_5",
+      "label": "L POV Back",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1988,
+        "y": 348,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_6",
+      "label": "L DIAL - Press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1988,
+        "y": 292,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_7",
+      "label": "L POV Forward",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1988,
+        "y": 238,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_8",
+      "label": "R POV1 Press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 710,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_9",
+      "label": "R POV1 Forward",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 602,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_10",
+      "label": "R POV1 Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 546,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_11",
+      "label": "R POV1 Back",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 491,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_12",
+      "label": "R POV1 Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 804,
+        "y": 656,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_13",
+      "label": "R Stick Press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 170,
+        "y": 480,
+        "w": 474,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_14",
+      "label": "R Dial - Forward",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 1016,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_15",
+      "label": "R Dial - Backward",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 1070,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_16",
+      "label": "R POV2 - Press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 960,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_17",
+      "label": "R POV2 - Forward",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 795,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_18",
+      "label": "R POV2 - Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 850,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_19",
+      "label": "R POV2 - Back",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 906,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_20",
+      "label": "R POV2 - Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2238,
+        "y": 740,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_21",
+      "label": "R 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2170,
+        "y": 1508,
+        "w": 425,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_22",
+      "label": "R POV3 - Press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 974,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_23",
+      "label": "R POV3 - Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 864,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_24",
+      "label": "R POV3 - Back",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 918,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_25",
+      "label": "R POV3 - Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 754,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_26",
+      "label": "R POV3 - Forward",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1624,
+        "y": 808,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_27",
+      "label": "R POV4 - Press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1432,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_28",
+      "label": "R POV4 - Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1322,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_29",
+      "label": "R POV4 - Back",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1378,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_30",
+      "label": "R POV4 - Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1212,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_31",
+      "label": "R POV4 - Forward",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2210,
+        "y": 1268,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_32",
+      "label": "R 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 842,
+        "y": 814,
+        "w": 380,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_33",
+      "label": "R 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 842,
+        "y": 894,
+        "w": 380,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_34",
+      "label": "T1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2200,
+        "y": 1731,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_35",
+      "label": "T2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2200,
+        "y": 1914,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_36",
+      "label": "T3 Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 720,
+        "y": 1046,
+        "w": 370,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_37",
+      "label": "T4 Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 720,
+        "y": 1238,
+        "w": 370,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_38",
+      "label": "B1-Ch1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 340,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_39",
+      "label": "B2-Ch1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 340,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_40",
+      "label": "B3-Ch1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 340,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_41",
+      "label": "B4-Ch1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_42",
+      "label": "B5-Ch1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_43",
+      "label": "B6-Ch1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_44",
+      "label": "T5 - Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1464,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_45",
+      "label": "T5 - Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1518,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_46",
+      "label": "T6 - Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1660,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_47",
+      "label": "T6 - Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1716,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_48",
+      "label": "T7 - Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1856,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_49",
+      "label": "T7 - Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 672,
+        "y": 1910,
+        "w": 300,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_50",
+      "label": "E1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1196,
+        "y": 2074,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_51",
+      "label": "E1 - Counter Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1196,
+        "y": 1964,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_52",
+      "label": "E1 - Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1196,
+        "y": 2020,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_53",
+      "label": "E2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1662,
+        "y": 2076,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_54",
+      "label": "E2 - Counter Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1662,
+        "y": 1966,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_55",
+      "label": "E2 - Clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1662,
+        "y": 2022,
+        "w": 325,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_56",
+      "label": "B1-Ch2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 710,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_57",
+      "label": "B2-Ch2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 710,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_58",
+      "label": "B3-Ch2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 710,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_59",
+      "label": "B4-Ch2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 860,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_60",
+      "label": "B5-Ch2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 860,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_61",
+      "label": "B6-Ch2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 860,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_62",
+      "label": "B1-Ch3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1090,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_63",
+      "label": "B2-Ch3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1090,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_64",
+      "label": "B3-Ch3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1090,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_65",
+      "label": "B4-Ch3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1220,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_66",
+      "label": "B5-Ch3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1220,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_67",
+      "label": "B6-Ch3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1220,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_68",
+      "label": "B1-Ch4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_69",
+      "label": "B2-Ch4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_70",
+      "label": "B3-Ch4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1470,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_71",
+      "label": "B4-Ch4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1600,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_72",
+      "label": "B5-Ch4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1600,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_73",
+      "label": "B6-Ch4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1600,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_74",
+      "label": "B1-Ch5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1840,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_75",
+      "label": "B2-Ch5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1840,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_76",
+      "label": "B3-Ch5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1840,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_77",
+      "label": "B4-Ch5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2732,
+        "y": 1980,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_79",
+      "label": "B6-Ch5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2920,
+        "y": 1980,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_80",
+      "label": "T4 Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3110,
+        "y": 1980,
+        "w": 180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_XAxis",
+      "label": "Throttle Analog Stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 170,
+        "y": 370,
+        "w": 474,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_YAxis",
+      "label": "Throttle Analog Stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 170,
+        "y": 425,
+        "w": 474,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_ZAxis",
+      "label": "Throttle Handle Slider",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1435,
+        "y": 194,
+        "w": 394,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_RXAxis",
+      "label": "Throttle L",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1850,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_RYAxis",
+      "label": "Throttle R",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 50,
+        "y": 1900,
+        "w": 450,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "VPCThrottle",
+      "key": "Joy_RZAxis",
+      "label": "Flaps",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2200,
+        "y": 1594,
+        "w": 350,
+        "h": 54
+      }
+    }
+  ]
+}

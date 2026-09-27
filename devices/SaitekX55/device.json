@@ -1,0 +1,798 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "SaitekX55",
+  "name": "Saitek X55",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "SaitekX55Joystick",
+      "usb": {
+        "vid": "0738",
+        "pid": "2215"
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "usb": {
+        "vid": "0738",
+        "pid": "A215"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "x55.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_1",
+      "label": "Primary trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2044,
+        "y": 604,
+        "w": 642,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_2",
+      "label": "Top trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2144,
+        "y": 224,
+        "w": 792,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_3",
+      "label": "Side trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3064,
+        "y": 554,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_4",
+      "label": "Secondary trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2044,
+        "y": 744,
+        "w": 642,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_5",
+      "label": "Pinky button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3024,
+        "y": 974,
+        "w": 792,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_6",
+      "label": "Pinky trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2044,
+        "y": 884,
+        "w": 642,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_7",
+      "label": "Witch hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3054,
+        "y": 224,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_8",
+      "label": "Witch hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3054,
+        "y": 280,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_9",
+      "label": "Witch hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3054,
+        "y": 336,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_10",
+      "label": "Witch hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3054,
+        "y": 392,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_11",
+      "label": "Castle hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3074,
+        "y": 724,
+        "w": 742,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_12",
+      "label": "Castle hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3074,
+        "y": 780,
+        "w": 742,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_13",
+      "label": "Castle hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3074,
+        "y": 836,
+        "w": 742,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_14",
+      "label": "Castle hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3074,
+        "y": 892,
+        "w": 742,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_POV1Up",
+      "label": "PoV hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1744,
+        "y": 304,
+        "w": 1072,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_POV1Right",
+      "label": "PoV hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1744,
+        "y": 360,
+        "w": 1072,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_POV1Down",
+      "label": "PoV hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1744,
+        "y": 416,
+        "w": 1072,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_POV1Left",
+      "label": "PoV hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1744,
+        "y": 472,
+        "w": 1072,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_RZAxis",
+      "label": "RZ Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3194,
+        "y": 1166,
+        "w": 632,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_XAxis",
+      "label": "X Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3194,
+        "y": 1110,
+        "w": 632,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Joystick",
+      "key": "Joy_YAxis",
+      "label": "Y Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3194,
+        "y": 1054,
+        "w": 632,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_1",
+      "label": "E button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 44,
+        "y": 604,
+        "w": 852,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_2",
+      "label": "F push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1874,
+        "y": 1660,
+        "w": 672,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_3",
+      "label": "G push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1534,
+        "y": 1810,
+        "w": 672,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_4",
+      "label": "H button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2574,
+        "y": 1694,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_5",
+      "label": "I button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2744,
+        "y": 1784,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_6",
+      "label": "Switch 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 1604,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_7",
+      "label": "Switch 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 1660,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_8",
+      "label": "Switch 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 94,
+        "y": 1754,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_9",
+      "label": "Switch 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 94,
+        "y": 1810,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_10",
+      "label": "Switch 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 764,
+        "y": 1754,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_11",
+      "label": "Switch 6",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 764,
+        "y": 1810,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_12",
+      "label": "TGL 1 up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1104,
+        "y": 1424,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_13",
+      "label": "TGL 1 down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1104,
+        "y": 1480,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_14",
+      "label": "TGL 2 up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1164,
+        "y": 1284,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_15",
+      "label": "TGL 2 down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1164,
+        "y": 1340,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_16",
+      "label": "TGL 3 up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1224,
+        "y": 1154,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_17",
+      "label": "TGL 3 down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1224,
+        "y": 1210,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_18",
+      "label": "TGL 4 up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1244,
+        "y": 1014,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_19",
+      "label": "TGL 4 down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1244,
+        "y": 1070,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_20",
+      "label": "H3 up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1154,
+        "y": 564,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_21",
+      "label": "H3 right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1154,
+        "y": 620,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_22",
+      "label": "H3 down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1154,
+        "y": 676,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_23",
+      "label": "H3 left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1154,
+        "y": 732,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_24",
+      "label": "H4 up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1364,
+        "y": 1924,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_25",
+      "label": "H4 right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1364,
+        "y": 1980,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_26",
+      "label": "H4 down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1364,
+        "y": 2036,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_27",
+      "label": "H4 left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1364,
+        "y": 2092,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_28",
+      "label": "Pinky rocker up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3124,
+        "y": 2034,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_29",
+      "label": "Pinky rocker down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3124,
+        "y": 2090,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_30",
+      "label": "Pinky spin up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3134,
+        "y": 1884,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_31",
+      "label": "Pinky spin down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3134,
+        "y": 1940,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_XAxis",
+      "label": "Throttle (left/both)",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 164,
+        "y": 680,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_UAxis",
+      "label": "RTY3 axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1194,
+        "y": 870,
+        "w": 732,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_VAxis",
+      "label": "RTY4 axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1194,
+        "y": 814,
+        "w": 732,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_ZAxis",
+      "label": "F spin",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1874,
+        "y": 1604,
+        "w": 672,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_RXAxis",
+      "label": "Stick x",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1534,
+        "y": 1754,
+        "w": 672,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_RYAxis",
+      "label": "Stick y",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1014,
+        "y": 1574,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX55Throttle",
+      "key": "Joy_RZAxis",
+      "label": "G spin",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 854,
+        "y": 1654,
+        "w": 692,
+        "h": 54
+      }
+    }
+  ]
+}

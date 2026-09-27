@@ -1,0 +1,291 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "LogitechG940",
+  "name": "Logitech G940 Stick + Throttle",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "LogitechG940Joystick",
+      "usb": {
+        "vid": "046D",
+        "pid": "C2A8"
+      }
+    },
+    {
+      "bindsId": "LogitechG940Throttle",
+      "usb": {
+        "vid": "046D",
+        "pid": "C2A9"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "g940.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_1",
+      "label": "Primary trigger half-press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2034,
+        "y": 604,
+        "w": 652,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_2",
+      "label": "Fire button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2044,
+        "y": 424,
+        "w": 642,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_3",
+      "label": "S1 button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2124,
+        "y": 234,
+        "w": 642,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_4",
+      "label": "S2 button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3064,
+        "y": 496,
+        "w": 752,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_5",
+      "label": "S3 button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3064,
+        "y": 584,
+        "w": 752,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_6",
+      "label": "S4 button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2044,
+        "y": 764,
+        "w": 642,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_7",
+      "label": "S5 button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2044,
+        "y": 1018,
+        "w": 642,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_8",
+      "label": "Ministick button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2954,
+        "y": 386,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_VAxis",
+      "label": "Ministick X",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2954,
+        "y": 330,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_UAxis",
+      "label": "Ministick Y",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2954,
+        "y": 274,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_9",
+      "label": "Primary trigger full-press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2034,
+        "y": 660,
+        "w": 652,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_POV1Up",
+      "label": "POV hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3124,
+        "y": 694,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_POV1Right",
+      "label": "POV hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3124,
+        "y": 750,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_POV1Down",
+      "label": "POV hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3124,
+        "y": 806,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_POV1Left",
+      "label": "POV hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3124,
+        "y": 862,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_XAxis",
+      "label": "Stick X axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3144,
+        "y": 1060,
+        "w": 672,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_YAxis",
+      "label": "Stick Y axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3144,
+        "y": 1004,
+        "w": 672,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_RXAxis",
+      "label": "Trim 2",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3084,
+        "y": 1824,
+        "w": 592,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_RYAxis",
+      "label": "Trim 3",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3224,
+        "y": 1744,
+        "w": 592,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechG940Joystick",
+      "key": "Joy_RZAxis",
+      "label": "Trim 1",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2934,
+        "y": 1904,
+        "w": 592,
+        "h": 54
+      }
+    }
+  ]
+}

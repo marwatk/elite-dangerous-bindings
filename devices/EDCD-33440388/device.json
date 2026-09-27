@@ -1,0 +1,312 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-33440388",
+  "name": "VPC Stick MT-50CM3 with Constellation Alpha (Right)",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "33440388",
+      "usb": {
+        "vid": "3344",
+        "pid": "0388"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "33440388",
+      "key": "Joy_RXAxis",
+      "label": "Alpha [ps4RXAxis]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_RYAxis",
+      "label": "Alpha [ps4RYAxis]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_UAxis",
+      "label": "Alpha Brake [x52prob6]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_XAxis",
+      "label": "CM3 [x52prox]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_YAxis",
+      "label": "CM3 [x52proy]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_ZAxis",
+      "label": "Alpha [x52prorz]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Pos_Joy_RXAxis",
+      "label": "Alpha [ps4RThumbR]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Pos_Joy_RYAxis",
+      "label": "Alpha [ps4RThumbD]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Pos_Joy_UAxis",
+      "label": "Alpha Brake [x52prob6]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Pos_Joy_XAxis",
+      "label": "CM3 [x52prox+]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Pos_Joy_YAxis",
+      "label": "CM3 [x52proy-]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Pos_Joy_ZAxis",
+      "label": "Alpha [x52prorz+]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Neg_Joy_RXAxis",
+      "label": "Alpha [ps4RThumbL]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Neg_Joy_RYAxis",
+      "label": "Alpha [ps4RThumbU]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Neg_Joy_UAxis",
+      "label": "Alpha Brake [x52prob6]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Neg_Joy_XAxis",
+      "label": "CM3 [x52prox-]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Neg_Joy_YAxis",
+      "label": "CM3 [x52proy+]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Neg_Joy_ZAxis",
+      "label": "Alpha [x52prorz-]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_1",
+      "label": "Alpha Flip [x52prob1] - Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_2",
+      "label": "Alpha Flip [x52prob1] - Pull",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_3",
+      "label": "Alpha [x52prob1] - Stage 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_4",
+      "label": "Alpha [x52prob15] - Stage 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_5",
+      "label": "Alpha [ps4RThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_6",
+      "label": "Alpha [x52prob4]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_7",
+      "label": "Alpha Face [x52prob26] Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_8",
+      "label": "Alpha Face [x52prob24]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_9",
+      "label": "Alpha Face [x52prob25]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_10",
+      "label": "Alpha Face [x52prob26]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_11",
+      "label": "Alpha Face [x52prob27]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_12",
+      "label": "Alpha [x52prob3]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_13",
+      "label": "Alpha [x52prop1d] Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_14",
+      "label": "Alpha [x52prop1u]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_15",
+      "label": "Alpha [x52prop1r]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_16",
+      "label": "Alpha [x52prop1d]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_17",
+      "label": "Alpha [x52prop1l]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_18",
+      "label": "Alpha Index [x52b22] Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_19",
+      "label": "Alpha Index [x52b20]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_20",
+      "label": "Alpha Index [x52b22]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_21",
+      "label": "Alpha [x52prob19] Push 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_22",
+      "label": "Alpha [x52prob19] Push 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_23",
+      "label": "Alpha [x52prob19] Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_24",
+      "label": "Alpha [x52prob19] Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_25",
+      "label": "Alpha Side [x52prob26] Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_26",
+      "label": "Alpha Side [x52prob24]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_27",
+      "label": "Alpha Side [x52prob25]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_28",
+      "label": "Alpha Side [x52prob26]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_29",
+      "label": "Alpha Side [x52prob27]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_30",
+      "label": "Alpha [x52prob5]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33440388",
+      "key": "Joy_31",
+      "label": "Alpha Brake [x52prob6]",
+      "kind": "button"
+    }
+  ]
+}

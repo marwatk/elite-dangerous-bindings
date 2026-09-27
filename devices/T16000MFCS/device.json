@@ -1,0 +1,651 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "T16000MFCS",
+  "name": "Thrustmaster T.16000M FCS HOTAS",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "T16000MFCS"
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "usb": {
+        "vid": "044F",
+        "pid": "B687"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "t16000mfcs.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_1",
+      "label": "Primary trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1804,
+        "y": 844,
+        "w": 642,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_2",
+      "label": "Bottom button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2764,
+        "y": 604,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_3",
+      "label": "Left-hand button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1754,
+        "y": 484,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_4",
+      "label": "Right-hand button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2764,
+        "y": 504,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_5",
+      "label": "Left bank top-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1254,
+        "y": 1244,
+        "w": 292,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_6",
+      "label": "Left bank top-middle button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1554,
+        "y": 1244,
+        "w": 292,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_7",
+      "label": "Left bank top-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1854,
+        "y": 1244,
+        "w": 292,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_8",
+      "label": "Left bank bottom-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1854,
+        "y": 1360,
+        "w": 292,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_9",
+      "label": "Left bank bottom-middle button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1554,
+        "y": 1360,
+        "w": 292,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_10",
+      "label": "Left bank bottom-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1254,
+        "y": 1360,
+        "w": 292,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_11",
+      "label": "Right bank top-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3484,
+        "y": 992,
+        "w": 292,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_12",
+      "label": "Right bank top-middle button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3184,
+        "y": 992,
+        "w": 292,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_13",
+      "label": "Right bank top-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2884,
+        "y": 992,
+        "w": 292,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_14",
+      "label": "Right bank bottom-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2884,
+        "y": 1108,
+        "w": 292,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_15",
+      "label": "Right bank bottom-middle button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3184,
+        "y": 1108,
+        "w": 292,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_16",
+      "label": "Right bank bottom-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3484,
+        "y": 1108,
+        "w": 292,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_POV1Up",
+      "label": "PoV hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2524,
+        "y": 214,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_POV1Right",
+      "label": "PoV hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2524,
+        "y": 270,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_POV1Down",
+      "label": "PoV hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2524,
+        "y": 326,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_POV1Left",
+      "label": "PoV hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2524,
+        "y": 382,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_RZAxis",
+      "label": "Stick twist",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2824,
+        "y": 856,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_UAxis",
+      "label": "Stick throttle slider",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2944,
+        "y": 1593,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_XAxis",
+      "label": "Stick pitch",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2824,
+        "y": 800,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_YAxis",
+      "label": "Stick roll",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2824,
+        "y": 744,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MFCS",
+      "key": "Joy_ZAxis",
+      "label": "Stick twist",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2824,
+        "y": 856,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_1",
+      "label": "TWCS Thumb Button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 294,
+        "y": 1244,
+        "w": 792,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_2",
+      "label": "TWCS Pinkie",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1774,
+        "y": 1774,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_3",
+      "label": "TWCS Ring Finger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1714,
+        "y": 1664,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_4",
+      "label": "TWCS Rocker [ps4PadU]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1484,
+        "y": 1514,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_5",
+      "label": "TWCS Rocker [ps4PadD]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1484,
+        "y": 1570,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_6",
+      "label": "TWCS Ministick Click",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 244,
+        "y": 1866,
+        "w": 732,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_7",
+      "label": "TWCS Saddle [ps4PadU]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1024,
+        "y": 654,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_8",
+      "label": "TWCS Saddle [ps4PadR]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1024,
+        "y": 710,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_9",
+      "label": "TWCS Saddle [ps4PadD]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1024,
+        "y": 766,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_10",
+      "label": "TWCS Saddle [ps4PadL]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1024,
+        "y": 820,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_11",
+      "label": "TWCS Castle [ps4PadU]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1034,
+        "y": 929,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_12",
+      "label": "TWCS Castle [ps4PadR]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1034,
+        "y": 985,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_13",
+      "label": "TWCS Castle [ps4PadD]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1034,
+        "y": 1041,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_14",
+      "label": "TWCS Castle [ps4PadL]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1034,
+        "y": 1097,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_POV1Up",
+      "label": "TWCS Cone [ps4PadU]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1014,
+        "y": 364,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_POV1Right",
+      "label": "TWCS Cone [ps4PadR]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1014,
+        "y": 420,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_POV1Down",
+      "label": "TWCS Cone [ps4PadD]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1014,
+        "y": 476,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_POV1Left",
+      "label": "TWCS Cone [ps4PadL]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1014,
+        "y": 532,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_XAxis",
+      "label": "TWCS Ministick X",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 244,
+        "y": 1810,
+        "w": 732,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_YAxis",
+      "label": "TWCS Ministick Y",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 244,
+        "y": 1754,
+        "w": 732,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_ZAxis",
+      "label": "TWCS Throttle",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 84,
+        "y": 555,
+        "w": 572,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_UAxis",
+      "label": "TWCS Tuning Wheel",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1874,
+        "y": 1914,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000MTHROTTLE",
+      "key": "Joy_RZAxis",
+      "label": "TWCS Paddle",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1954,
+        "y": 2054,
+        "w": 832,
+        "h": 54
+      }
+    }
+  ]
+}

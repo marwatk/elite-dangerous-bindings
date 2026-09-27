@@ -1,0 +1,354 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-334400D4",
+  "name": "VPC WarBRD Constellation Alpha Prime (Right)",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "334400D4",
+      "usb": {
+        "vid": "3344",
+        "pid": "00D4"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_RXAxis",
+      "label": "POV Hat X",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_RYAxis",
+      "label": "POV Hat Y",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_RZAxis",
+      "label": "Stick RZAxis",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_UAxis",
+      "label": "Pinky Axis",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_VAxis",
+      "label": "unused vaxis",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_XAxis",
+      "label": "[x52x]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_YAxis",
+      "label": "[x52y]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_ZAxis",
+      "label": "[x52rz]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV1Up",
+      "label": "unused pvo1up",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV1Right",
+      "label": "unused pvo1right",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV1Down",
+      "label": "unused pvo1down",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV1Left",
+      "label": "unused pvo1left",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV2Up",
+      "label": "unused pvo2up",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV2Right",
+      "label": "unused pvo2right",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV2Down",
+      "label": "unused pvo2down",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV2Left",
+      "label": "unused pvo2left",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV3Up",
+      "label": "unused pvo3up",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV3Right",
+      "label": "unused pvo3right",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV3Down",
+      "label": "unused pvo3down",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV3Left",
+      "label": "unused pvo1left",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV4Up",
+      "label": "unused pvo4up",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV4Right",
+      "label": "unused pvo4right",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV4Down",
+      "label": "unused pvo4down",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_POV4Left",
+      "label": "unused pvo4left",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_1",
+      "label": "Trigger Lever In",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_2",
+      "label": "Trigger Lever Hold",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_3",
+      "label": "Trigger Lever Squeeze",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_4",
+      "label": "Trigger 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_5",
+      "label": "Trigger 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_6",
+      "label": "Stick 6",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_7",
+      "label": "[x52b3]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_8",
+      "label": "unused joy 8",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_9",
+      "label": "[x52prob20]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_10",
+      "label": "[x52prob23]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_11",
+      "label": "[x52prob22]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_12",
+      "label": "[x52prob21]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_13",
+      "label": "[x52b4]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_14",
+      "label": "unused joy 14",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_15",
+      "label": "[x52b20]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_16",
+      "label": "[x52b23]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_17",
+      "label": "[x52b22]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_18",
+      "label": "[x52b21]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_19",
+      "label": "[x52prob19]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_20",
+      "label": "unused joy 20",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_21",
+      "label": "Wheel Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_22",
+      "label": "Wheel Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_23",
+      "label": "Thumb Press",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_24",
+      "label": "[x52prob24]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_25",
+      "label": "[x52prob27]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_26",
+      "label": "[x52prob26]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_27",
+      "label": "[x52prob25]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_28",
+      "label": "[ps4RThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_29",
+      "label": "[ps4RThumbU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_30",
+      "label": "[ps4RThumbD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_31",
+      "label": "Pinky Button",
+      "kind": "button"
+    },
+    {
+      "bindsId": "334400D4",
+      "key": "Joy_32",
+      "label": "Pinky Lever",
+      "kind": "button"
+    }
+  ]
+}

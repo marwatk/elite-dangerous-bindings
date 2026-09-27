@@ -1,0 +1,366 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-231D013C",
+  "name": "VKB STECS Space Throttle Grip Standard (Right)",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "231D013C",
+      "usb": {
+        "vid": "231D",
+        "pid": "013C"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_1",
+      "label": "STECS - Base Sys",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_2",
+      "label": "STECS - Base Start",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_3",
+      "label": "STECS - Base Mode 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_4",
+      "label": "STECS - Base Mode 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_5",
+      "label": "STECS - Base Mode 3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_6",
+      "label": "STECS - Base Mode 4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_7",
+      "label": "STECS - Base Mode 5",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_8",
+      "label": "STECS - B1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_9",
+      "label": "STECS - Trigger",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_10",
+      "label": "STECS - B2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_11",
+      "label": "STECS - Speed Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_12",
+      "label": "STECS - Speed Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_13",
+      "label": "STECS - Speed Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_14",
+      "label": "STECS - Index Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_15",
+      "label": "STECS - HAT1 Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_16",
+      "label": "STECS - Index Fore",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_17",
+      "label": "STECS - Index Back",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_18",
+      "label": "STECS - Index Right",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_19",
+      "label": "STECS - Index Left",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_20",
+      "label": "STECS - HAT1 Back",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_21",
+      "label": "STECS - HAT1 Fore",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_22",
+      "label": "STECS - HAT1 Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_23",
+      "label": "STECS - HAT1 Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_24",
+      "label": "STECS - H1 Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_25",
+      "label": "STECS - H1 Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_26",
+      "label": "STECS - H1 Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_27",
+      "label": "STECS - H2 Back",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_28",
+      "label": "STECS - H2 Fore",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_29",
+      "label": "STECS - H2 Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_30",
+      "label": "STECS - STEM A1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_31",
+      "label": "STECS - STEM A2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_32",
+      "label": "STECS - STEM C1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_33",
+      "label": "STECS - STEM B1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_34",
+      "label": "STECS - STEM B2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_35",
+      "label": "STECS - STEM B3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_36",
+      "label": "STECS - STEM B4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_37",
+      "label": "STECS - STEM B5",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_38",
+      "label": "STECS - STEM Sw1 Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_39",
+      "label": "STECS - STEM Sw1 Mid",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_40",
+      "label": "STECS - STEM Sw1 Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_41",
+      "label": "STECS - STEM Sw2 Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_42",
+      "label": "STECS - STEM Sw2 Mid",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_43",
+      "label": "STECS - STEM Sw2 Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_44",
+      "label": "STECS - STEM Tgl Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_45",
+      "label": "STECS - STEM Tgl Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_46",
+      "label": "STECS - STEM Enc1 CCW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_47",
+      "label": "STECS - STEM Enc1 CW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_48",
+      "label": "STECS - STEM Enc2 CCW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_49",
+      "label": "STECS - STEM Enc2 CW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_50",
+      "label": "STECS - STEM Enc1 Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_51",
+      "label": "STECS - STEM Enc2 Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_52",
+      "label": "STECS - STEM Flap Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_53",
+      "label": "STECS - STEM Flap Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_XAxis",
+      "label": "STECS - [x52prox]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_YAxis",
+      "label": "STECS - [x52proy]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_ZAxis",
+      "label": "STECS - [x52z]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_RXAxis",
+      "label": "STECS - Space Brake",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D013C",
+      "key": "Joy_RYAxis",
+      "label": "STECS - Laser Power",
+      "kind": "axis"
+    }
+  ]
+}

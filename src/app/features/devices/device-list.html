@@ -1,0 +1,82 @@
+<div class="page devices">
+  <div class="page-header">
+    <h1>Devices</h1>
+    <span class="muted">{{ catalog.devices().length }} controllers</span>
+    <span class="spacer"></span>
+    <button matButton type="button" (click)="zipInput.click()" matTooltip="Import a device .zip made with the layout editor">
+      <mat-icon>upload_file</mat-icon>Import .zip
+    </button>
+    <input #zipInput type="file" accept=".zip,application/zip" hidden (change)="importZip($event)" />
+    <a matButton="filled" routerLink="/devices/new" class="new-btn"><mat-icon>add</mat-icon>Map a new controller</a>
+  </div>
+
+  <div class="filters">
+    <mat-form-field class="search" subscriptSizing="dynamic" appearance="outline">
+      <mat-icon matPrefix>search</mat-icon>
+      <mat-label>Search name, Elite ID or USB ID</mat-label>
+      <input matInput type="search" [value]="q()" (input)="setQuery(val($event))" data-testid="device-search" />
+    </mat-form-field>
+    <mat-chip-set aria-label="Filters">
+      @for (s of sourceFilters; track s) {
+        <mat-chip
+          [highlighted]="sources().has(s)"
+          (click)="toggleSource(s)"
+          [attr.aria-pressed]="sources().has(s)"
+          role="button"
+        >
+          {{ labels[s] }} <span class="count">{{ counts()[s] }}</span>
+        </mat-chip>
+      }
+      <mat-chip [highlighted]="inFileOnly()" (click)="inFileOnly.set(!inFileOnly())" [attr.aria-pressed]="inFileOnly()" role="button">
+        <mat-icon matChipAvatar>description</mat-icon>In my file
+      </mat-chip>
+      <mat-chip [highlighted]="artOnly()" (click)="artOnly.set(!artOnly())" [attr.aria-pressed]="artOnly()" role="button">
+        <mat-icon matChipAvatar>image</mat-icon>Has artwork
+      </mat-chip>
+    </mat-chip-set>
+  </div>
+
+  @if (!catalog.loaded()) {
+    <div class="loading"><mat-spinner diameter="40" /></div>
+  } @else {
+    <p class="muted result-count" aria-live="polite">{{ filtered().length }} shown</p>
+    <div class="grid">
+      @for (d of filtered(); track d.id) {
+        <a class="card" [routerLink]="['/devices', d.id]" [attr.data-device]="d.id">
+          <div class="thumb">
+            @if (thumb(d); as src) {
+              <img [src]="src" loading="lazy" decoding="async" alt="" />
+            } @else {
+              <mat-icon>no_photography</mat-icon>
+            }
+          </div>
+          <div class="body">
+            <div class="name">{{ d.name }}</div>
+            <div class="meta">
+              <span class="badge" [class]="'badge src-' + (d.local ? 'mine' : d.source)">{{ d.local ? 'Mine' : labels[d.source] }}</span>
+              @if (usedIds().has(d.id)) {
+                <span class="badge used">In your file</span>
+              }
+              <span class="muted">{{ d.controlCount }} controls</span>
+            </div>
+            <div class="ids">
+              @for (id of d.ids.slice(0, maxIds); track $index) {
+                <span class="id" [matTooltip]="id.usb ? 'USB ' + fmt(id.usb) : ''">
+                  {{ id.bindsId }}{{ id.deviceIndex !== undefined ? ' #' + id.deviceIndex : '' }}
+                  @if (id.usb && id.bindsId !== id.usb.vid + id.usb.pid) {
+                    <span class="usb">{{ fmt(id.usb) }}</span>
+                  }
+                </span>
+              }
+              @if (d.ids.length > maxIds) {
+                <span class="id more">+{{ d.ids.length - maxIds }}</span>
+              }
+            </div>
+          </div>
+        </a>
+      } @empty {
+        <p class="muted">No devices match. Not there? <a routerLink="/devices/new">Map it yourself</a>.</p>
+      }
+    </div>
+  }
+</div>

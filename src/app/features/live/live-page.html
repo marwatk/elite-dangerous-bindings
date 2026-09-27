@@ -1,0 +1,205 @@
+<div class="page">
+  <div class="page-header">
+    <h1>Live input</h1>
+    <span class="spacer"></span>
+    <button
+      matButton="filled"
+      (click)="addControllers()"
+      [disabled]="!input.webHidSupported || requesting()"
+      [matTooltip]="input.webHidSupported ? 'Choose controllers in the browser\'s WebHID dialog' : 'WebHID needs Chrome, Edge or Opera'"
+    >
+      <mat-icon>add_circle</mat-icon> Add controllers
+    </button>
+  </div>
+
+  <section class="support" aria-label="Browser support">
+    <span class="chip" [class.yes]="input.webHidSupported">
+      <mat-icon inline>{{ input.webHidSupported ? 'check_circle' : 'cancel' }}</mat-icon>
+      WebHID {{ input.webHidSupported ? 'supported' : 'not supported' }}
+    </span>
+    <span class="chip" [class.yes]="input.gamepadSupported">
+      <mat-icon inline>{{ input.gamepadSupported ? 'check_circle' : 'cancel' }}</mat-icon>
+      Gamepad API {{ input.gamepadSupported ? 'supported' : 'not supported' }}
+    </span>
+    <span class="chip yes">
+      <mat-icon inline>keyboard</mat-icon> Keyboard
+    </span>
+    @if (!secure) {
+      <span class="chip"><mat-icon inline>lock_open</mat-icon> Not a secure context: controllers need https or localhost</span>
+    }
+  </section>
+  <p class="muted help">
+    @if (input.webHidSupported) {
+      <strong>Add controllers</strong> opens the browser's permission dialog: pick each joystick, throttle or pedal set
+      once and it is remembered. Those devices are read directly (WebHID), with the game's own button numbering.
+    }
+    Controllers you haven't added are read through the Gamepad API, which only shows a device
+    <strong>after you press one of its buttons</strong>, and stops while this tab isn't focused.
+  </p>
+  @if (requestError()) {
+    <p class="error"><mat-icon inline>error</mat-icon> {{ requestError() }}</p>
+  }
+
+  <div class="layout">
+    <div class="devices">
+      @for (d of devices(); track d.id) {
+        <app-live-device-card [device]="d" />
+      } @empty {
+        <mat-card appearance="outlined" class="empty">
+          <mat-icon>sports_esports</mat-icon>
+          <p>No controllers yet.</p>
+          <p class="muted">
+            Press a button on your joystick, or use <strong>Add controllers</strong>. Keyboard presses show up in the
+            panel on the right and in the event log.
+          </p>
+        </mat-card>
+      }
+    </div>
+
+    <aside class="side">
+      <mat-card appearance="outlined" class="what-panel">
+        <h2><mat-icon>help</mat-icon> What does this do?</h2>
+        @if (lastPress(); as lp) {
+          <p class="pressed">
+            <span class="kbd on">{{ lp.ref | inputLabel }}</span>
+            <code class="muted">{{ lp.ref.key }}</code>
+          </p>
+          @if (lp.held.length) {
+            <p class="muted small">While holding {{ modifierText(lp.held) }}</p>
+          }
+          @if (!store.isOpen()) {
+            <p class="muted">
+              Open your bindings file to see which commands this control triggers.
+              <a routerLink="/">Open a file</a>
+            </p>
+          } @else if (what(); as w) {
+            @if (w.direct.length) {
+              <ul class="uses">
+                @for (u of w.direct; track u.code + u.slot + u.key) {
+                  <li [class.active]="u.active">
+                    <span class="name">{{ u.name }}</span>
+                    <span class="muted small">
+                      {{ u.group }} · {{ u.slot }}
+                      @if (u.key !== lp.ref.key) {
+                        · <code>{{ u.key }}</code>
+                      }
+                      @if (u.hold) {
+                        · hold
+                      }
+                    </span>
+                    @if (u.modifiers.length) {
+                      <span class="mods small" [class.met]="u.active">
+                        <mat-icon inline>{{ u.active ? 'lock_open' : 'lock' }}</mat-icon>
+                        needs {{ modifierText(u.modifiers) }}
+                      </span>
+                    }
+                  </li>
+                }
+              </ul>
+            } @else {
+              <p class="muted">Not bound to anything in {{ store.source()?.name }}.</p>
+            }
+            @if (w.asModifier.length) {
+              <p class="small">Also a modifier for:</p>
+              <ul class="uses small">
+                @for (u of w.asModifier; track u.code + u.binding.key) {
+                  <li>{{ u.name }} <span class="muted">+ {{ u.binding | inputLabel }}</span></li>
+                }
+              </ul>
+            }
+          }
+        } @else {
+          <p class="muted">Press any button, flick a hat, move an axis or press a key.</p>
+        }
+      </mat-card>
+
+      <mat-card appearance="outlined" class="wizard">
+        <h2><mat-icon>fact_check</mat-icon> Numbering check</h2>
+        <app-numbering-wizard />
+      </mat-card>
+    </aside>
+  </div>
+
+  <mat-accordion class="diag" multi>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title><mat-icon>monitor_heart</mat-icon>&nbsp;Diagnostics</mat-panel-title>
+        <mat-panel-description class="hide-small">Raw data, event log, missing devices</mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <h3>Event log <button matButton class="clear" (click)="clearLog()">Clear</button></h3>
+      <div class="log" role="log" aria-label="Event log">
+        @for (e of log(); track e.n) {
+          <div class="ev" [class.axis]="e.kind === 'axis'">
+            <span class="t">{{ e.time }}</span>
+            <code class="k">{{ e.key }}</code>
+            <span class="x">{{ e.text }}</span>
+            <span class="d muted">{{ e.device }}</span>
+          </div>
+        } @empty {
+          <p class="muted">Nothing yet. Use a control or press a key.</p>
+        }
+      </div>
+
+      @if (store.isOpen()) {
+        <h3>In your file but not connected</h3>
+        @for (m of missing(); track m.device + m.deviceIndex) {
+          <p class="missing">
+            <mat-icon inline>link_off</mat-icon> {{ m.name }} <code>{{ m.device }}</code>
+            @if (m.deviceIndex) {
+              <span class="muted">DeviceIndex {{ m.deviceIndex }}</span>
+            }
+          </p>
+        } @empty {
+          <p class="muted">Every controller your file uses is connected.</p>
+        }
+        <p class="muted small">
+          Not showing up? Press its buttons (Gamepad API), add it with <strong>Add controllers</strong> (WebHID), or set
+          the Elite device ID on its card if the file uses a different one.
+        </p>
+      }
+
+      @if (input.hidNotes().length) {
+        <h3>WebHID notes</h3>
+        @for (n of input.hidNotes(); track n) {
+          <p class="small">{{ n }}</p>
+        }
+      }
+
+      <h3>Devices</h3>
+      @for (x of diagnostics(); track x.device.id) {
+        <div class="dev-diag">
+          <p>
+            <strong>{{ x.device.name }}</strong>
+            <span class="muted">· {{ x.device.backend }} · <code>{{ x.device.id }}</code> → <code>{{ x.device.bindsId }}</code>
+              @if (x.diag?.profile) {
+                · mapping {{ x.diag!.profile }}
+              }
+            </span>
+          </p>
+          @if (x.diag; as dg) {
+            @if (dg.error) {
+              <p class="error small">{{ dg.error }}</p>
+            }
+            <pre class="raw">{{ dg.raw || '(no data yet)' }}</pre>
+            @if (dg.pads) {
+              @for (p of dg.pads; track p.index) {
+                <pre class="raw small">gamepad {{ p.index }} "{{ p.id }}" mapping="{{ p.mapping }}"
+buttons [{{ p.buttons.join(', ') }}]
+axes    [{{ p.axes.join(', ') }}]</pre>
+              }
+            }
+            @if (dg.fields?.length) {
+              <details>
+                <summary>{{ dg.fields!.length }} HID fields</summary>
+                <pre class="raw small">{{ dg.fields!.join('\n') }}</pre>
+              </details>
+            }
+          }
+        </div>
+      } @empty {
+        <p class="muted">No controllers detected.</p>
+      }
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

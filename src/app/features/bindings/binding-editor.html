@@ -1,0 +1,269 @@
+<h2 mat-dialog-title class="title">
+  {{ info.longName }}
+</h2>
+<mat-dialog-content class="content">
+  <p class="meta">
+    <code>{{ orig.code }}</code>
+    <span>{{ info.area }} › {{ info.section }}</span>
+    <span class="tag">{{ orig.kind === 'axis' ? 'Axis command' : info.hasAnalogue ? 'Button (axis allowed)' : 'Button command' }}</span>
+  </p>
+
+  @if (slotNames.length > 1) {
+    <div class="slot-choice">
+      <span class="label" id="slot-choice-label">Slot to edit</span>
+      <mat-button-toggle-group
+        [value]="active()"
+        (change)="selectSlot($event.value)"
+        aria-labelledby="slot-choice-label"
+        hideSingleSelectionIndicator
+      >
+        @for (s of slotNames; track s) {
+          <mat-button-toggle [value]="s">
+            <span class="toggle-inner">
+              <span class="toggle-name">
+                {{ SLOT_LABELS[s] }}
+                @if (slotDirty(s)) {
+                  <span class="dot" aria-label="changed">●</span>
+                }
+              </span>
+              <span class="toggle-value">
+                @if (slotOf(s); as b) {
+                  {{ b | inputLabel }}
+                } @else {
+                  not bound
+                }
+              </span>
+            </span>
+          </mat-button-toggle>
+        }
+      </mat-button-toggle-group>
+    </div>
+  }
+
+  <section class="slot" [attr.aria-label]="SLOT_LABELS[active()] + ' slot'">
+    <div class="slot-head">
+      <h3>{{ SLOT_LABELS[active()] }}</h3>
+    </div>
+
+    <div class="current" aria-live="polite">
+      @if (currentBound(); as cur) {
+        <app-slot-view [binding]="cur" [showHold]="false" />
+      } @else {
+        <span class="muted">Not bound</span>
+      }
+    </div>
+
+    @if (slotChanged()) {
+      <div class="replace" role="status">
+        <mat-icon inline>{{ original() ? 'swap_horiz' : 'add' }}</mat-icon>
+        @if (original(); as o) {
+          <span>{{ currentBound() ? 'Replaces' : 'Clears' }}</span>
+          <app-slot-view class="was" [binding]="o" />
+        } @else {
+          <span>New binding for an empty slot</span>
+        }
+        <button matButton type="button" class="small" (click)="restoreSlot()">Keep original</button>
+      </div>
+    }
+
+    @if (incompatible()) {
+      <div class="warn" role="alert">
+        <mat-icon inline>warning</mat-icon>
+        @if (traits.kind === 'axis') {
+          This is an analogue command: bind an axis, not a button.
+        } @else {
+          A button command on a whole axis only fires at the end of its travel. Use an axis half (+ / −) or a button.
+        }
+      </div>
+    }
+
+    <div class="actions">
+      <button #bindButton matButton="filled" type="button" (click)="startCapture('binding')" [disabled]="!!capturing()">
+        <mat-icon>ads_click</mat-icon>
+        Press to bind
+      </button>
+      <button matButton="outlined" type="button" (click)="openPicker('binding')" [attr.aria-expanded]="picking() === 'binding'">
+        <mat-icon>list</mat-icon>
+        Pick from list
+      </button>
+      <button matButton type="button" (click)="clearSlot()" [disabled]="!currentBound()">
+        <mat-icon>backspace</mat-icon>
+        Clear
+      </button>
+    </div>
+
+    @if (capturing(); as what) {
+      <div class="waiting" #waitPanel tabindex="-1" role="status" aria-live="assertive">
+        <mat-spinner diameter="28" />
+        <div class="waiting-text">
+          <strong>Waiting for input…</strong>
+          @if (what === 'modifier') {
+            <span>Press the button or key to use as a modifier.</span>
+          } @else if (traits.kind === 'axis') {
+            <span>Move an axis on your controller.</span>
+          } @else {
+            <span>Press the button, key or hat (hold any modifiers first), then let go. You can also move an axis.</span>
+          }
+          @if (held().length) {
+            <span class="held">
+              Holding:
+              @for (h of held(); track $index) {
+                <span class="kbd">{{ h | inputLabel }}</span>
+              }
+            </span>
+          }
+          <span class="muted small-text">
+            Nothing happening? Your controller may not be readable in this browser; use “Pick from list”.
+          </span>
+          @if (liveInput.webHidSupported) {
+            <button matButton type="button" class="small" (click)="allowController()">
+              <mat-icon>usb</mat-icon>Allow a controller…
+            </button>
+          }
+        </div>
+        <button matButton="outlined" type="button" (click)="cancelCapture()">Cancel <span class="muted">(Esc)</span></button>
+      </div>
+    }
+    @if (captureError(); as err) {
+      <div class="warn" role="alert"><mat-icon inline>error</mat-icon>{{ err }}</div>
+    }
+
+    @if (suggestInverted()) {
+      <div class="suggest" role="status">
+        <mat-icon inline>swap_vert</mat-icon>
+        You moved the axis in the negative direction. Invert it?
+        <button matButton type="button" class="small" (click)="setInverted(true)">Set Inverted</button>
+        <button matButton type="button" class="small" (click)="suggestInverted.set(false)">No</button>
+      </div>
+    }
+    @if (fullAxis(); as f) {
+      <div class="suggest" role="status">
+        <mat-icon inline>info</mat-icon>
+        Bound to one half of the axis. This command can also use the whole axis.
+        <button matButton type="button" class="small" (click)="useFullAxis()">Use whole axis</button>
+      </div>
+    }
+
+    @if (picking() === 'binding') {
+      <app-control-picker
+        [action]="traits"
+        target="binding"
+        [initial]="currentBound()"
+        (picked)="picked($event)"
+        (cancelled)="picking.set(null)"
+      />
+    }
+
+    @if (currentBound(); as cur) {
+      <div class="mods">
+        <span class="label">Modifiers</span>
+        @for (m of cur.modifiers; track $index) {
+          <span class="mod-chip">
+            <span class="kbd" [attr.title]="m | inputLabel">{{ m | inputLabel }}</span>
+            <button
+              matIconButton
+              type="button"
+              class="tiny"
+              (click)="removeMod($index)"
+              [attr.aria-label]="'Remove modifier ' + (m | inputLabel)"
+            >
+              <mat-icon>close</mat-icon>
+            </button>
+          </span>
+        } @empty {
+          <span class="muted">None</span>
+        }
+        <span class="mod-actions">
+          <button matButton type="button" class="small" (click)="startCapture('modifier')" [disabled]="!!capturing()">
+            <mat-icon>add</mat-icon>Press modifier
+          </button>
+          <button matButton type="button" class="small" (click)="openPicker('modifier')" [attr.aria-expanded]="picking() === 'modifier'">
+            <mat-icon>list</mat-icon>Pick modifier
+          </button>
+        </span>
+      </div>
+      @if (picking() === 'modifier') {
+        <app-control-picker
+          [action]="traits"
+          target="modifier"
+          [initial]="cur.modifiers[0] ?? cur"
+          (picked)="picked($event)"
+          (cancelled)="picking.set(null)"
+        />
+      }
+      <mat-checkbox [checked]="cur.hold" (change)="setHold($event.checked)">
+        Hold <span class="muted">– only active while held</span>
+      </mat-checkbox>
+    }
+
+    @if (conflicts().length) {
+      <div class="conflicts" role="alert">
+        <div class="conflict-head">
+          <mat-icon inline>error</mat-icon>
+          <strong>Already used in the same context ({{ info.group }})</strong>
+        </div>
+        <ul>
+          @for (c of conflicts(); track c.code + c.slot) {
+            <li>
+              <span>{{ c.name }} <span class="muted">({{ c.slot }})</span></span>
+              <button matButton type="button" class="small" (click)="clearOther(c.code, c.slot)">
+                Clear the other one
+              </button>
+            </li>
+          }
+        </ul>
+      </div>
+    }
+    @for (s of otherConflicts(); track s) {
+      <p class="warn small-text"><mat-icon inline>error</mat-icon>The {{ SLOT_LABELS[s] }} binding also conflicts with another command.</p>
+    }
+    @if (draft().clearOthers.length) {
+      <div class="cleared">
+        <span class="muted">Will also clear:</span>
+        @for (c of draft().clearOthers; track c.code + c.slot) {
+          <span class="cleared-item">
+            {{ actionName(c.code) }} ({{ c.slot }})
+            <button matButton type="button" class="small" (click)="undoClearOther($index)">Undo</button>
+          </span>
+        }
+      </div>
+    }
+  </section>
+
+  @if (orig.kind === 'axis') {
+    <section class="options" aria-label="Axis options">
+      <mat-slide-toggle [checked]="!!draft().inverted" (change)="setInverted($event.checked)">Inverted</mat-slide-toggle>
+      <div class="deadzone">
+        <label id="dz-label" for="dz-input">Deadzone</label>
+        <mat-slider min="0" max="100" step="1" discrete [displayWith]="pctLabel" class="slider">
+          <input
+            id="dz-input"
+            matSliderThumb
+            [value]="deadzonePct()"
+            (valueChange)="setDeadzone($event)"
+            aria-labelledby="dz-label"
+          />
+        </mat-slider>
+        <span class="dz-value">{{ deadzonePct() }}%</span>
+      </div>
+    </section>
+  }
+  @if (orig.toggleOn !== null) {
+    <section class="options" aria-label="Options">
+      <mat-checkbox [checked]="!!draft().toggleOn" (change)="setToggleOn($event.checked)">
+        Toggle on <span class="muted">– press once to switch on, again to switch off</span>
+      </mat-checkbox>
+    </section>
+  }
+</mat-dialog-content>
+<mat-dialog-actions class="footer">
+  <span class="muted summary">
+    @if (edits().length) {
+      {{ edits().length }} change{{ edits().length === 1 ? '' : 's' }} to apply
+    } @else {
+      No changes
+    }
+  </span>
+  <button matButton type="button" (click)="cancel()">Cancel</button>
+  <button matButton="filled" type="button" (click)="apply()" [disabled]="!edits().length">Apply</button>
+</mat-dialog-actions>

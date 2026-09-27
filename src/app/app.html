@@ -1,0 +1,117 @@
+<mat-toolbar class="toolbar no-print">
+  <button
+    matIconButton
+    (click)="navOpen.set(!navOpen())"
+    aria-label="Toggle navigation"
+    matTooltip="Menu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <a routerLink="/" class="brand">
+    <mat-icon class="brand-icon">joystick</mat-icon>
+    <span class="brand-text">ED Bindings</span>
+  </a>
+
+  @if (store.source(); as src) {
+    <span class="file" [matTooltip]="store.dirty() ? 'Unsaved changes (autosaved in this browser)' : 'Saved'">
+      <mat-icon inline>description</mat-icon>
+      <span class="file-name">{{ src.name }}</span>
+      @if (store.dirty()) {
+        <span class="dirty" aria-label="unsaved changes">●</span>
+      }
+    </span>
+  }
+
+  <span class="spacer"></span>
+
+  @if (store.isOpen()) {
+    <button
+      matIconButton
+      (click)="store.undo()"
+      [disabled]="!store.canUndo()"
+      [matTooltip]="store.undoLabel() ? 'Undo: ' + store.undoLabel() : 'Undo'"
+      aria-label="Undo"
+    >
+      <mat-icon>undo</mat-icon>
+    </button>
+    <button
+      matIconButton
+      (click)="store.redo()"
+      [disabled]="!store.canRedo()"
+      [matTooltip]="store.redoLabel() ? 'Redo: ' + store.redoLabel() : 'Redo'"
+      aria-label="Redo"
+    >
+      <mat-icon>redo</mat-icon>
+    </button>
+  }
+  <button matButton (click)="files.pickAndOpen()" matTooltip="Open a .binds file (Ctrl+O)">
+    <mat-icon>folder_open</mat-icon>
+    <span class="hide-small">Open</span>
+  </button>
+  @if (store.isOpen()) {
+    <button matButton="filled" [matMenuTriggerFor]="saveMenu">
+      <mat-icon>save</mat-icon>
+      <span class="hide-small">Save</span>
+    </button>
+    <mat-menu #saveMenu="matMenu">
+      @if (store.source()?.handle) {
+        <button mat-menu-item (click)="files.save()">
+          <mat-icon>save</mat-icon>Save to {{ store.source()?.name }}
+        </button>
+      }
+      @if (files.canSaveInPlace) {
+        <button mat-menu-item (click)="files.saveAs()"><mat-icon>save_as</mat-icon>Save as…</button>
+      }
+      <button mat-menu-item (click)="files.download()"><mat-icon>download</mat-icon>Download {{ files.suggestedName() }}</button>
+      <button mat-menu-item (click)="files.copyShareLink()"><mat-icon>link</mat-icon>Copy share link</button>
+    </mat-menu>
+  }
+  <button
+    matIconButton
+    (click)="toggleTheme()"
+    [matTooltip]="light() ? 'Dark theme' : 'Light theme'"
+    aria-label="Toggle theme"
+  >
+    <mat-icon>{{ light() ? 'dark_mode' : 'light_mode' }}</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-sidenav-container class="container">
+  <mat-sidenav
+    class="nav no-print"
+    [mode]="isMobile() ? 'over' : 'side'"
+    [opened]="navOpen()"
+    (openedChange)="navOpen.set($event)"
+  >
+    <mat-nav-list>
+      @for (item of nav; track item.path) {
+        <a
+          mat-list-item
+          [routerLink]="item.path"
+          routerLinkActive
+          #rla="routerLinkActive"
+          [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+          [activated]="rla.isActive"
+          [class.needs-file]="item.needsFile && !store.isOpen()"
+          (click)="closeNavOnMobile()"
+        >
+          <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+          <span matListItemTitle>{{ item.label }}</span>
+        </a>
+      }
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    @if (catalog.error(); as err) {
+      <div class="load-error" role="alert">{{ err }}</div>
+    }
+    <router-outlet />
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+@if (dragging()) {
+  <div class="drop-overlay no-print" aria-hidden="true">
+    <mat-icon>file_download</mat-icon>
+    <span>Drop a <code>.binds</code> file to open it</span>
+  </div>
+}

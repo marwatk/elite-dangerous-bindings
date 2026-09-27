@@ -1,0 +1,362 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "LogitechGTWheel",
+  "name": "Logitech Driving Force GT Wheel",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "046DC29A",
+      "usb": {
+        "vid": "046D",
+        "pid": "C29A"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "gtwheel.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_1",
+      "label": "Cross button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2624,
+        "y": 1089,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_2",
+      "label": "Square button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2624,
+        "y": 1184,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_3",
+      "label": "Circle button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2624,
+        "y": 994,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_4",
+      "label": "Triangle button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2624,
+        "y": 900,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_5",
+      "label": "Right back paddle",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2404,
+        "y": 594,
+        "w": 992,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_6",
+      "label": "Left back paddle",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 24,
+        "y": 594,
+        "w": 992,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_7",
+      "label": "Right shoulder button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2404,
+        "y": 484,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_8",
+      "label": "Left shoulder button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 24,
+        "y": 484,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_9",
+      "label": "Select button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 484,
+        "y": 1720,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_10",
+      "label": "Start button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1744,
+        "y": 1720,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_11",
+      "label": "R3 button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2404,
+        "y": 354,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_12",
+      "label": "L3 button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 24,
+        "y": 354,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_13",
+      "label": "Gear stick towards",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2684,
+        "y": 808,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_14",
+      "label": "Gear stick away",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2684,
+        "y": 752,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_15",
+      "label": "Dial button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2684,
+        "y": 1494,
+        "w": 1132,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_16",
+      "label": "Plus button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 84,
+        "y": 1554,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_17",
+      "label": "Dial clockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2684,
+        "y": 1274,
+        "w": 1132,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_18",
+      "label": "Dial anticlockwise",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2684,
+        "y": 1384,
+        "w": 1132,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_19",
+      "label": "Minus button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 84,
+        "y": 1610,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_20",
+      "label": "Horn",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1544,
+        "y": 554,
+        "w": 332,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_21",
+      "label": "Central button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1114,
+        "y": 1824,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_POV1Up",
+      "label": "PoV up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 84,
+        "y": 870,
+        "w": 932,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_POV1Right",
+      "label": "PoV right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 84,
+        "y": 980,
+        "w": 932,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_POV1Down",
+      "label": "PoV down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 84,
+        "y": 1090,
+        "w": 932,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_POV1Left",
+      "label": "PoV left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 84,
+        "y": 1200,
+        "w": 932,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "046DC29A",
+      "key": "Joy_XAxis",
+      "label": "Steering wheel",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1284,
+        "y": 304,
+        "w": 932,
+        "h": 54
+      }
+    }
+  ]
+}

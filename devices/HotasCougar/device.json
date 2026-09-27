@@ -1,0 +1,518 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "HotasCougar",
+  "name": "Thrustmaster HOTAS Cougar",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "044F0400",
+      "usb": {
+        "vid": "044F",
+        "pid": "0400"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "hotascougar.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_1",
+      "label": "Primary trigger half press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2003,
+        "y": 557,
+        "w": 670,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_2",
+      "label": "Top trigger red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1948,
+        "y": 218,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_3",
+      "label": "Pinky button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2080,
+        "y": 1094,
+        "w": 592,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_4",
+      "label": "Pinky trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2080,
+        "y": 1004,
+        "w": 592,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_5",
+      "label": "Top side button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2881,
+        "y": 218,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_6",
+      "label": "Primary trigger full press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2003,
+        "y": 611,
+        "w": 670,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_7",
+      "label": "Left hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1995,
+        "y": 302,
+        "w": 676,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_8",
+      "label": "Left hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1995,
+        "y": 356,
+        "w": 676,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_9",
+      "label": "Left hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1995,
+        "y": 410,
+        "w": 676,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_10",
+      "label": "Left hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1995,
+        "y": 464,
+        "w": 676,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_11",
+      "label": "Right hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3042,
+        "y": 562,
+        "w": 774,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_12",
+      "label": "Right hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3042,
+        "y": 616,
+        "w": 774,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_13",
+      "label": "Right hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3042,
+        "y": 670,
+        "w": 774,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_14",
+      "label": "Right hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3042,
+        "y": 724,
+        "w": 774,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_15",
+      "label": "Thumb hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2004,
+        "y": 700,
+        "w": 667,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_16",
+      "label": "Thumb hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2004,
+        "y": 754,
+        "w": 667,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_17",
+      "label": "Thumb hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2004,
+        "y": 808,
+        "w": 667,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_18",
+      "label": "Thumb hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2004,
+        "y": 862,
+        "w": 667,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_19",
+      "label": "Rdr Cursor button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 372,
+        "y": 1640,
+        "w": 683,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_20",
+      "label": "Radio select down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1495,
+        "y": 1679,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_21",
+      "label": "Radio select up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1495,
+        "y": 1733,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_22",
+      "label": "Radio select right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1495,
+        "y": 1787,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_23",
+      "label": "Radio select left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1495,
+        "y": 1841,
+        "w": 772,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_24",
+      "label": "Man RNG/Uncage button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1220,
+        "y": 649,
+        "w": 633,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_25",
+      "label": "Dog fight up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1310,
+        "y": 1022,
+        "w": 690,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_26",
+      "label": "Dog fight down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1310,
+        "y": 1076,
+        "w": 690,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_27",
+      "label": "SPD BRK up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1310,
+        "y": 1214,
+        "w": 690,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_28",
+      "label": "SPD BRK down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1310,
+        "y": 1268,
+        "w": 690,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_POV1Up",
+      "label": "PoV hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3042,
+        "y": 304,
+        "w": 774,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_POV1Right",
+      "label": "PoV hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3042,
+        "y": 358,
+        "w": 774,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_POV1Down",
+      "label": "PoV hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3042,
+        "y": 412,
+        "w": 774,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_POV1Left",
+      "label": "PoV hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3042,
+        "y": 466,
+        "w": 774,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_XAxis",
+      "label": "Stick left/right",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3124,
+        "y": 870,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_YAxis",
+      "label": "Stick up/down",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3124,
+        "y": 816,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_ZAxis",
+      "label": "Throttle",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 108,
+        "y": 364,
+        "w": 682,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_UAxis",
+      "label": "Man RNG/Uncage",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1220,
+        "y": 595,
+        "w": 633,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_RXAxis",
+      "label": "Ant Elev",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1310,
+        "y": 1424,
+        "w": 690,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0400",
+      "key": "Joy_VAxis",
+      "label": "Rdr Cursor",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 372,
+        "y": 1586,
+        "w": 683,
+        "h": 54
+      }
+    }
+  ]
+}

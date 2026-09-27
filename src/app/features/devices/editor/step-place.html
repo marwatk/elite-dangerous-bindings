@@ -1,0 +1,198 @@
+@if (!store.draft().images.length) {
+  <p class="empty">
+    <mat-icon>image</mat-icon> Add an image first.
+    <button matButton="tonal" type="button" (click)="store.step.set('image')">Go to Image</button>
+  </p>
+} @else if (!store.placeable().length) {
+  <p class="empty">
+    <mat-icon>list</mat-icon> List the controls first.
+    <button matButton="tonal" type="button" (click)="store.step.set('inventory')">Go to Controls</button>
+  </p>
+} @else {
+  <div class="place">
+    <aside class="checklist" aria-label="Controls to place">
+      <div class="list-head">
+        <strong>{{ store.placedCount() }} / {{ store.placeable().length }} placed</strong>
+        <span class="spacer"></span>
+        <mat-slide-toggle [checked]="onlyUnplaced()" (change)="onlyUnplaced.set($event.checked)">Unplaced</mat-slide-toggle>
+      </div>
+      @if (multiPart()) {
+        <div class="parts">
+          <select class="part-select" [value]="partFilter() ?? ''" (change)="partFilter.set($any($event.target).value || null)" aria-label="Show part">
+            <option value="">All parts</option>
+            @for (p of store.primaries(); track p.uid) {
+              <option [value]="p.uid">{{ partName(p.uid) }}</option>
+            }
+          </select>
+        </div>
+      }
+      <div class="items">
+        @for (c of checklist(); track c.uid) {
+          <div
+            class="item"
+            role="button"
+            tabindex="0"
+            [attr.data-uid]="c.uid"
+            [class.active]="store.activeUid() === c.uid"
+            [class.placed]="!!c.box"
+            [class.sel]="store.selected().has(c.uid)"
+            (click)="pick(c, $event)"
+            (keydown.enter)="pick(c, $any($event))"
+          >
+            <mat-icon class="state">{{ c.box ? 'check_circle' : 'radio_button_unchecked' }}</mat-icon>
+            <div class="text">
+              @if (store.activeUid() === c.uid) {
+                <input
+                  class="lbl-input"
+                  [value]="c.label"
+                  (input)="setLabel(c.uid, $event)"
+                  (click)="$event.stopPropagation()"
+                  placeholder="Label"
+                  aria-label="Label"
+                />
+              } @else {
+                <span class="lbl">{{ c.label || '(no label)' }}</span>
+              }
+              <span class="key">{{ c.key }}{{ multiPart() ? ' · ' + partName(c.part) : '' }}{{ c.box && (c.image ?? 0) !== store.imageIndex() ? ' · image ' + ((c.image ?? 0) + 1) : '' }}</span>
+            </div>
+          </div>
+        }
+      </div>
+    </aside>
+
+    <div class="work">
+      <div class="toolbar">
+        @if (store.draft().images.length > 1) {
+          <mat-button-toggle-group [value]="store.imageIndex()" (change)="store.imageIndex.set($event.value)" aria-label="Image" hideSingleSelectionIndicator>
+            @for (img of store.draft().images; track img.uid; let i = $index) {
+              <mat-button-toggle [value]="i">Image {{ i + 1 }}</mat-button-toggle>
+            }
+          </mat-button-toggle-group>
+        }
+        <button matIconButton type="button" (click)="zoomBy(0.8)" matTooltip="Zoom out (−)" aria-label="Zoom out"><mat-icon>zoom_out</mat-icon></button>
+        <span class="zoom mono">{{ (zoom() * 100).toFixed(0) }}%</span>
+        <button matIconButton type="button" (click)="zoomBy(1.25)" matTooltip="Zoom in (+)" aria-label="Zoom in"><mat-icon>zoom_in</mat-icon></button>
+        <button matIconButton type="button" (click)="fit()" matTooltip="Fit to width" aria-label="Fit to width"><mat-icon>fit_width</mat-icon></button>
+        <button matIconButton type="button" [class.on]="panMode()" (click)="panMode.set(!panMode())" matTooltip="Pan (or hold Space / middle-drag)" aria-label="Pan">
+          <mat-icon>pan_tool</mat-icon>
+        </button>
+        <span class="sep"></span>
+        <button matIconButton type="button" [class.on]="snapOn()" (click)="snapOn.set(!snapOn())" matTooltip="Snap to other boxes" aria-label="Snap to boxes">
+          <mat-icon>straighten</mat-icon>
+        </button>
+        <button matIconButton type="button" [class.on]="gridOn()" [matMenuTriggerFor]="gridMenu" matTooltip="Grid" aria-label="Grid">
+          <mat-icon>grid_4x4</mat-icon>
+        </button>
+        <mat-menu #gridMenu="matMenu">
+          <button mat-menu-item (click)="gridOn.set(false)">No grid</button>
+          @for (g of [5, 10, 20, 50]; track g) {
+            <button mat-menu-item (click)="gridOn.set(true); gridSize.set(g)">{{ g }} px grid</button>
+          }
+        </mat-menu>
+        <span class="sep"></span>
+        <button matIconButton type="button" (click)="sameSizeAsLast()" [disabled]="!store.lastSize() || !selectedPlaced().length" matTooltip="Same size as last box" aria-label="Same size as last">
+          <mat-icon>photo_size_select_small</mat-icon>
+        </button>
+        <button matIconButton type="button" (click)="align('left')" [disabled]="selectedPlaced().length < 2" matTooltip="Align left edges (shift-click to multi-select)" aria-label="Align left">
+          <mat-icon>align_horizontal_left</mat-icon>
+        </button>
+        <button matIconButton type="button" (click)="align('top')" [disabled]="selectedPlaced().length < 2" matTooltip="Align top edges" aria-label="Align top">
+          <mat-icon>align_vertical_top</mat-icon>
+        </button>
+        <button matIconButton type="button" (click)="deleteSelected()" [disabled]="!selectedPlaced().length && !store.activeControl()?.box" matTooltip="Remove box (Delete)" aria-label="Remove box">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <span class="spacer"></span>
+        <mat-slide-toggle [checked]="autoAdvance()" (change)="autoAdvance.set($event.checked)">Auto-advance</mat-slide-toggle>
+      </div>
+
+      <div class="status" aria-live="polite">
+        @if (store.activeControl(); as a) {
+          <span class="now">{{ a.label || a.key }}</span>
+          <span class="mono muted">{{ a.key }}</span>
+          @if (a.box) {
+            — drag to move, handles to resize, arrows to nudge; drag on empty space to redraw.
+          } @else {
+            — drag on the image to draw its box (or click to drop one).
+          }
+        } @else {
+          Pick a control from the list or press it on the controller.
+        }
+      </div>
+
+      <div class="viewport" #viewport (wheel)="onWheel($event)" [class.panning]="panMode()">
+        @if (image(); as img) {
+          <svg
+            #svg
+            tabindex="0"
+            data-testid="place-canvas"
+            [attr.width]="img.width * zoom()"
+            [attr.height]="img.height * zoom()"
+            [attr.viewBox]="'0 0 ' + img.width + ' ' + img.height"
+            (pointerdown)="down($event)"
+            (pointermove)="move($event)"
+            (pointerup)="up($event)"
+            (pointercancel)="up($event)"
+          >
+            <defs>
+              <pattern id="edb-grid" [attr.width]="gridSize()" [attr.height]="gridSize()" patternUnits="userSpaceOnUse">
+                <path [attr.d]="'M' + gridSize() + ' 0H0V' + gridSize()" fill="none" class="gridline" [attr.stroke-width]="1 / zoom()" />
+              </pattern>
+            </defs>
+            <image [attr.href]="imageUrl()" x="0" y="0" [attr.width]="img.width" [attr.height]="img.height" preserveAspectRatio="none" />
+            @if (showGrid()) {
+              <rect x="0" y="0" [attr.width]="img.width" [attr.height]="img.height" fill="url(#edb-grid)" pointer-events="none" />
+            }
+            @for (b of boxes(); track b.uid) {
+              <g class="box" [attr.data-uid]="b.uid" [class.active]="store.activeUid() === b.uid" [class.sel]="store.selected().has(b.uid)">
+                <rect [attr.x]="b.box.x" [attr.y]="b.box.y" [attr.width]="b.box.w" [attr.height]="b.box.h" [attr.stroke-width]="stroke()" />
+                <text [attr.x]="b.box.x + b.box.h * 0.2" [attr.y]="b.box.y + b.box.h / 2" [attr.font-size]="fontSize(b.box)">{{ b.label || b.key }}</text>
+              </g>
+            }
+            @if (drawRect(); as r) {
+              <rect class="drawing" [attr.x]="r.x" [attr.y]="r.y" [attr.width]="r.w" [attr.height]="r.h" [attr.stroke-width]="stroke()" />
+            }
+            @for (x of guides().x; track $index) {
+              <line class="guide" [attr.x1]="x" [attr.x2]="x" y1="0" [attr.y2]="img.height" [attr.stroke-width]="stroke() / 2" />
+            }
+            @for (y of guides().y; track $index) {
+              <line class="guide" x1="0" [attr.x2]="img.width" [attr.y1]="y" [attr.y2]="y" [attr.stroke-width]="stroke() / 2" />
+            }
+            @if (handleBox(); as hb) {
+              @for (h of handles; track h) {
+                <rect
+                  [attr.data-handle]="h"
+                  [class]="'handle h-' + h"
+                  [attr.x]="hb.box.x + (h.includes('w') ? 0 : h.includes('e') ? hb.box.w : hb.box.w / 2) - handleSize() / 2"
+                  [attr.y]="hb.box.y + (h.includes('n') ? 0 : h.includes('s') ? hb.box.h : hb.box.h / 2) - handleSize() / 2"
+                  [attr.width]="handleSize()"
+                  [attr.height]="handleSize()"
+                  [attr.stroke-width]="stroke() / 2"
+                />
+              }
+            }
+          </svg>
+        }
+      </div>
+      <p class="hint">Ctrl + wheel (or pinch) zooms · Space-drag, middle-drag or the hand tool pans · Shift-click selects several boxes · N jumps to the next unplaced control.</p>
+
+      @if (store.activeControl(); as a) {
+        <div class="inspector">
+          <strong>{{ a.key }}</strong>
+          @if (a.box) {
+            @for (f of ['x', 'y', 'w', 'h']; track f) {
+              <label>{{ f }} <input class="num" type="number" [value]="$any(a.box)[f]" (change)="setBoxField(a.uid, $any(f), $event)" /></label>
+            }
+            <button matButton type="button" (click)="store.removeBoxes([a.uid])"><mat-icon>backspace</mat-icon>Remove box</button>
+          }
+          @if (previous()?.box) {
+            <button matButton type="button" (click)="shareWithPrevious()" matTooltip="Use exactly the same box as {{ previous()!.label || previous()!.key }} (e.g. a hat's directions)">
+              <mat-icon>join</mat-icon>Share box with previous
+            </button>
+          }
+          <button matButton type="button" (click)="nextUnplaced()"><mat-icon>skip_next</mat-icon>Next unplaced</button>
+        </div>
+      }
+    </div>
+  </div>
+}

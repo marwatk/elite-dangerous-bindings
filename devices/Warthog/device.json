@@ -1,0 +1,1403 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "Warthog",
+  "name": "Thrustmaster HOTAS Warthog",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "usb": {
+        "vid": "044F",
+        "pid": "0402"
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "usb": {
+        "vid": "044F",
+        "pid": "0404"
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "usb": {
+        "vid": "044F",
+        "pid": "FFFF"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "warthog.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_1",
+      "label": "Primary trigger half press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2042,
+        "y": 548,
+        "w": 620,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_2",
+      "label": "Top trigger red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1952,
+        "y": 214,
+        "w": 880,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_3",
+      "label": "Pinky button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2084,
+        "y": 1102,
+        "w": 580,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_4",
+      "label": "Pinky trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2084,
+        "y": 1012,
+        "w": 580,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_5",
+      "label": "Top side button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2886,
+        "y": 212,
+        "w": 880,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_6",
+      "label": "Primary trigger full press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2042,
+        "y": 602,
+        "w": 620,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_7",
+      "label": "Left hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1916,
+        "y": 300,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_8",
+      "label": "Left hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1916,
+        "y": 354,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_9",
+      "label": "Left hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1916,
+        "y": 408,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_10",
+      "label": "Left hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1916,
+        "y": 462,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_11",
+      "label": "Right hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 562,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_12",
+      "label": "Right hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 616,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_13",
+      "label": "Right hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 670,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_14",
+      "label": "Right hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 724,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_15",
+      "label": "Thumb hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2004,
+        "y": 700,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_16",
+      "label": "Thumb hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2004,
+        "y": 754,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_17",
+      "label": "Thumb hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2004,
+        "y": 808,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_18",
+      "label": "Thumb hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2004,
+        "y": 862,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_19",
+      "label": "Thumb hat push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2004,
+        "y": 914,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_POV1Up",
+      "label": "PoV hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 308,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_POV1Right",
+      "label": "PoV hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 362,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_POV1Down",
+      "label": "PoV hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 416,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_POV1Left",
+      "label": "PoV hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 470,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_XAxis",
+      "label": "Stick left/right",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3126,
+        "y": 872,
+        "w": 680,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogJoystick",
+      "key": "Joy_YAxis",
+      "label": "Stick up/down",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3126,
+        "y": 818,
+        "w": 680,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_1",
+      "label": "Rear analogue push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2870,
+        "y": 1422,
+        "w": 680,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_2",
+      "label": "Side hat push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1674,
+        "y": 1672,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_3",
+      "label": "Side hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1674,
+        "y": 1456,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_4",
+      "label": "Side hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1674,
+        "y": 1510,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_5",
+      "label": "Side hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1674,
+        "y": 1564,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_6",
+      "label": "Side hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1674,
+        "y": 1618,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_7",
+      "label": "Side top switch right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1694,
+        "y": 1810,
+        "w": 640,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_8",
+      "label": "Side top switch left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1694,
+        "y": 1756,
+        "w": 640,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_9",
+      "label": "Side middle switch right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1694,
+        "y": 1950,
+        "w": 640,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_10",
+      "label": "Side middle switch left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1694,
+        "y": 1896,
+        "w": 640,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_11",
+      "label": "Side bottom switch right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1694,
+        "y": 2088,
+        "w": 640,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_12",
+      "label": "Side bottom switch left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1694,
+        "y": 2034,
+        "w": 640,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_13",
+      "label": "Side toggle up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3386,
+        "y": 1976,
+        "w": 420,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_14",
+      "label": "Side toggle down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3386,
+        "y": 2030,
+        "w": 420,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_15",
+      "label": "Rear red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3196,
+        "y": 1514,
+        "w": 620,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_16",
+      "label": "ENG left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1080,
+        "y": 566,
+        "w": 620,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_17",
+      "label": "ENG right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1200,
+        "y": 666,
+        "w": 620,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_18",
+      "label": "ENG operate left down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1316,
+        "y": 1000,
+        "w": 420,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_19",
+      "label": "ENG operate right down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1354,
+        "y": 844,
+        "w": 420,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_20",
+      "label": "APU start button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1140,
+        "y": 1118,
+        "w": 620,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_21",
+      "label": "LDGH silence button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 960,
+        "y": 1362,
+        "w": 620,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_22",
+      "label": "Flaps up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 88,
+        "y": 750,
+        "w": 320,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_23",
+      "label": "Flaps down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 88,
+        "y": 804,
+        "w": 320,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_24",
+      "label": "EAC",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 36,
+        "y": 1428,
+        "w": 480,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_25",
+      "label": "RDR ALT",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 218,
+        "y": 1542,
+        "w": 480,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_26",
+      "label": "Autopilot",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 436,
+        "y": 1646,
+        "w": 480,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_27",
+      "label": "Autopilot select up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1020,
+        "y": 1460,
+        "w": 420,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_28",
+      "label": "Autopilot select down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1020,
+        "y": 1514,
+        "w": 420,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_31",
+      "label": "ENG operate left up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1316,
+        "y": 946,
+        "w": 420,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_32",
+      "label": "ENG operate right up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1354,
+        "y": 790,
+        "w": 420,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_POV1Up",
+      "label": "Rear PoV hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1964,
+        "y": 1214,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_POV1Right",
+      "label": "Rear PoV hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1964,
+        "y": 1268,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_POV1Down",
+      "label": "Rear PoV hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1964,
+        "y": 1322,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_POV1Left",
+      "label": "Rear PoV hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1964,
+        "y": 1376,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_UAxis",
+      "label": "Throttle friction control",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1082,
+        "y": 1252,
+        "w": 520,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_XAxis",
+      "label": "Rear analogue left/right",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2870,
+        "y": 1368,
+        "w": 680,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_YAxis",
+      "label": "Rear analogue up/down",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2870,
+        "y": 1314,
+        "w": 680,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogThrottle",
+      "key": "Joy_ZAxis",
+      "label": "Throttle",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 530,
+        "y": 316,
+        "w": 540,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_1",
+      "label": "Primary trigger half press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2042,
+        "y": 548,
+        "w": 620,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_2",
+      "label": "Top trigger red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1952,
+        "y": 214,
+        "w": 880,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_3",
+      "label": "Pinky button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2084,
+        "y": 1102,
+        "w": 580,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_4",
+      "label": "Pinky trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2084,
+        "y": 1012,
+        "w": 580,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_5",
+      "label": "Top side button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2886,
+        "y": 212,
+        "w": 880,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_6",
+      "label": "Primary trigger full press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2042,
+        "y": 602,
+        "w": 620,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_7",
+      "label": "Left hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1916,
+        "y": 300,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_8",
+      "label": "Left hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1916,
+        "y": 354,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_9",
+      "label": "Left hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1916,
+        "y": 408,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_10",
+      "label": "Left hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1916,
+        "y": 462,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_11",
+      "label": "Right hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 562,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_12",
+      "label": "Right hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 616,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_13",
+      "label": "Right hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 670,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_14",
+      "label": "Right hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 724,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_15",
+      "label": "Thumb hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2004,
+        "y": 700,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_16",
+      "label": "Thumb hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2004,
+        "y": 754,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_17",
+      "label": "Thumb hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2004,
+        "y": 808,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_18",
+      "label": "Thumb hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2004,
+        "y": 862,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_19",
+      "label": "Thumb hat push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2004,
+        "y": 914,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_POV1Up",
+      "label": "PoV hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 308,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_POV1Right",
+      "label": "PoV hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 362,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_POV1Down",
+      "label": "PoV hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 416,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_POV1Left",
+      "label": "PoV hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 3048,
+        "y": 470,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_XAxis",
+      "label": "Stick left/right",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3126,
+        "y": 872,
+        "w": 680,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_YAxis",
+      "label": "Stick up/down",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3126,
+        "y": 818,
+        "w": 680,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_20",
+      "label": "Rear red button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3196,
+        "y": 1514,
+        "w": 620,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_21",
+      "label": "LDGH silence button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 960,
+        "y": 1362,
+        "w": 620,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_22",
+      "label": "Rear PoV hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1964,
+        "y": 1214,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_23",
+      "label": "Rear PoV hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1964,
+        "y": 1268,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_24",
+      "label": "Rear PoV hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1964,
+        "y": 1322,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_25",
+      "label": "Rear PoV hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1964,
+        "y": 1376,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_26",
+      "label": "Side hat push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1674,
+        "y": 1672,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_27",
+      "label": "Side hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1674,
+        "y": 1456,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_28",
+      "label": "Side hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1674,
+        "y": 1510,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_29",
+      "label": "Side hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1674,
+        "y": 1564,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_30",
+      "label": "Side hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1674,
+        "y": 1618,
+        "w": 660,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_31",
+      "label": "ENG operate left down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1316,
+        "y": 1000,
+        "w": 420,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_32",
+      "label": "ENG operate right down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1354,
+        "y": 844,
+        "w": 420,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_VAxis",
+      "label": "Throttle friction control",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1082,
+        "y": 1252,
+        "w": 520,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_RXAxis",
+      "label": "Rear analogue left/right",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2870,
+        "y": 1368,
+        "w": 680,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_RYAxis",
+      "label": "Rear analogue up/down",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2870,
+        "y": 1314,
+        "w": 680,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterWarthogCombined",
+      "key": "Joy_ZAxis",
+      "label": "Throttle",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 530,
+        "y": 316,
+        "w": 540,
+        "h": 54
+      }
+    }
+  ]
+}

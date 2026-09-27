@@ -1,0 +1,63 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "T-Rudder",
+  "name": "Thrustmaster TFRP Pedals",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "T-Rudder",
+      "usb": {
+        "vid": "044F",
+        "pid": "B679"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "tfrp.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "T-Rudder",
+      "key": "Joy_XAxis",
+      "label": "Left pedal",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 164,
+        "y": 588,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "T-Rudder",
+      "key": "Joy_YAxis",
+      "label": "Right pedal",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2269,
+        "y": 594,
+        "w": 1323,
+        "h": 152
+      }
+    },
+    {
+      "bindsId": "T-Rudder",
+      "key": "Joy_ZAxis",
+      "label": "Rudder",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1213,
+        "y": 343,
+        "w": 1323,
+        "h": 152
+      }
+    }
+  ]
+}

@@ -1,0 +1,687 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "VKB-Gladiator-NXT-Premium-Left",
+  "name": "VKB Gladiator NXT Premium (Left)",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "231D0201",
+      "usb": {
+        "vid": "231D",
+        "pid": "0201"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "vkb-gladiator-nxt-premium-left.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_1",
+      "label": "LGNX Fire 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2692,
+        "y": 1390,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_2",
+      "label": "LGNX Fire 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2692,
+        "y": 1452,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_3",
+      "label": "LGNX A2 (thumb red)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2616,
+        "y": 1018,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_4",
+      "label": "LGNX B1 (right side)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 546,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_5",
+      "label": "LGNX D1 (pinky)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2616,
+        "y": 2028,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_6",
+      "label": "LGNX A3 [ps4PadU]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 1136,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV3Up",
+      "label": "LGNX A3 [ps4PadU]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 1136,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_7",
+      "label": "LGNX A3 [ps4PadR]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 1196,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV3Right",
+      "label": "LGNX A3 [ps4PadR]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 1196,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_8",
+      "label": "LGNX A3 [ps4PadD]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 1258,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV3Down",
+      "label": "LGNX A3 [ps4PadD]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 1258,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_9",
+      "label": "LGNX A3 [ps4PadL]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 1320,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV3Left",
+      "label": "LGNX A3 [ps4PadL]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 1320,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_10",
+      "label": "LGNX A3 Click",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 1382,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_11",
+      "label": "LGNX A4 [ps4PadU]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 720,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV2Up",
+      "label": "LGNX A4 [ps4PadU]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 720,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_12",
+      "label": "LGNX A4 [ps4PadR]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 786,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV2Right",
+      "label": "LGNX A4 [ps4PadR]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 786,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_13",
+      "label": "LGNX A4 [ps4PadD]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 850,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV2Down",
+      "label": "LGNX A4 [ps4PadD]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 850,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_14",
+      "label": "LGNX A4 [ps4PadL]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 916,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV2Left",
+      "label": "LGNX A4 [ps4PadL]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 916,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_15",
+      "label": "LGNX A4 Click",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 374,
+        "y": 982,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_16",
+      "label": "LGNX C1 [ps4PadU]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2616,
+        "y": 1624,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV4Up",
+      "label": "LGNX C1 [ps4PadU]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2616,
+        "y": 1624,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_17",
+      "label": "LGNX C1 [ps4PadR]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2616,
+        "y": 1690,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV4Right",
+      "label": "LGNX C1 [ps4PadR]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2616,
+        "y": 1690,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_18",
+      "label": "LGNX C1 [ps4PadD]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2616,
+        "y": 1754,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV4Down",
+      "label": "LGNX C1 [ps4PadD]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2616,
+        "y": 1754,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_19",
+      "label": "LGNX C1 [ps4PadL]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2616,
+        "y": 1820,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV4Left",
+      "label": "LGNX C1 [ps4PadL]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2616,
+        "y": 1820,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_20",
+      "label": "LGNX C1 Click",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2616,
+        "y": 1886,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_21",
+      "label": "LGNX Push Brake",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2692,
+        "y": 1158,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_22",
+      "label": "LGNX Pull Brake",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2692,
+        "y": 1220,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_23",
+      "label": "LGNX En1 [ps4PadU]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 456,
+        "y": 1826,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_24",
+      "label": "LGNX En1 [ps4PadD]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 456,
+        "y": 1888,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_25",
+      "label": "LGNX En2 [ps4PadU]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 456,
+        "y": 1948,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_26",
+      "label": "LGNX En2 [ps4PadD]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 456,
+        "y": 2010,
+        "w": 842,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_27",
+      "label": "LGNX F1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 394,
+        "y": 1540,
+        "w": 902,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_28",
+      "label": "LGNX F2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 394,
+        "y": 1600,
+        "w": 902,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_29",
+      "label": "LGNX F3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 394,
+        "y": 1662,
+        "w": 902,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_XAxis",
+      "label": "LGNX [x52prox]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1598,
+        "y": 320,
+        "w": 758,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_YAxis",
+      "label": "LGNX [x52proy]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1598,
+        "y": 382,
+        "w": 758,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_ZAxis",
+      "label": "LGNX Throttle",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1598,
+        "y": 446,
+        "w": 758,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_RXAxis",
+      "label": "LGNX Thumbstick X",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1598,
+        "y": 508,
+        "w": 758,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_RYAxis",
+      "label": "LGNX Thumbstick Y",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1598,
+        "y": 572,
+        "w": 758,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_RZAxis",
+      "label": "LGNX [x52prorz]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1598,
+        "y": 634,
+        "w": 758,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV1Up",
+      "label": "LGNX A1 [ps4PadU]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2616,
+        "y": 598,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV1Right",
+      "label": "LGNX A1 [ps4PadR]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2616,
+        "y": 664,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV1Down",
+      "label": "LGNX A1 [ps4PadD]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2616,
+        "y": 730,
+        "w": 918,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0201",
+      "key": "Joy_POV1Left",
+      "label": "LGNX A1 [ps4PadL]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2616,
+        "y": 796,
+        "w": 918,
+        "h": 56
+      }
+    }
+  ]
+}

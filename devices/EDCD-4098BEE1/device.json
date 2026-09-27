@@ -1,0 +1,318 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-4098BEE1",
+  "name": "Winwing/Winctrl MFD 1",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "4098BEE1",
+      "usb": {
+        "vid": "4098",
+        "pid": "BEE1"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_1",
+      "label": "WW B1 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_2",
+      "label": "WW B2 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_3",
+      "label": "WW B3 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_4",
+      "label": "WW B4 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_5",
+      "label": "WW B5 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_6",
+      "label": "WW B6 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_7",
+      "label": "WW B7 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_8",
+      "label": "WW B8 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_9",
+      "label": "WW B9 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_10",
+      "label": "WW GAIN up [x360PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_11",
+      "label": "WW GAIN down [x360PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_12",
+      "label": "WW B12 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_13",
+      "label": "WW B13 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_14",
+      "label": "WW B14 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_15",
+      "label": "WW B15 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_16",
+      "label": "WW B16 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_17",
+      "label": "WW B17 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_18",
+      "label": "WW B18 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_19",
+      "label": "WW B19 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_20",
+      "label": "WW B20 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_21",
+      "label": "WW CONT down [x360PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_22",
+      "label": "WW CONT up [x360PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_23",
+      "label": "WW B23 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_24",
+      "label": "WW B24 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_25",
+      "label": "WW B25 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_26",
+      "label": "WW B26 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_27",
+      "label": "WW B27 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_28",
+      "label": "WW B28 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_29",
+      "label": "WW B29 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_30",
+      "label": "WW B30 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_31",
+      "label": "WW B31 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_32",
+      "label": "WW SYM down [x360PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_33",
+      "label": "WW SYM up [x360PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_34",
+      "label": "WW B34 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_35",
+      "label": "WW B35 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_36",
+      "label": "WW B36 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_37",
+      "label": "WW B37 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_38",
+      "label": "WW B38 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_39",
+      "label": "WW B39 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_40",
+      "label": "WW B40 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_41",
+      "label": "WW B41 [x360LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_42",
+      "label": "WW B42 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_43",
+      "label": "WW DAY [x360PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_44",
+      "label": "WW NGT [x360PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_45",
+      "label": "WW SIDE down [x52u-]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_46",
+      "label": "WW SIDE mid [x52u]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_47",
+      "label": "WW SIDE up [x52u+]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_48",
+      "label": "WW KNOB press [x52b2]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_49",
+      "label": "WW KNOB left [x52prorx-]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BEE1",
+      "key": "Joy_50",
+      "label": "WW KNOB right [x52prorx+]",
+      "kind": "button"
+    }
+  ]
+}

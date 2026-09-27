@@ -1,0 +1,349 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "T16000M",
+  "name": "Thrustmaster T.16000M",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "T16000M",
+      "usb": {
+        "vid": "044F",
+        "pid": "B10A"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "t16000m.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_1",
+      "label": "T16000M trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2124,
+        "y": 624,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_2",
+      "label": "T16000M rear trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 474,
+        "y": 624,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_3",
+      "label": "T16000M left trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 474,
+        "y": 494,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_4",
+      "label": "T16000M right trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2124,
+        "y": 494,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_5",
+      "label": "T16000M left buttons 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 24,
+        "y": 1104,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_6",
+      "label": "T16000M left buttons 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 574,
+        "y": 1104,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_7",
+      "label": "T16000M left buttons 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1124,
+        "y": 1104,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_8",
+      "label": "T16000M left buttons 6",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1124,
+        "y": 1220,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_9",
+      "label": "T16000M left buttons 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 574,
+        "y": 1220,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_10",
+      "label": "T16000M left buttons 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 24,
+        "y": 1220,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_11",
+      "label": "T16000M right buttons 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3264,
+        "y": 1104,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_12",
+      "label": "T16000M right buttons 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2714,
+        "y": 1104,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_13",
+      "label": "T16000M right buttons 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2164,
+        "y": 1104,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_14",
+      "label": "T16000M right buttons 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2164,
+        "y": 1220,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_15",
+      "label": "T16000M right buttons 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2714,
+        "y": 1220,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_16",
+      "label": "T16000M right buttons 6",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3264,
+        "y": 1220,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_POV1Up",
+      "label": "T16000M [x52prop1u]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1542,
+        "y": 214,
+        "w": 1532,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_POV1Right",
+      "label": "T16000M [x52prop1r]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1542,
+        "y": 270,
+        "w": 1532,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_POV1Down",
+      "label": "T16000M [x52prop1d]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1542,
+        "y": 326,
+        "w": 1532,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_POV1Left",
+      "label": "T16000M [x52prop1l]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1542,
+        "y": 382,
+        "w": 1532,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_RZAxis",
+      "label": "T16000M [x52prorz]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2357,
+        "y": 980,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_UAxis",
+      "label": "T16000M [x52prou]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2584,
+        "y": 1750,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_XAxis",
+      "label": "T16000M [x52prox]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2357,
+        "y": 924,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_YAxis",
+      "label": "T16000M [x52proy]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2357,
+        "y": 868,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "T16000M",
+      "key": "Joy_ZAxis",
+      "label": "Stick twist",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2357,
+        "y": 980,
+        "w": 1132,
+        "h": 54
+      }
+    }
+  ]
+}

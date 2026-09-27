@@ -1,0 +1,284 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "LogitechExtreme3DPro",
+  "name": "Logitech Extreme 3D Pro",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "usb": {
+        "vid": "046D",
+        "pid": "C215"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "extreme3dpro.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_1",
+      "label": "Primary trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 474,
+        "y": 904,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_2",
+      "label": "Side trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 474,
+        "y": 1004,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_3",
+      "label": "Bottom-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 424,
+        "y": 784,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_4",
+      "label": "Bottom-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2124,
+        "y": 784,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_5",
+      "label": "Top-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 424,
+        "y": 654,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_6",
+      "label": "Top-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2124,
+        "y": 654,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_7",
+      "label": "Left bank top-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 244,
+        "y": 1434,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_8",
+      "label": "Left bank top-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 794,
+        "y": 1434,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_9",
+      "label": "Left bank middle-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 244,
+        "y": 1550,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_10",
+      "label": "Left bank middle-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 794,
+        "y": 1550,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_11",
+      "label": "Left bank bottom-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 244,
+        "y": 1666,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_12",
+      "label": "Left bank bottom-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 794,
+        "y": 1666,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_POV1Up",
+      "label": "PoV hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 864,
+        "y": 374,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_POV1Right",
+      "label": "PoV hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 864,
+        "y": 430,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_POV1Down",
+      "label": "PoV hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 864,
+        "y": 486,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_POV1Left",
+      "label": "PoV hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 864,
+        "y": 542,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_RZAxis",
+      "label": "Stick twist",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2357,
+        "y": 980,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_UAxis",
+      "label": "Stick throttle slider",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2864,
+        "y": 1574,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_XAxis",
+      "label": "Stick pitch",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2357,
+        "y": 924,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "LogitechExtreme3DPro",
+      "key": "Joy_YAxis",
+      "label": "Stick roll",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2357,
+        "y": 868,
+        "w": 1132,
+        "h": 54
+      }
+    }
+  ]
+}

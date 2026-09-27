@@ -1,0 +1,336 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "TCASidestickLeft",
+  "name": "Thrustmaster TCA Sidestick (Left)",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "044F0405",
+      "usb": {
+        "vid": "044F",
+        "pid": "0405"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "tca-left.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_1",
+      "label": "Primary trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2124,
+        "y": 494,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_2",
+      "label": "Back button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 474,
+        "y": 494,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_3",
+      "label": "Left-hand button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 474,
+        "y": 624,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_4",
+      "label": "Right-hand button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2124,
+        "y": 624,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_5",
+      "label": "Left bank top-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 24,
+        "y": 1104,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_6",
+      "label": "Left bank top-middle button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 574,
+        "y": 1104,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_7",
+      "label": "Left bank top-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1124,
+        "y": 1104,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_8",
+      "label": "Left bank bottom-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1124,
+        "y": 1220,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_9",
+      "label": "Left bank bottom-middle button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 574,
+        "y": 1220,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_10",
+      "label": "Left bank bottom-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 24,
+        "y": 1220,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_11",
+      "label": "Right bank top-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3264,
+        "y": 1104,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_12",
+      "label": "Right bank top-middle button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2714,
+        "y": 1104,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_13",
+      "label": "Right bank top-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2164,
+        "y": 1104,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_14",
+      "label": "Right bank bottom-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2164,
+        "y": 1220,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_15",
+      "label": "Right bank bottom-middle button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2714,
+        "y": 1220,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_16",
+      "label": "Right bank bottom-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3264,
+        "y": 1220,
+        "w": 542,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_POV1Up",
+      "label": "PoV hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1542,
+        "y": 214,
+        "w": 1532,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_POV1Right",
+      "label": "PoV hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1542,
+        "y": 270,
+        "w": 1532,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_POV1Down",
+      "label": "PoV hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1542,
+        "y": 326,
+        "w": 1532,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_POV1Left",
+      "label": "PoV hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1542,
+        "y": 382,
+        "w": 1532,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_RZAxis",
+      "label": "Stick twist",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2357,
+        "y": 980,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_UAxis",
+      "label": "Stick throttle slider",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2584,
+        "y": 1750,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_XAxis",
+      "label": "Stick pitch",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2357,
+        "y": 924,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044F0405",
+      "key": "Joy_YAxis",
+      "label": "Stick roll",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2357,
+        "y": 868,
+        "w": 1132,
+        "h": 54
+      }
+    }
+  ]
+}

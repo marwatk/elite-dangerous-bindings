@@ -1,0 +1,444 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-231D0139",
+  "name": "VKB STECS Space Throttle Grip Max (Left) [VendorID: 231D, ProductID: 0139]",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "231D0139",
+      "usb": {
+        "vid": "231D",
+        "pid": "0139"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_1",
+      "label": "STGL SYS",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_2",
+      "label": "STGL START",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_3",
+      "label": "STGL MODE 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_4",
+      "label": "STGL MODE 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_5",
+      "label": "STGL MODE 3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_6",
+      "label": "STGL MODE 4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_7",
+      "label": "STGL MODE 5",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_XAxis",
+      "label": "STGL [x52prox]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_YAxis",
+      "label": "STGL [x52proy]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_ZAxis",
+      "label": "STGL [x52z]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_21",
+      "label": "STGL B1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_22",
+      "label": "STGL TRIGGER",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_23",
+      "label": "STGL B2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_24",
+      "label": "STGL SPEED LIM PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_25",
+      "label": "STGL SPEED LIM UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_26",
+      "label": "STGL SPEED LIM DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_27",
+      "label": "STGL POINTER PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_28",
+      "label": "STGL HAT1 PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_29",
+      "label": "STGL POINTER [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_30",
+      "label": "STGL POINTER [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_31",
+      "label": "STGL POINTER [ps4PadL]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_32",
+      "label": "STGL POINTER [ps4PadR]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_33",
+      "label": "STGL HAT1 BACK",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_34",
+      "label": "STGL HAT1 FORE",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_35",
+      "label": "STGL HAT1 DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_36",
+      "label": "STGL HAT1 UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_37",
+      "label": "STGL H1 DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_38",
+      "label": "STGL H1 Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_39",
+      "label": "STGL H1 PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_40",
+      "label": "STGL H2 BACK",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_41",
+      "label": "STGL H2 FORE",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_42",
+      "label": "STGL H2 PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_RXAxis",
+      "label": "STGL BRAKE",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_RYAxis",
+      "label": "STGL LASER [x52prob19]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_8",
+      "label": "ATEM MSE CCW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_9",
+      "label": "ATEM MSE CW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_10",
+      "label": "ATEM SAFE",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_11",
+      "label": "ATEM 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_12",
+      "label": "ATEM 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_13",
+      "label": "ATEM 3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_14",
+      "label": "ATEM 4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_15",
+      "label": "ATEM ARMED",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_16",
+      "label": "ATEM MSE [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_17",
+      "label": "ATEM MSE [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_18",
+      "label": "ATEM MSE [ps4PadR]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_19",
+      "label": "ATEM MSE [ps4PadL]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_20",
+      "label": "ATEM MSE PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_43",
+      "label": "STEM A1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_44",
+      "label": "STEM A2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_45",
+      "label": "STEM C1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_46",
+      "label": "STEM B1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_47",
+      "label": "STEM B2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_48",
+      "label": "STEM B3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_49",
+      "label": "STEM B4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_50",
+      "label": "STEM B5",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_51",
+      "label": "STEM SW1 UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_52",
+      "label": "STEM SW1 PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_53",
+      "label": "STEM SW1 DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_54",
+      "label": "STEM SW2 UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_55",
+      "label": "STEM SW2 PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_56",
+      "label": "STEM SW2 DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_57",
+      "label": "STEM TGL UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_58",
+      "label": "STEM TGL DOWN",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_59",
+      "label": "STEM EN1 CCW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_60",
+      "label": "STEM EN1 CW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_61",
+      "label": "STEM EN2 CCW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_62",
+      "label": "STEM EN2 CW",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_63",
+      "label": "STEM EN1 PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_64",
+      "label": "STEM EN2 PUSH",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_65",
+      "label": "STEM LEVER UP",
+      "kind": "button"
+    },
+    {
+      "bindsId": "231D0139",
+      "key": "Joy_66",
+      "label": "STEM LEVER DOWN",
+      "kind": "button"
+    }
+  ]
+}

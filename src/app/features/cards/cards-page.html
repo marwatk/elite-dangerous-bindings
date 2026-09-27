@@ -1,0 +1,173 @@
+@if (!store.isOpen()) {
+  <div class="page">
+    <div class="page-header"><h1>Reference cards</h1></div>
+    <div class="cards-empty">
+      <mat-icon>style</mat-icon>
+      <p>Open a bindings file to make printable reference cards for your controllers and keyboard.</p>
+      <a matButton="filled" routerLink="/"><mat-icon>home</mat-icon>Go to Home</a>
+    </div>
+  </div>
+} @else {
+  <div class="cards-wrap">
+    <div class="page-header no-print">
+      <h1>Reference cards</h1>
+      @if (store.doc()?.presetName; as preset) {
+        <span class="muted">{{ preset }}</span>
+      }
+      <span class="spacer"></span>
+      @if (busy(); as label) {
+        <span class="busy" role="status"><mat-spinner diameter="20" />{{ label }}</span>
+      }
+      <button matButton="outlined" (click)="print()" [disabled]="!views().length">
+        <mat-icon>print</mat-icon>Print
+      </button>
+      <button
+        matButton="filled"
+        (click)="downloadPdf()"
+        [disabled]="!views().length || !!busy()"
+        matTooltip="All shown cards, one per page"
+      >
+        <mat-icon>picture_as_pdf</mat-icon>PDF
+      </button>
+    </div>
+
+    <div class="cards-layout" [class.wide]="wide()">
+      @if (wide()) {
+        <aside class="cards-options no-print" aria-label="Card options">
+          <ng-container *ngTemplateOutlet="options" />
+        </aside>
+      } @else {
+        <mat-expansion-panel class="cards-options-panel no-print">
+          <mat-expansion-panel-header>
+            <mat-panel-title><mat-icon>tune</mat-icon>&nbsp;Options</mat-panel-title>
+          </mat-expansion-panel-header>
+          <ng-container *ngTemplateOutlet="options" />
+        </mat-expansion-panel>
+      }
+
+      <div class="cards-list">
+        @for (v of views(); track v.card.id) {
+          <section class="card-sheet" [attr.aria-label]="v.rendered.name">
+            <div class="card-bar no-print">
+              <h2>{{ v.rendered.name }}</h2>
+              <span class="muted">{{ v.count }} {{ v.count === 1 ? 'binding' : 'bindings' }}</span>
+              <span class="card-actions">
+              <button matButton (click)="downloadSvg(v)" [disabled]="!!busy()" matTooltip="Download as SVG">
+                <mat-icon>download</mat-icon>SVG
+              </button>
+              <button matButton (click)="downloadPng(v)" [disabled]="!!busy()" matTooltip="Download as PNG">
+                <mat-icon>image</mat-icon>PNG
+              </button>
+              </span>
+            </div>
+            <app-card-svg class="card-image" [svg]="v.rendered.svg" />
+          </section>
+        } @empty {
+          @if (!loading().length && fontsReady()) {
+            <div class="cards-empty no-print">
+              <mat-icon>style</mat-icon>
+              @if (allCards().length) {
+                <p>All cards are switched off in the options.</p>
+              } @else {
+                <p>This file has no bindings for a keyboard or a controller with artwork.</p>
+              }
+            </div>
+          }
+        }
+        @if (loading().length || !fontsReady()) {
+          <div class="cards-loading no-print" role="status">
+            <mat-spinner diameter="24" />
+            Drawing cards…
+          </div>
+        }
+
+        @if (unplaced().length) {
+          <section class="unplaced no-print">
+            <h2>Not shown on any card</h2>
+            <p class="muted">These bindings are in your file but have no place on the cards above.</p>
+            <table>
+              <thead>
+                <tr><th>Input</th><th>Bound to</th><th>Why</th></tr>
+              </thead>
+              <tbody>
+                @for (u of unplaced(); track u.id) {
+                  <tr>
+                    <td>{{ u.input }}</td>
+                    <td>{{ u.actions }}</td>
+                    <td class="muted">{{ u.reason }}</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </section>
+        }
+      </div>
+    </div>
+  </div>
+}
+
+<ng-template #options>
+  <div class="opt-section">
+    <h3>Groups</h3>
+    <div class="opt-links">
+      <button matButton (click)="setAllGroups(true)">All</button>
+      <button matButton (click)="setAllGroups(false)">None</button>
+    </div>
+    <div class="opt-grid">
+      @for (g of groups; track g.value) {
+        <mat-checkbox [checked]="hasGroup(g.value)" (change)="toggleGroup(g.value, $event.checked)">
+          {{ g.label }}
+        </mat-checkbox>
+      }
+    </div>
+  </div>
+
+  <div class="opt-section">
+    <h3 id="scheme-label">Colours</h3>
+    <mat-radio-group
+      class="opt-col"
+      aria-labelledby="scheme-label"
+      [value]="prefs().scheme"
+      (change)="setScheme($event.value)"
+    >
+      @for (s of schemes; track s.value) {
+        <mat-radio-button [value]="s.value">{{ s.label }}</mat-radio-button>
+      }
+    </mat-radio-group>
+  </div>
+
+  <div class="opt-section">
+    <mat-slide-toggle [checked]="prefs().compact" (change)="setCompact($event.checked)">
+      Short labels
+    </mat-slide-toggle>
+    <p class="muted hint">Uses abbreviations such as “FSD” and “GEAR” where available.</p>
+  </div>
+
+  @if (hasKeyboard()) {
+    <div class="opt-section">
+      <h3 id="kb-label">Keyboard card</h3>
+      <mat-radio-group
+        class="opt-col"
+        aria-labelledby="kb-label"
+        [value]="prefs().keyboardStyle"
+        (change)="setKeyboardStyle($event.value)"
+      >
+        <mat-radio-button value="graphic">Keyboard picture</mat-radio-button>
+        <mat-radio-button value="list">List</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  }
+
+  @if (allCards().length) {
+    <div class="opt-section">
+      <h3>Cards</h3>
+      <div class="opt-col">
+        @for (c of allCards(); track c.card.id) {
+          <mat-checkbox [checked]="isShown(c.card.id)" (change)="toggleCard(c.card.id, $event.checked)">
+            {{ c.card.name }} <span class="muted">({{ c.count }})</span>
+          </mat-checkbox>
+        }
+      </div>
+    </div>
+  }
+</ng-template>

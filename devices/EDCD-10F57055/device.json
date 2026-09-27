@@ -1,0 +1,222 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-10F57055",
+  "name": "TurtleBeach VelocityOne FlightStick",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "10F57055",
+      "usb": {
+        "vid": "10F5",
+        "pid": "7055"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_RXAxis",
+      "label": "VOneFS H2 X",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_RYAxis",
+      "label": "VOneFS H2 Y",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_RZAxis",
+      "label": "VOneFS LThrottle",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_UAxis",
+      "label": "VOneFS UAxis",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_Slider2",
+      "label": "VOneFS VAxis",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_XAxis",
+      "label": "VOneFS [x52prox]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_YAxis",
+      "label": "VOneFS [x52proy]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_ZAxis",
+      "label": "VOneFS [x52prorz]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_POV1Up",
+      "label": "VOneFS H1 [ps4PadU]",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_POV1Right",
+      "label": "VOneFS H1 [ps4PadR]",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_POV1Down",
+      "label": "VOneFS H1 [ps4PadD]",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_POV1Left",
+      "label": "VOneFS H1 [ps4PadL]",
+      "kind": "hat"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_1",
+      "label": "VOneFS B1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_2",
+      "label": "VOneFS B2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_3",
+      "label": "VOneFS B3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_4",
+      "label": "VOneFS B4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_5",
+      "label": "VOneFS B5",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_6",
+      "label": "VOneFS B6",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_7",
+      "label": "VOneFS B7",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_8",
+      "label": "VOneFS B8",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_9",
+      "label": "VOneFS B9 LTOGA",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_10",
+      "label": "VOneFS B10 LFULL REV",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_11",
+      "label": "VOneFS B11 RTOGA",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_12",
+      "label": "VOneFS B12 RFULL REV",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_13",
+      "label": "VOneFS En [ps4PadU]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_14",
+      "label": "VOneFS En [ps4PadD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_15",
+      "label": "VOneFS En Click",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_16",
+      "label": "VOneFS B16",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_17",
+      "label": "VOneFS B17",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_18",
+      "label": "VOneFS Trigger",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_19",
+      "label": "VOneFS H2 Click",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_20",
+      "label": "VOneFS Xbox",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_21",
+      "label": "VOneFS [xb1Back]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "10F57055",
+      "key": "Joy_22",
+      "label": "VOneFS [xb1Start]",
+      "kind": "button"
+    }
+  ]
+}

@@ -1,0 +1,492 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "SaitekX45",
+  "name": "Saitek X45",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "SaitekX45",
+      "usb": {
+        "vid": "06A3",
+        "pid": "053C"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "x45.webp",
+      "width": 5120,
+      "height": 2880
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_1",
+      "label": "Stick Trigger button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 4260,
+        "y": 1040,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_2",
+      "label": "Stick Fire button 'A'",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2900,
+        "y": 810,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_3",
+      "label": "Stick Fire button 'B'",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 4100,
+        "y": 640,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_4",
+      "label": "Stick Launch button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3710,
+        "y": 410,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_5",
+      "label": "Throttle Fire button 'D'",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1880,
+        "y": 1410,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_6",
+      "label": "Throttle Mouse Fire button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1630,
+        "y": 2400,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_7",
+      "label": "Stick Pinkie button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 4200,
+        "y": 1370,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_8",
+      "label": "Stick Fire button 'C'",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 4260,
+        "y": 800,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_9",
+      "label": "Stick first switch up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1630,
+        "y": 1556,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_10",
+      "label": "Stick first switch down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1630,
+        "y": 1608,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_11",
+      "label": "Stick second switch up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1785,
+        "y": 1716,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_12",
+      "label": "Stick second switch down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1785,
+        "y": 1768,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_13",
+      "label": "Stick third switch up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2110,
+        "y": 1872,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_14",
+      "label": "Stick third switch down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2110,
+        "y": 1924,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_15",
+      "label": "Stick PoV2 Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2940,
+        "y": 370,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_16",
+      "label": "Stick PoV2 Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2940,
+        "y": 450,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_17",
+      "label": "Stick PoV2 Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2940,
+        "y": 540,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_18",
+      "label": "Stick PoV2 Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2940,
+        "y": 630,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_19",
+      "label": "Throttle rear hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1630,
+        "y": 530,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_20",
+      "label": "Throttle rear hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1630,
+        "y": 610,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_21",
+      "label": "Throttle rear hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1630,
+        "y": 700,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_22",
+      "label": "Throttle rear hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1630,
+        "y": 790,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_23",
+      "label": "Throttle Mouse Hat Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2180,
+        "y": 1930,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_24",
+      "label": "Throttle Mouse Hat Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2180,
+        "y": 2010,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_25",
+      "label": "Throttle Mouse Hat Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2180,
+        "y": 2100,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_26",
+      "label": "Throttle Mouse Hat Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2180,
+        "y": 2190,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_POV1Up",
+      "label": "Stick PoV1 hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2810,
+        "y": 1050,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_POV1Right",
+      "label": "Stick PoV1 hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2810,
+        "y": 1130,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_POV1Down",
+      "label": "Stick PoV1 hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2810,
+        "y": 1220,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_POV1Left",
+      "label": "Stick PoV1 hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 2810,
+        "y": 1315,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_RXAxis",
+      "label": "Throttle bottom rotary",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1890,
+        "y": 1620,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_RYAxis",
+      "label": "Throttle top rotary",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1940,
+        "y": 1120,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_RZAxis",
+      "label": "Throttle yaw rocker",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 730,
+        "y": 880,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_XAxis",
+      "label": "Stick roll",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 4210,
+        "y": 2310,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_YAxis",
+      "label": "Stick pitch",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 4210,
+        "y": 2400,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX45",
+      "key": "Joy_UAxis",
+      "label": "Throttle main slider",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 140,
+        "y": 1600,
+        "w": 600,
+        "h": 54
+      }
+    }
+  ]
+}

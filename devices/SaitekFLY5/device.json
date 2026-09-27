@@ -1,0 +1,603 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "SaitekFLY5",
+  "name": "Saitek Cyborg FLY 5",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "SaitekFLY5",
+      "usb": {
+        "vid": "0738",
+        "pid": "1302"
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "usb": {
+        "vid": "06A3",
+        "pid": "0836"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "fly5.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_1",
+      "label": "Primary trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 684,
+        "y": 794,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_2",
+      "label": "Bottom-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 734,
+        "y": 874,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_3",
+      "label": "Bottom-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2414,
+        "y": 744,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_4",
+      "label": "Top-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 624,
+        "y": 704,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_5",
+      "label": "Top-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2414,
+        "y": 594,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_6",
+      "label": "Bottom bank first button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 584,
+        "y": 1847,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_7",
+      "label": "Bottom bank second button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 734,
+        "y": 1927,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_8",
+      "label": "Bottom bank third button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 884,
+        "y": 2007,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_9",
+      "label": "Bottom bank fourth button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1034,
+        "y": 2090,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_10",
+      "label": "Rear left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 304,
+        "y": 1604,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_11",
+      "label": "Rear right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 664,
+        "y": 1204,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_12",
+      "label": "Scroll wheel up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2474,
+        "y": 864,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_13",
+      "label": "Scroll wheel down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2474,
+        "y": 920,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_14",
+      "label": "Base button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2594,
+        "y": 1504,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_POV1Up",
+      "label": "PoV hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 990,
+        "y": 304,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_POV1Right",
+      "label": "PoV hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 990,
+        "y": 360,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_POV1Down",
+      "label": "PoV hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 990,
+        "y": 416,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_POV1Left",
+      "label": "PoV hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 990,
+        "y": 472,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_RZAxis",
+      "label": "Stick twist",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2484,
+        "y": 1136,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_XAxis",
+      "label": "Stick roll",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2484,
+        "y": 1080,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_YAxis",
+      "label": "Stick pitch",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2484,
+        "y": 1024,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekFLY5",
+      "key": "Joy_ZAxis",
+      "label": "Throttle",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 264,
+        "y": 1404,
+        "w": 1032,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_1",
+      "label": "Primary trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 684,
+        "y": 794,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_2",
+      "label": "Bottom-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 734,
+        "y": 874,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_3",
+      "label": "Bottom-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2414,
+        "y": 744,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_4",
+      "label": "Top-left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 624,
+        "y": 704,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_5",
+      "label": "Top-right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2414,
+        "y": 594,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_6",
+      "label": "Bottom bank first button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 584,
+        "y": 1847,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_7",
+      "label": "Bottom bank second button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 734,
+        "y": 1927,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_8",
+      "label": "Bottom bank third button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 884,
+        "y": 2007,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_9",
+      "label": "Bottom bank fourth button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1034,
+        "y": 2090,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_10",
+      "label": "Rear left button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 304,
+        "y": 1604,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_11",
+      "label": "Rear right button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 664,
+        "y": 1204,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_12",
+      "label": "Scroll wheel up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2474,
+        "y": 864,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_13",
+      "label": "Scroll wheel down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2474,
+        "y": 920,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_14",
+      "label": "Base button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2594,
+        "y": 1504,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_POV1Up",
+      "label": "PoV hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 990,
+        "y": 304,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_POV1Right",
+      "label": "PoV hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 990,
+        "y": 360,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_POV1Down",
+      "label": "PoV hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 990,
+        "y": 416,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_POV1Left",
+      "label": "PoV hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 990,
+        "y": 472,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_RZAxis",
+      "label": "Stick twist",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2484,
+        "y": 1136,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_XAxis",
+      "label": "Stick roll",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2484,
+        "y": 1080,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_YAxis",
+      "label": "Stick pitch",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2484,
+        "y": 1024,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30836",
+      "key": "Joy_ZAxis",
+      "label": "Throttle",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 264,
+        "y": 1404,
+        "w": 1032,
+        "h": 54
+      }
+    }
+  ]
+}

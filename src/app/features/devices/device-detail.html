@@ -1,0 +1,107 @@
+<div class="page detail">
+  <div class="page-header">
+    <a matIconButton routerLink="/devices" aria-label="All devices" matTooltip="All devices"><mat-icon>arrow_back</mat-icon></a>
+    <h1>{{ summary()?.name ?? id() }}</h1>
+    @if (summary(); as s) {
+      <span class="badge" [class]="'badge src-' + (s.local ? 'mine' : s.source)">{{ s.local ? 'Mine (this browser)' : labels[s.source] }}</span>
+    }
+  </div>
+
+  @if (error(); as err) {
+    <p class="muted">{{ err }} <a routerLink="/devices">Back to all devices</a></p>
+  } @else if (!definition()) {
+    <div class="loading"><mat-spinner diameter="40" /></div>
+  } @else if (definition(); as def) {
+    <div class="actions">
+      <a matButton="filled" [routerLink]="['/devices', def.id, 'edit']" [matTooltip]="isLocal() ? 'Open in the layout editor' : 'Opens a copy in the layout editor; export the result to replace this device in a pull request'">
+        <mat-icon>edit</mat-icon>Edit layout
+      </a>
+      <button matButton="tonal" type="button" (click)="exportButtonMaps()"><mat-icon>label</mat-icon>Export button names (.buttonMap)</button>
+      <button matButton type="button" (click)="downloadJson()"><mat-icon>data_object</mat-icon>Download device.json</button>
+      @if (isLocal()) {
+        <button matButton type="button" (click)="exportZip()"><mat-icon>folder_zip</mat-icon>Export .zip</button>
+        <button matButton type="button" class="danger" (click)="remove()"><mat-icon>delete</mat-icon>Delete from this browser</button>
+      }
+    </div>
+
+    <div class="view-bar">
+      <mat-button-toggle-group [value]="mode()" (change)="mode.set($event.value)" aria-label="What to show in the boxes">
+        <mat-button-toggle value="labels">Labels</mat-button-toggle>
+        <mat-button-toggle value="keys">Elite keys</mat-button-toggle>
+        <mat-button-toggle value="boxes">Boxes only</mat-button-toggle>
+      </mat-button-toggle-group>
+      @if (def.images.length > 1) {
+        <mat-button-toggle-group [value]="imageIndex()" (change)="imageIndex.set($event.value)" aria-label="Image">
+          @for (img of def.images; track $index; let i = $index) {
+            <mat-button-toggle [value]="i">Image {{ i + 1 }}</mat-button-toggle>
+          }
+        </mat-button-toggle-group>
+      }
+      <span class="muted">{{ placed() }} of {{ def.controls.length }} controls have a box</span>
+    </div>
+
+    <app-device-diagram
+      class="diagram"
+      [class.debug]="mode() === 'boxes'"
+      [device]="def"
+      [imageIndex]="imageIndex()"
+      [showText]="mode() !== 'boxes'"
+      [labels]="diagramLabels()"
+      [highlight]="highlight()"
+    />
+
+    <div class="tables">
+      <section>
+        <h2>Elite device IDs</h2>
+        <table class="grid">
+          <thead>
+            <tr><th>ID in .binds</th><th>Index</th><th>USB VID:PID</th><th></th></tr>
+          </thead>
+          <tbody>
+            @for (i of def.ids; track $index) {
+              <tr>
+                <td class="mono">{{ i.bindsId }}</td>
+                <td>{{ i.deviceIndex ?? '' }}</td>
+                <td class="mono">{{ fmt(i.usb) }}</td>
+                <td>
+                  @if (used().has(i.bindsId)) {
+                    <span class="badge used">In your file</span>
+                  }
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+        @if (def.keyBindsIds?.length) {
+          <p class="muted small">Card chosen only when one of these is used: {{ def.keyBindsIds!.join(', ') }}</p>
+        }
+      </section>
+
+      <section class="controls">
+        <h2>Controls</h2>
+        <div class="table-wrap">
+          <table class="grid">
+            <thead>
+              <tr><th>Elite ID</th><th>Key</th><th>Label</th><th>Kind</th><th>Box</th></tr>
+            </thead>
+            <tbody>
+              @for (c of def.controls; track $index) {
+                <tr (mouseenter)="highlightRow(c.bindsId, c.key)" (mouseleave)="clearHighlight()">
+                  <td class="mono">{{ c.bindsId }}{{ c.deviceIndex !== undefined ? ' #' + c.deviceIndex : '' }}</td>
+                  <td class="mono">{{ c.key }}</td>
+                  <td>{{ c.label }}</td>
+                  <td>{{ c.kind }}</td>
+                  <td>
+                    @if (c.box) {
+                      <mat-icon class="ok" inline>check</mat-icon>{{ def.images.length > 1 ? ' ' + ((c.image ?? 0) + 1) : '' }}
+                    }
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  }
+</div>

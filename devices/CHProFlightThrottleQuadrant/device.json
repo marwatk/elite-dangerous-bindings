@@ -1,0 +1,141 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "CHProFlightThrottleQuadrant",
+  "name": "CH Pro Flight Throttle Quadrant",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "06A30C2D",
+      "usb": {
+        "vid": "06A3",
+        "pid": "0C2D"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "chproflightquadrant.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "06A30C2D",
+      "key": "Joy_XAxis",
+      "label": "Throttle 1",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 554,
+        "y": 564,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30C2D",
+      "key": "Joy_YAxis",
+      "label": "Throttle 2",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1474,
+        "y": 324,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30C2D",
+      "key": "Joy_ZAxis",
+      "label": "Throttle 3",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2414,
+        "y": 564,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30C2D",
+      "key": "Joy_1",
+      "label": "Switch 1 up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 354,
+        "y": 1484,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30C2D",
+      "key": "Joy_2",
+      "label": "Switch 1 down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 354,
+        "y": 1540,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30C2D",
+      "key": "Joy_3",
+      "label": "Switch 2 up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1474,
+        "y": 1754,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30C2D",
+      "key": "Joy_4",
+      "label": "Switch 2 down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1474,
+        "y": 1810,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30C2D",
+      "key": "Joy_5",
+      "label": "Switch 3 up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2614,
+        "y": 1484,
+        "w": 932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "06A30C2D",
+      "key": "Joy_6",
+      "label": "Switch 3 down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2614,
+        "y": 1540,
+        "w": 932,
+        "h": 54
+      }
+    }
+  ]
+}

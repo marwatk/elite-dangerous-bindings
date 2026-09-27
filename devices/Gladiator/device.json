@@ -1,0 +1,557 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "Gladiator",
+  "name": "VKB Gladiator",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "231D0121",
+      "usb": {
+        "vid": "231D",
+        "pid": "0121"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "gladiator.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_1",
+      "label": "Flaps up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 204,
+        "y": 1524,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_2",
+      "label": "Flaps down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 254,
+        "y": 1624,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_3",
+      "label": "A1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 784,
+        "y": 1904,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_4",
+      "label": "A2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2524,
+        "y": 1514,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_5",
+      "label": "A3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2464,
+        "y": 1424,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_6",
+      "label": "B1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1144,
+        "y": 1994,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_7",
+      "label": "B2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2484,
+        "y": 1814,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_8",
+      "label": "B3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2564,
+        "y": 1604,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_9",
+      "label": "C1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2244,
+        "y": 1994,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_10",
+      "label": "C2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2414,
+        "y": 1904,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_11",
+      "label": "C3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2624,
+        "y": 1694,
+        "w": 992,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_12",
+      "label": "Engine start",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2274,
+        "y": 1254,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_13",
+      "label": "Eject",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2204,
+        "y": 1114,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_14",
+      "label": "Primary trigger (mode 1, unshifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2184,
+        "y": 584,
+        "w": 1472,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_15",
+      "label": "Primary trigger (mode 1, shifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2184,
+        "y": 640,
+        "w": 1472,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_16",
+      "label": "Primary trigger (mode 2, unshifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2184,
+        "y": 704,
+        "w": 1472,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_17",
+      "label": "Primary trigger (mode 2, shifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2184,
+        "y": 760,
+        "w": 1472,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_18",
+      "label": "Thumb trigger (mode 1, unshifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2124,
+        "y": 304,
+        "w": 1472,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_19",
+      "label": "Thumb trigger (mode 1, shifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2124,
+        "y": 360,
+        "w": 1472,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_20",
+      "label": "Thumb trigger (mode 2, unshifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2124,
+        "y": 424,
+        "w": 1472,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_21",
+      "label": "Thumb trigger (mode 2, shifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2124,
+        "y": 480,
+        "w": 1472,
+        "h": 56
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_POV1Up",
+      "label": "POV hat up (mode 1, unshifted)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 304,
+        "w": 1112,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_22",
+      "label": "POV hat up (mode 1, shifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 360,
+        "w": 1112,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_POV1Down",
+      "label": "POV hat down (mode 1, unshifted)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 526,
+        "w": 1112,
+        "h": 52
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_23",
+      "label": "POV hat down (mode 1, shifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 580,
+        "w": 1112,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_POV1Left",
+      "label": "POV hat left (mode 1, unshifted)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 636,
+        "w": 1112,
+        "h": 52
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_24",
+      "label": "POV hat left (mode 1, shifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 690,
+        "w": 1112,
+        "h": 66
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_POV1Right",
+      "label": "POV hat right (mode 1, unshifted)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 416,
+        "w": 1112,
+        "h": 52
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_25",
+      "label": "POV hat right (mode 1, shifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 470,
+        "w": 1112,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_POV2Up",
+      "label": "POV hat up (mode 2, unshifted)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 764,
+        "w": 1112,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_26",
+      "label": "POV hat up (mode 2, shifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 820,
+        "w": 1112,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_POV2Down",
+      "label": "POV hat down (mode 2, unshifted)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 986,
+        "w": 1112,
+        "h": 52
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_27",
+      "label": "POV hat down (mode 2, shifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 1040,
+        "w": 1112,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_POV2Left",
+      "label": "POV hat left (mode 2, unshifted)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 1096,
+        "w": 1112,
+        "h": 52
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_28",
+      "label": "POV hat left (mode 2, shifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 1150,
+        "w": 1112,
+        "h": 66
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_POV2Right",
+      "label": "POV hat right (mode 2, unshifted)",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 876,
+        "w": 1112,
+        "h": 52
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_29",
+      "label": "POV hat right (mode 2, shifted)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 274,
+        "y": 930,
+        "w": 1112,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_XAxis",
+      "label": "Roll",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2164,
+        "y": 910,
+        "w": 1532,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_YAxis",
+      "label": "Pitch",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2164,
+        "y": 854,
+        "w": 1532,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_RXAxis",
+      "label": "Yaw",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2164,
+        "y": 966,
+        "w": 1532,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "231D0121",
+      "key": "Joy_ZAxis",
+      "label": "Throttle",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 564,
+        "y": 1402,
+        "w": 832,
+        "h": 54
+      }
+    }
+  ]
+}

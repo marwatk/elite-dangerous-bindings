@@ -1,0 +1,270 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-3344025A",
+  "name": "Virpil Universal Control Panel #2",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "3344025A",
+      "usb": {
+        "vid": "3344",
+        "pid": "025A"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_1",
+      "label": "B1 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_2",
+      "label": "B2 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_3",
+      "label": "B3 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_4",
+      "label": "B4 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_5",
+      "label": "B5 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_6",
+      "label": "B6 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_7",
+      "label": "B7 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_8",
+      "label": "B8 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_9",
+      "label": "B9 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_10",
+      "label": "B10 [xb1LThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_11",
+      "label": "[x52b9]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_12",
+      "label": "[x52prob9]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_13",
+      "label": "[x52prob10]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_14",
+      "label": "[x52b10]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_15",
+      "label": "[x52b11]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_16",
+      "label": "[x52prob11]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_17",
+      "label": "[x52prob12]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_18",
+      "label": "[x52b12]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_19",
+      "label": "[x52b13]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_20",
+      "label": "[x52prob13]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_21",
+      "label": "[x52prob14]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_22",
+      "label": "[x52b14]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_23",
+      "label": "Guarded switch 1 [x52z]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_24",
+      "label": "Emergency 1 [x52proy+]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_25",
+      "label": "Guarded switch 2 [x52z]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_26",
+      "label": "Emergency 2 [x52proy+]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_27",
+      "label": "T9 left [x52prox-]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_28",
+      "label": "T9 right [x52prox+]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_29",
+      "label": "T10 left [x52prox-]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_30",
+      "label": "T10 right [x52prox+]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_31",
+      "label": "E1 push [x52prory]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_32",
+      "label": "E1 a-clockwise [x52prory-]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_33",
+      "label": "E1 clockwise [x52prory+]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_34",
+      "label": "E2 push [x52prory]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_35",
+      "label": "E2 a-clockwise [x52prory-]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_36",
+      "label": "E2 clockwise [x52prory+]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_37",
+      "label": "E3 push [x52prory]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_38",
+      "label": "E3 a-clockwise [x52prory-]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_39",
+      "label": "E3 clockwise [x52prory+]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_40",
+      "label": "Landing off [hts4ThrottleY]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_41",
+      "label": "Landing up [hts4ThrottleD]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "3344025A",
+      "key": "Joy_42",
+      "label": "Landing down [hts4ThrottleU]",
+      "kind": "button"
+    }
+  ]
+}

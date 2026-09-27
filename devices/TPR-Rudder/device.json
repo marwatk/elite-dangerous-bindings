@@ -1,0 +1,63 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "TPR-Rudder",
+  "name": "Thrustmaster TPR Pedals",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "044FB68F",
+      "usb": {
+        "vid": "044F",
+        "pid": "B68F"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "tpr-rudder.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "044FB68F",
+      "key": "Joy_XAxis",
+      "label": "Left pedal",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 164,
+        "y": 591,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "044FB68F",
+      "key": "Joy_YAxis",
+      "label": "Right pedal",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2264,
+        "y": 591,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "044FB68F",
+      "key": "Joy_ZAxis",
+      "label": "Rudder",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1208,
+        "y": 331,
+        "w": 1332,
+        "h": 162
+      }
+    }
+  ]
+}

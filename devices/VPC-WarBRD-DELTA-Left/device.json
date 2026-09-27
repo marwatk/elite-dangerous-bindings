@@ -1,0 +1,375 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "VPC-WarBRD-DELTA-Left",
+  "name": "Virpil WarBRD DELTA (Left)",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "03EB2042",
+      "usb": {
+        "vid": "03EB",
+        "pid": "2042"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "vpc-warbrd-delta-left.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_1",
+      "label": "Trigger first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2470,
+        "y": 1100,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_2",
+      "label": "Trigger second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2470,
+        "y": 1160,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_3",
+      "label": "Trigger button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2470,
+        "y": 1300,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_4",
+      "label": "Wheel up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 270,
+        "y": 1000,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_5",
+      "label": "Wheel down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 270,
+        "y": 1060,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_6",
+      "label": "Wheel push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 270,
+        "y": 1120,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_7",
+      "label": "Mini-joystick push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 270,
+        "y": 820,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_8",
+      "label": "8",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2470,
+        "y": 700,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_9",
+      "label": "9",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2470,
+        "y": 760,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_10",
+      "label": "10",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2470,
+        "y": 820,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_11",
+      "label": "11",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2470,
+        "y": 880,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_12",
+      "label": "12",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2470,
+        "y": 940,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_13",
+      "label": "13",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 270,
+        "y": 300,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_14",
+      "label": "14",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 270,
+        "y": 360,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_15",
+      "label": "15",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 270,
+        "y": 420,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_16",
+      "label": "16",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 270,
+        "y": 480,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_17",
+      "label": "17",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 270,
+        "y": 540,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_18",
+      "label": "18",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2470,
+        "y": 300,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_19",
+      "label": "19",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2470,
+        "y": 360,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_20",
+      "label": "20",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2470,
+        "y": 420,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_21",
+      "label": "21",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2470,
+        "y": 480,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_22",
+      "label": "22",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2470,
+        "y": 540,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_XAxis",
+      "label": "X Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 270,
+        "y": 1400,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_YAxis",
+      "label": "Y Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 270,
+        "y": 1460,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_ZAxis",
+      "label": "Z Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 270,
+        "y": 1520,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_RXAxis",
+      "label": "RX Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 270,
+        "y": 700,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "03EB2042",
+      "key": "Joy_RYAxis",
+      "label": "RY Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 270,
+        "y": 760,
+        "w": 1180,
+        "h": 54
+      }
+    }
+  ]
+}

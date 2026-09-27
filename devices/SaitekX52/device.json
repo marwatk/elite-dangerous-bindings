@@ -1,0 +1,557 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "SaitekX52",
+  "name": "Saitek X52",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "SaitekX52",
+      "usb": {
+        "vid": "06A3",
+        "pid": "075C"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "x52.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_1",
+      "label": "Stick primary trigger half press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3164,
+        "y": 858,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_2",
+      "label": "Stick 'Safe'",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2524,
+        "y": 210,
+        "w": 560,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_3",
+      "label": "Stick blue button right of Safe",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3108,
+        "y": 478,
+        "w": 560,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_4",
+      "label": "Stick blue button right of hat",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3118,
+        "y": 662,
+        "w": 560,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_5",
+      "label": "Stick black button left of hat",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2071,
+        "y": 674,
+        "w": 570,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_6",
+      "label": "Stick pinky trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3102,
+        "y": 1148,
+        "w": 570,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_7",
+      "label": "Throttle blue button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1334,
+        "y": 1038,
+        "w": 740,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_8",
+      "label": "Throttle top rotary button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1142,
+        "y": 656,
+        "w": 760,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_9",
+      "label": "Stick first switch up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1630,
+        "y": 1556,
+        "w": 560,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_10",
+      "label": "Stick first switch down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1630,
+        "y": 1608,
+        "w": 560,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_11",
+      "label": "Stick second switch up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1785,
+        "y": 1716,
+        "w": 560,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_12",
+      "label": "Stick second switch down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1785,
+        "y": 1768,
+        "w": 560,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_13",
+      "label": "Stick third switch up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2110,
+        "y": 1872,
+        "w": 560,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_14",
+      "label": "Stick third switch down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2110,
+        "y": 1924,
+        "w": 560,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_15",
+      "label": "Stick primary trigger full press",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 3164,
+        "y": 910,
+        "w": 600,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_16",
+      "label": "Stick top hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2044,
+        "y": 422,
+        "w": 740,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_17",
+      "label": "Stick top hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2044,
+        "y": 370,
+        "w": 740,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_18",
+      "label": "Stick top hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2044,
+        "y": 318,
+        "w": 740,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_19",
+      "label": "Stick top hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2044,
+        "y": 476,
+        "w": 740,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_20",
+      "label": "Throttle rear hat up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 254,
+        "y": 330,
+        "w": 750,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_21",
+      "label": "Throttle rear hat right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 254,
+        "y": 382,
+        "w": 750,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_22",
+      "label": "Throttle rear hat down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 254,
+        "y": 434,
+        "w": 750,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_23",
+      "label": "Throttle rear hat left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 254,
+        "y": 486,
+        "w": 750,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_27",
+      "label": "Throttle bottom left button (RST)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 26,
+        "y": 1748,
+        "w": 570,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_28",
+      "label": "Throttle bottom middle button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 198,
+        "y": 1850,
+        "w": 570,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_29",
+      "label": "Throttle bottom right button (FUN)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 355,
+        "y": 1954,
+        "w": 570,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_30",
+      "label": "Throttle bottom rotary button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1498,
+        "y": 1316,
+        "w": 750,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_31",
+      "label": "Throttle mouse click",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1114,
+        "y": 2014,
+        "w": 620,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_32",
+      "label": "Throttle rear wheel click",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 124,
+        "y": 752,
+        "w": 650,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_POV1Up",
+      "label": "PoV hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1878,
+        "y": 786,
+        "w": 740,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_POV1Right",
+      "label": "PoV hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1878,
+        "y": 838,
+        "w": 740,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_POV1Down",
+      "label": "PoV hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1878,
+        "y": 890,
+        "w": 740,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_POV1Left",
+      "label": "PoV hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1878,
+        "y": 942,
+        "w": 740,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_RXAxis",
+      "label": "Throttle bottom rotary",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1498,
+        "y": 1264,
+        "w": 750,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_RYAxis",
+      "label": "Throttle top rotary",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1142,
+        "y": 604,
+        "w": 740,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_RZAxis",
+      "label": "Stick yaw",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3074,
+        "y": 1946,
+        "w": 720,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_UAxis",
+      "label": "Throttle 'volume' slider",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 422,
+        "y": 584,
+        "w": 460,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_XAxis",
+      "label": "Stick roll",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3074,
+        "y": 1894,
+        "w": 720,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_YAxis",
+      "label": "Stick pitch",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3074,
+        "y": 1842,
+        "w": 720,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "Joy_ZAxis",
+      "label": "Throttle main slider",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 102,
+        "y": 1224,
+        "w": 460,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "SaitekX52",
+      "key": "?Wheel",
+      "label": "Throttle rear wheel",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 694,
+        "w": 660,
+        "h": 54
+      }
+    }
+  ]
+}

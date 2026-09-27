@@ -1,0 +1,48 @@
+{
+  "name": "elite-dangerous-bindings",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve --host 0.0.0.0 --poll 1000",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "devices": "node tools/build-device-index.mjs",
+    "devices:check": "node tools/build-device-index.mjs --check",
+    "prestart": "npm run devices",
+    "prebuild": "npm run devices",
+    "pretest": "npm run devices",
+    "import-data": "tools/fetch-upstream.sh && python3 tools/import_data.py && npm run devices",
+    "e2e": "playwright test"
+  },
+  "private": true,
+  "packageManager": "npm@11.19.0",
+  "dependencies": {
+    "@angular/cdk": "^22.2.0",
+    "@angular/common": "^22.2.0",
+    "@angular/compiler": "^22.2.0",
+    "@angular/core": "^22.2.0",
+    "@angular/forms": "^22.2.0",
+    "@angular/material": "^22.2.0",
+    "@angular/platform-browser": "^22.2.0",
+    "@angular/router": "^22.2.0",
+    "@angular/service-worker": "^22.2.0",
+    "jspdf": "^4.2.1",
+    "jszip": "^3.10.2",
+    "rxjs": "~7.8.0",
+    "svg2pdf.js": "^2.8.1",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^22.2.0",
+    "@angular/cli": "^22.2.0",
+    "@angular/compiler-cli": "^22.2.0",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^24.19.0",
+    "ajv": "^8.20.0",
+    "jsdom": "^30.0.0",
+    "prettier": "^3.8.1",
+    "typescript": "~6.0.2",
+    "vitest": "^5.0.0"
+  }
+}

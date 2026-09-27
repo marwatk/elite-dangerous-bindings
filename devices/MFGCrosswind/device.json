@@ -1,0 +1,109 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "MFGCrosswind",
+  "name": "MFG Crosswind Pedals",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "16D00A38",
+      "usb": {
+        "vid": "16D0",
+        "pid": "0A38"
+      }
+    },
+    {
+      "bindsId": "85640203",
+      "usb": {
+        "vid": "8564",
+        "pid": "0203"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "crosswind.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "16D00A38",
+      "key": "Joy_XAxis",
+      "label": "Left pedal (unconfirmed)",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 164,
+        "y": 588,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "16D00A38",
+      "key": "Joy_YAxis",
+      "label": "Right pedal (unconfirmed)",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2264,
+        "y": 588,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "16D00A38",
+      "key": "Joy_RZAxis",
+      "label": "Rudder",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1208,
+        "y": 331,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "85640203",
+      "key": "Joy_XAxis",
+      "label": "Left pedal (unconfirmed)",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 164,
+        "y": 588,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "85640203",
+      "key": "Joy_YAxis",
+      "label": "Right pedal (unconfirmed)",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2264,
+        "y": 588,
+        "w": 1332,
+        "h": 162
+      }
+    },
+    {
+      "bindsId": "85640203",
+      "key": "Joy_RZAxis",
+      "label": "Rudder",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1208,
+        "y": 331,
+        "w": 1332,
+        "h": 162
+      }
+    }
+  ]
+}

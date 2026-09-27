@@ -1,0 +1,599 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "DS4",
+  "name": "Sony DualShock 4",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "DS4"
+    },
+    {
+      "bindsId": "DualShock4",
+      "usb": {
+        "vid": "054C",
+        "pid": "0BA0"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "ds4.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "DS4",
+      "key": "Joy_1",
+      "label": "Square",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 1378,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_2",
+      "label": "Cross",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 1283,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_3",
+      "label": "Circle",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 1188,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_4",
+      "label": "Triangle",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 1094,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_5",
+      "label": "Left bumper",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 824,
+        "w": 1392,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_6",
+      "label": "Right bumper",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2368,
+        "y": 824,
+        "w": 1442,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_7",
+      "label": "Share (?)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 986,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_8",
+      "label": "Options (?)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 986,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_9",
+      "label": "Trackpad press (?)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1428,
+        "y": 551,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_10",
+      "label": "PS button (?)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1328,
+        "y": 1866,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_11",
+      "label": "Press of left stick",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1824,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_12",
+      "label": "Press of right stick",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2765,
+        "y": 1824,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_POV1Up",
+      "label": "POV1 Up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1104,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_POV1Right",
+      "label": "POV1 Right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1214,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_POV1Down",
+      "label": "POV1 Down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1324,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_POV1Left",
+      "label": "POV1 Left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1434,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_YAxis",
+      "label": "Vertical axis of left stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1604,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_XAxis",
+      "label": "Horizontal axis of left stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1714,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_RZAxis",
+      "label": "Vertical axis of right stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2765,
+        "y": 1604,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_ZAxis",
+      "label": "Horizontal axis of right stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2765,
+        "y": 1714,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_RXAxis",
+      "label": "Left trigger",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 718,
+        "w": 1392,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DS4",
+      "key": "Joy_RYAxis",
+      "label": "Right trigger",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2368,
+        "y": 720,
+        "w": 1442,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_1",
+      "label": "Square",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 1378,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_2",
+      "label": "Cross",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 1283,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_3",
+      "label": "Circle",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 1188,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_4",
+      "label": "Triangle",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 1094,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_5",
+      "label": "Left bumper",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 824,
+        "w": 1392,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_6",
+      "label": "Right bumper",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2368,
+        "y": 824,
+        "w": 1442,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_7",
+      "label": "Share (?)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 986,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_8",
+      "label": "Options (?)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2625,
+        "y": 986,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_9",
+      "label": "Trackpad press (?)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1428,
+        "y": 551,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_10",
+      "label": "PS button (?)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1328,
+        "y": 1866,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_11",
+      "label": "Press of left stick",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1824,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_12",
+      "label": "Press of right stick",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2765,
+        "y": 1824,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_POV1Up",
+      "label": "POV1 Up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1104,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_POV1Right",
+      "label": "POV1 Right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1214,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_POV1Down",
+      "label": "POV1 Down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1324,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_POV1Left",
+      "label": "POV1 Left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1434,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_YAxis",
+      "label": "Vertical axis of left stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1604,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_XAxis",
+      "label": "Horizontal axis of left stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 134,
+        "y": 1714,
+        "w": 1032,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_RZAxis",
+      "label": "Vertical axis of right stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2765,
+        "y": 1604,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_ZAxis",
+      "label": "Horizontal axis of right stick",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2765,
+        "y": 1714,
+        "w": 1052,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_RXAxis",
+      "label": "Left trigger",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 74,
+        "y": 718,
+        "w": 1392,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "DualShock4",
+      "key": "Joy_RYAxis",
+      "label": "Right trigger",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2368,
+        "y": 720,
+        "w": 1442,
+        "h": 54
+      }
+    }
+  ]
+}

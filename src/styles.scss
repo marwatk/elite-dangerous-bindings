@@ -1,0 +1,128 @@
+@use '@angular/material' as mat;
+
+// Theme: Material 3 with an Elite-style orange primary. Dark by default,
+// light when the user picks it (html.light) or prefers it and hasn't chosen.
+html {
+  height: 100%;
+  color-scheme: dark;
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$orange-palette,
+        tertiary: mat.$cyan-palette,
+      ),
+      typography: (
+        plain-family: 'Roboto, sans-serif',
+        brand-family: "'Exo 2', Roboto, sans-serif",
+      ),
+      density: 0,
+    )
+  );
+
+  // App-level tokens (use these rather than hard-coded colours).
+  --edb-accent: #ff8c0d;
+  --edb-accent-soft: color-mix(in srgb, var(--edb-accent) 16%, transparent);
+  --edb-danger: #ff5a5a;
+  --edb-warning: #ffc048;
+  --edb-ok: #5fd38a;
+  --edb-muted: var(--mat-sys-on-surface-variant);
+  --edb-border: var(--mat-sys-outline-variant);
+  --edb-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html.light {
+  color-scheme: light;
+  --edb-accent: #c25e00;
+  --edb-danger: #c62828;
+  --edb-warning: #9a6700;
+  --edb-ok: #1b7f3b;
+}
+
+body {
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+  margin: 0;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Exo 2', Roboto, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+code,
+.mono {
+  font-family: var(--edb-mono);
+  font-size: 0.92em;
+}
+
+a {
+  color: var(--edb-accent);
+}
+
+.muted {
+  color: var(--edb-muted);
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+// A plain content page: centred column with comfortable side gutters.
+.page {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 16px 48px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-bottom: 16px;
+
+  h1 {
+    margin: 0;
+    font-size: 1.6rem;
+  }
+}
+
+// Keyboard-key style chip for showing inputs.
+.kbd {
+  display: inline-block;
+  padding: 1px 6px;
+  border: 1px solid var(--edb-border);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  font-family: var(--edb-mono);
+  font-size: 0.85em;
+  white-space: nowrap;
+  background: var(--mat-sys-surface-container-high);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media print {
+  html {
+    color-scheme: light;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

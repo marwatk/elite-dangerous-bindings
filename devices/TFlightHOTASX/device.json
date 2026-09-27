@@ -1,0 +1,297 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "TFlightHOTASX",
+  "name": "Thrustmaster T.Flight HOTAS X",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "usb": {
+        "vid": "044F",
+        "pid": "B108"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "hotasx.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_1",
+      "label": "Stick primary trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1394,
+        "y": 614,
+        "w": 1082,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_2",
+      "label": "Stick L1 button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2114,
+        "y": 264,
+        "w": 1192,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_3",
+      "label": "Stick R3 button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2954,
+        "y": 544,
+        "w": 792,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_4",
+      "label": "Stick L3 button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2754,
+        "y": 374,
+        "w": 832,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_5",
+      "label": "Throttle 'square'",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 950,
+        "y": 734,
+        "w": 592,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_6",
+      "label": "Throttle 'cross'",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 950,
+        "y": 898,
+        "w": 592,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_7",
+      "label": "Throttle 'circle'",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 950,
+        "y": 1046,
+        "w": 592,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_8",
+      "label": "Throttle 'triangle'",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1044,
+        "y": 1374,
+        "w": 592,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_9",
+      "label": "Throttle R2 button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1628,
+        "y": 710,
+        "w": 832,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_10",
+      "label": "Throttle L2 button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1928,
+        "y": 790,
+        "w": 532,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_11",
+      "label": "Throttle SE button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 284,
+        "y": 2004,
+        "w": 592,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_12",
+      "label": "Throttle ST button",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 984,
+        "y": 2004,
+        "w": 592,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_POV1Up",
+      "label": "PoV hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 994,
+        "y": 354,
+        "w": 1532,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_POV1Right",
+      "label": "PoV hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 994,
+        "y": 410,
+        "w": 1532,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_POV1Down",
+      "label": "PoV hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 994,
+        "y": 466,
+        "w": 1532,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_POV1Left",
+      "label": "PoV hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 994,
+        "y": 522,
+        "w": 1532,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_RZAxis",
+      "label": "Stick twist",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3018,
+        "y": 947,
+        "w": 792,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_XAxis",
+      "label": "Stick left/right",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3018,
+        "y": 837,
+        "w": 792,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_YAxis",
+      "label": "Stick up/down",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 3018,
+        "y": 727,
+        "w": 792,
+        "h": 108
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_ZAxis",
+      "label": "Throttle",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 96,
+        "y": 736,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "ThrustMasterTFlightHOTASX",
+      "key": "Joy_UAxis",
+      "label": "Throttle rocker",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 1114,
+        "y": 1504,
+        "w": 932,
+        "h": 108
+      }
+    }
+  ]
+}

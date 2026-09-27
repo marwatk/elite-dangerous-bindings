@@ -1,0 +1,3524 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "VPC-ALPHA-Prime-Right",
+  "name": "Virpil Alpha Prime (Right)",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "334443F4",
+      "usb": {
+        "vid": "3344",
+        "pid": "43F4"
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "usb": {
+        "vid": "3344",
+        "pid": "4390"
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "usb": {
+        "vid": "3344",
+        "pid": "C3F3"
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "usb": {
+        "vid": "3344",
+        "pid": "83F4"
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "usb": {
+        "vid": "3344",
+        "pid": "03F4"
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "usb": {
+        "vid": "3344",
+        "pid": "40D4"
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "usb": {
+        "vid": "3344",
+        "pid": "0390"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "vpc-alpha-prime-right.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_1",
+      "label": "Flip Trigger first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 810,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_2",
+      "label": "Flip Trigger second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 870,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_3",
+      "label": "Flip Trigger third stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 930,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_4",
+      "label": "Trigger first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1060,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_5",
+      "label": "Trigger second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1120,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_6",
+      "label": "Mini-joystick push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 630,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_13",
+      "label": "13",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 920,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_14",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1340,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_15",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1100,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_18",
+      "label": "Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1160,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_17",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1220,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_16",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1280,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_7",
+      "label": "7",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 330,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_8",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 740,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_9",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 500,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_12",
+      "label": "Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 560,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_11",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 620,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_10",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 680,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_28",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 330,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_29",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 210,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_30",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 270,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_19",
+      "label": "Push first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1630,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_20",
+      "label": "Push second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1690,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_22",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1570,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_21",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1510,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_23",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1540,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_24",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1300,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_27",
+      "label": "Righ",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1360,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_26",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1420,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_25",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1480,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_31",
+      "label": "31",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1900,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_32",
+      "label": "32",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1750,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_UAxis",
+      "label": "U Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1690,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_XAxis",
+      "label": "X Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1860,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_YAxis",
+      "label": "Y Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1920,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_ZAxis",
+      "label": "Z Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1980,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_RXAxis",
+      "label": "RX Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 510,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334443F4",
+      "key": "Joy_RYAxis",
+      "label": "RY Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 570,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_1",
+      "label": "Flip Trigger first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 810,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_2",
+      "label": "Flip Trigger second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 870,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_3",
+      "label": "Flip Trigger third stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 930,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_4",
+      "label": "Trigger first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1060,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_5",
+      "label": "Trigger second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1120,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_6",
+      "label": "Mini-joystick push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 630,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_13",
+      "label": "13",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 920,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_14",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1340,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_15",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1100,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_18",
+      "label": "Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1160,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_17",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1220,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_16",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1280,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_7",
+      "label": "7",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 330,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_8",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 740,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_9",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 500,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_12",
+      "label": "Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 560,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_11",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 620,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_10",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 680,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_28",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 330,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_29",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 210,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_30",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 270,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_19",
+      "label": "Push first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1630,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_20",
+      "label": "Push second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1690,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_22",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1570,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_21",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1510,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_23",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1540,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_24",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1300,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_27",
+      "label": "Righ",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1360,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_26",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1420,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_25",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1480,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_31",
+      "label": "31",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1900,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_32",
+      "label": "32",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1750,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_UAxis",
+      "label": "U Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1690,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_XAxis",
+      "label": "X Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1860,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_YAxis",
+      "label": "Y Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1920,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_ZAxis",
+      "label": "Z Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1980,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_RXAxis",
+      "label": "RX Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 510,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33444390",
+      "key": "Joy_RYAxis",
+      "label": "RY Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 570,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_1",
+      "label": "Flip Trigger first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 810,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_2",
+      "label": "Flip Trigger second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 870,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_3",
+      "label": "Flip Trigger third stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 930,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_4",
+      "label": "Trigger first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1060,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_5",
+      "label": "Trigger second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1120,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_6",
+      "label": "Mini-joystick push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 630,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_13",
+      "label": "13",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 920,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_14",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1340,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_15",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1100,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_18",
+      "label": "Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1160,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_17",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1220,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_16",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1280,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_7",
+      "label": "7",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 330,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_8",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 740,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_9",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 500,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_12",
+      "label": "Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 560,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_11",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 620,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_10",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 680,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_28",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 330,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_29",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 210,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_30",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 270,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_19",
+      "label": "Push first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1630,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_20",
+      "label": "Push second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1690,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_22",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1570,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_21",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1510,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_23",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1540,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_24",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1300,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_27",
+      "label": "Righ",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1360,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_26",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1420,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_25",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1480,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_31",
+      "label": "31",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1900,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_32",
+      "label": "32",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1750,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_UAxis",
+      "label": "U Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1690,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_XAxis",
+      "label": "X Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1860,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_YAxis",
+      "label": "Y Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1920,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_ZAxis",
+      "label": "Z Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1980,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_RXAxis",
+      "label": "RX Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 510,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "3344C3F3",
+      "key": "Joy_RYAxis",
+      "label": "RY Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 570,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_1",
+      "label": "Alpha L Flip [x52prob1] Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 810,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_2",
+      "label": "Alpha L Flip [x52prob1] Center",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 870,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_3",
+      "label": "Alpha L Flip [x52prob1] Pull",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 930,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_4",
+      "label": "Alpha L [x52prob1] Stage 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1060,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_5",
+      "label": "Alpha L [x52prob15] Stage 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1120,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_6",
+      "label": "Alpha L [ps4RThumb]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 630,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_13",
+      "label": "Alpha L [x52prob4]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 920,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_14",
+      "label": "Alpha L [x52b22] Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1340,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_15",
+      "label": "Alpha L [x52b20]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1100,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_18",
+      "label": "Alpha L [x52b23]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1160,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_17",
+      "label": "Alpha L [x52b22]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1220,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_16",
+      "label": "Alpha L [x52b21]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1280,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_7",
+      "label": "Alpha L [x52prob3]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 330,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_8",
+      "label": "Alpha L [x52prob22] Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 740,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_9",
+      "label": "Alpha L [x52prob20]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 500,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_12",
+      "label": "Alpha L [x52prob23]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 560,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_11",
+      "label": "Alpha L [x52prob22]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 620,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_10",
+      "label": "Alpha L [x52prob21]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 680,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_28",
+      "label": "Alpha L Index [x52b22] Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 330,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_29",
+      "label": "Alpha L Index [x52b20]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 210,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_30",
+      "label": "Alpha L Index [x52b22]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 270,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_19",
+      "label": "Alpha L [x52prob19] Push 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1630,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_20",
+      "label": "Alpha L [x52prob19] Push 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1690,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_22",
+      "label": "Alpha L [x52prob19] Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1570,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_21",
+      "label": "Alpha L [x52prob19] Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1510,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_23",
+      "label": "Alpha L [x52prob26] Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1540,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_24",
+      "label": "Alpha L [x52prob24]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1300,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_27",
+      "label": "Alpha L [x52prob27]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1360,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_26",
+      "label": "Alpha L [x52prob26]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1420,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_25",
+      "label": "Alpha L [x52prob25]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1480,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_31",
+      "label": "Alpha L [x52prob5]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1900,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_32",
+      "label": "Alpha L Brake [x52prob6]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1750,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_UAxis",
+      "label": "Alpha L Brake [x52prob6]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1690,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_XAxis",
+      "label": "WarBRD-D L [x52prox]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1860,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_YAxis",
+      "label": "WarBRD-D L [x52proy]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1920,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_ZAxis",
+      "label": "Alpha L [x52prorz]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1980,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_RXAxis",
+      "label": "Alpha L [ps4RXAxis]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 510,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334483F4",
+      "key": "Joy_RYAxis",
+      "label": "Alpha L [ps4RYAxis]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 570,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_1",
+      "label": "Flip Trigger first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 810,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_2",
+      "label": "Flip Trigger second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 870,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_3",
+      "label": "Flip Trigger third stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 930,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_4",
+      "label": "Trigger first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1060,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_5",
+      "label": "Trigger second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1120,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_6",
+      "label": "Mini-joystick push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 630,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_13",
+      "label": "13",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 920,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_14",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1340,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_15",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1100,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_18",
+      "label": "Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1160,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_17",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1220,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_16",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1280,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_7",
+      "label": "7",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 330,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_8",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 740,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_9",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 500,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_12",
+      "label": "Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 560,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_11",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 620,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_10",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 680,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_28",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 330,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_29",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 210,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_30",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 270,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_19",
+      "label": "Push first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1630,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_20",
+      "label": "Push second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1690,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_22",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1570,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_21",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1510,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_23",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1540,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_24",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1300,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_27",
+      "label": "Righ",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1360,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_26",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1420,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_25",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1480,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_31",
+      "label": "31",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1900,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_32",
+      "label": "32",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1750,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_UAxis",
+      "label": "U Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1690,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_XAxis",
+      "label": "X Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1860,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_YAxis",
+      "label": "Y Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1920,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_ZAxis",
+      "label": "Z Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1980,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_RXAxis",
+      "label": "RX Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 510,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334403F4",
+      "key": "Joy_RYAxis",
+      "label": "RY Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 570,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_1",
+      "label": "Flip Trigger first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 810,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_2",
+      "label": "Flip Trigger second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 870,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_3",
+      "label": "Flip Trigger third stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 930,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_4",
+      "label": "Trigger first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1060,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_5",
+      "label": "Trigger second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1120,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_6",
+      "label": "Mini-joystick push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 630,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_13",
+      "label": "13",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 920,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_14",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1340,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_15",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1100,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_18",
+      "label": "Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1160,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_17",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1220,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_16",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1280,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_7",
+      "label": "7",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 330,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_8",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 740,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_9",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 500,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_12",
+      "label": "Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 560,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_11",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 620,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_10",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 680,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_28",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 330,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_29",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 210,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_30",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 270,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_19",
+      "label": "Push first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1630,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_20",
+      "label": "Push second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1690,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_22",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1570,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_21",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1510,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_23",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1540,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_24",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1300,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_27",
+      "label": "Righ",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1360,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_26",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1420,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_25",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1480,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_31",
+      "label": "31",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1900,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_32",
+      "label": "32",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1750,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_UAxis",
+      "label": "U Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1690,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_XAxis",
+      "label": "X Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1860,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_YAxis",
+      "label": "Y Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1920,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_ZAxis",
+      "label": "Z Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1980,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_RXAxis",
+      "label": "RX Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 510,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "334440D4",
+      "key": "Joy_RYAxis",
+      "label": "RY Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 570,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_1",
+      "label": "Flip Trigger first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 810,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_2",
+      "label": "Flip Trigger second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 870,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_3",
+      "label": "Flip Trigger third stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 930,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_4",
+      "label": "Trigger first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1060,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_5",
+      "label": "Trigger second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1120,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_6",
+      "label": "Mini-joystick push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 630,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_13",
+      "label": "13",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 920,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_14",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1340,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_15",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1100,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_18",
+      "label": "Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1160,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_17",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1220,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_16",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1280,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_7",
+      "label": "7",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 330,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_8",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 740,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_9",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 500,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_12",
+      "label": "Right",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 560,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_11",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 620,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_10",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 680,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_28",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 330,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_29",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 210,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_30",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 270,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_19",
+      "label": "Push first stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1630,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_20",
+      "label": "Push second stage",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1690,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_22",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1570,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_21",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1510,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_23",
+      "label": "Push",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1540,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_24",
+      "label": "Up",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1300,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_27",
+      "label": "Righ",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1360,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_26",
+      "label": "Down",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1420,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_25",
+      "label": "Left",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1480,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_31",
+      "label": "31",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1900,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_32",
+      "label": "32",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1750,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_UAxis",
+      "label": "U Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 1690,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_XAxis",
+      "label": "X Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1860,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_YAxis",
+      "label": "Y Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1920,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_ZAxis",
+      "label": "Z Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2610,
+        "y": 1980,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_RXAxis",
+      "label": "RX Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 510,
+        "w": 1180,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "33440390",
+      "key": "Joy_RYAxis",
+      "label": "RY Axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 120,
+        "y": 570,
+        "w": 1180,
+        "h": 54
+      }
+    }
+  ]
+}

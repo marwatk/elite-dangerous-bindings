@@ -1,0 +1,401 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "VKB-Kosmosima-SCG-Right",
+  "name": "VKB Kosmosima SCG (Right)",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "231D0126",
+      "usb": {
+        "vid": "231D",
+        "pid": "0126"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "vkb-kosmosima-scg-right.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_1",
+      "label": "SCG Fire 1",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1139,
+        "y": 1777,
+        "w": 739,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_2",
+      "label": "SCG Fire 2",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1139,
+        "y": 1852,
+        "w": 739,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_3",
+      "label": "SCG A2 (thumb red)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2571,
+        "y": 1364,
+        "w": 724,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_4",
+      "label": "SCG B1 (right side)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1223,
+        "y": 1091,
+        "w": 709,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_5",
+      "label": "SCG D1 (pinky)",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1059,
+        "y": 2030,
+        "w": 740,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_6",
+      "label": "SCG A4 [ps4PadU]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2427,
+        "y": 388,
+        "w": 782,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_7",
+      "label": "SCG A4 [ps4PadR]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2427,
+        "y": 623,
+        "w": 782,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_8",
+      "label": "SCG A4 [ps4PadD]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2427,
+        "y": 466,
+        "w": 782,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_9",
+      "label": "SCG A4 [ps4PadL]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2427,
+        "y": 544,
+        "w": 782,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_10",
+      "label": "SCG A4 Click",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2427,
+        "y": 699,
+        "w": 782,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_11",
+      "label": "SCG A3 [ps4PadU]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2518,
+        "y": 876,
+        "w": 772,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_12",
+      "label": "SCG A3 [ps4PadR]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2518,
+        "y": 1107,
+        "w": 772,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_13",
+      "label": "SCG A3 [ps4PadD]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2518,
+        "y": 953,
+        "w": 772,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_14",
+      "label": "SCG A3 [ps4PadL]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2518,
+        "y": 1029,
+        "w": 772,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_15",
+      "label": "SCG A3 Click",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2518,
+        "y": 1184,
+        "w": 772,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_21",
+      "label": "SCG C1 [ps4PadU]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2658,
+        "y": 1534,
+        "w": 632,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_22",
+      "label": "SCG C1 [ps4PadR]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2658,
+        "y": 1768,
+        "w": 632,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_23",
+      "label": "SCG C1 [ps4PadD]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2658,
+        "y": 1612,
+        "w": 632,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_24",
+      "label": "SCG C1 [ps4PadL]",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2658,
+        "y": 1690,
+        "w": 632,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_25",
+      "label": "SCG C1 Click",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2658,
+        "y": 1845,
+        "w": 632,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_26",
+      "label": "SCG Push Brake",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1153,
+        "y": 1519,
+        "w": 718,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_27",
+      "label": "SCG Pull Brake",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 1153,
+        "y": 1597,
+        "w": 718,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_RXAxis",
+      "label": "SCG Thumbstick X",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 732,
+        "y": 406,
+        "w": 639,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_RYAxis",
+      "label": "SCG Thumbstick Y",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 732,
+        "y": 484,
+        "w": 639,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_RZAxis",
+      "label": "SCG [x52prorz]",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2622,
+        "y": 2025,
+        "w": 671,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_POV1Up",
+      "label": "SCG A1 [ps4PadU]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1488,
+        "y": 561,
+        "w": 571,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_POV1Right",
+      "label": "SCG A1 [ps4PadR]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1488,
+        "y": 795,
+        "w": 571,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_POV1Down",
+      "label": "SCG A1 [ps4PadD]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1488,
+        "y": 638,
+        "w": 571,
+        "h": 68
+      }
+    },
+    {
+      "bindsId": "231D0126",
+      "key": "Joy_POV1Left",
+      "label": "SCG A1 [ps4PadL]",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 1488,
+        "y": 717,
+        "w": 571,
+        "h": 68
+      }
+    }
+  ]
+}

@@ -1,0 +1,438 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-33448196",
+  "name": "LEFT VPC VMAX Prime Throttle",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "33448196",
+      "usb": {
+        "vid": "3344",
+        "pid": "8196"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "33448196",
+      "key": "Joy_RXAxis",
+      "label": "VMAX [x52proz] L",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_RYAxis",
+      "label": "VMAX [x52proz] R",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_RZAxis",
+      "label": "VMAX [x52prou]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_UAxis",
+      "label": "VMAX [x52prorx] Left",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_VAxis",
+      "label": "VMAX [x52prorx] Top",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_XAxis",
+      "label": "VMAX [ps4RXAxis]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_YAxis",
+      "label": "VMAX [ps4RYAxis]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Pos_Joy_RXAxis",
+      "label": "VMAX [x52proz+] L",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Pos_Joy_RYAxis",
+      "label": "VMAX [x52proz+] R",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Pos_Joy_RZAxis",
+      "label": "VMAX [x52prou+]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Pos_Joy_UAxis",
+      "label": "VMAX [x52prorx-] Left",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Pos_Joy_VAxis",
+      "label": "VMAX [x52prorx+] Top",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Pos_Joy_XAxis",
+      "label": "VMAX [ps4RThumbR]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Pos_Joy_YAxis",
+      "label": "VMAX [ps4RThumbD]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Neg_Joy_RXAxis",
+      "label": "VMAX [x52proz-] L",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Neg_Joy_RYAxis",
+      "label": "VMAX [x52proz-] R",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Neg_Joy_RZAxis",
+      "label": "VMAX [x52prou-]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Neg_Joy_UAxis",
+      "label": "VMAX [x52prorx+] Left",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Neg_Joy_VAxis",
+      "label": "VMAX [x52prorx-] Top",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Neg_Joy_XAxis",
+      "label": "VMAX [ps4RThumbL]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Neg_Joy_YAxis",
+      "label": "VMAX [ps4RThumbU]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_1",
+      "label": "VMAX [x52prob7]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_2",
+      "label": "VMAX [x52prob31] Left",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_3",
+      "label": "VMAX [x52prob4]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_4",
+      "label": "VMAX [x52prob26] Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_5",
+      "label": "VMAX [x52prob24]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_6",
+      "label": "VMAX [x52prob25]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_7",
+      "label": "VMAX [x52prob26]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_8",
+      "label": "VMAX [x52prob27]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_9",
+      "label": "VMAX [x52prob31] Top",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_10",
+      "label": "VMAX [x52b22] Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_11",
+      "label": "VMAX [x52b20]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_13",
+      "label": "VMAX [x52b22]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_15",
+      "label": "VMAX [ps4RThumb]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_16",
+      "label": "VMAX [x52prob3]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_17",
+      "label": "VMAX [x52prob5]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_18",
+      "label": "VMAX [x52prob22] Push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_19",
+      "label": "VMAX [x52prob20]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_20",
+      "label": "VMAX [x52prob21]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_21",
+      "label": "VMAX [x52prob22]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_22",
+      "label": "VMAX [x52prob23]",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_23",
+      "label": "VMAX B1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_24",
+      "label": "VMAX B2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_25",
+      "label": "VMAX B3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_26",
+      "label": "VMAX B4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_27",
+      "label": "VMAX B5",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_28",
+      "label": "VMAX B6",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_29",
+      "label": "VMAX STORES JETT B7",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_30",
+      "label": "VMAX T1 - Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_31",
+      "label": "VMAX T1 - Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_32",
+      "label": "VMAX T2 - Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_33",
+      "label": "VMAX T2 - Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_34",
+      "label": "VMAX T3 - Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_35",
+      "label": "VMAX T3 - Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_36",
+      "label": "VMAX T4 - Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_37",
+      "label": "VMAX T4 - Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_38",
+      "label": "VMAX T5 - Up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_39",
+      "label": "VMAX T5 - Down",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_40",
+      "label": "VMAX APU",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_41",
+      "label": "VMAX [x52prob8] 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_42",
+      "label": "VMAX [x52prory-] 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_43",
+      "label": "VMAX [x52prory+] 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_44",
+      "label": "VMAX [x52prob8] 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_45",
+      "label": "VMAX [x52prory-] 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_46",
+      "label": "VMAX [x52prory+] 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_47",
+      "label": "VMAX MODE - 1",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_48",
+      "label": "VMAX MODE - 2",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_49",
+      "label": "VMAX MODE - 3",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_50",
+      "label": "VMAX MODE - 4",
+      "kind": "button"
+    },
+    {
+      "bindsId": "33448196",
+      "key": "Joy_51",
+      "label": "VMAX MODE - 5",
+      "kind": "button"
+    }
+  ]
+}

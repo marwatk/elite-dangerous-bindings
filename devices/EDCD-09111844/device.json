@@ -1,0 +1,36 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-09111844",
+  "name": "Footcontrol USB [VendorID: 0911, ProductID: 1844]",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "09111844",
+      "usb": {
+        "vid": "0911",
+        "pid": "1844"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "09111844",
+      "key": "Joy_1",
+      "label": "FOOT LEFT",
+      "kind": "button"
+    },
+    {
+      "bindsId": "09111844",
+      "key": "Joy_2",
+      "label": "FOOT RIGHT",
+      "kind": "button"
+    },
+    {
+      "bindsId": "09111844",
+      "key": "Joy_3",
+      "label": "FOOT MIDDLE",
+      "kind": "button"
+    }
+  ]
+}

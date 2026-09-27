@@ -1,0 +1,264 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-4098BF05",
+  "name": "WINCTRL CarrierAce PTO 2",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "4098BF05",
+      "usb": {
+        "vid": "4098",
+        "pid": "BF05"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_1",
+      "label": "PTO2 PUSH TO JETT",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_2",
+      "label": "PTO2 MASTER CAUTION",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_3",
+      "label": "PTO2 LAUNCH BAR retract",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_4",
+      "label": "PTO2 LAUNCH BAR extend",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_5",
+      "label": "PTO2 FLAP auto",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_6",
+      "label": "PTO2 FLAP half",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_7",
+      "label": "PTO2 FLAP full",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_8",
+      "label": "PTO2 LDG TAXI LT on",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_9",
+      "label": "PTO2 LDG TAXI LT off",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_10",
+      "label": "PTO2 ANTI SKID on",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_11",
+      "label": "PTO2 ANTI SKID off",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_12",
+      "label": "PTO2 HOOK BYPASS field",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_13",
+      "label": "PTO2 HOOK BYPASS carrier",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_14",
+      "label": "PTO2 PROBE extend",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_15",
+      "label": "PTO2 PROBE retract",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_16",
+      "label": "PTO2 PROBE emerg extd",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_17",
+      "label": "PTO2 SELECT JETT l fus msl",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_18",
+      "label": "PTO2 SELECT JETT safe",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_19",
+      "label": "PTO2 SELECT JETT r fus msl",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_20",
+      "label": "PTO2 SELECT JETT rack lchr",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_21",
+      "label": "PTO2 SELECT JETT stores",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_22",
+      "label": "PTO2 JETT",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_23",
+      "label": "PTO2 CTR",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_24",
+      "label": "PTO2 LI",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_25",
+      "label": "PTO2 RI",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_26",
+      "label": "PTO2 LO",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_27",
+      "label": "PTO2 RO",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_28",
+      "label": "PTO2 WING fold",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_29",
+      "label": "PTO2 WING hold",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_30",
+      "label": "PTO2 WING spread",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_31",
+      "label": "PTO2 WING lock",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_32",
+      "label": "PTO2 HOOK up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_33",
+      "label": "PTO2 HOOK ctr",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_34",
+      "label": "PTO2 HOOK dn",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_35",
+      "label": "PTO2 LDG GEAR up",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_36",
+      "label": "PTO2 LDG GEAR ctr",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_37",
+      "label": "PTO2 LDG GEAR dn",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_38",
+      "label": "PTO2 PARK BRK push",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_39",
+      "label": "PTO2 PARK BRK pull",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_40",
+      "label": "PTO2 PARK BRK lt",
+      "kind": "button"
+    },
+    {
+      "bindsId": "4098BF05",
+      "key": "Joy_41",
+      "label": "PTO2 PARK BRK rt",
+      "kind": "button"
+    }
+  ]
+}

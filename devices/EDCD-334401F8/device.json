@@ -1,0 +1,72 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "EDCD-334401F8",
+  "name": "VPC Rudder Pedals ACE",
+  "source": "edcd",
+  "ids": [
+    {
+      "bindsId": "334401F8",
+      "usb": {
+        "vid": "3344",
+        "pid": "01F8"
+      }
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "bindsId": "334401F8",
+      "key": "Joy_UAxis",
+      "label": "Toe Brake Right",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334401F8",
+      "key": "Joy_VAxis",
+      "label": "Toe Brake Left",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334401F8",
+      "key": "Joy_ZAxis",
+      "label": "[xb1htsRudAx]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334401F8",
+      "key": "Pos_Joy_UAxis",
+      "label": "Toe Brake Release Right",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334401F8",
+      "key": "Pos_Joy_VAxis",
+      "label": "Toe Brake Release Left",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334401F8",
+      "key": "Pos_Joy_ZAxis",
+      "label": "[xb1htsRudAx+]",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334401F8",
+      "key": "Neg_Joy_UAxis",
+      "label": "Toe Brake Push Right",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334401F8",
+      "key": "Neg_Joy_VAxis",
+      "label": "Toe Brake Push Left",
+      "kind": "axis"
+    },
+    {
+      "bindsId": "334401F8",
+      "key": "Neg_Joy_ZAxis",
+      "label": "[xb1htsRudAx-]",
+      "kind": "axis"
+    }
+  ]
+}

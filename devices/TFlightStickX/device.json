@@ -1,0 +1,284 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "id": "TFlightStickX",
+  "name": "Thrustmaster T.Flight Stick X",
+  "source": "edrefcard2",
+  "ids": [
+    {
+      "bindsId": "044FB106",
+      "usb": {
+        "vid": "044F",
+        "pid": "B106"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "stickx.webp",
+      "width": 3840,
+      "height": 2160
+    }
+  ],
+  "controls": [
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_1",
+      "label": "Primary trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 684,
+        "y": 822,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_2",
+      "label": "Secondary trigger",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2204,
+        "y": 744,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_3",
+      "label": "Button 3",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2124,
+        "y": 564,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_4",
+      "label": "Button 4",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2174,
+        "y": 654,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_5",
+      "label": "Button 5",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 474,
+        "y": 1564,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_6",
+      "label": "Button 6",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 544,
+        "y": 1424,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_7",
+      "label": "Button 7",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 584,
+        "y": 1266,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_8",
+      "label": "Button 8",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 584,
+        "y": 1204,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_9",
+      "label": "Button 9",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 554,
+        "y": 1704,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_10",
+      "label": "Button 10",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 554,
+        "y": 1766,
+        "w": 1092,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_11",
+      "label": "Button 11",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2824,
+        "y": 1428,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_12",
+      "label": "Button 12",
+      "kind": "button",
+      "image": 0,
+      "box": {
+        "x": 2824,
+        "y": 1338,
+        "w": 692,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_POV1Up",
+      "label": "PoV hat up",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 990,
+        "y": 304,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_POV1Right",
+      "label": "PoV hat right",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 990,
+        "y": 360,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_POV1Down",
+      "label": "PoV hat down",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 990,
+        "y": 416,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_POV1Left",
+      "label": "PoV hat left",
+      "kind": "hat",
+      "image": 0,
+      "box": {
+        "x": 990,
+        "y": 472,
+        "w": 1932,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_RZAxis",
+      "label": "Stick twist",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2364,
+        "y": 966,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_UAxis",
+      "label": "Throttle axis",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2584,
+        "y": 1833,
+        "w": 892,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_XAxis",
+      "label": "Stick left/right",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2364,
+        "y": 910,
+        "w": 1132,
+        "h": 54
+      }
+    },
+    {
+      "bindsId": "044FB106",
+      "key": "Joy_YAxis",
+      "label": "Stick up/down",
+      "kind": "axis",
+      "image": 0,
+      "box": {
+        "x": 2364,
+        "y": 854,
+        "w": 1132,
+        "h": 54
+      }
+    }
+  ]
+}
