@@ -11,9 +11,11 @@ test.skip(!TAG, 'Set FONT_SHOTS=before|after to take card screenshots');
 test.setTimeout(120_000);
 test.use({ deviceScaleFactor: 2 });
 
-const X56 = readFileSync('upstream/edrefcard2/bindings/Defaults ODY patch 8/SaitekX56.binds', 'utf8');
+// Read lazily: upstream/ (tools/fetch-upstream.sh) isn't present in CI, where these tests are skipped.
+const x56 = () => readFileSync('upstream/edrefcard2/bindings/Defaults ODY patch 8/SaitekX56.binds', 'utf8');
 /** No Cougar file upstream: the X56 defaults moved onto a HOTAS Cougar. */
-const COUGAR = X56.replace(/SaitekX56Joystick|SaitekX56Throttle/g, '044F0400').replace(/PresetName="[^"]*"/, 'PresetName="Cougar test"');
+const cougar = () =>
+  x56().replace(/SaitekX56Joystick|SaitekX56Throttle/g, '044F0400').replace(/PresetName="[^"]*"/, 'PresetName="Cougar test"');
 
 async function open(page: Page, name: string, text: string): Promise<void> {
   await page.addInitScript(() => delete (window as { showOpenFilePicker?: unknown }).showOpenFilePicker);
@@ -28,12 +30,12 @@ async function open(page: Page, name: string, text: string): Promise<void> {
 }
 
 for (const [label, name, text] of [
-  ['x56', 'SaitekX56.binds', X56],
-  ['cougar', 'Cougar.binds', COUGAR],
+  ['x56', 'SaitekX56.binds', x56],
+  ['cougar', 'Cougar.binds', cougar],
 ] as const) {
   test(`card text size: ${label}`, async ({ page }) => {
     await page.setViewportSize({ width: 1700, height: 1100 });
-    await open(page, name, text);
+    await open(page, name, text());
     await page.locator('app-card-svg').first().screenshot({ path: `test-results/shots/devices-leaders/font-${TAG}-${label}.png` });
   });
 }
