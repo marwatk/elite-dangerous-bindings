@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Original design: a wireframe ship above a cockpit-style elliptical scanner. -->
+  <rect width="64" height="64" rx="14" fill="#15151b"/>
+  <g fill="none" stroke="#ff8c0d" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Scanner ellipse and range ring -->
+    <ellipse cx="32" cy="47" rx="25" ry="8" stroke-width="2" stroke-opacity="0.5"/>
+    <ellipse cx="32" cy="47" rx="12" ry="3.8" stroke-width="1.5" stroke-opacity="0.35"/>
+    <!-- Contact stalk from the ship down to the scanner plane -->
+    <path d="M32 33V47" stroke-width="2" stroke-opacity="0.7"/>
+    <!-- Ship, front view: a wide, flat low-poly wedge -->
+    <path d="M4 27 19 19H45L60 27 45 33H19Z" fill="#ff8c0d" fill-opacity="0.14" stroke-width="3"/>
+    <path d="M19 19 23 33M45 19 41 33" stroke-width="1.75"/>
+  </g>
+  <!-- Cockpit and engine glow -->
+  <path d="M28 20.5H36L34.5 24.5H29.5Z" fill="#ffb347"/>
+  <path d="M27 30H37" stroke="#ffb347" stroke-width="2" stroke-linecap="round"/>
+  <!-- Contact blip on the scanner -->
+  <circle cx="32" cy="47" r="2.5" fill="#ff8c0d"/>
+</svg>
