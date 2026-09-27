@@ -75,6 +75,14 @@ EDRefKB — https://github.com/RealOfficialTurf/EDRefKB
   Copyright (c) 2022 RealOfficialTurf
   Used for: Elite keyboard key names and action labels.
 
+Material Symbols — https://github.com/google/material-design-icons
+  Copyright Google LLC
+  Licensed under the Apache License, Version 2.0
+  (https://www.apache.org/licenses/LICENSE-2.0).
+  Used for: the "joystick" icon in the favicon and app icons
+  (public/favicon.svg, favicon.ico, icons/), recoloured and placed on a
+  background.
+
 elite-dangerous-binds-editor
 (https://github.com/mholtmanns/elite-dangerous-binds-editor) is released
 into the public domain under the Unlicense and needs no notice; it is
