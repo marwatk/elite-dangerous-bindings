@@ -146,7 +146,6 @@
 svg {
   display: block;
   margin: 0 auto;
-  background: #fff;
   cursor: crosshair;
   touch-action: none;
   user-select: none;
@@ -171,6 +170,184 @@ svg {
   &.sel rect {
     stroke: #0077cc;
     stroke-dasharray: 6 3;
+  }
+}
+.leader {
+  pointer-events: none;
+  path {
+    fill: none;
+    stroke: rgba(179, 84, 0, 0.85);
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  circle {
+    fill: #b35400;
+    stroke: #fff;
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+  }
+  &.target path {
+    stroke: #0077cc;
+  }
+  &.target circle {
+    fill: #0077cc;
+  }
+}
+.leader-hit {
+  fill: none;
+  stroke: transparent;
+  pointer-events: stroke;
+  cursor: copy;
+}
+.leader-point {
+  fill: #fff;
+  stroke: #0077cc;
+  cursor: move;
+  &.anchor {
+    fill: #0077cc;
+    stroke: #fff;
+  }
+  &.sel {
+    fill: #e0007a;
+    stroke: #fff;
+  }
+}
+.line-mode svg,
+.line-mode .box {
+  cursor: crosshair;
+}
+.outside {
+  fill: color-mix(in srgb, var(--mat-sys-surface-container-lowest) 55%, transparent);
+  fill-rule: evenodd;
+  pointer-events: none;
+}
+.canvas-outline {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  &.grown {
+    stroke: #0077cc;
+  }
+}
+.work {
+  position: relative;
+}
+.canvas-pop {
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  top: 48px;
+  width: min(420px, 100%);
+  box-sizing: border-box;
+  padding: 8px 16px 12px;
+  border: 1px solid var(--edb-border);
+  border-radius: 12px;
+  background: var(--mat-sys-surface-container);
+  box-shadow: var(--mat-sys-level3);
+  .pop-head {
+    display: flex;
+    align-items: center;
+    strong {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+  .hint {
+    margin: 0 0 8px;
+  }
+  .pop-label {
+    margin: 4px 0 6px;
+    font: var(--mat-sys-label-large);
+  }
+  .pop-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .margin {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .num {
+    width: 70px;
+    padding: 4px;
+    border: 1px solid var(--edb-border);
+    border-radius: 4px;
+    background: var(--mat-sys-surface);
+    color: var(--mat-sys-on-surface);
+  }
+  .swatch {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    border: 1px solid var(--edb-border);
+  }
+  button.swatch {
+    padding: 0;
+    cursor: pointer;
+    &.picked {
+      outline: 2px solid var(--edb-accent);
+      outline-offset: 2px;
+    }
+  }
+  input[type='color'] {
+    width: 40px;
+    height: 28px;
+    padding: 0;
+    border: 1px solid var(--edb-border);
+    border-radius: 6px;
+    background: none;
+    cursor: pointer;
+  }
+  .busy {
+    display: flex;
+    gap: 6px;
+    margin: 8px 0 0;
+    font-size: 0.85rem;
+    color: var(--edb-warning);
+    mat-icon {
+      flex: none;
+    }
+  }
+  .out {
+    margin: 12px 0 0;
+  }
+  .mono {
+    font-family: var(--edb-mono);
+  }
+}
+.group-div {
+  fill: none;
+  stroke: rgba(179, 84, 0, 0.7);
+  pointer-events: none;
+}
+.box .group-label,
+.box .group-mtext {
+  font-weight: 700;
+  text-anchor: middle;
+}
+.group-marker path {
+  fill: none;
+  stroke: #111;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  &.filled {
+    fill: #111;
+    stroke: none;
+  }
+}
+.group-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  mat-icon {
+    margin-right: 4px;
   }
 }
 .drawing {

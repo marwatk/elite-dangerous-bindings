@@ -51,6 +51,10 @@
         }
       }
     },
+    "drawBoxes": {
+      "description": "Draw box outlines behind the text on cards: for artwork without printed boxes (photos). The layout editor always sets it.",
+      "type": "boolean"
+    },
     "controls": {
       "type": "array",
       "items": {
@@ -68,16 +72,45 @@
           "label": { "type": "string" },
           "kind": { "enum": ["button", "axis", "hat"] },
           "image": { "type": "integer", "minimum": 0, "description": "Index into images." },
-          "box": {
-            "description": "Label box on the image, in image pixels, top-left origin.",
-            "type": "object",
-            "required": ["x", "y", "w", "h"],
-            "additionalProperties": false,
-            "properties": {
-              "x": { "type": "number" },
-              "y": { "type": "number" },
-              "w": { "type": "number", "exclusiveMinimum": 0 },
-              "h": { "type": "number", "exclusiveMinimum": 0 }
+          "box": { "$ref": "#/$defs/box" },
+          "leader": { "$ref": "#/$defs/leader" }
+        },
+        "dependentRequired": { "leader": ["box"] }
+      }
+    },
+    "groups": {
+      "description": "Controls sharing one box (hats, rockers, encoders, ministicks…). The box is split into a row per member (stack) or a cell per member (row), each with its marker; the label sits in a column on the left. Grouped controls have no box of their own.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "box", "members"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$" },
+          "label": { "type": "string" },
+          "layout": { "enum": ["stack", "row"] },
+          "showLabel": { "type": "boolean" },
+          "image": { "type": "integer", "minimum": 0, "description": "Index into images." },
+          "box": { "$ref": "#/$defs/box" },
+          "leader": { "$ref": "#/$defs/leader" },
+          "members": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "object",
+              "required": ["bindsId", "key", "marker"],
+              "additionalProperties": false,
+              "properties": {
+                "bindsId": { "type": "string" },
+                "deviceIndex": { "type": "integer", "minimum": 0 },
+                "key": { "type": "string", "minLength": 1 },
+                "marker": {
+                  "description": "Which member this is: one of ↑ ↗ → ↘ ↓ ↙ ← ↖ ● ⟳ ⟲ ↕ ↔ ± + − (drawn as symbols) or short text such as Fwd.",
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 12
+                }
+              }
             }
           }
         }
@@ -101,6 +134,32 @@
     }
   },
   "$defs": {
+    "box": {
+      "description": "Label box on the image, in image pixels, top-left origin.",
+      "type": "object",
+      "required": ["x", "y", "w", "h"],
+      "additionalProperties": false,
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "w": { "type": "number", "exclusiveMinimum": 0 },
+        "h": { "type": "number", "exclusiveMinimum": 0 }
+      }
+    },
+    "leader": {
+      "description": "Leader line from the box to the control, in image pixels. The last point is the anchor on the control; earlier points are elbows. The line starts on the box edge nearest the first point. Requires box.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["x", "y"],
+        "additionalProperties": false,
+        "properties": {
+          "x": { "type": "number" },
+          "y": { "type": "number" }
+        }
+      }
+    },
     "usb": {
       "type": "object",
       "required": ["vid", "pid"],

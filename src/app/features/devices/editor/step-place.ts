@@ -14,13 +14,14 @@ import {
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatDialog } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { filter } from 'rxjs';
-import { Box } from '../../../core/data/catalog.types';
+import { Box, ImagePoint } from '../../../core/data/catalog.types';
 import {
   HANDLES,
   Handle,
@@ -36,8 +37,16 @@ import {
   snapMove,
   snapTargets,
 } from '../../../core/devices/geometry';
+import { insertElbow, leaderPath, pathData, removeLeaderPoint, roundPoint, withAnchor } from '../../../core/devices/leader';
 import { InputService } from '../../../core/input/input.service';
-import { DraftControl, partFor, partLabel } from './draft';
+import { canvasOutputSize, canvasPaddingFor, contentOn } from './canvas';
+import { BACKGROUND_SWATCHES, BackgroundSetting, canvasRect, contentExtent, hasPadding, unionRect, workspaceRect } from './canvas-padding';
+import { groupDividers, groupLayout } from '../../../core/devices/group-layout';
+import { markerSymbol, markerTransform } from '../../../core/devices/markers';
+import { DraftControl, PlaceItem, partFor, partLabel } from './draft';
+import { openGroupDialog } from './group-dialog';
+import { memberName } from './groups';
+import { MarkerIcon } from './marker-icon';
 import { EditorStore } from './editor-store';
 import { specForKey } from './inventory';
 
@@ -45,9 +54,10 @@ type Gesture =
   | { kind: 'pan'; x: number; y: number; sl: number; st: number }
   | { kind: 'draw'; start: Point; uid: string; targets: SnapLines }
   | { kind: 'move'; start: Point; boxes: Map<string, Box>; primary: string; moved: boolean; targets: SnapLines }
-  | { kind: 'resize'; start: Point; uid: string; box: Box; handle: Handle; moved: boolean; targets: SnapLines };
+  | { kind: 'resize'; start: Point; uid: string; box: Box; handle: Handle; moved: boolean; targets: SnapLines }
+  | { kind: 'leader'; start: Point; uid: string; index: number; orig: ImagePoint[]; moved: boolean };
 
-type Placed = DraftControl & { box: Box };
+type Placed = PlaceItem & { box: Box };
 
 const MIN_ZOOM = 0.05;
 const MAX_ZOOM = 8;
@@ -55,7 +65,7 @@ const MAX_ZOOM = 8;
 @Component({
   selector: 'app-step-place',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MatButtonModule, MatButtonToggleModule, MatDividerModule, MatIconModule, MatMenuModule, MatSlideToggleModule, MatTooltipModule],
+  imports: [MatButtonModule, MatButtonToggleModule, MatDividerModule, MatIconModule, MatMenuModule, MatSlideToggleModule, MatTooltipModule, MarkerIcon],
   templateUrl: './step-place.html',
   styleUrl: './step-place.scss',
   host: {
@@ -67,6 +77,7 @@ export class StepPlace {
   protected readonly store = inject(EditorStore);
   private readonly input = inject(InputService);
   private readonly injector = inject(Injector);
+  private readonly dialog = inject(MatDialog);
 
   private readonly viewport = viewChild<ElementRef<HTMLDivElement>>('viewport');
   private readonly svg = viewChild<ElementRef<SVGSVGElement>>('svg');
@@ -83,11 +94,59 @@ export class StepPlace {
   protected readonly partFilter = signal<string | null>(null);
   protected readonly drawRect = signal<Box | null>(null);
   protected readonly guides = signal<SnapLines>({ x: [], y: [] });
+  /** "Draw line": the next click on the image sets the selected box's leader anchor. */
+  protected readonly lineMode = signal(false);
+  /** Selected leader point (elbow or anchor) of the line being edited. */
+  protected readonly selPoint = signal<{ uid: string; index: number } | null>(null);
+  /** The canvas popover (background, margin, 16:9) is open. */
+  protected readonly canvasOpen = signal(false);
+  protected readonly swatches = BACKGROUND_SWATCHES;
+  /** Workspace kept still while a gesture runs (it grows afterwards). */
+  private readonly frozenView = signal<Box | null>(null);
   private gesture: Gesture | null = null;
   private spaceDown = false;
 
   protected readonly image = computed(() => this.store.draft().images[this.store.imageIndex()] ?? null);
   protected readonly imageUrl = computed(() => this.store.urlFor(this.image()?.blob));
+  /** Space the exported image adds around the photo to hold boxes beside it. */
+  protected readonly canvasPad = computed(() => canvasPaddingFor(this.store.draft(), this.store.imageIndex()));
+  /** The exported image's area, in image pixels (the photo is at 0,0). */
+  protected readonly canvasBounds = computed(() => {
+    const img = this.image();
+    return img ? canvasRect(img, this.canvasPad()) : null;
+  });
+  protected readonly canvasGrows = computed(() => hasPadding(this.canvasPad()));
+  protected readonly outputSize = computed(() => (this.image() ? canvasOutputSize(this.store.draft(), this.store.imageIndex()) : null));
+  /** Workspace: the photo, everything drawn and the canvas, with room to draw into on every side. */
+  private readonly liveView = computed<Box | null>(() => {
+    const img = this.image();
+    if (!img) return null;
+    const { boxes, points } = contentOn(this.store.draft(), this.store.imageIndex());
+    return workspaceRect(img, unionRect(contentExtent(img, boxes, points), this.canvasBounds()!));
+  });
+  protected readonly view = computed(() => this.frozenView() ?? this.liveView());
+  protected readonly viewBox = computed(() => {
+    const v = this.view();
+    return v ? `${v.x} ${v.y} ${v.w} ${v.h}` : '0 0 1 1';
+  });
+  protected readonly detected = computed(() => {
+    const img = this.image();
+    return img ? (this.store.detected().get(img.uid) ?? null) : null;
+  });
+  /** Fill of the area around the photo, as the exported image will have it. */
+  protected readonly backdrop = computed(() => {
+    const bg = this.store.canvas().background;
+    if (bg.kind === 'color') return bg.color;
+    if (bg.kind === 'auto' && this.detected()?.color) return this.detected()!.color!;
+    return bg.kind === 'auto' && !this.detected() ? '#ffffff' : 'url(#edb-checker)';
+  });
+  /** Everything in the workspace outside the exported canvas (shaded). */
+  protected readonly outsidePath = computed(() => {
+    const v = this.view();
+    const c = this.canvasBounds();
+    if (!v || !c) return '';
+    return `M${v.x} ${v.y}H${v.x + v.w}V${v.y + v.h}H${v.x}Z M${c.x} ${c.y}V${c.y + c.h}H${c.x + c.w}V${c.y}Z`;
+  });
   protected readonly multiPart = computed(() => this.store.primaries().length > 1);
   private readonly visiblePlaceable = computed(() => {
     const f = this.partFilter();
@@ -108,9 +167,36 @@ export class StepPlace {
     if (sel.size !== 1) return null;
     return this.boxes().find((b) => sel.has(b.uid)) ?? null;
   });
+  /** Box whose leader line is edited: the one selected box, else the active control's box on this image. */
+  protected readonly lineTarget = computed<Placed | null>(() => {
+    const hb = this.handleBox();
+    if (hb) return hb;
+    const uid = this.store.activeUid();
+    return (uid && this.boxes().find((b) => b.uid === uid)) || null;
+  });
+  /** Leader lines on this image, drawn under the boxes. */
+  protected readonly leaders = computed(() =>
+    this.boxes()
+      .filter((b) => b.leader?.length)
+      .map((b) => ({ uid: b.uid, d: pathData(leaderPath(b.box, b.leader)), anchor: b.leader!.at(-1)! })),
+  );
+  /** Points of the edited line: start on the box edge, elbows, anchor. */
+  protected readonly targetPath = computed(() => {
+    const t = this.lineTarget();
+    return t ? leaderPath(t.box, t.leader) : [];
+  });
+  protected readonly targetPathD = computed(() => pathData(this.targetPath()));
+  /** Groups on this image drawn subdivided: label column, markers, member names. */
+  protected readonly groupShapes = computed(() => {
+    const d = this.store.draft();
+    const out = new Map<string, ReturnType<typeof this.groupShape>>();
+    for (const b of this.boxes()) if (b.group) out.set(b.uid, this.groupShape(d.controls, b));
+    return out;
+  });
   protected readonly selectedPlaced = computed(() => this.boxes().filter((b) => this.store.selected().has(b.uid)));
   protected readonly stroke = computed(() => 2 / this.zoom());
   protected readonly handleSize = computed(() => 10 / this.zoom());
+  protected readonly dotRadius = computed(() => 3.5 / this.zoom());
   protected readonly showGrid = computed(() => this.gridOn() && this.gridSize() * this.zoom() >= 5);
   protected readonly previous = computed(() => {
     const list = this.store.placeable();
@@ -138,6 +224,34 @@ export class StepPlace {
     });
     if (!this.store.activeUid()) this.store.activeUid.set(this.store.nextUnplaced(null)?.uid ?? null);
 
+    // When the workspace grows or shrinks on the left/top, scroll so the photo stays put.
+    let prev: { uid: string; x: number; y: number } | null = null;
+    effect(() => {
+      const v = this.view();
+      const img = this.image();
+      if (!v || !img) return;
+      const last = prev;
+      prev = { uid: img.uid, x: v.x, y: v.y };
+      if (!last || last.uid !== img.uid || (last.x === v.x && last.y === v.y)) return;
+      const z = untracked(this.zoom);
+      afterNextRender(
+        {
+          write: () => {
+            const vp = this.viewport()?.nativeElement;
+            if (!vp) return;
+            vp.scrollLeft += (last.x - v.x) * z;
+            vp.scrollTop += (last.y - v.y) * z;
+          },
+        },
+        { injector: this.injector },
+      );
+    });
+    // Background colour of the photo, for the area around it.
+    effect(() => {
+      const img = this.image();
+      if (img) void this.store.detectFor(img);
+    });
+
     // Pressing a control on the device selects it (adding it if it isn't listed).
     const sub = this.input.events.pipe(filter((e) => e.pressed && e.kind !== 'key')).subscribe((e) => {
       const d = this.store.draft();
@@ -164,12 +278,27 @@ export class StepPlace {
 
   // ------------------------------------------------------------ zoom
 
+  /** Zoom to the exported canvas plus some of the room around it, centred. */
   protected fit(): void {
     const vp = this.viewport()?.nativeElement;
     const img = this.image();
-    if (!vp || !img) return;
-    const z = (vp.clientWidth - 4) / img.width;
-    this.zoom.set(Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, z)));
+    const c = this.canvasBounds();
+    const v = this.view();
+    if (!vp || !img || !c || !v) return;
+    const target = { x: c.x - img.width * 0.2, y: c.y - img.height * 0.2, w: c.w + img.width * 0.4, h: c.h + img.height * 0.4 };
+    // The viewport's height follows its content up to max-height, so fit to that.
+    const maxH = parseFloat(getComputedStyle(vp).maxHeight) || vp.clientHeight;
+    const z = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, Math.min((vp.clientWidth - 4) / target.w, (maxH - 4) / target.h)));
+    this.zoom.set(z);
+    afterNextRender(
+      {
+        write: () => {
+          vp.scrollLeft = (target.x + target.w / 2 - v.x) * z - vp.clientWidth / 2;
+          vp.scrollTop = (target.y + target.h / 2 - v.y) * z - vp.clientHeight / 2;
+        },
+      },
+      { injector: this.injector },
+    );
   }
 
   protected zoomBy(factor: number, clientX?: number, clientY?: number): void {
@@ -238,12 +367,38 @@ export class StepPlace {
       return;
     }
     svg.focus({ preventScroll: true });
+    this.frozenView.set(this.view());
     const p = this.toImage(e);
     const t = e.target as Element;
+    const lt = this.lineTarget();
+    this.selPoint.set(null);
+    // Leader line: drag its anchor or an elbow.
+    const pointAttr = t.closest('[data-leader-point]')?.getAttribute('data-leader-point');
+    if (pointAttr != null && lt?.leader) {
+      const index = Number(pointAttr);
+      this.selPoint.set({ uid: lt.uid, index });
+      this.gesture = { kind: 'leader', start: p, uid: lt.uid, index, orig: lt.leader.map((q) => ({ ...q })), moved: false };
+      return;
+    }
+    // "Draw line" mode or Alt-click: set the anchor.
+    if ((this.lineMode() || e.altKey) && lt) {
+      this.setAnchor(lt, p);
+      return;
+    }
+    this.lineMode.set(false);
     const handle = t.closest('[data-handle]')?.getAttribute('data-handle') as Handle | undefined;
     const hb = this.handleBox();
     if (handle && hb) {
       this.gesture = { kind: 'resize', start: p, uid: hb.uid, box: { ...hb.box }, handle, moved: false, targets: this.targets(new Set([hb.uid])) };
+      return;
+    }
+    // Click on the line: add an elbow there and drag it.
+    if (t.closest('[data-leader-seg]') && lt?.leader) {
+      this.store.checkpoint();
+      const { leader, index } = insertElbow(this.targetPath(), lt.leader, roundPoint(p));
+      this.store.setLeader(lt.uid, leader, { undo: false });
+      this.selPoint.set({ uid: lt.uid, index });
+      this.gesture = { kind: 'leader', start: p, uid: lt.uid, index, orig: leader, moved: true };
       return;
     }
     const uid = t.closest('[data-uid]')?.getAttribute('data-uid');
@@ -294,6 +449,16 @@ export class StepPlace {
       this.guides.set(r.guides);
       return;
     }
+    if (g.kind === 'leader') {
+      if (!g.moved) {
+        if (Math.hypot(dx, dy) * this.zoom() < 3) return;
+        g.moved = true;
+        this.store.checkpoint();
+      }
+      const next = g.orig.map((q, i) => (i === g.index ? this.clampToView({ x: q.x + dx, y: q.y + dy }) : q));
+      this.store.setLeader(g.uid, next, { undo: false });
+      return;
+    }
     if (!g.moved) {
       if (Math.hypot(dx, dy) * this.zoom() < 3) return;
       g.moved = true;
@@ -318,6 +483,7 @@ export class StepPlace {
   protected up(e: PointerEvent): void {
     const g = this.gesture;
     this.gesture = null;
+    this.frozenView.set(null);
     if (!g) return;
     if (g.kind === 'draw') {
       const r = this.drawRect();
@@ -325,6 +491,9 @@ export class StepPlace {
       if (r && r.w * this.zoom() >= 6 && r.h * this.zoom() >= 6) this.finishDraw(g.uid, r);
       else if (c && !c.box) this.finishDraw(g.uid, this.defaultBoxAt(g.start));
       else this.store.selected.set(new Set());
+    } else if (g.kind === 'leader' && g.moved) {
+      const c = this.store.draft().controls.find((x) => x.uid === g.uid);
+      if (c?.leader) this.store.setLeader(g.uid, c.leader.map(roundPoint), { undo: false });
     } else if ((g.kind === 'move' || g.kind === 'resize') && g.moved) {
       const d = this.store.draft();
       const uids = g.kind === 'move' ? [...g.boxes.keys()] : [g.uid];
@@ -352,6 +521,62 @@ export class StepPlace {
       const next = this.store.nextUnplaced(uid);
       this.store.activeUid.set(next?.uid ?? uid);
     }
+  }
+
+  // ------------------------------------------------------------ leader lines
+
+  private clampToView(p: Point): Point {
+    const v = this.view()!;
+    return { x: Math.min(v.x + v.w, Math.max(v.x, p.x)), y: Math.min(v.y + v.h, Math.max(v.y, p.y)) };
+  }
+
+  private setAnchor(target: Placed, p: Point): void {
+    const anchor = roundPoint(this.clampToView(p));
+    this.store.setLeader(target.uid, withAnchor(target.leader, anchor));
+    this.store.selected.set(new Set([target.uid]));
+    this.lineMode.set(false);
+  }
+
+  protected selectOnly(uid: string): ReadonlySet<string> {
+    return new Set([uid]);
+  }
+
+  protected toggleLineMode(): void {
+    this.lineMode.set(!this.lineMode() && !!this.lineTarget());
+  }
+
+  protected removeLine(uid: string): void {
+    this.store.setLeader(uid, null);
+    this.selPoint.set(null);
+    this.lineMode.set(false);
+  }
+
+  private deleteSelectedPoint(): boolean {
+    const sp = this.selPoint();
+    const lt = this.lineTarget();
+    if (!sp || !lt?.leader || lt.uid !== sp.uid || sp.index >= lt.leader.length) return false;
+    this.store.setLeader(lt.uid, removeLeaderPoint(lt.leader, sp.index) ?? null);
+    this.selPoint.set(null);
+    return true;
+  }
+
+  // ------------------------------------------------------------ canvas
+
+  protected setBackground(kind: BackgroundSetting['kind'], color?: string): void {
+    const cur = this.store.canvas().background;
+    const bg: BackgroundSetting =
+      kind === 'color' ? { kind, color: (color ?? (cur.kind === 'color' ? cur.color : this.detected()?.color) ?? '#ffffff').toLowerCase() } : { kind };
+    this.store.setCanvas({ background: bg }, color && cur.kind === 'color' ? 'canvas-colour' : undefined);
+  }
+
+  protected pickedColour(): string {
+    const bg = this.store.canvas().background;
+    return bg.kind === 'color' ? bg.color : (this.detected()?.color ?? '#ffffff');
+  }
+
+  protected setMargin(e: Event): void {
+    const v = Number((e.target as HTMLInputElement).value);
+    if (Number.isFinite(v) && v >= 0) this.store.setCanvas({ margin: Math.round(v) }, 'canvas-margin');
   }
 
   // ------------------------------------------------------------ commands
@@ -398,11 +623,36 @@ export class StepPlace {
   }
 
   protected setLabel(uid: string, e: Event): void {
-    this.store.updateControl(uid, { label: (e.target as HTMLInputElement).value }, `label:${uid}`);
+    const label = (e.target as HTMLInputElement).value;
+    if (this.store.draft().groups?.some((g) => g.uid === uid)) this.store.updateGroup(uid, { label }, `label:${uid}`);
+    else this.store.updateControl(uid, { label }, `label:${uid}`);
+  }
+
+  protected editGroup(uid: string): void {
+    void openGroupDialog(this.dialog, this.store, { group: uid });
+  }
+
+  private groupShape(controls: DraftControl[], b: Placed) {
+    const g = b.group!;
+    const members = g.members.map((m) => ({ key: controls.find((c) => c.uid === m.control)?.key ?? '', marker: m.marker, control: m.control }));
+    const geo = groupLayout({ box: b.box, layout: g.layout, showLabel: g.showLabel, members });
+    const l = geo.labelRect;
+    return {
+      labelRect: l,
+      labelSize: l ? Math.min(l.w * 0.62, (l.h * 0.9) / Math.max(1, b.label.length * 0.6)) : 0,
+      dividers: groupDividers(geo, g.layout),
+      members: geo.members.map((cell) => {
+        const c = controls.find((x) => x.uid === members[cell.index].control);
+        const symbol = markerSymbol(cell.marker);
+        const name = c && c.label !== memberName(g.label, cell.marker) ? c.label : (c?.key ?? '');
+        return { ...cell, symbol, transform: symbol ? markerTransform(cell.markerRect, 0.62) : '', name };
+      }),
+    };
   }
 
   protected setBoxField(uid: string, field: keyof Box, e: Event): void {
-    const c = this.store.draft().controls.find((x) => x.uid === uid);
+    const d = this.store.draft();
+    const c = d.controls.find((x) => x.uid === uid) ?? d.groups?.find((x) => x.uid === uid);
     const v = Number((e.target as HTMLInputElement).value);
     if (!c?.box || !Number.isFinite(v) || ((field === 'w' || field === 'h') && v <= 0)) return;
     this.store.setBoxes(new Map([[uid, { ...c.box, [field]: v }]]), { coalesce: `box:${uid}` });
@@ -421,9 +671,19 @@ export class StepPlace {
       e.preventDefault();
       const [dx, dy] = arrows[e.key];
       this.store.setBoxes(new Map(sel.map((b) => [b.uid, nudge(b.box, dx, dy)])), { coalesce: 'nudge' });
+    } else if ((e.key === 'Delete' || e.key === 'Backspace') && this.selPoint()) {
+      e.preventDefault();
+      this.deleteSelectedPoint();
     } else if ((e.key === 'Delete' || e.key === 'Backspace') && (sel.length || this.store.activeControl()?.box)) {
       e.preventDefault();
       this.deleteSelected();
+    } else if (e.key === 'Escape' && this.canvasOpen()) {
+      this.canvasOpen.set(false);
+    } else if (e.key === 'Escape' && (this.lineMode() || this.selPoint())) {
+      this.lineMode.set(false);
+      this.selPoint.set(null);
+    } else if (e.key === 'l' || e.key === 'L') {
+      this.toggleLineMode();
     } else if (e.key === 'Escape') {
       this.gesture = null;
       this.drawRect.set(null);

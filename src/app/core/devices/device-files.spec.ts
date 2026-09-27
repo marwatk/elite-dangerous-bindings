@@ -86,6 +86,87 @@ describe('device.json', () => {
     expect(Object.keys(parsed.ids[0])).toEqual(['bindsId', 'deviceIndex', 'usb']);
   });
 
+  it('writes leader lines after the box, rounded, and only with a box', () => {
+    const def = sample();
+    def.controls[0].leader = [{ x: 300.123, y: 40 }, { x: 420, y: 80.456 }];
+    def.controls[3].leader = [{ x: 1, y: 2 }];
+    const parsed = JSON.parse(deviceJson(def));
+    expect(validate(parsed)).toBe(true);
+    expect(Object.keys(parsed.controls[0])).toEqual(['bindsId', 'key', 'label', 'kind', 'image', 'box', 'leader']);
+    expect(parsed.controls[0].leader).toEqual([{ x: 300.12, y: 40 }, { x: 420, y: 80.46 }]);
+    expect(parsed.controls[3].leader).toBeUndefined();
+    expect(schemaErrors(parsed)).toEqual([]);
+  });
+
+  it('writes groups and drawBoxes in a stable order and round-trips them', () => {
+    const def = sample();
+    def.controls.push(
+      { bindsId: '231D0200', key: 'Joy_POV1Down', label: 'Hat Down', kind: 'hat' },
+      { bindsId: '231D0200', key: 'Joy_5', label: 'Hat push', kind: 'button' },
+    );
+    def.drawBoxes = true;
+    def.groups = [
+      {
+        members: [
+          { key: 'Joy_POV1Up', bindsId: '231D0200', marker: '↑' },
+          { bindsId: '231D0200', key: 'Joy_POV1Down', marker: '↓' },
+          { bindsId: '231D0200', key: 'Joy_5', marker: '●' },
+        ],
+        box: { x: 10.333, y: 300, w: 400, h: 120 },
+        label: 'H1',
+        id: 'H1',
+        showLabel: true,
+        leader: [{ x: 500, y: 350 }],
+      },
+    ];
+    const text = deviceJson(def);
+    const parsed = JSON.parse(text);
+    expect(validate(parsed)).toBe(true);
+    expect(schemaErrors(parsed)).toEqual([]);
+    expect(Object.keys(parsed)).toEqual(['$schema', 'id', 'name', 'source', 'ids', 'images', 'drawBoxes', 'controls', 'groups']);
+    expect(Object.keys(parsed.groups[0])).toEqual(['id', 'label', 'layout', 'image', 'box', 'leader', 'members']);
+    expect(parsed.groups[0]).toMatchObject({ layout: 'stack', image: 0, box: { x: 10.33, y: 300, w: 400, h: 120 } });
+    expect(Object.keys(parsed.groups[0].members[0])).toEqual(['bindsId', 'key', 'marker']);
+    expect(deviceJson(parsed)).toBe(text);
+    // showLabel is only written when false; drawBoxes only when true.
+    def.groups[0].showLabel = false;
+    def.drawBoxes = false;
+    const again = JSON.parse(deviceJson(def));
+    expect(again.groups[0].showLabel).toBe(false);
+    expect(again.drawBoxes).toBeUndefined();
+  });
+
+  it('checks group rules beyond the schema', () => {
+    const base = (): DeviceDefinition => {
+      const d = sample();
+      d.controls.push({ bindsId: '231D0200', key: 'Joy_5', label: 'Push', kind: 'button' });
+      d.groups = [
+        {
+          id: 'H1',
+          label: 'H1',
+          box: { x: 0, y: 0, w: 100, h: 60 },
+          members: [
+            { bindsId: '231D0200', key: 'Joy_POV1Up', marker: '↑' },
+            { bindsId: '231D0200', key: 'Joy_5', marker: '●' },
+          ],
+        },
+      ];
+      return d;
+    };
+    expect(schemaErrors(base())).toEqual([]);
+    const errs = (mutate: (d: DeviceDefinition) => void) => {
+      const d = base();
+      mutate(d);
+      return schemaErrors(d).join('\n');
+    };
+    expect(errs((d) => (d.groups![0].members[1].marker = '↑'))).toMatch(/marker "↑" is used twice/);
+    expect(errs((d) => (d.groups![0].members[1].key = 'Joy_99'))).toMatch(/not in controls/);
+    expect(errs((d) => (d.groups![0].members[0].key = 'Joy_1'))).toMatch(/can't have a box of its own/);
+    expect(errs((d) => d.groups!.push({ ...d.groups![0], id: 'H2' }))).toMatch(/already in group H1/);
+    expect(errs((d) => d.groups!.push({ ...d.groups![0] }))).toMatch(/used twice/);
+    expect(errs((d) => (d.groups![0].image = 4))).toMatch(/missing image/);
+  });
+
   it('schemaErrors agrees with the JSON schema', () => {
     const cases: [string, (d: DeviceDefinition) => void][] = [
       ['bad id', (d) => (d.id = '-bad id')],
@@ -97,8 +178,22 @@ describe('device.json', () => {
       ['bad kind', (d) => ((d.controls[0] as { kind: string }).kind = 'slider')],
       ['bad source', (d) => ((d as { source: string }).source = 'mine')],
       ['extra prop', (d) => ((d as unknown as Record<string, unknown>)['extra'] = 1)],
+      ['extra control prop', (d) => ((d.controls[0] as unknown as Record<string, unknown>)['colour'] = 'red')],
+      ['empty leader', (d) => (d.controls[0].leader = [])],
+      ['bad leader point', (d) => (d.controls[0].leader = [{ x: 1, y: 'a' as unknown as number }])],
+      ['leader point extra prop', (d) => (d.controls[0].leader = [{ x: 1, y: 2, z: 3 } as { x: number; y: number }])],
+      ['leader without box', (d) => (d.controls[3].leader = [{ x: 1, y: 2 }])],
+      ['drawBoxes not boolean', (d) => ((d as unknown as Record<string, unknown>)['drawBoxes'] = 'yes')],
+      ['group with one member', (d) => (d.groups = [{ id: 'G', label: 'G', box: { x: 0, y: 0, w: 1, h: 1 }, members: [{ bindsId: '231D0200', key: 'Joy_POV1Up', marker: '↑' }] }])],
+      ['group bad layout', (d) => (d.groups = [{ id: 'G', label: 'G', layout: 'compass' as 'row', box: { x: 0, y: 0, w: 1, h: 1 }, members: [] }])],
+      ['group bad id', (d) => (d.groups = [{ id: '-G', label: 'G', box: { x: 0, y: 0, w: 1, h: 1 }, members: [] }])],
+      ['group no box', (d) => (d.groups = [{ id: 'G', label: 'G', members: [] } as unknown as NonNullable<DeviceDefinition['groups']>[number]])],
+      ['member empty marker', (d) => (d.groups = [{ id: 'G', label: 'G', box: { x: 0, y: 0, w: 1, h: 1 }, members: [{ bindsId: 'a', key: 'b', marker: '' }, { bindsId: 'a', key: 'c', marker: 'x' }] }])],
     ];
-    const good = normalizeDefinition(sample());
+    const withLeader = sample();
+    withLeader.controls[0].leader = [{ x: 400, y: 200 }];
+    const good = normalizeDefinition(withLeader);
+    expect(validate(good)).toBe(true);
     expect(schemaErrors(good)).toEqual([]);
     for (const [name, mutate] of cases) {
       const d = JSON.parse(JSON.stringify(good)) as DeviceDefinition;

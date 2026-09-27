@@ -62,9 +62,43 @@ describe('draft <-> definition', () => {
     expect(validate(JSON.parse(deviceJson(def)))).toBe(true);
   });
 
+  it('carries leader lines to device.json (shared halves too) and back', () => {
+    const d: EditorDraft = {
+      ...emptyDraft(),
+      id: 'T',
+      name: 'T',
+      ids: [{ uid: 'p', bindsId: '12345678' }],
+      images: [{ uid: 'i', name: 'x.png', blob: blob(), type: 'webp', width: 100, height: 100 }],
+      controls: [
+        { uid: 'a', part: 'p', key: 'Joy_XAxis', label: 'X', kind: 'axis', image: 0, box: { x: 1, y: 2, w: 30, h: 10 }, leader: [{ x: 60, y: 40 }, { x: 80, y: 50 }] },
+        { uid: 'b', part: 'p', key: 'Pos_Joy_XAxis', label: 'X+', kind: 'axis' },
+      ],
+    };
+    const def = draftToDefinition(d);
+    expect(def.controls[0].leader).toEqual([{ x: 60, y: 40 }, { x: 80, y: 50 }]);
+    expect(def.controls[1].leader).toEqual(def.controls[0].leader);
+    expect(validate(JSON.parse(deviceJson(def)))).toBe(true);
+    const back = definitionToDraft(def, [blob()]);
+    expect(back.controls.map((c) => c.leader)).toEqual([[{ x: 60, y: 40 }, { x: 80, y: 50 }], undefined]);
+  });
+
   it('names image files uniquely and keeps existing names', () => {
     const img = (file?: string, type: 'webp' | 'svg' = 'webp') => ({ uid: String(Math.random()), name: 'n', file, blob: blob(), type, width: 1, height: 1 });
     const d = { ...emptyDraft(), id: 'Dev', images: [img(), img('front.webp'), img('front.webp'), img('old.png'), img(undefined, 'svg')] };
     expect(imageFileNames(d)).toEqual(['Dev.webp', 'front.webp', 'Dev-3.webp', 'Dev-4.webp', 'Dev-5.svg']);
+  });
+
+  it('draws box outlines for new devices, keeps an existing device\'s choice', () => {
+    const newDef = draftToDefinition({ ...emptyDraft(), id: 'N', name: 'N', ids: [{ uid: 'p', bindsId: '12345678' }] });
+    expect(newDef.drawBoxes).toBe(true);
+    // An EDRefCard device (boxes printed on the artwork) stays without outlines…
+    const x56 = load('SaitekX56');
+    const d = definitionToDraft(x56, x56.images.map(blob));
+    expect(d.drawBoxes).toBe(false);
+    expect(draftToDefinition(d, x56.source).drawBoxes).toBeUndefined();
+    // …and a device that had them keeps them.
+    expect(definitionToDraft({ ...x56, drawBoxes: true }, x56.images.map(blob)).drawBoxes).toBe(true);
+    // Autosaves from before the setting: on only for new devices.
+    expect(draftToDefinition({ ...d, drawBoxes: undefined }).drawBoxes).toBeUndefined();
   });
 });

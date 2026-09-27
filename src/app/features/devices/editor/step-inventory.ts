@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, computed, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, ElementRef, computed, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -10,14 +11,16 @@ import { CatalogService } from '../../../core/data/catalog.service';
 import { ControlKind } from '../../../core/data/catalog.types';
 import { kindForKey, parseButtonMap } from '../../../core/devices/device-files';
 import { InputService } from '../../../core/input/input.service';
-import { partFor, partLabel } from './draft';
+import { DraftGroup, partFor, partLabel } from './draft';
 import { EditorStore } from './editor-store';
+import { openGroupDialog } from './group-dialog';
 import { ControlSpec, controlsFromCounts, specForKey } from './inventory';
+import { MarkerIcon } from './marker-icon';
 
 @Component({
   selector: 'app-step-inventory',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MatButtonModule, MatButtonToggleModule, MatIconModule, MatSlideToggleModule, MatTooltipModule],
+  imports: [MatButtonModule, MatButtonToggleModule, MatIconModule, MatSlideToggleModule, MatTooltipModule, MarkerIcon],
   styleUrls: ['./step-common.scss'],
   styles: `
     .counts input {
@@ -48,8 +51,41 @@ import { ControlSpec, controlsFromCounts, specForKey } from './inventory';
     select.dense-field {
       width: auto;
     }
-    tr.flash td {
+    tr.picked td {
       background: var(--edb-accent-soft);
+    }
+    /* Held or moved on the controller right now. */
+    tr.live td {
+      background: color-mix(in srgb, var(--edb-accent) 45%, transparent);
+    }
+    tr.live td:first-child {
+      box-shadow: inset 4px 0 0 var(--edb-accent);
+    }
+    .groups {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .group-chip {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 2px 4px 2px 10px;
+      border: 1px solid var(--edb-border);
+      border-radius: 18px;
+      background: var(--mat-sys-surface-container-high);
+      .markers {
+        display: inline-flex;
+        gap: 2px;
+        color: var(--edb-muted);
+      }
+    }
+    .in-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
     }
     .add-row {
       margin-top: 8px;
@@ -121,17 +157,50 @@ import { ControlSpec, controlsFromCounts, specForKey } from './inventory';
         <div class="list-head">
           <h2>{{ controls().length }} controls{{ store.primaries().length > 1 ? ' on ' + partName() : '' }}</h2>
           <span class="spacer"></span>
+          <button
+            matButton="tonal"
+            type="button"
+            (click)="groupSelected()"
+            [disabled]="picked().size < 2"
+            matTooltip="Put the ticked controls in one box: a hat, rocker, encoder, ministick…"
+            data-testid="group-selected"
+          >
+            <mat-icon>table_rows</mat-icon>Group…
+          </button>
           <button matButton type="button" (click)="store.sortControls()"><mat-icon>sort</mat-icon>Sort</button>
           <button matButton type="button" (click)="clear()" [disabled]="!controls().length"><mat-icon>delete_sweep</mat-icon>Remove all</button>
         </div>
+        @if (groups().length) {
+          <div class="groups" aria-label="Groups">
+            @for (g of groups(); track g.uid) {
+              <div class="group-chip" [attr.data-group]="g.label">
+                <mat-icon>{{ g.layout === 'row' ? 'view_column' : 'table_rows' }}</mat-icon>
+                <strong>{{ g.label || 'Unnamed group' }}</strong>
+                <span class="markers">
+                  @for (m of g.members; track m.control) {
+                    <app-marker-icon [marker]="m.marker" />
+                  }
+                </span>
+                <button matButton type="button" (click)="editGroup(g.uid)" [attr.data-testid]="'edit-group-' + g.label"><mat-icon>edit</mat-icon>Edit</button>
+                <button matIconButton type="button" (click)="store.ungroup(g.uid)" matTooltip="Ungroup" aria-label="Ungroup"><mat-icon>call_split</mat-icon></button>
+              </div>
+            }
+          </div>
+        }
         <div class="table-wrap">
           <table class="grid">
             <thead>
-              <tr><th>Elite key</th><th>Label</th><th>Kind</th><th>Box</th><th></th></tr>
+              <tr>
+                <th><input type="checkbox" [checked]="allPicked()" (change)="pickAll($any($event.target).checked)" aria-label="Select all" /></th>
+                <th>Elite key</th><th>Label</th><th>Kind</th><th>Box / group</th><th></th>
+              </tr>
             </thead>
             <tbody>
               @for (c of controls(); track c.uid) {
-                <tr [class.flash]="c.key === lastPressed()">
+                <tr [class.live]="liveKeys().has(c.key)" [class.picked]="picked().has(c.uid)" [attr.data-row-key]="c.key">
+                  <td>
+                    <input type="checkbox" [checked]="picked().has(c.uid)" (change)="pick(c.uid, $any($event.target).checked)" [attr.aria-label]="'Select ' + c.key" [attr.data-key]="c.key" />
+                  </td>
                   <td class="key mono">{{ c.key }}</td>
                   <td>{{ c.label }}</td>
                   <td>
@@ -141,7 +210,13 @@ import { ControlSpec, controlsFromCounts, specForKey } from './inventory';
                       <option value="hat">hat</option>
                     </select>
                   </td>
-                  <td>{{ c.box ? '✓' : '' }}</td>
+                  <td>
+                    @if (groupOf().get(c.uid); as g) {
+                      <span class="in-group">{{ g.group.label }} <app-marker-icon [marker]="g.marker" /></span>
+                    } @else {
+                      {{ c.box ? '✓' : '' }}
+                    }
+                  </td>
                   <td>
                     <button matIconButton type="button" (click)="store.removeControls([c.uid])" aria-label="Remove control" matTooltip="Remove">
                       <mat-icon>close</mat-icon>
@@ -165,6 +240,7 @@ export class StepInventory {
   private readonly catalog = inject(CatalogService);
   private readonly input = inject(InputService);
   private readonly snack = inject(MatSnackBar);
+  private readonly dialog = inject(MatDialog);
 
   protected readonly nButtons = signal(32);
   protected readonly nAxes = signal(8);
@@ -173,7 +249,32 @@ export class StepInventory {
   protected readonly addAsPressed = signal(true);
   protected readonly lastPressed = signal<string | null>(null);
 
+  /** Keys on the current part that are held (buttons, hats) or moved (axes) right now. */
+  protected readonly liveKeys = computed(() => {
+    const d = this.store.draft();
+    const part = this.store.currentPart();
+    const keys = new Set<string>();
+    const add = (device: string, index: number, key: string) => {
+      if (partFor(d, device, index) === part) keys.add(key.replace(/^(Pos|Neg)_/, ''));
+    };
+    for (const r of this.input.held()) add(r.device, r.deviceIndex ?? 0, r.key);
+    for (const id of this.input.movedAxes()) {
+      const [device, index, key] = id.split('::');
+      add(device, Number(index) || 0, key);
+    }
+    return keys;
+  });
+
   protected readonly controls = computed(() => this.store.draft().controls.filter((c) => c.part === this.store.currentPart()));
+  /** Controls ticked for grouping. */
+  protected readonly picked = signal<ReadonlySet<string>>(new Set());
+  protected readonly allPicked = computed(() => this.controls().length > 0 && this.controls().every((c) => this.picked().has(c.uid)));
+  protected readonly groups = computed(() => (this.store.draft().groups ?? []).filter((g) => g.part === this.store.currentPart()));
+  protected readonly groupOf = computed(() => {
+    const m = new Map<string, { group: DraftGroup; marker: string }>();
+    for (const g of this.store.draft().groups ?? []) for (const x of g.members) m.set(x.control, { group: g, marker: x.marker });
+    return m;
+  });
   protected readonly partName = computed(() => partLabel(this.store.draft(), this.store.currentPart() ?? ''));
   protected readonly partBindsId = computed(() => this.store.draft().ids.find((i) => i.uid === this.store.currentPart())?.bindsId ?? '');
   protected readonly existing = computed(() => {
@@ -191,8 +292,52 @@ export class StepInventory {
       if (!part) return;
       this.lastPressed.set(key);
       if (this.addAsPressed()) this.store.addControls([specForKey(key)], part);
+      // Show the part the control belongs to, then bring its row into view and flash it.
+      if (part !== this.store.currentPart()) this.store.currentPart.set(part);
+      setTimeout(() => this.flashRow(key));
     });
     inject(DestroyRef).onDestroy(() => sub.unsubscribe());
+  }
+
+  private readonly host = inject<ElementRef<HTMLElement>>(ElementRef);
+
+  /** Scroll a control's row into view and flash it (restarts on every press). */
+  private flashRow(key: string): void {
+    const row = this.host.nativeElement.querySelector<HTMLTableRowElement>(`tr[data-row-key="${CSS.escape(key)}"]`);
+    if (!row) return;
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const accent = getComputedStyle(row).getPropertyValue('--edb-accent').trim() || '#ff8c0d';
+    for (const cell of Array.from(row.cells)) {
+      cell.animate(
+        [{ backgroundColor: accent }, { backgroundColor: 'transparent' }],
+        { duration: reduce ? 1 : 1200, easing: 'ease-out' },
+      );
+    }
+  }
+
+  protected pick(uid: string, on: boolean): void {
+    this.picked.update((s) => {
+      const out = new Set(s);
+      if (on) out.add(uid);
+      else out.delete(uid);
+      return out;
+    });
+  }
+
+  protected pickAll(on: boolean): void {
+    this.picked.set(on ? new Set(this.controls().map((c) => c.uid)) : new Set());
+  }
+
+  protected async groupSelected(): Promise<void> {
+    // In list order.
+    const uids = this.controls().filter((c) => this.picked().has(c.uid)).map((c) => c.uid);
+    if (uids.length < 2) return;
+    if (await openGroupDialog(this.dialog, this.store, { uids })) this.picked.set(new Set());
+  }
+
+  protected editGroup(uid: string): void {
+    void openGroupDialog(this.dialog, this.store, { group: uid });
   }
 
   protected val(e: Event): string {

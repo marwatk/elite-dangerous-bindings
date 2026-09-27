@@ -58,7 +58,18 @@ export class DeviceDetail {
     return new Map(def.controls.map((c) => [controlKey(c.bindsId, c.key), c.key]));
   });
   protected readonly used = computed(() => new Set(this.bindings.devicesUsed().map((u) => u.device)));
-  protected readonly placed = computed(() => this.definition()?.controls.filter((c) => c.box).length ?? 0);
+  protected readonly placed = computed(() => {
+    const def = this.definition();
+    return (def?.controls.filter((c) => c.box).length ?? 0) + (def?.groups ?? []).reduce((n, g) => n + g.members.length, 0);
+  });
+  /** Group label of a grouped control ("H1 ↑"), for the controls table. */
+  protected groupOf(c: { bindsId: string; key: string; deviceIndex?: number }): string {
+    for (const g of this.definition()?.groups ?? []) {
+      const m = g.members.find((x) => x.bindsId === c.bindsId && x.key === c.key && x.deviceIndex === c.deviceIndex);
+      if (m) return `${g.label} ${m.marker}`;
+    }
+    return '';
+  }
   protected readonly highlight = signal<ReadonlySet<string>>(new Set());
 
   constructor() {

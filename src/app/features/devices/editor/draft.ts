@@ -6,15 +6,19 @@
  */
 import {
   Box,
+  ControlGroup,
   ControlKind,
   DeviceControl,
   DeviceDefinition,
   DeviceIdEntry,
   DeviceSource,
+  GroupLayoutKind,
+  ImagePoint,
   InputCorrection,
   UsbId,
 } from '../../../core/data/catalog.types';
 import { extForType, usbFromBindsId } from '../../../core/devices/device-files';
+import { CanvasSettings } from './canvas-padding';
 import { sameBox } from '../../../core/devices/geometry';
 
 export interface DraftId {
@@ -51,6 +55,24 @@ export interface DraftControl {
   kind: ControlKind;
   image?: number;
   box?: Box;
+  /** Leader line (image pixels, anchor last); only with a box. */
+  leader?: ImagePoint[];
+}
+
+/** Controls sharing one box (hat, rocker, encoder…). Members are control uids of one part, in row order. */
+export interface DraftGroup {
+  uid: string;
+  /** uid of the primary DraftId. */
+  part: string;
+  /** id in device.json (kept from an imported definition). */
+  id?: string;
+  label: string;
+  layout: GroupLayoutKind;
+  showLabel: boolean;
+  members: { control: string; marker: string }[];
+  image?: number;
+  box?: Box;
+  leader?: ImagePoint[];
 }
 
 export interface EditorDraft {
@@ -65,8 +87,13 @@ export interface EditorDraft {
   ids: DraftId[];
   images: DraftImage[];
   controls: DraftControl[];
+  groups?: DraftGroup[];
   keyBindsIds?: string[];
   inputCorrections?: Record<string, InputCorrection>;
+  /** Cards draw box outlines (photos); off for artwork with printed boxes. Absent: on for new devices. */
+  drawBoxes?: boolean;
+  /** Canvas around the images (background, margin, 16:9); defaults when absent. */
+  canvas?: Partial<CanvasSettings>;
   updated: number;
 }
 
@@ -80,7 +107,7 @@ export function newUid(): string {
 }
 
 export function emptyDraft(): EditorDraft {
-  return { version: 1, baseId: null, name: '', id: '', idEdited: false, ids: [], images: [], controls: [], updated: Date.now() };
+  return { version: 1, baseId: null, name: '', id: '', idEdited: false, ids: [], images: [], controls: [], drawBoxes: true, updated: Date.now() };
 }
 
 export function isPrimary(d: EditorDraft, id: DraftId): boolean {
@@ -118,10 +145,48 @@ export function isSharedHalf(c: DraftControl, controls: DraftControl[]): boolean
   return !c.box && !!axisBaseOf(c, controls);
 }
 
-/** Controls that need a box of their own (checklist). */
-export function placeableControls(d: EditorDraft): DraftControl[] {
+/** The group a control belongs to, if any. */
+export function groupOfControl(d: EditorDraft, uid: string): DraftGroup | undefined {
+  return d.groups?.find((g) => g.members.some((m) => m.control === uid));
+}
+
+/** Something drawn as one box in the Place step: a control, or a whole group (`group` set, uid = group uid). */
+export interface PlaceItem extends DraftControl {
+  group?: DraftGroup;
+}
+
+/** A group as a place item: label, box and leader of the group; key sums up its members. */
+export function groupItem(d: EditorDraft, g: DraftGroup): PlaceItem {
+  const first = d.controls.find((c) => c.uid === g.members[0]?.control);
+  const item: PlaceItem = {
+    uid: g.uid,
+    part: g.part,
+    key: `${first?.key ?? 'group'}${g.members.length > 1 ? ` +${g.members.length - 1}` : ''}`,
+    label: g.label,
+    kind: first?.kind ?? 'button',
+    group: g,
+  };
+  if (g.box) {
+    item.box = g.box;
+    item.image = g.image ?? 0;
+  }
+  if (g.leader) item.leader = g.leader;
+  return item;
+}
+
+/** Things that need a box (checklist): controls with a box of their own, and groups (where their first member is). */
+export function placeableControls(d: EditorDraft): PlaceItem[] {
   const parts = new Set(primaryIds(d).map((i) => i.uid));
-  return d.controls.filter((c) => parts.has(c.part) && !isSharedHalf(c, d.controls));
+  const firstMember = new Map((d.groups ?? []).filter((g) => g.members.length).map((g) => [g.members[0].control, g]));
+  const grouped = new Set((d.groups ?? []).flatMap((g) => g.members.map((m) => m.control)));
+  const out: PlaceItem[] = [];
+  for (const c of d.controls) {
+    if (!parts.has(c.part)) continue;
+    const g = firstMember.get(c.uid);
+    if (g) out.push(groupItem(d, g));
+    else if (!grouped.has(c.uid) && !isSharedHalf(c, d.controls)) out.push(c);
+  }
+  return out;
 }
 
 /** File name for each image on export. Keeps existing names when unique and of the same type. */
@@ -149,6 +214,11 @@ function withUsb(id: DraftId): DeviceIdEntry {
   return e;
 }
 
+/** Whether cards draw box outlines: the draft's setting, else on for a new device (older autosaves). */
+export function drawsBoxes(d: Pick<EditorDraft, 'drawBoxes' | 'baseId'>): boolean {
+  return d.drawBoxes ?? d.baseId === null;
+}
+
 /** The draft as a device definition (what device.json will hold). */
 export function draftToDefinition(d: EditorDraft, source: DeviceSource = 'user'): DeviceDefinition {
   const files = imageFileNames(d);
@@ -160,6 +230,17 @@ export function draftToDefinition(d: EditorDraft, source: DeviceSource = 'user')
     images: d.images.map((img, i) => ({ file: files[i], width: Math.round(img.width), height: Math.round(img.height) })),
     controls: [],
   };
+  if (drawsBoxes(d)) def.drawBoxes = true;
+  const grouped = new Set((d.groups ?? []).flatMap((g) => g.members.map((m) => m.control)));
+  const groups: ControlGroup[] = [];
+  const groupIds = new Set<string>();
+  const groupId = (g: DraftGroup) => {
+    const base = g.id || g.label.normalize('NFKD').replace(/[^A-Za-z0-9_-]+/g, '-').replace(/^[-_]+|-+$/g, '') || 'group';
+    let id = base;
+    for (let n = 2; groupIds.has(id); n++) id = `${base}-${n}`;
+    groupIds.add(id);
+    return id;
+  };
   if (d.keyBindsIds?.length) def.keyBindsIds = d.keyBindsIds.filter((k) => d.ids.some((i) => i.bindsId === k));
   if (d.inputCorrections && Object.keys(d.inputCorrections).length) def.inputCorrections = d.inputCorrections;
   for (const id of d.ids) {
@@ -169,14 +250,27 @@ export function draftToDefinition(d: EditorDraft, source: DeviceSource = 'user')
       const label = (part !== id.uid && id.labelOverrides?.[c.key]) || c.label;
       const out: DeviceControl = { bindsId: id.bindsId, key: c.key, label, kind: c.kind };
       if (id.deviceIndex !== undefined) out.deviceIndex = id.deviceIndex;
-      const src = c.box ? c : isSharedHalf(c, d.controls) ? axisBaseOf(c, d.controls) : undefined;
-      if (src?.box && (src.image ?? 0) < d.images.length) {
+      const src = grouped.has(c.uid) ? undefined : c.box ? c : isSharedHalf(c, d.controls) ? axisBaseOf(c, d.controls) : undefined;
+      if (src?.box && !grouped.has(src.uid) && (src.image ?? 0) < d.images.length) {
         out.image = src.image ?? 0;
         out.box = { ...src.box };
+        if (src.leader?.length) out.leader = src.leader.map((p) => ({ ...p }));
       }
       def.controls.push(out);
     }
+    for (const g of d.groups ?? []) {
+      if (g.part !== part || !g.box || (g.image ?? 0) >= d.images.length) continue;
+      const members = g.members
+        .map((m) => ({ c: d.controls.find((c) => c.uid === m.control), marker: m.marker }))
+        .filter((m): m is { c: DraftControl; marker: string } => !!m.c)
+        .map((m) => ({ bindsId: id.bindsId, ...(id.deviceIndex !== undefined ? { deviceIndex: id.deviceIndex } : {}), key: m.c.key, marker: m.marker }));
+      const out: ControlGroup = { id: groupId(g), label: g.label, layout: g.layout, image: g.image ?? 0, box: { ...g.box }, members };
+      if (!g.showLabel) out.showLabel = false;
+      if (g.leader?.length) out.leader = g.leader.map((p) => ({ ...p }));
+      groups.push(out);
+    }
   }
+  if (groups.length) def.groups = groups;
   return def;
 }
 
@@ -184,7 +278,7 @@ export function draftToDefinition(d: EditorDraft, source: DeviceSource = 'user')
 function signature(controls: DeviceControl[]): string {
   return JSON.stringify(
     controls
-      .map((c) => [c.key, c.kind, c.box ? (c.image ?? 0) : null, c.box ?? null])
+      .map((c) => [c.key, c.kind, c.box ? (c.image ?? 0) : null, c.box ?? null, c.box ? (c.leader ?? null) : null])
       .sort((a, b) => String(a[0]).localeCompare(String(b[0]))),
   );
 }
@@ -223,18 +317,35 @@ export function definitionToDraft(def: DeviceDefinition, images: Blob[]): Editor
         if (c.box) {
           dc.box = { ...c.box };
           dc.image = c.image ?? 0;
+          if (c.leader?.length) dc.leader = c.leader.map((p) => ({ ...p }));
         }
         controls.push(dc);
       }
     }
     ids.push(id);
   }
+  // Groups: kept for the part their first member belongs to (an alias repeats its primary's groups).
+  const groups: DraftGroup[] = [];
+  for (const g of def.groups ?? []) {
+    const m0 = g.members[0];
+    const id = m0 && ids.find((i) => i.bindsId === m0.bindsId && (i.deviceIndex ?? undefined) === (m0.deviceIndex ?? undefined) && !i.aliasOf);
+    if (!id) continue;
+    const members = g.members
+      .map((m) => ({ control: controls.find((c) => c.part === id.uid && c.key === m.key)?.uid, marker: m.marker }))
+      .filter((m): m is { control: string; marker: string } => !!m.control && !groups.some((x) => x.members.some((y) => y.control === m.control)));
+    if (!members.length) continue;
+    const dg: DraftGroup = { uid: newUid(), part: id.uid, id: g.id, label: g.label, layout: g.layout ?? 'stack', showLabel: g.showLabel !== false, members, image: g.image ?? 0, box: { ...g.box } };
+    if (g.leader?.length) dg.leader = g.leader.map((p) => ({ ...p }));
+    groups.push(dg);
+  }
   // Axis halves drawn exactly on their axis's box become shared.
   for (const c of controls) {
     const base = axisBaseOf(c, controls);
     if (c.box && base?.box && sameBox(c.box, base.box) && (c.image ?? 0) === (base.image ?? 0)) {
+      if (c.leader && !base.leader) base.leader = c.leader;
       delete c.box;
       delete c.image;
+      delete c.leader;
     }
   }
   return {
@@ -255,6 +366,8 @@ export function definitionToDraft(def: DeviceDefinition, images: Blob[]): Editor
       height: img.height,
     })),
     controls,
+    drawBoxes: !!def.drawBoxes,
+    ...(groups.length ? { groups } : {}),
     keyBindsIds: def.keyBindsIds ? [...def.keyBindsIds] : undefined,
     inputCorrections: def.inputCorrections ? JSON.parse(JSON.stringify(def.inputCorrections)) : undefined,
     updated: Date.now(),

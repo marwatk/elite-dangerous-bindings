@@ -53,6 +53,14 @@
               } @else {
                 <span class="lbl">{{ c.label || '(no label)' }}</span>
               }
+              @if (c.group; as g) {
+                <span class="key group-key">
+                  <mat-icon inline>{{ g.layout === 'row' ? 'view_column' : 'table_rows' }}</mat-icon>
+                  @for (m of g.members; track m.control) {
+                    <app-marker-icon [marker]="m.marker" />
+                  }
+                </span>
+              }
               <span class="key">{{ c.key }}{{ multiPart() ? ' · ' + partName(c.part) : '' }}{{ c.box && (c.image ?? 0) !== store.imageIndex() ? ' · image ' + ((c.image ?? 0) + 1) : '' }}</span>
             </div>
           </div>
@@ -102,12 +110,121 @@
         <button matIconButton type="button" (click)="deleteSelected()" [disabled]="!selectedPlaced().length && !store.activeControl()?.box" matTooltip="Remove box (Delete)" aria-label="Remove box">
           <mat-icon>delete</mat-icon>
         </button>
+        <span class="sep"></span>
+        <button
+          matIconButton
+          type="button"
+          [class.on]="lineMode()"
+          (click)="toggleLineMode()"
+          [disabled]="!lineTarget()"
+          matTooltip="Draw a line from the selected box to its control (L, or Alt-click the control)"
+          aria-label="Draw line"
+          data-testid="draw-line"
+        >
+          <mat-icon>polyline</mat-icon>
+        </button>
+        <span class="sep"></span>
+        <button
+          matButton
+          type="button"
+          [class.on]="canvasOpen()"
+          (click)="canvasOpen.set(!canvasOpen())"
+          matTooltip="Background around the photo, margin and output size"
+          aria-label="Canvas"
+          [attr.aria-expanded]="canvasOpen()"
+          data-testid="canvas-button"
+        >
+          <mat-icon>aspect_ratio</mat-icon>Canvas
+        </button>
         <span class="spacer"></span>
         <mat-slide-toggle [checked]="autoAdvance()" (change)="autoAdvance.set($event.checked)">Auto-advance</mat-slide-toggle>
       </div>
 
+      @if (canvasOpen()) {
+        <div class="canvas-pop" role="dialog" aria-label="Canvas" data-testid="canvas-panel">
+          <div class="pop-head">
+            <strong><mat-icon>aspect_ratio</mat-icon>Canvas</strong>
+            <span class="spacer"></span>
+            <button matIconButton type="button" (click)="canvasOpen.set(false)" aria-label="Close"><mat-icon>close</mat-icon></button>
+          </div>
+          <p class="hint">
+            Put boxes beside the photo wherever they fit: the exported image grows to hold them (dashed outline), filled with
+            this background.
+          </p>
+          <div class="pop-label">Background</div>
+          <mat-button-toggle-group [value]="store.canvas().background.kind" (change)="setBackground($event.value)" aria-label="Background" hideSingleSelectionIndicator>
+            <mat-button-toggle value="auto" data-testid="bg-auto">Auto-detect</mat-button-toggle>
+            <mat-button-toggle value="color" data-testid="bg-color">Colour</mat-button-toggle>
+            <mat-button-toggle value="transparent" data-testid="bg-transparent">Transparent</mat-button-toggle>
+          </mat-button-toggle-group>
+          <div class="pop-row">
+            @switch (store.canvas().background.kind) {
+              @case ('auto') {
+                @if (detected(); as d) {
+                  @if (d.color) {
+                    <span class="swatch" [style.background]="d.color"></span>
+                    <span>Detected <span class="mono" data-testid="detected-colour">{{ d.color }}</span> from the photo's border</span>
+                  } @else {
+                    <span>The photo's border is transparent, so the space around it stays transparent.</span>
+                  }
+                } @else {
+                  <span class="hint">Detecting…</span>
+                }
+              }
+              @case ('color') {
+                <input type="color" [value]="pickedColour()" (input)="setBackground('color', $any($event.target).value)" aria-label="Background colour" data-testid="bg-picker" />
+                @for (sw of swatches; track sw.color) {
+                  <button
+                    type="button"
+                    class="swatch"
+                    [class.picked]="pickedColour() === sw.color"
+                    [style.background]="sw.color"
+                    (click)="setBackground('color', sw.color)"
+                    [matTooltip]="sw.name + ' ' + sw.color"
+                    [attr.aria-label]="sw.name"
+                  ></button>
+                }
+                @if (detected()?.color; as dc) {
+                  <button type="button" class="swatch" [class.picked]="pickedColour() === dc" [style.background]="dc" (click)="setBackground('color', dc)" [matTooltip]="'Detected ' + dc" aria-label="Detected colour"></button>
+                }
+                <span class="mono">{{ pickedColour() }}</span>
+              }
+              @case ('transparent') {
+                <span class="hint">Saved with transparency (WebP). Cards and diagrams show white behind it.</span>
+              }
+            }
+          </div>
+          @if (store.canvas().background.kind === 'auto' && detected()?.busy) {
+            <p class="busy"><mat-icon>info</mat-icon><span>The background looks busy, so this is its median colour — you may prefer a solid colour.</span></p>
+          }
+          <div class="pop-row">
+            <label class="margin">
+              Margin around boxes
+              <input class="num" type="number" min="0" step="8" [value]="store.canvas().margin" (change)="setMargin($event)" data-testid="canvas-margin" />
+              px
+            </label>
+          </div>
+          <div class="pop-row">
+            <mat-slide-toggle [checked]="store.canvas().aspect169" (change)="store.setCanvas({ aspect169: $event.checked })" data-testid="canvas-169">Keep 16:9</mat-slide-toggle>
+          </div>
+          @if (outputSize(); as o) {
+            <p class="out">
+              Output: <strong class="mono" data-testid="canvas-size">{{ o.width }} × {{ o.height }}</strong> px
+              @if (!canvasGrows()) {
+                <span class="hint">— the photo as it is</span>
+              } @else {
+                <span class="hint">— photo {{ image()!.width }} × {{ image()!.height }} + space for boxes</span>
+              }
+            </p>
+          }
+        </div>
+      }
+
       <div class="status" aria-live="polite">
-        @if (store.activeControl(); as a) {
+        @if (lineMode() && lineTarget(); as lt) {
+          <span class="now">{{ lt.label || lt.key }}</span>
+          — click the control this box labels to anchor its line (Esc cancels).
+        } @else if (store.activeControl(); as a) {
           <span class="now">{{ a.label || a.key }}</span>
           <span class="mono muted">{{ a.key }}</span>
           @if (a.box) {
@@ -120,15 +237,15 @@
         }
       </div>
 
-      <div class="viewport" #viewport (wheel)="onWheel($event)" [class.panning]="panMode()">
+      <div class="viewport" #viewport (wheel)="onWheel($event)" [class.panning]="panMode()" [class.line-mode]="lineMode()">
         @if (image(); as img) {
           <svg
             #svg
             tabindex="0"
             data-testid="place-canvas"
-            [attr.width]="img.width * zoom()"
-            [attr.height]="img.height * zoom()"
-            [attr.viewBox]="'0 0 ' + img.width + ' ' + img.height"
+            [attr.width]="view()!.w * zoom()"
+            [attr.height]="view()!.h * zoom()"
+            [attr.viewBox]="viewBox()"
             (pointerdown)="down($event)"
             (pointermove)="move($event)"
             (pointerup)="up($event)"
@@ -138,25 +255,105 @@
               <pattern id="edb-grid" [attr.width]="gridSize()" [attr.height]="gridSize()" patternUnits="userSpaceOnUse">
                 <path [attr.d]="'M' + gridSize() + ' 0H0V' + gridSize()" fill="none" class="gridline" [attr.stroke-width]="1 / zoom()" />
               </pattern>
+              <pattern id="edb-checker" [attr.width]="16 / zoom()" [attr.height]="16 / zoom()" patternUnits="userSpaceOnUse">
+                <rect [attr.width]="16 / zoom()" [attr.height]="16 / zoom()" fill="#ffffff" />
+                <rect [attr.width]="8 / zoom()" [attr.height]="8 / zoom()" fill="#dcdcdc" />
+                <rect [attr.x]="8 / zoom()" [attr.y]="8 / zoom()" [attr.width]="8 / zoom()" [attr.height]="8 / zoom()" fill="#dcdcdc" />
+              </pattern>
             </defs>
+            <rect class="backdrop" [attr.x]="view()!.x" [attr.y]="view()!.y" [attr.width]="view()!.w" [attr.height]="view()!.h" [attr.fill]="backdrop()" />
             <image [attr.href]="imageUrl()" x="0" y="0" [attr.width]="img.width" [attr.height]="img.height" preserveAspectRatio="none" />
             @if (showGrid()) {
-              <rect x="0" y="0" [attr.width]="img.width" [attr.height]="img.height" fill="url(#edb-grid)" pointer-events="none" />
+              <rect [attr.x]="view()!.x" [attr.y]="view()!.y" [attr.width]="view()!.w" [attr.height]="view()!.h" fill="url(#edb-grid)" pointer-events="none" />
+            }
+            <path class="outside" [attr.d]="outsidePath()" />
+            @if (canvasBounds(); as cb) {
+              <rect
+                class="canvas-outline"
+                [class.grown]="canvasGrows()"
+                data-testid="canvas-outline"
+                [attr.x]="cb.x"
+                [attr.y]="cb.y"
+                [attr.width]="cb.w"
+                [attr.height]="cb.h"
+                [attr.stroke-width]="stroke() * 0.75"
+                [attr.stroke-dasharray]="8 / zoom() + ' ' + 5 / zoom()"
+              />
+            }
+            @for (l of leaders(); track l.uid) {
+              <g class="leader" [class.target]="lineTarget()?.uid === l.uid" [attr.data-leader-of]="l.uid">
+                <path [attr.d]="l.d" [attr.stroke-width]="stroke()" />
+                <circle [attr.cx]="l.anchor.x" [attr.cy]="l.anchor.y" [attr.r]="dotRadius() * 1.4" />
+              </g>
+            }
+            @if (targetPath().length) {
+              <path class="leader-hit" data-leader-seg [attr.d]="targetPathD()" [attr.stroke-width]="handleSize()" />
             }
             @for (b of boxes(); track b.uid) {
               <g class="box" [attr.data-uid]="b.uid" [class.active]="store.activeUid() === b.uid" [class.sel]="store.selected().has(b.uid)">
                 <rect [attr.x]="b.box.x" [attr.y]="b.box.y" [attr.width]="b.box.w" [attr.height]="b.box.h" [attr.stroke-width]="stroke()" />
-                <text [attr.x]="b.box.x + b.box.h * 0.2" [attr.y]="b.box.y + b.box.h / 2" [attr.font-size]="fontSize(b.box)">{{ b.label || b.key }}</text>
+                @if (groupShapes().get(b.uid); as gs) {
+                  <path class="group-div" [attr.d]="gs.dividers" [attr.stroke-width]="stroke() / 2" />
+                  @if (gs.labelRect; as l) {
+                    <text class="group-label" [attr.transform]="'translate(' + (l.x + l.w / 2) + ' ' + (l.y + l.h / 2) + ') rotate(-90)'" [attr.font-size]="gs.labelSize">
+                      {{ b.label }}
+                    </text>
+                  }
+                  @for (m of gs.members; track m.index) {
+                    @if (m.symbol; as sym) {
+                      <g class="group-marker" [attr.transform]="m.transform">
+                        <path [attr.d]="sym.d" [attr.transform]="sym.transform ?? null" [class.filled]="sym.fill" />
+                      </g>
+                    } @else {
+                      <text class="group-mtext" [attr.x]="m.markerRect.x + m.markerRect.w / 2" [attr.y]="m.markerRect.y + m.markerRect.h / 2" [attr.font-size]="m.markerRect.h * 0.45">
+                        {{ m.marker || '?' }}
+                      </text>
+                    }
+                    <text [attr.x]="m.textRect.x + m.textRect.h * 0.2" [attr.y]="m.textRect.y + m.textRect.h / 2" [attr.font-size]="fontSize(m.textRect)">{{ m.name }}</text>
+                  }
+                } @else {
+                  <text [attr.x]="b.box.x + b.box.h * 0.2" [attr.y]="b.box.y + b.box.h / 2" [attr.font-size]="fontSize(b.box)">{{ b.label || b.key }}</text>
+                }
               </g>
             }
             @if (drawRect(); as r) {
               <rect class="drawing" [attr.x]="r.x" [attr.y]="r.y" [attr.width]="r.w" [attr.height]="r.h" [attr.stroke-width]="stroke()" />
             }
             @for (x of guides().x; track $index) {
-              <line class="guide" [attr.x1]="x" [attr.x2]="x" y1="0" [attr.y2]="img.height" [attr.stroke-width]="stroke() / 2" />
+              <line class="guide" [attr.x1]="x" [attr.x2]="x" [attr.y1]="view()!.y" [attr.y2]="view()!.y + view()!.h" [attr.stroke-width]="stroke() / 2" />
             }
             @for (y of guides().y; track $index) {
-              <line class="guide" x1="0" [attr.x2]="img.width" [attr.y1]="y" [attr.y2]="y" [attr.stroke-width]="stroke() / 2" />
+              <line class="guide" [attr.x1]="view()!.x" [attr.x2]="view()!.x + view()!.w" [attr.y1]="y" [attr.y2]="y" [attr.stroke-width]="stroke() / 2" />
+            }
+            @if (lineTarget(); as lt) {
+              @for (q of lt.leader ?? []; track $index; let i = $index; let last = $last) {
+                @if (last) {
+                  <circle
+                    class="leader-point anchor"
+                    [class.sel]="selPoint()?.uid === lt.uid && selPoint()?.index === i"
+                    [attr.data-leader-point]="i"
+                    [attr.cx]="q.x"
+                    [attr.cy]="q.y"
+                    [attr.r]="handleSize() * 0.6"
+                    [attr.stroke-width]="stroke() / 2"
+                  >
+                    <title>Line anchor: drag to move</title>
+                  </circle>
+                } @else {
+                  <rect
+                    class="leader-point"
+                    [class.sel]="selPoint()?.uid === lt.uid && selPoint()?.index === i"
+                    [attr.data-leader-point]="i"
+                    [attr.x]="q.x - handleSize() / 2"
+                    [attr.y]="q.y - handleSize() / 2"
+                    [attr.width]="handleSize()"
+                    [attr.height]="handleSize()"
+                    [attr.stroke-width]="stroke() / 2"
+                  >
+                    <title>Bend: drag to move, Delete removes it</title>
+                  </rect>
+                }
+              }
             }
             @if (handleBox(); as hb) {
               @for (h of handles; track h) {
@@ -174,16 +371,37 @@
           </svg>
         }
       </div>
-      <p class="hint">Ctrl + wheel (or pinch) zooms · Space-drag, middle-drag or the hand tool pans · Shift-click selects several boxes · N jumps to the next unplaced control.</p>
+      <p class="hint">
+        Ctrl + wheel (or pinch) zooms · Space-drag, middle-drag or the hand tool pans · Shift-click selects several boxes · N jumps to the next unplaced control ·
+        Lines: L or Alt-click sets the selected box's anchor, drag the dot to move it, click the line to add a bend · Boxes may go
+        beside the photo: the exported image grows to the dashed outline.
+      </p>
 
       @if (store.activeControl(); as a) {
         <div class="inspector">
-          <strong>{{ a.key }}</strong>
+          <strong>{{ a.group ? (a.label || 'Group') : a.key }}</strong>
+          @if (a.group) {
+            <button matButton="tonal" type="button" (click)="editGroup(a.uid)" data-testid="place-edit-group"><mat-icon>table_rows</mat-icon>Edit group…</button>
+          }
           @if (a.box) {
             @for (f of ['x', 'y', 'w', 'h']; track f) {
               <label>{{ f }} <input class="num" type="number" [value]="$any(a.box)[f]" (change)="setBoxField(a.uid, $any(f), $event)" /></label>
             }
             <button matButton type="button" (click)="store.removeBoxes([a.uid])"><mat-icon>backspace</mat-icon>Remove box</button>
+            @if ((a.image ?? 0) === store.imageIndex()) {
+              <button
+                matButton
+                type="button"
+                (click)="store.selected.set(selectOnly(a.uid)); lineMode.set(true)"
+                [class.on]="lineMode()"
+                matTooltip="Click the control on the image to anchor the line (Esc cancels)"
+              >
+                <mat-icon>polyline</mat-icon>{{ a.leader?.length ? 'Move line anchor' : 'Draw line' }}
+              </button>
+            }
+            @if (a.leader?.length) {
+              <button matButton type="button" (click)="removeLine(a.uid)" data-testid="remove-line"><mat-icon>timeline</mat-icon>Remove line</button>
+            }
           }
           @if (previous()?.box) {
             <button matButton type="button" (click)="shareWithPrevious()" matTooltip="Use exactly the same box as {{ previous()!.label || previous()!.key }} (e.g. a hat's directions)">

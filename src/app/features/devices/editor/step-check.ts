@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, computed, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, computed, effect, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
@@ -61,6 +61,13 @@ const FILLER = [
     .warning mat-icon {
       color: var(--edb-warning);
     }
+    .hint mat-icon {
+      color: var(--edb-muted);
+    }
+    .issue.hint {
+      font-size: inherit;
+      color: var(--edb-muted);
+    }
     .ok {
       color: var(--edb-ok);
     }
@@ -105,13 +112,14 @@ const FILLER = [
           {{ store.draft().ids.length }} IDs · {{ store.draft().controls.length }} controls · {{ store.placedCount() }}/{{ store.placeable().length }} placed ·
           {{ store.draft().images.length }} images
         </p>
+        @if (!problems()) {
+          <p class="ok"><mat-icon inline>check_circle</mat-icon> Everything looks good. device.json matches the schema.</p>
+        }
         @for (i of store.issues(); track $index) {
           <button type="button" class="issue" [class]="i.level" (click)="fix(i)">
-            <mat-icon>{{ i.level === 'error' ? 'error' : 'warning' }}</mat-icon>
+            <mat-icon>{{ i.level === 'error' ? 'error' : i.level === 'hint' ? 'lightbulb' : 'warning' }}</mat-icon>
             <span>{{ i.message }}</span>
           </button>
-        } @empty {
-          <p class="ok"><mat-icon inline>check_circle</mat-icon> Everything looks good. device.json matches the schema.</p>
         }
       </div>
     </div>
@@ -123,7 +131,10 @@ export class StepCheck {
   protected readonly mode = signal<'labels' | 'filler' | 'keys'>('labels');
   private readonly recentAxes = signal<ReadonlySet<string>>(new Set());
 
-  protected readonly imageUrl = computed(() => this.store.urlFor(this.store.draft().images[this.store.imageIndex()]?.blob));
+  /** Errors and warnings (hints don't count). */
+  protected readonly problems = computed(() => this.store.issues().filter((i) => i.level !== 'hint').length);
+  /** The image drawn on its canvas (grown to hold boxes beside the photo), as exported. */
+  protected readonly imageUrl = signal<string | null>(null);
   protected readonly highlight = computed(() => {
     const set = new Set(this.recentAxes());
     for (const r of this.input.held()) set.add(controlKey(r.device, r.key));
@@ -138,6 +149,20 @@ export class StepCheck {
   });
 
   constructor() {
+    let run = 0;
+    effect(() => {
+      const d = this.store.draft();
+      const i = this.store.imageIndex();
+      const n = ++run;
+      if (!d.images[i]) {
+        this.imageUrl.set(null);
+        return;
+      }
+      void this.store
+        .renderCanvas(i, d)
+        .then((img) => n === run && this.imageUrl.set(this.store.urlFor(img.blob)))
+        .catch(() => n === run && this.imageUrl.set(this.store.urlFor(d.images[i].blob)));
+    });
     const timers = new Map<string, ReturnType<typeof setTimeout>>();
     const sub = this.input.events.pipe(filter((e) => e.kind === 'axis' && e.pressed)).subscribe((e) => {
       const k = controlKey(e.ref.device, e.ref.key);

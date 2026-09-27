@@ -94,4 +94,59 @@ describe('EditorStore', () => {
     store.removeImage(0);
     expect(store.draft().controls[0].box).toBeUndefined();
   });
+
+  it('edits leader lines with undo, keeps them when boxes move and drops them with the box', async () => {
+    const { store } = setup();
+    await store.open(null, { bindsId: '12345678' });
+    store.addImages([{ uid: 'i1', name: 'a', blob: new Blob([]), type: 'webp', width: 1000, height: 500 }]);
+    store.addControls(controlsFromCounts(2, 0, 0));
+    const [a, b] = store.draft().controls;
+    store.setLeader(b.uid, [{ x: 5, y: 5 }]);
+    expect(store.draft().controls[1].leader).toBeUndefined(); // no box, no line
+    store.setBoxes(new Map([[a.uid, { x: 10, y: 10, w: 100, h: 20 }]]));
+    store.setLeader(a.uid, [{ x: 400, y: 300 }]);
+    store.setLeader(a.uid, [{ x: 200, y: 300 }, { x: 400, y: 300 }]);
+    store.setBoxes(new Map([[a.uid, { x: 50, y: 10, w: 100, h: 20 }]]));
+    expect(store.draft().controls[0].leader).toEqual([{ x: 200, y: 300 }, { x: 400, y: 300 }]);
+    store.undo();
+    store.undo();
+    expect(store.draft().controls[0].leader).toEqual([{ x: 400, y: 300 }]);
+    store.redo();
+    store.setLeader(a.uid, null);
+    expect(store.draft().controls[0].leader).toBeUndefined();
+    store.undo();
+    expect(store.draft().controls[0].leader?.length).toBe(2);
+    store.removeBoxes([a.uid]);
+    expect(store.draft().controls[0].leader).toBeUndefined();
+  });
+
+  it('keeps canvas settings in the draft with undo, and exports boxes beside the photo on a grown canvas', async () => {
+    const { store } = setup();
+    await store.open(null, { bindsId: '12345678' });
+    store.setName('T');
+    store.addImages([{ uid: 'i1', name: 'a', blob: new Blob([]), type: 'webp', width: 400, height: 300 }]);
+    store.addControls(controlsFromCounts(1, 0, 0));
+    const [a] = store.draft().controls;
+    store.setBoxes(new Map([[a.uid, { x: 350, y: 10, w: 100, h: 20 }]]));
+    expect(store.definition().images[0]).toMatchObject({ width: 498, height: 300 });
+    expect(store.definition().controls[0].box).toEqual({ x: 350, y: 10, w: 100, h: 20 });
+    store.setCanvas({ margin: 0, background: { kind: 'color', color: '#ff0000' } });
+    expect(store.definition().images[0].width).toBe(450);
+    store.undo();
+    expect(store.canvas()).toMatchObject({ margin: 48, background: { kind: 'auto' } });
+    // The draft keeps the photo as it is.
+    expect(store.draft().images[0].width).toBe(400);
+  });
+
+  it('turns box outlines on when a new image is uploaded, and lets the user toggle them (undoable)', async () => {
+    const { store } = setup();
+    await store.open(null, { bindsId: '12345678' });
+    store.update((d) => ({ ...d, baseId: 'Edited', drawBoxes: false }));
+    store.addImages([{ uid: 'i1', name: 'photo', blob: new Blob([]), type: 'webp', width: 400, height: 300 }]);
+    expect(store.draft().drawBoxes).toBe(true);
+    store.setDrawBoxes(false);
+    expect(store.definition().drawBoxes).toBeUndefined();
+    store.undo();
+    expect(store.definition().drawBoxes).toBe(true);
+  });
 });

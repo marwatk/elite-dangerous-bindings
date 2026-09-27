@@ -5,7 +5,7 @@
  * specialisations) but works on the app's parsed document and device JSON.
  */
 import { ActionState, InputRef, SlotBinding, SlotName, isBound } from '../../core/binds/binds-document';
-import { ActionInfo, Box, DeviceDefinition, DeviceSummary } from '../../core/data/catalog.types';
+import { ActionInfo, Box, ControlGroup, DeviceControl, DeviceDefinition, DeviceSummary, GroupLayoutKind, ImagePoint } from '../../core/data/catalog.types';
 
 export interface CardOptions {
   /** ActionInfo.group values to show. */
@@ -42,6 +42,20 @@ export interface CardSpot {
   /** Elite control keys that share this box (axis and its halves). */
   controls: string[];
   entries: CardEntry[];
+  /** Leader line from the box to the control (image pixels, anchor last), if the device has one. */
+  leader?: ImagePoint[];
+}
+
+/** A control group on a device card: one row/cell per member, in member order (unbound members stay, empty). */
+export interface GroupSpot {
+  id: string;
+  label: string;
+  layout: GroupLayoutKind;
+  showLabel: boolean;
+  box: Box;
+  image: number;
+  leader?: ImagePoint[];
+  members: { key: string; marker: string; entries: CardEntry[] }[];
 }
 
 export interface DeviceCard {
@@ -54,6 +68,9 @@ export interface DeviceCard {
   /** `bindsId::index` keys this card draws. */
   covers: string[];
   spots: CardSpot[];
+  groups: GroupSpot[];
+  /** The artwork has no printed boxes: draw them (and show empty ones). */
+  drawBoxes?: boolean;
 }
 
 export interface KeyboardRow {
@@ -350,6 +367,33 @@ function addUnique(list: CardEntry[], e: CardEntry): void {
   if (!list.some((x) => x.text === e.text && x.kind === e.kind && x.modifier === e.modifier)) list.push(e);
 }
 
+export type ResolvedInput = { control: DeviceControl & { box: Box } } | { group: ControlGroup; index: number };
+
+/**
+ * Where a control is drawn on a card: its own box or its row in a group.
+ * Exact matches win over the fallback from an axis half to its axis.
+ */
+export function resolveInput(def: DeviceDefinition, cardIndex: number, device: string, deviceIndex: number, key: string): ResolvedInput | undefined {
+  const control = (k: string) =>
+    def.controls.find((c) => c.box && c.bindsId === device && c.key === k && (c.deviceIndex ?? cardIndex) === deviceIndex) as
+      | (DeviceControl & { box: Box })
+      | undefined;
+  const member = (k: string) => {
+    for (const group of def.groups ?? []) {
+      const index = group.members.findIndex((m) => m.bindsId === device && m.key === k && (m.deviceIndex ?? cardIndex) === deviceIndex);
+      if (index >= 0) return { group, index };
+    }
+    return undefined;
+  };
+  for (const k of new Set([key, baseKey(key)])) {
+    const c = control(k);
+    if (c) return { control: c };
+    const g = member(k);
+    if (g) return g;
+  }
+  return undefined;
+}
+
 /** Find the control box for a key on a card, falling back from an axis half to its axis. */
 export function findControl(def: DeviceDefinition, cardIndex: number, device: string, deviceIndex: number, key: string) {
   const match = (k: string) =>
@@ -367,17 +411,68 @@ export function buildCards(input: CardInputs, choices?: CardChoice[]): CardSet {
   const modNumber = new Map(modifiers.map((m) => [modifierSig(m.keys), m.number]));
   const deviceSummary = new Map(devices.map((d) => [d.id, d]));
 
-  const deviceCards: (DeviceCard & { spotMap: Map<string, CardSpot>; def?: DeviceDefinition })[] = picked.map((c) => ({
-    kind: 'device',
-    id: `${c.deviceId}::${c.deviceIndex}`,
-    deviceId: c.deviceId,
-    deviceIndex: c.deviceIndex,
-    name: (deviceSummary.get(c.deviceId)?.name ?? c.deviceId) + (c.deviceIndex > 0 ? ` #${c.deviceIndex + 1}` : ''),
-    covers: c.covers,
-    spots: [],
-    spotMap: new Map(),
-    def: definition(c.deviceId),
-  }));
+  type BuildCard = DeviceCard & { spotMap: Map<string, CardSpot>; groupMap: Map<string, GroupSpot>; def?: DeviceDefinition };
+  const deviceCards: BuildCard[] = picked.map((c) => {
+    const def = definition(c.deviceId);
+    return {
+      kind: 'device',
+      id: `${c.deviceId}::${c.deviceIndex}`,
+      deviceId: c.deviceId,
+      deviceIndex: c.deviceIndex,
+      name: (deviceSummary.get(c.deviceId)?.name ?? c.deviceId) + (c.deviceIndex > 0 ? ` #${c.deviceIndex + 1}` : ''),
+      covers: c.covers,
+      spots: [],
+      groups: [],
+      ...(def?.drawBoxes ? { drawBoxes: true } : {}),
+      spotMap: new Map(),
+      groupMap: new Map(),
+      def,
+    };
+  });
+  const boxKey = (img: number, b: Box) => `${img}:${b.x},${b.y},${b.w},${b.h}`;
+  const spotFor = (card: BuildCard, ctl: DeviceControl & { box: Box }): CardSpot => {
+    const img = ctl.image ?? 0;
+    const k = boxKey(img, ctl.box);
+    let spot = card.spotMap.get(k);
+    if (!spot) {
+      spot = { box: ctl.box, image: img, controls: [], entries: [] };
+      card.spotMap.set(k, spot);
+      card.spots.push(spot);
+    }
+    if (!spot.leader) {
+      // Any control sharing this box may carry the line (e.g. an axis for its halves).
+      const withLine = ctl.leader?.length ? ctl : card.def?.controls.find((c) => c.leader?.length && c.box && boxKey(c.image ?? 0, c.box) === k);
+      if (withLine?.leader) spot.leader = withLine.leader;
+    }
+    return spot;
+  };
+  const groupSpotFor = (card: BuildCard, g: ControlGroup): GroupSpot => {
+    // Alias IDs repeat a group in the same place: one spot per position.
+    const k = boxKey(g.image ?? 0, g.box);
+    let spot = card.groupMap.get(k);
+    if (!spot) {
+      spot = {
+        id: g.id,
+        label: g.label,
+        layout: g.layout ?? 'stack',
+        showLabel: g.showLabel !== false,
+        box: g.box,
+        image: g.image ?? 0,
+        ...(g.leader?.length ? { leader: g.leader } : {}),
+        members: g.members.map((m) => ({ key: m.key, marker: m.marker, entries: [] })),
+      };
+      card.groupMap.set(k, spot);
+      card.groups.push(spot);
+    }
+    return spot;
+  };
+  // Artwork without printed boxes shows every box, bound or not: the layout is part of the reference.
+  for (const card of deviceCards) {
+    if (!card.def?.drawBoxes) continue;
+    const covered = (bindsId: string, deviceIndex?: number) => card.covers.includes(`${bindsId}::${deviceIndex ?? card.deviceIndex}`);
+    for (const c of card.def.controls) if (c.box && covered(c.bindsId, c.deviceIndex)) spotFor(card, c as DeviceControl & { box: Box });
+    for (const g of card.def.groups ?? []) if (g.members.some((m) => covered(m.bindsId, m.deviceIndex))) groupSpotFor(card, g);
+  }
   const keyboard: KeyboardCard = { kind: 'keyboard', id: 'Keyboard', name: 'Keyboard', keys: new Map(), rows: [] };
   let keyboardUsed = actions.some((a) =>
     Object.values(a.slots).some((s) => s && isBound(s) && (s.device === 'Keyboard' || s.modifiers.some((m) => m.device === 'Keyboard'))),
@@ -403,18 +498,15 @@ export function buildCards(input: CardInputs, choices?: CardChoice[]): CardSet {
     let placed = false;
     for (const card of cards) {
       if (!card.def) continue;
-      const ctl = findControl(card.def, card.deviceIndex, r.device, r.deviceIndex, r.key);
-      if (!ctl?.box) continue;
-      const img = ctl.image ?? 0;
-      const k = `${img}:${ctl.box.x},${ctl.box.y},${ctl.box.w},${ctl.box.h}`;
-      let spot = card.spotMap.get(k);
-      if (!spot) {
-        spot = { box: ctl.box, image: img, controls: [], entries: [] };
-        card.spotMap.set(k, spot);
-        card.spots.push(spot);
+      const at = resolveInput(card.def, card.deviceIndex, r.device, r.deviceIndex, r.key);
+      if (!at) continue;
+      if ('group' in at) {
+        addUnique(groupSpotFor(card, at.group).members[at.index].entries, e);
+      } else {
+        const spot = spotFor(card, at.control);
+        if (!spot.controls.includes(r.key)) spot.controls.push(r.key);
+        addUnique(spot.entries, e);
       }
-      if (!spot.controls.includes(r.key)) spot.controls.push(r.key);
-      addUnique(spot.entries, e);
       placed = true;
     }
     // Definitions still loading count as placed so nothing flickers into the list.
@@ -452,11 +544,14 @@ export function buildCards(input: CardInputs, choices?: CardChoice[]): CardSet {
     }
   }
 
-  for (const c of deviceCards) c.spots.forEach((s) => sortEntries(s.entries));
+  for (const c of deviceCards) {
+    c.spots.forEach((s) => sortEntries(s.entries));
+    c.groups.forEach((g) => g.members.forEach((m) => sortEntries(m.entries)));
+  }
   for (const list of keyboard.keys.values()) sortEntries(list);
   keyboard.rows.sort((a, b) => a.entry.order - b.entry.order || a.entry.modifier - b.entry.modifier);
 
-  const cards: Card[] = deviceCards.map(({ spotMap: _s, def: _d, ...card }) => card);
+  const cards: Card[] = deviceCards.map(({ spotMap: _s, groupMap: _g, def: _d, ...card }) => card);
   if (keyboardUsed) cards.push(keyboard);
   const unplacedList = [...unplaced.values()].map((u) => ({ ...u, entries: sortEntries(u.entries) }));
   return { cards, modifiers, unplaced: unplacedList };
@@ -466,13 +561,16 @@ export function buildCards(input: CardInputs, choices?: CardChoice[]): CardSet {
 export function modifiersOnCard(card: Card): Set<number> {
   const set = new Set<number>();
   const add = (list: CardEntry[]) => list.forEach((e) => e.modifier && set.add(e.modifier));
-  if (card.kind === 'device') card.spots.forEach((s) => add(s.entries));
-  else card.keys.forEach(add);
+  if (card.kind === 'device') {
+    card.spots.forEach((s) => add(s.entries));
+    card.groups.forEach((g) => g.members.forEach((m) => add(m.entries)));
+  } else card.keys.forEach(add);
   return set;
 }
 
 /** Entries on a card, flattened. */
 export function cardEntries(card: Card): CardEntry[] {
-  return card.kind === 'device' ? card.spots.flatMap((s) => s.entries) : [...card.keys.values()].flat();
+  if (card.kind !== 'device') return [...card.keys.values()].flat();
+  return [...card.spots.flatMap((s) => s.entries), ...card.groups.flatMap((g) => g.members.flatMap((m) => m.entries))];
 }
 

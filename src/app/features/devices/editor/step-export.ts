@@ -1,17 +1,19 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { buildButtonMapExport, buildDeviceZip, controlsForBindsId, deviceJson } from '../../../core/devices/device-files';
 import { LocalDeviceStore } from '../../../core/devices/local-device-store.service';
 import { downloadBlob } from '../download';
+import { draftToDefinition, drawsBoxes, imageFileNames } from './draft';
 import { EditorStore } from './editor-store';
 
 @Component({
   selector: 'app-step-export',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MatButtonModule, MatIconModule],
+  imports: [MatButtonModule, MatIconModule, MatSlideToggleModule],
   styleUrls: ['./step-common.scss'],
   styles: `
     .tree {
@@ -51,6 +53,8 @@ import { EditorStore } from './editor-store';
       <div class="panel">
         <h2><mat-icon>folder_zip</mat-icon>{{ zipName() }}</h2>
         <pre class="tree">{{ tree() }}</pre>
+        <mat-slide-toggle [checked]="drawBoxes()" (change)="store.setDrawBoxes($event.checked)" data-testid="draw-boxes">Draw box outlines on cards</mat-slide-toggle>
+        <p class="hint">Turn off if your artwork already has boxes printed on it.</p>
         <p class="hint">
           Only include images you have the right to share (e.g. your own photo). CONTRIBUTING-DEVICE.md explains how to open the
           pull request and how to offer the <code>.buttonMap</code> to EDCD's EliteCustomButtonNames.
@@ -83,6 +87,7 @@ export class StepExport {
   protected readonly busy = signal(false);
 
   protected readonly errors = computed(() => this.store.issues().filter((i) => i.level === 'error'));
+  protected readonly drawBoxes = computed(() => drawsBoxes(this.store.draft()));
   protected readonly zipName = computed(() => `${this.store.draft().id || 'device'}.zip`);
   protected readonly tree = computed(() => {
     const def = this.store.definition();
@@ -98,8 +103,11 @@ export class StepExport {
     return lines.join('\n');
   });
 
-  private images() {
-    return this.store.draft().images.map((img, i) => ({ file: this.store.fileNames()[i], blob: img.blob }));
+  /** device.json and images as exported: each image drawn on its canvas, boxes moved to match. */
+  private async files() {
+    const d = await this.store.materialize();
+    const names = imageFileNames(d);
+    return { def: draftToDefinition(d), images: d.images.map((img, i) => ({ file: names[i], blob: img.blob })) };
   }
 
   private async run(fn: () => Promise<void>): Promise<void> {
@@ -114,11 +122,17 @@ export class StepExport {
   }
 
   protected downloadZip(): Promise<void> {
-    return this.run(async () => downloadBlob(await buildDeviceZip(this.store.definition(), this.images()), this.zipName()));
+    return this.run(async () => {
+      const { def, images } = await this.files();
+      downloadBlob(await buildDeviceZip(def, images), this.zipName());
+    });
   }
 
-  protected downloadJson(): void {
-    downloadBlob(new Blob([deviceJson(this.store.definition())], { type: 'application/json' }), 'device.json');
+  protected downloadJson(): Promise<void> {
+    return this.run(async () => {
+      const { def } = await this.files();
+      downloadBlob(new Blob([deviceJson(def)], { type: 'application/json' }), 'device.json');
+    });
   }
 
   protected downloadButtonMaps(): Promise<void> {
@@ -131,8 +145,8 @@ export class StepExport {
 
   protected save(): Promise<void> {
     return this.run(async () => {
-      const def = this.store.definition();
-      await this.local.save(def, this.images().map((i) => i.blob));
+      const { def, images } = await this.files();
+      await this.local.save(def, images.map((i) => i.blob));
       const isNew = !this.store.draft().baseId;
       if (isNew) {
         await this.store.clearDraft();

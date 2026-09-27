@@ -3,7 +3,7 @@
  * EDCD .buttonMap writing, the repo-layout .zip, and schema checks that
  * mirror schemas/device.schema.json (kept in sync by a unit test with ajv).
  */
-import { Box, DeviceControl, DeviceDefinition, DeviceIdEntry, DeviceImage, UsbId } from '../data/catalog.types';
+import { Box, ControlGroup, DeviceControl, DeviceDefinition, DeviceIdEntry, DeviceImage, GroupMember, ImagePoint, UsbId } from '../data/catalog.types';
 
 export const SCHEMA_REF = '../../schemas/device.schema.json';
 export const MAX_IMAGE_SIDE = 3840;
@@ -62,9 +62,14 @@ export function formatUsb(usb: UsbId | undefined): string {
 
 // ------------------------------------------------------------ device.json
 
+const round2 = (n: number) => Math.round(n * 100) / 100;
+
 function roundBox(b: Box): Box {
-  const r = (n: number) => Math.round(n * 100) / 100;
-  return { x: r(b.x), y: r(b.y), w: r(b.w), h: r(b.h) };
+  return { x: round2(b.x), y: round2(b.y), w: round2(b.w), h: round2(b.h) };
+}
+
+function roundPoint(p: ImagePoint): ImagePoint {
+  return { x: round2(p.x), y: round2(p.y) };
 }
 
 function orderId(e: DeviceIdEntry): DeviceIdEntry {
@@ -83,9 +88,27 @@ function orderControl(c: DeviceControl): DeviceControl {
   if (c.box) {
     out.image = c.image ?? 0;
     out.box = roundBox(c.box);
+    if (c.leader?.length) out.leader = c.leader.map(roundPoint);
   } else if (c.image !== undefined) {
     out.image = c.image;
   }
+  return out;
+}
+
+function orderGroup(g: ControlGroup): ControlGroup {
+  const out = { id: g.id, label: g.label } as ControlGroup;
+  out.layout = g.layout ?? 'stack';
+  if (g.showLabel === false) out.showLabel = false;
+  out.image = g.image ?? 0;
+  out.box = roundBox(g.box);
+  if (g.leader?.length) out.leader = g.leader.map(roundPoint);
+  out.members = g.members.map((m) => {
+    const o = { bindsId: m.bindsId } as GroupMember;
+    if (m.deviceIndex !== undefined) o.deviceIndex = m.deviceIndex;
+    o.key = m.key;
+    o.marker = m.marker;
+    return o;
+  });
   return out;
 }
 
@@ -98,7 +121,9 @@ export function normalizeDefinition(def: DeviceDefinition): DeviceDefinition {
   out.ids = def.ids.map(orderId);
   if (def.keyBindsIds?.length) out.keyBindsIds = [...def.keyBindsIds];
   out.images = def.images.map((i): DeviceImage => ({ file: i.file, width: Math.round(i.width), height: Math.round(i.height) }));
+  if (def.drawBoxes) out.drawBoxes = true;
   out.controls = def.controls.map(orderControl);
+  if (def.groups?.length) out.groups = def.groups.map(orderGroup);
   if (def.inputCorrections && Object.keys(def.inputCorrections).length) {
     out.inputCorrections = JSON.parse(JSON.stringify(def.inputCorrections));
   }
@@ -198,7 +223,7 @@ export function kindForKey(key: string): 'button' | 'axis' | 'hat' {
 export function schemaErrors(def: DeviceDefinition): string[] {
   const e: string[] = [];
   const d = def as unknown as Record<string, unknown>;
-  const allowed = new Set(['$schema', 'id', 'name', 'source', 'ids', 'keyBindsIds', 'images', 'controls', 'inputCorrections']);
+  const allowed = new Set(['$schema', 'id', 'name', 'source', 'ids', 'keyBindsIds', 'images', 'drawBoxes', 'controls', 'groups', 'inputCorrections']);
   for (const k of Object.keys(d)) if (!allowed.has(k)) e.push(`unknown property "${k}"`);
   if (typeof def.id !== 'string' || !DEVICE_ID_PATTERN.test(def.id)) e.push('id: letters, digits and dashes only, starting with a letter or digit');
   if (typeof def.name !== 'string' || def.name.length < 1) e.push('name is required');
@@ -216,7 +241,10 @@ export function schemaErrors(def: DeviceDefinition): string[] {
     if (!isInt(img.width, 1) || !isInt(img.height, 1)) e.push(`images[${i}]: width and height must be positive integers`);
   });
   if (!Array.isArray(def.controls)) e.push('controls must be a list');
+  const controlKeys = new Set(['bindsId', 'deviceIndex', 'key', 'label', 'kind', 'image', 'box', 'leader']);
+  const num = (n: unknown) => typeof n === 'number' && Number.isFinite(n);
   (def.controls ?? []).forEach((c, i) => {
+    for (const k of Object.keys(c)) if (!controlKeys.has(k)) e.push(`controls[${i}]: unknown property "${k}"`);
     if (typeof c.bindsId !== 'string') e.push(`controls[${i}].bindsId is required`);
     if (typeof c.key !== 'string' || !c.key) e.push(`controls[${i}].key is required`);
     if (typeof c.label !== 'string') e.push(`controls[${i}].label must be text`);
@@ -227,9 +255,81 @@ export function schemaErrors(def: DeviceDefinition): string[] {
     }
     if (c.box) {
       const b = c.box;
-      if (![b.x, b.y, b.w, b.h].every((n) => typeof n === 'number' && Number.isFinite(n))) e.push(`controls[${i}].box must have numeric x, y, w, h`);
+      if (![b.x, b.y, b.w, b.h].every(num)) e.push(`controls[${i}].box must have numeric x, y, w, h`);
       else if (!(b.w > 0 && b.h > 0)) e.push(`controls[${i}] (${c.key}): box width and height must be > 0`);
     }
+    if (c.leader !== undefined) {
+      const l = c.leader as unknown;
+      if (!Array.isArray(l) || !l.length) e.push(`controls[${i}] (${c.key}): leader must be a list of at least one point`);
+      else if (!l.every((p) => p && typeof p === 'object' && num(p.x) && num(p.y) && Object.keys(p).every((k) => k === 'x' || k === 'y'))) {
+        e.push(`controls[${i}] (${c.key}): leader points must have numeric x and y`);
+      }
+      if (!c.box) e.push(`controls[${i}] (${c.key}): a leader line needs a box`);
+    }
+  });
+  if (def.drawBoxes !== undefined && typeof def.drawBoxes !== 'boolean') e.push('drawBoxes must be true or false');
+  e.push(...groupErrors(def));
+  return e;
+}
+
+const GROUP_ID = /^[A-Za-z0-9][A-Za-z0-9_-]*$/;
+
+/** Checks for `groups` (schema rules, plus: members exist, are in one group only and have no box of their own). */
+function groupErrors(def: DeviceDefinition): string[] {
+  const e: string[] = [];
+  const groups = def.groups as unknown;
+  if (groups === undefined) return e;
+  if (!Array.isArray(groups)) return ['groups must be a list'];
+  const num = (n: unknown) => typeof n === 'number' && Number.isFinite(n);
+  const groupKeys = new Set(['id', 'label', 'layout', 'showLabel', 'image', 'box', 'leader', 'members']);
+  const memberKeys = new Set(['bindsId', 'deviceIndex', 'key', 'marker']);
+  const ids = new Set<string>();
+  const grouped = new Map<string, string>();
+  const ctlKey = (bindsId: string, deviceIndex: number | undefined, key: string) => `${bindsId}::${deviceIndex ?? '*'}::${key}`;
+  const controls = new Map((def.controls ?? []).map((c) => [ctlKey(c.bindsId, c.deviceIndex, c.key), c]));
+  (groups as ControlGroup[]).forEach((g, i) => {
+    const at = `groups[${i}]${typeof g?.id === 'string' ? ` (${g.id})` : ''}`;
+    if (!g || typeof g !== 'object') return void e.push(`${at} must be an object`);
+    for (const k of Object.keys(g)) if (!groupKeys.has(k)) e.push(`${at}: unknown property "${k}"`);
+    if (typeof g.id !== 'string' || !GROUP_ID.test(g.id)) e.push(`${at}: id must use letters, digits, dashes and underscores`);
+    else if (ids.has(g.id)) e.push(`${at}: id "${g.id}" is used twice`);
+    else ids.add(g.id);
+    if (typeof g.label !== 'string') e.push(`${at}: label must be text`);
+    if (g.layout !== undefined && g.layout !== 'stack' && g.layout !== 'row') e.push(`${at}: layout must be stack or row`);
+    if (g.showLabel !== undefined && typeof g.showLabel !== 'boolean') e.push(`${at}: showLabel must be true or false`);
+    if (g.image !== undefined && (!Number.isInteger(g.image) || g.image < 0 || g.image >= (def.images?.length ?? 0))) {
+      e.push(`${at} refers to missing image ${g.image}`);
+    }
+    const b = g.box;
+    if (!b || typeof b !== 'object' || ![b.x, b.y, b.w, b.h].every(num)) e.push(`${at}: box must have numeric x, y, w, h`);
+    else if (!(b.w > 0 && b.h > 0)) e.push(`${at}: box width and height must be > 0`);
+    if (g.leader !== undefined) {
+      const l = g.leader as unknown;
+      if (!Array.isArray(l) || !l.length || !l.every((p) => p && typeof p === 'object' && num(p.x) && num(p.y) && Object.keys(p).every((k) => k === 'x' || k === 'y'))) {
+        e.push(`${at}: leader must be a list of points with numeric x and y`);
+      }
+    }
+    if (!Array.isArray(g.members) || g.members.length < 2) {
+      e.push(`${at}: a group needs at least 2 members`);
+      if (!Array.isArray(g.members)) return;
+    }
+    const markers = new Set<string>();
+    g.members.forEach((m, j) => {
+      const mat = `${at}.members[${j}]`;
+      if (!m || typeof m !== 'object') return void e.push(`${mat} must be an object`);
+      for (const k of Object.keys(m)) if (!memberKeys.has(k)) e.push(`${mat}: unknown property "${k}"`);
+      if (typeof m.bindsId !== 'string' || typeof m.key !== 'string' || !m.key) return void e.push(`${mat}: bindsId and key are required`);
+      if (m.deviceIndex !== undefined && (!Number.isInteger(m.deviceIndex) || m.deviceIndex < 0)) e.push(`${mat}: deviceIndex must be an integer ≥ 0`);
+      if (typeof m.marker !== 'string' || !m.marker || m.marker.length > 12) e.push(`${mat} (${m.key}): marker must be 1–12 characters`);
+      else if (markers.has(m.marker)) e.push(`${at}: marker "${m.marker}" is used twice`);
+      else markers.add(m.marker);
+      const k = ctlKey(m.bindsId, m.deviceIndex, m.key);
+      const c = controls.get(k);
+      if (!c) e.push(`${mat}: ${m.bindsId} ${m.key} is not in controls`);
+      else if (c.box || c.leader) e.push(`${mat}: ${m.key} is in a group, so it can't have a box of its own`);
+      if (grouped.has(k)) e.push(`${mat}: ${m.key} is already in group ${grouped.get(k)}`);
+      else grouped.set(k, String(g.id));
+    });
   });
   return e;
 }

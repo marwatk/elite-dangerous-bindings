@@ -4,7 +4,11 @@
  * you see is what you print. All text is XML-escaped here.
  */
 import { InputRef } from '../../core/binds/binds-document';
-import { Card, CardEntry, DeviceCard, KeyboardCard, ModifierInfo, cardEntries, modifiersOnCard } from './card-model';
+import { Box } from '../../core/data/catalog.types';
+import { groupDividers, groupLayout } from '../../core/devices/group-layout';
+import { leaderPath, pathData } from '../../core/devices/leader';
+import { markerSvg } from '../../core/devices/markers';
+import { Card, CardEntry, DeviceCard, GroupSpot, KeyboardCard, ModifierInfo, cardEntries, modifiersOnCard } from './card-model';
 import { KEYBOARD_HEIGHT_U, KEYBOARD_WIDTH_U, KeyCap, keyboardLayout } from './keyboard-layout';
 import {
   CARD_GROUPS,
@@ -53,6 +57,10 @@ export interface RenderedCard {
 
 export const CARD_WIDTH = 3840;
 const SEP_COLOUR = '#9a9a9a';
+/** Leader lines: dark and thin on the white card, like EDRefCard's artwork. */
+const LEADER_COLOUR = '#3a3a3a';
+/** Outline of drawn boxes and groups. */
+const BOX_STROKE = '#2b2b2b';
 
 // ------------------------------------------------------------ helpers
 
@@ -184,6 +192,91 @@ function footer(card: Card, ctx: RenderContext, y: number, width: number): strin
 
 // ------------------------------------------------------------ device card
 
+/** Share of a single-line box's height used by its largest font (≈40 px in EDRefCard's 54 px boxes). */
+export const BOX_FONT_SHARE = 0.74;
+
+/**
+ * Text sizing for a box of height `h`: the single-line maximum comes from the
+ * box height, capped at the card's typical box height `refH` so a tall box
+ * wraps its text instead of blowing it up. Padding scales the same way.
+ */
+export function boxTextMetrics(h: number, refH: number): { maxSize: number; padX: number; padY: number } {
+  const line = Math.min(h, refH > 0 ? refH : h);
+  return { maxSize: BOX_FONT_SHARE * line, padX: 0.11 * line, padY: 0.04 * line };
+}
+
+/** Typical (median) box height on a card: plain boxes and group rows. */
+export function typicalBoxHeight(card: DeviceCard): number {
+  const hs = [
+    ...card.spots.map((s) => s.box.h),
+    ...card.groups.map((g) => (g.layout === 'row' ? g.box.h : g.box.h / Math.max(1, g.members.length))),
+  ].sort((a, b) => a - b);
+  return hs.length ? hs[Math.floor(hs.length / 2)] : 54;
+}
+
+interface DeviceStyle {
+  ctx: RenderContext;
+  refH: number;
+  minSize: number;
+  stroke: number;
+}
+
+/** Entries fitted into a box, EDRefCard style (flowed with separators, left aligned). */
+function boxText(entries: CardEntry[], b: Box, st: DeviceStyle): string {
+  if (!entries.length) return '';
+  const items = entryItems(entries, st.ctx.scheme);
+  const t = boxTextMetrics(b.h, st.refH);
+  const fit = fitText(items, b.w - 2 * t.padX, b.h - 2 * t.padY, st.ctx.measure, {
+    maxSize: t.maxSize,
+    minSize: Math.min(st.minSize, t.maxSize),
+    lineHeight: 1.08,
+  });
+  return drawFit(fit, items, b.x + t.padX, b.y + t.padY, b.h - 2 * t.padY);
+}
+
+/** A light, slightly translucent box behind the text, readable on busy photos. */
+function boxOutline(b: Box, st: DeviceStyle): string {
+  const r = st.stroke * 2;
+  return `<rect class="box" x="${n(b.x)}" y="${n(b.y)}" width="${n(b.w)}" height="${n(b.h)}" rx="${n(r)}" fill="#ffffff" fill-opacity="0.78" stroke="${BOX_STROKE}" stroke-width="${n(st.stroke)}"/>`;
+}
+
+function renderGroup(g: GroupSpot, st: DeviceStyle): string {
+  const geo = groupLayout(g);
+  let out = `<g class="group" data-group="${esc(g.id)}">`;
+  out += boxOutline(g.box, st);
+  out += `<path d="${groupDividers(geo, g.layout)}" fill="none" stroke="${BOX_STROKE}" stroke-opacity="0.55" stroke-width="${n(st.stroke * 0.6)}"/>`;
+  if (geo.labelRect) {
+    const l = geo.labelRect;
+    const pad = l.w * 0.12;
+    // Rotated 90° counter-clockwise: reads bottom to top.
+    out += `<g class="group-label" transform="translate(${n(l.x + l.w / 2)} ${n(l.y + l.h / 2)}) rotate(-90)">`;
+    out += fitLine(g.label, -l.h / 2 + pad, -l.w / 2 + pad * 0.5, l.h - 2 * pad, l.w - pad, st.ctx.measure, {
+      size: Math.min(l.w * 0.72, BOX_FONT_SHARE * st.refH * 1.4),
+      bold: true,
+      min: Math.min(st.minSize, l.w * 0.3),
+      align: 'middle',
+    });
+    out += '</g>';
+  }
+  for (const m of geo.members) {
+    const entries = g.members[m.index].entries;
+    out += `<g class="member" data-key="${esc(m.key)}" data-marker="${esc(m.marker)}">`;
+    const r = m.markerRect;
+    out +=
+      markerSvg(m.marker, r, INK, 0.62) ??
+      fitLine(m.marker, r.x + r.w * 0.08, r.y + r.h * 0.12, r.w * 0.84, r.h * 0.76, st.ctx.measure, {
+        size: r.h * 0.6,
+        bold: true,
+        min: Math.min(st.minSize, r.h * 0.3),
+        align: 'middle',
+      });
+    out += boxText(entries, m.textRect, st);
+    out += '</g>';
+  }
+  out += '</g>';
+  return out;
+}
+
 function renderDevice(card: DeviceCard, ctx: RenderContext): RenderedCard {
   const img = ctx.image ?? { width: CARD_WIDTH, height: 2160 };
   const s = img.width / CARD_WIDTH;
@@ -193,21 +286,27 @@ function renderDevice(card: DeviceCard, ctx: RenderContext): RenderedCard {
   if (ctx.imageHref) {
     out += `<image href="${esc(ctx.imageHref)}" xlink:href="${esc(ctx.imageHref)}" x="0" y="0" width="${img.width}" height="${img.height}" preserveAspectRatio="none"/>`;
   }
-  const padX = 6 * s;
-  const padY = 2 * s;
-  for (const spot of card.spots) {
-    if (spot.image !== 0 || !spot.entries.length) continue;
-    const items = entryItems(spot.entries, ctx.scheme);
-    const b = spot.box;
-    const fit = fitText(items, b.w - 2 * padX, b.h - 2 * padY, ctx.measure, {
-      maxSize: 40 * s,
-      minSize: 9 * s,
-      lineHeight: 1.08,
-    });
+  const refH = typicalBoxHeight(card);
+  const st: DeviceStyle = { ctx, refH, minSize: 9 * s, stroke: Math.max(1, refH * 0.045) };
+  const spots = card.spots.filter((sp) => sp.image === 0 && (sp.entries.length || card.drawBoxes));
+  const groups = card.groups.filter((g) => g.image === 0);
+  // Leader lines go under the boxes and text.
+  let lines = '';
+  for (const sp of [...spots, ...groups]) {
+    if (!sp.leader?.length) continue;
+    const a = sp.leader.at(-1)!;
+    lines += `<path d="${pathData(leaderPath(sp.box, sp.leader))}"/><circle cx="${n(a.x)}" cy="${n(a.y)}" r="${n(8 * s)}" stroke="#ffffff" stroke-width="${n(2.5 * s)}" fill="${LEADER_COLOUR}"/>`;
+  }
+  if (lines) {
+    out += `<g class="leaders" fill="none" stroke="${LEADER_COLOUR}" stroke-width="${n(3 * s)}" stroke-linejoin="round" stroke-linecap="round">${lines}</g>`;
+  }
+  for (const spot of spots) {
     out += `<g class="spot" data-controls="${esc(spot.controls.join(' '))}">`;
-    out += drawFit(fit, items, b.x + padX, b.y + padY, b.h - 2 * padY);
+    if (card.drawBoxes) out += boxOutline(spot.box, st);
+    out += boxText(spot.entries, spot.box, st);
     out += '</g>';
   }
+  for (const g of groups) out += renderGroup(g, st);
   out += footer(card, ctx, img.height, width);
   out += '</svg>';
   return { id: card.id, name: card.name, svg: out, width, height };

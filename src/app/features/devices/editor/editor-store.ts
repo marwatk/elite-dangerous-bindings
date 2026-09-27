@@ -1,6 +1,6 @@
 import { Injectable, OnDestroy, computed, inject, signal } from '@angular/core';
 import { CatalogService } from '../../../core/data/catalog.service';
-import { Box } from '../../../core/data/catalog.types';
+import { Box, ImagePoint } from '../../../core/data/catalog.types';
 import { normalizeBindsId, readDeviceZip, slugifyDeviceId, usbFromBindsId } from '../../../core/devices/device-files';
 import { LocalDeviceStore } from '../../../core/devices/local-device-store.service';
 import { LiveDevice } from '../../../core/input/input.types';
@@ -9,14 +9,21 @@ import {
   DraftId,
   DraftImage,
   EditorDraft,
+  PlaceItem,
   definitionToDraft,
   draftToDefinition,
   emptyDraft,
+  groupItem,
+  groupOfControl,
   imageFileNames,
   newUid,
   placeableControls,
   primaryIds,
 } from './draft';
+import { applyCanvas, canvasAdjustment, canvasPaddingFor, canvasSettings } from './canvas';
+import { BorderColour, CanvasSettings, hasPadding, resolveBackground } from './canvas-padding';
+import { GroupSpec, cleanGroups, createGroup, updateGroup, ungroup } from './groups';
+import { adjustImage, detectImageBackground } from './image-tools';
 import { ControlSpec, compareControls, mergeControls } from './inventory';
 import { StepId, ValidationContext, validateDraft } from './validation';
 
@@ -55,11 +62,24 @@ export class EditorStore implements OnDestroy {
   readonly canUndo = computed(() => (this.historyRev(), this.undoStack.length > 0));
   readonly canRedo = computed(() => (this.historyRev(), this.redoStack.length > 0));
 
-  readonly definition = computed(() => draftToDefinition(this.draft()));
-  readonly fileNames = computed(() => imageFileNames(this.draft()));
+  /** The draft as exported: images grown to their canvas, boxes moved to match (geometry only). */
+  readonly exportDraft = computed(() => applyCanvas(this.draft()));
+  readonly definition = computed(() => draftToDefinition(this.exportDraft()));
+  readonly fileNames = computed(() => imageFileNames(this.exportDraft()));
+  readonly canvas = computed(() => canvasSettings(this.draft()));
+  /** Background colour detected from each image's border, by image uid. */
+  readonly detected = signal<ReadonlyMap<string, BorderColour>>(new Map());
+  private readonly detecting = new Map<string, Promise<BorderColour>>();
+  private readonly renders = new Map<string, Promise<DraftImage>>();
   readonly placeable = computed(() => placeableControls(this.draft()));
   readonly primaries = computed(() => primaryIds(this.draft()));
-  readonly activeControl = computed(() => this.draft().controls.find((c) => c.uid === this.activeUid()) ?? null);
+  /** The control or group being placed/edited. */
+  readonly activeControl = computed<PlaceItem | null>(() => {
+    const d = this.draft();
+    const uid = this.activeUid();
+    const g = d.groups?.find((x) => x.uid === uid);
+    return g ? groupItem(d, g) : (d.controls.find((c) => c.uid === uid) ?? null);
+  });
   readonly placedCount = computed(() => this.placeable().filter((c) => c.box).length);
 
   private readonly validationContext: ValidationContext = {
@@ -183,7 +203,7 @@ export class EditorStore implements OnDestroy {
       if (!merge) this.pushUndo(prev);
       this.lastCoalesce = opts.coalesce ? { key: opts.coalesce, at: now } : null;
     }
-    this.draft.set({ ...next, updated: Date.now() });
+    this.draft.set({ ...cleanGroups(next), updated: Date.now() });
     this.scheduleSave();
   }
 
@@ -249,15 +269,28 @@ export class EditorStore implements OnDestroy {
     return u;
   }
 
+  /** Add uploaded images. New artwork (a photo) has no printed boxes, so cards draw them. */
   addImages(images: DraftImage[]): void {
-    this.update((d) => ({ ...d, images: [...d.images, ...images] }));
+    this.update((d) => ({ ...d, images: [...d.images, ...images], drawBoxes: true }));
   }
 
-  replaceImage(index: number, image: DraftImage, boxes?: Map<string, Box>): void {
+  setDrawBoxes(on: boolean): void {
+    this.update((d) => ({ ...d, drawBoxes: on }));
+  }
+
+  /** Swap an image (after an adjustment), moving its boxes and leader lines to match. */
+  replaceImage(index: number, image: DraftImage, boxes?: Map<string, Box>, leaders?: Map<string, ImagePoint[]>): void {
+    const move = <T extends { uid: string; box?: Box; leader?: ImagePoint[] }>(c: T): T => {
+      let out = c;
+      if (boxes?.has(c.uid)) out = { ...out, box: boxes.get(c.uid) };
+      if (leaders?.has(c.uid)) out = { ...out, leader: leaders.get(c.uid) };
+      return out;
+    };
     this.update((d) => ({
       ...d,
       images: d.images.map((img, i) => (i === index ? image : img)),
-      controls: boxes ? d.controls.map((c) => (boxes.has(c.uid) ? { ...c, box: boxes.get(c.uid) } : c)) : d.controls,
+      controls: d.controls.map(move),
+      ...(d.groups ? { groups: d.groups.map(move) } : {}),
     }));
   }
 
@@ -265,11 +298,24 @@ export class EditorStore implements OnDestroy {
     this.update((d) => ({
       ...d,
       images: d.images.filter((_, i) => i !== index),
+      ...(d.groups
+        ? {
+            groups: d.groups.map((g) => {
+              const img = g.image ?? 0;
+              if (!g.box) return g;
+              if (img === index) {
+                const { box: _b, image: _i, leader: _l, ...rest } = g;
+                return rest;
+              }
+              return img > index ? { ...g, image: img - 1 } : g;
+            }),
+          }
+        : {}),
       controls: d.controls.map((c) => {
         const img = c.image ?? 0;
         if (!c.box) return c;
         if (img === index) {
-          const { box: _b, image: _i, ...rest } = c;
+          const { box: _b, image: _i, leader: _l, ...rest } = c;
           return rest;
         }
         return img > index ? { ...c, image: img - 1 } : c;
@@ -285,8 +331,60 @@ export class EditorStore implements OnDestroy {
       const images = [...d.images];
       [images[index], images[j]] = [images[j], images[index]];
       const swap = (n: number) => (n === index ? j : n === j ? index : n);
-      return { ...d, images, controls: d.controls.map((c) => (c.box ? { ...c, image: swap(c.image ?? 0) } : c)) };
+      return {
+        ...d,
+        images,
+        controls: d.controls.map((c) => (c.box ? { ...c, image: swap(c.image ?? 0) } : c)),
+        ...(d.groups ? { groups: d.groups.map((g) => (g.box ? { ...g, image: swap(g.image ?? 0) } : g)) } : {}),
+      };
     });
+  }
+
+  // ------------------------------------------------------------ canvas
+
+  setCanvas(patch: Partial<CanvasSettings>, coalesce?: string): void {
+    this.update((d) => ({ ...d, canvas: { ...canvasSettings(d), ...patch } }), { coalesce });
+  }
+
+  /** Detect (once per image) the background colour of its border. */
+  detectFor(img: DraftImage): Promise<BorderColour> {
+    let p = this.detecting.get(img.uid);
+    if (!p) {
+      p = detectImageBackground(img).catch(() => ({ color: null, share: 0, busy: false }));
+      this.detecting.set(img.uid, p);
+      void p.then((r) => this.detected.update((m) => new Map(m).set(img.uid, r)));
+    }
+    return p;
+  }
+
+  /** Image `index` drawn on its canvas (the original when nothing lies beside it). */
+  async renderCanvas(index: number, d: EditorDraft = this.draft()): Promise<DraftImage> {
+    const img = d.images[index];
+    const pad = canvasPaddingFor(d, index);
+    if (!hasPadding(pad)) return img;
+    const setting = canvasSettings(d).background;
+    const detected = setting.kind === 'auto' ? (await this.detectFor(img)).color : null;
+    const adj = canvasAdjustment(pad, resolveBackground(setting, detected));
+    const key = `${img.uid}|${JSON.stringify(adj)}`;
+    let p = this.renders.get(key);
+    if (!p) {
+      if (this.renders.size > 12) this.renders.clear();
+      p = adjustImage(img, adj);
+      this.renders.set(key, p);
+      p.catch(() => this.renders.delete(key));
+    }
+    return p;
+  }
+
+  /** The draft with every image drawn on its canvas: what the .zip and "Save to this browser" contain. */
+  async materialize(): Promise<EditorDraft> {
+    const d = this.draft();
+    const rendered = new Map<number, DraftImage>();
+    for (let i = 0; i < d.images.length; i++) {
+      const out = await this.renderCanvas(i, d);
+      if (out !== d.images[i]) rendered.set(i, out);
+    }
+    return applyCanvas(d, rendered);
   }
 
   // ------------------------------------------------------------ identity
@@ -408,30 +506,62 @@ export class EditorStore implements OnDestroy {
     this.update((d) => ({ ...d, controls: [...d.controls].sort(compareControls) }));
   }
 
-  /** Set boxes (gesture steps pass undo: false after checkpoint()). */
+  /** Set boxes of controls or groups, by uid (gesture steps pass undo: false after checkpoint()). */
   setBoxes(boxes: Map<string, Box>, opts: { undo?: boolean; image?: number; coalesce?: string } = {}): void {
+    const put = <T extends { uid: string; box?: Box; image?: number }>(c: T): T =>
+      boxes.has(c.uid) ? { ...c, box: boxes.get(c.uid)!, image: opts.image ?? (c.box ? (c.image ?? 0) : this.imageIndex()) } : c;
     this.update(
-      (d) => ({
-        ...d,
-        controls: d.controls.map((c) =>
-          boxes.has(c.uid) ? { ...c, box: boxes.get(c.uid)!, image: opts.image ?? (c.box ? (c.image ?? 0) : this.imageIndex()) } : c,
-        ),
-      }),
+      (d) => ({ ...d, controls: d.controls.map(put), ...(d.groups ? { groups: d.groups.map(put) } : {}) }),
       { undo: opts.undo, coalesce: opts.coalesce },
     );
   }
 
   removeBoxes(uids: Iterable<string>): void {
     const set = new Set(uids);
-    this.update((d) => ({
-      ...d,
-      controls: d.controls.map((c) => {
-        if (!set.has(c.uid) || !c.box) return c;
-        const { box: _b, image: _i, ...rest } = c;
-        return rest;
-      }),
-    }));
+    const drop = <T extends { uid: string; box?: Box; image?: number; leader?: ImagePoint[] }>(c: T): T => {
+      if (!set.has(c.uid) || !c.box) return c;
+      const { box: _b, image: _i, leader: _l, ...rest } = c;
+      return rest as T;
+    };
+    this.update((d) => ({ ...d, controls: d.controls.map(drop), ...(d.groups ? { groups: d.groups.map(drop) } : {}) }));
     this.selected.set(new Set());
+  }
+
+  // ------------------------------------------------------------ groups
+
+  /** Group controls (one box for all of them). Returns the group's uid. */
+  groupControls(spec: GroupSpec): string {
+    const uid = newUid();
+    this.update((d) => createGroup(d, spec, uid));
+    return uid;
+  }
+
+  updateGroup(uid: string, spec: Partial<GroupSpec>, coalesce?: string): void {
+    this.update((d) => updateGroup(d, uid, spec), { coalesce });
+  }
+
+  ungroup(uid: string): void {
+    this.update((d) => ungroup(d, uid));
+    if (this.activeUid() === uid) this.activeUid.set(null);
+    this.selected.update((s) => new Set([...s].filter((u) => u !== uid)));
+  }
+
+  /** Set or (null) remove a box's leader line (gesture steps pass undo: false after checkpoint()). */
+  setLeader(uid: string, leader: ImagePoint[] | null, opts: { undo?: boolean; coalesce?: string } = {}): void {
+    const put = <T extends { uid: string; leader?: ImagePoint[] }>(x: T): T => {
+      if (x.uid !== uid) return x;
+      if (leader?.length) return { ...x, leader: leader.map((p) => ({ x: p.x, y: p.y })) };
+      const { leader: _l, ...rest } = x;
+      return rest as T;
+    };
+    this.update(
+      (d) => {
+        const c = d.controls.find((x) => x.uid === uid) ?? d.groups?.find((x) => x.uid === uid);
+        if (!c?.box || (!leader?.length && !c.leader)) return d;
+        return { ...d, controls: d.controls.map(put), ...(d.groups ? { groups: d.groups.map(put) } : {}) };
+      },
+      { undo: opts.undo, coalesce: opts.coalesce },
+    );
   }
 
   /** Next control without a box, after the given one (wrapping). */
@@ -445,10 +575,13 @@ export class EditorStore implements OnDestroy {
     return null;
   }
 
-  /** Select a control; with a box on another image, switch to it. */
+  /** Select a control (a grouped one selects its group); with a box on another image, switch to it. */
   activate(uid: string | null, opts: { addToSelection?: boolean } = {}): void {
+    const d = this.draft();
+    if (uid) uid = groupOfControl(d, uid)?.uid ?? uid;
     this.activeUid.set(uid);
-    const c = uid ? this.draft().controls.find((x) => x.uid === uid) : null;
+    const g = uid ? d.groups?.find((x) => x.uid === uid) : undefined;
+    const c = uid ? (g ?? d.controls.find((x) => x.uid === uid)) : null;
     if (c?.box) {
       if ((c.image ?? 0) !== this.imageIndex()) this.imageIndex.set(c.image ?? 0);
       this.selected.update((s) => (opts.addToSelection ? new Set([...s, c.uid]) : new Set([c.uid])));

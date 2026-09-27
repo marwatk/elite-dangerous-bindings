@@ -94,7 +94,7 @@ const X56: DeviceDefinition = {
     { bindsId: 'SaitekX56Joystick', key: 'Joy_2', label: 'A', kind: 'button', box: box(200) },
     { bindsId: 'SaitekX56Joystick', key: 'Joy_YAxis', label: 'Y', kind: 'axis', box: box(300) },
     { bindsId: 'SaitekX56Throttle', key: 'Joy_1', label: 'E', kind: 'button', box: box(400) },
-    { bindsId: 'SaitekX56Throttle', key: 'Joy_ZAxis', label: 'Throttle', kind: 'axis', box: box(500) },
+    { bindsId: 'SaitekX56Throttle', key: 'Joy_ZAxis', label: 'Throttle', kind: 'axis', box: box(500), leader: [{ x: 1200, y: 700 }, { x: 1500, y: 800 }] },
   ],
 };
 
@@ -168,7 +168,37 @@ const NOART: DeviceDefinition = {
   controls: [{ bindsId: '12345678', key: 'Joy_1', label: 'B1', kind: 'button' }],
 };
 
-const DEFS = [X56, T16, FCS, COMBAT, CHTHROTTLE, STECS1, STECS2, NOART];
+const HATSTICK: DeviceDefinition = {
+  id: 'HatStick',
+  name: 'Hat Stick',
+  source: 'user',
+  ids: [{ bindsId: '11112222' }, { bindsId: '11113333' }],
+  images: [{ file: 'h.webp', width: 1600, height: 900 }],
+  drawBoxes: true,
+  controls: [
+    ...['11112222', '11113333'].flatMap((b) => [
+      { bindsId: b, key: 'Joy_1', label: 'Trigger', kind: 'button' as const, image: 0, box: box(100) },
+      { bindsId: b, key: 'Joy_2', label: 'Unbound', kind: 'button' as const, image: 0, box: box(200) },
+      { bindsId: b, key: 'Joy_POV1Up', label: 'H1 ↑', kind: 'hat' as const },
+      { bindsId: b, key: 'Joy_POV1Down', label: 'H1 ↓', kind: 'hat' as const },
+      { bindsId: b, key: 'Joy_5', label: 'H1 ●', kind: 'button' as const },
+      { bindsId: b, key: 'Joy_ZAxis', label: 'Z', kind: 'axis' as const },
+    ]),
+  ],
+  groups: ['11112222', '11113333'].map((b, i) => ({
+    id: i ? `H1-${i}` : 'H1',
+    label: 'H1',
+    box: { x: 100, y: 400, w: 600, h: 162 },
+    leader: [{ x: 900, y: 450 }],
+    members: [
+      { bindsId: b, key: 'Joy_POV1Up', marker: '↑' },
+      { bindsId: b, key: 'Joy_POV1Down', marker: '↓' },
+      { bindsId: b, key: 'Joy_5', marker: '●' },
+    ],
+  })),
+};
+
+const DEFS = [X56, T16, FCS, COMBAT, CHTHROTTLE, STECS1, STECS2, NOART, HATSTICK];
 const DEVICES = DEFS.map(summary);
 const ALL_GROUPS: CardOptions = { groups: new Set(CARD_GROUPS.map((g) => g.value)), compact: false };
 
@@ -322,6 +352,52 @@ describe('card text', () => {
     const spot = device(build(doc), 'SaitekX56::0')!.spots.find((s) => s.box.y === 500)!;
     expect(spot.entries.map((e) => e.text)).toEqual(['Landing Gear', 'Throttle']);
     expect(spot.controls.sort()).toEqual(['Joy_ZAxis', 'Pos_Joy_ZAxis']);
+  });
+
+  it('carries leader lines to their spots', () => {
+    const doc = file({
+      PrimaryFire: { primary: { device: 'SaitekX56Joystick', key: 'Joy_1' } },
+      LandingGearToggle: { primary: { device: 'SaitekX56Throttle', key: 'Pos_Joy_ZAxis' } },
+    });
+    const card = device(build(doc), 'SaitekX56::0')!;
+    expect(card.spots.find((s) => s.box.y === 500)!.leader).toEqual([{ x: 1200, y: 700 }, { x: 1500, y: 800 }]);
+    expect(card.spots.find((s) => s.box.y === 100)!.leader).toBeUndefined();
+  });
+
+  it('places group members in their rows and shows every box of drawBoxes artwork', () => {
+    const doc = file({
+      PrimaryFire: { primary: { device: '11112222', key: 'Joy_POV1Up' } },
+      SecondaryFire: { primary: { device: '11112222', key: 'Joy_5', mods: [['Keyboard', 'Key_LeftShift']] } },
+      UseBoostJuice: { primary: { device: '11112222', key: 'Joy_1' } },
+    });
+    const set = build(doc);
+    const card = device(set, 'HatStick::0')!;
+    expect(card.drawBoxes).toBe(true);
+    expect(card.groups).toHaveLength(1);
+    const g = card.groups[0];
+    expect(g).toMatchObject({ id: 'H1', label: 'H1', layout: 'stack', showLabel: true, leader: [{ x: 900, y: 450 }] });
+    expect(g.members.map((m) => [m.key, m.marker, m.entries.map((e) => e.text)])).toEqual([
+      ['Joy_POV1Up', '↑', ['Primary Fire']],
+      ['Joy_POV1Down', '↓', []],
+      ['Joy_5', '●', ['Secondary Fire[1]']],
+    ]);
+    // Unbound boxes are on the card too (empty).
+    expect(card.spots.map((s) => [s.box.y, s.entries.map((e) => e.text)])).toEqual([
+      [100, ['Boost']],
+      [200, []],
+    ]);
+    expect(set.unplaced).toEqual([]);
+    expect(set.modifiers.map((m) => m.number)).toEqual([1]);
+  });
+
+  it('finds group members of an alias ID and falls back from an axis half to a grouped axis', () => {
+    const doc = file({
+      PrimaryFire: { primary: { device: '11113333', key: 'Joy_POV1Down' } },
+      ThrottleAxis: { binding: { device: '11113333', key: 'Joy_ZAxis' } },
+    });
+    const card = device(build(doc), 'HatStick::0')!;
+    expect(card.groups).toHaveLength(1);
+    expect(card.groups[0].members[1].entries.map((e) => e.text)).toEqual(['Primary Fire']);
   });
 
   it('hides redundant specialisations bound to the same input', () => {

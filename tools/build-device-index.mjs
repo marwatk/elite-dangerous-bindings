@@ -37,6 +37,28 @@ for (const dir of readdirSync(join(root, 'devices'), { withFileTypes: true })) {
   device.controls.forEach((c, i) => {
     if (c.image !== undefined && c.image >= device.images.length) errors.push(`${dir.name}: controls[${i}] refers to missing image ${c.image}`);
   });
+  // Groups: unique ids and markers; members are listed controls, in one group only, without a box of their own.
+  const groupIds = new Set();
+  const grouped = new Map();
+  const ctlKey = (bindsId, deviceIndex, key) => `${bindsId}::${deviceIndex ?? '*'}::${key}`;
+  const controls = new Map(device.controls.map((c) => [ctlKey(c.bindsId, c.deviceIndex, c.key), c]));
+  (device.groups ?? []).forEach((g, i) => {
+    const at = `${dir.name}: groups[${i}] (${g.id})`;
+    if (groupIds.has(g.id)) errors.push(`${at}: id is used twice`);
+    groupIds.add(g.id);
+    if (g.image !== undefined && g.image >= device.images.length) errors.push(`${at} refers to missing image ${g.image}`);
+    const markers = new Set();
+    for (const m of g.members) {
+      if (markers.has(m.marker)) errors.push(`${at}: marker "${m.marker}" is used twice`);
+      markers.add(m.marker);
+      const k = ctlKey(m.bindsId, m.deviceIndex, m.key);
+      const c = controls.get(k);
+      if (!c) errors.push(`${at}: ${m.bindsId} ${m.key} is not in controls`);
+      else if (c.box || c.leader) errors.push(`${at}: ${m.key} is grouped, so it can't have a box of its own`);
+      if (grouped.has(k)) errors.push(`${at}: ${m.key} is already in group ${grouped.get(k)}`);
+      grouped.set(k, g.id);
+    }
+  });
   for (const id of device.ids) {
     const k = `${id.bindsId}::${id.deviceIndex ?? '*'}`;
     if (seenIds.has(k) && device.source === 'user') errors.push(`${dir.name}: ${k} is already handled by ${seenIds.get(k)}`);

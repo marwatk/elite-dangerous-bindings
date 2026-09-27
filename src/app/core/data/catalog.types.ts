@@ -79,6 +79,12 @@ export interface Box {
   h: number;
 }
 
+/** A point on a device image, in image pixels (top-left origin). */
+export interface ImagePoint {
+  x: number;
+  y: number;
+}
+
 export interface DeviceControl {
   bindsId: string;
   deviceIndex?: number;
@@ -87,6 +93,41 @@ export interface DeviceControl {
   kind: ControlKind;
   image?: number;
   box?: Box;
+  /**
+   * Leader line from the box to the control: the last point is the anchor on
+   * the control, earlier points are elbows. The line starts on the box edge
+   * nearest the first point (computed when drawn). Needs `box`.
+   */
+  leader?: ImagePoint[];
+}
+
+export type GroupLayoutKind = 'stack' | 'row';
+
+/** One control in a group, and the marker that says which it is (↑, ●, +, "Fwd"…). */
+export interface GroupMember {
+  bindsId: string;
+  deviceIndex?: number;
+  key: string;
+  marker: string;
+}
+
+/**
+ * Controls that share one label box (a hat, rocker, encoder, ministick…):
+ * the box is split into one row (stack) or cell (row) per member, with the
+ * group's label in a column on the left. Members keep their entry in
+ * `controls` (names) but have no box of their own.
+ */
+export interface ControlGroup {
+  id: string;
+  label: string;
+  /** Default "stack". */
+  layout?: GroupLayoutKind;
+  /** Default true. */
+  showLabel?: boolean;
+  image?: number;
+  box: Box;
+  leader?: ImagePoint[];
+  members: GroupMember[];
 }
 
 export interface InputCorrection {
@@ -117,7 +158,10 @@ export interface DeviceDefinition {
   ids: DeviceIdEntry[];
   keyBindsIds?: string[];
   images: DeviceImage[];
+  /** Draw box outlines on cards (artwork without printed boxes, e.g. photos). */
+  drawBoxes?: boolean;
   controls: DeviceControl[];
+  groups?: ControlGroup[];
   inputCorrections?: Record<string, InputCorrection>;
 }
 

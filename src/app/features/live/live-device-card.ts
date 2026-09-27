@@ -335,6 +335,7 @@ export class LiveDeviceCard {
     if (!def) return [];
     const id = this.device().bindsId;
     const idx = new Set(def.controls.filter((c) => c.bindsId === id && c.box).map((c) => c.image ?? 0));
+    for (const g of def.groups ?? []) if (g.members.some((m) => m.bindsId === id)) idx.add(g.image ?? 0);
     return idx.size ? [...idx].sort() : def.images.map((_, i) => i);
   });
 

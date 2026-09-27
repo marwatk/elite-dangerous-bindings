@@ -4,10 +4,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { Box } from '../../../core/data/catalog.types';
+import { Box, ImagePoint } from '../../../core/data/catalog.types';
 import { EditorStore } from './editor-store';
 import { ImageAdjust } from './image-adjust';
-import { ACCEPTED_IMAGES, Adjustment, adjustBox, adjustImage, loadImageFile } from './image-tools';
+import { ACCEPTED_IMAGES, Adjustment, adjustBox, adjustImage, adjustPoint, loadImageFile } from './image-tools';
 
 @Component({
   selector: 'app-step-image',
@@ -70,7 +70,8 @@ import { ACCEPTED_IMAGES, Adjustment, adjustBox, adjustImage, loadImageFile } fr
   template: `
     <p class="intro">
       Upload a photo, render or diagram of the controller. Use several images for multi-part devices (stick and throttle,
-      front and back). Straighten and crop it here; images are saved as WebP, at most 3840 px on the longest side. Only use
+      front and back). Straighten and crop it here; images are saved as WebP, at most 3840 px on the longest side. A tight photo
+      of just the controller is fine: on the Place step you can put boxes beside it and the image grows to hold them. Only use
       images you have the right to share, such as your own photo.
     </p>
 
@@ -107,7 +108,7 @@ import { ACCEPTED_IMAGES, Adjustment, adjustBox, adjustImage, loadImageFile } fr
             <div class="hint">{{ img.width }} × {{ img.height }} px · {{ img.type.toUpperCase() }} · {{ boxCount(i) }} boxes</div>
           </div>
           <div class="row">
-            <button matButton type="button" (click)="adjusting.set(i)"><mat-icon>crop_rotate</mat-icon>Rotate / crop</button>
+            <button matButton type="button" (click)="openAdjust(i)"><mat-icon>crop_rotate</mat-icon>Rotate / crop</button>
             <span class="spacer"></span>
             <button matIconButton type="button" [disabled]="first" (click)="store.moveImage(i, -1)" matTooltip="Move earlier" aria-label="Move earlier">
               <mat-icon>arrow_back</mat-icon>
@@ -176,6 +177,12 @@ export class StepImage {
     }
   }
 
+  protected openAdjust(i: number): void {
+    this.adjusting.set(i);
+    // The panel opens below the drop zone: bring it into view.
+    setTimeout(() => document.querySelector('app-image-adjust')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+  }
+
   protected remove(i: number): void {
     const n = this.boxCount(i);
     if (n && !confirm(`Remove this image and the ${n} boxes placed on it?`)) return;
@@ -189,10 +196,13 @@ export class StepImage {
     try {
       const out = await adjustImage(img, adj);
       const boxes = new Map<string, Box>();
+      const leaders = new Map<string, ImagePoint[]>();
       for (const c of this.store.draft().controls) {
-        if (c.box && (c.image ?? 0) === i) boxes.set(c.uid, adjustBox(c.box, img, adj));
+        if (!c.box || (c.image ?? 0) !== i) continue;
+        boxes.set(c.uid, adjustBox(c.box, img, adj));
+        if (c.leader?.length) leaders.set(c.uid, c.leader.map((p) => adjustPoint(p, img, adj)));
       }
-      this.store.replaceImage(i, out, boxes);
+      this.store.replaceImage(i, out, boxes, leaders);
       this.adjusting.set(null);
     } catch (e) {
       this.snack.open((e as Error).message, 'OK', { duration: 6000 });

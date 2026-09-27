@@ -1,12 +1,14 @@
 /** Checks shown in the editor's "Check" step. */
 import { bindsIdError, isValidDeviceId, schemaErrors } from '../../../core/devices/device-files';
 import { findOverlaps, isOffImage } from '../../../core/devices/geometry';
+import { canvasOutputSize } from './canvas';
 import { DraftControl, EditorDraft, draftToDefinition, partLabel, placeableControls, primaryIds } from './draft';
 
 export type StepId = 'image' | 'identify' | 'inventory' | 'place' | 'name' | 'check' | 'export';
 
 export interface Issue {
-  level: 'error' | 'warning';
+  /** A hint is only a suggestion: it doesn't block anything and "all good" can still show. */
+  level: 'error' | 'warning' | 'hint';
   step: StepId;
   message: string;
   /** Controls concerned (select them to fix). */
@@ -82,11 +84,47 @@ export function validateDraft(d: EditorDraft, ctx: ValidationContext): Issue[] {
     d.images.forEach((img, i) => {
       const boxed = placeable.filter((c) => c.box && (c.image ?? 0) === i) as (DraftControl & { box: NonNullable<DraftControl['box']> })[];
       const off = boxed.filter((c) => isOffImage(c.box, img.width, img.height));
-      if (off.length) add('warning', 'place', `Boxes off the image: ${names(off)}.`, off.map((c) => c.uid));
+      if (off.length) {
+        const size = canvasOutputSize(d, i);
+        add(
+          'hint',
+          'place',
+          `Boxes beside the photo${d.images.length > 1 ? ` (image ${i + 1})` : ''}: ${names(off)}. The exported image grows to ${size.width} × ${size.height} px to hold them.`,
+          off.map((c) => c.uid),
+        );
+      }
       for (const [a, b] of findOverlaps(boxed)) {
         add('warning', 'place', `Overlapping boxes: ${a.label || a.key} and ${b.label || b.key}.`, [a.uid, b.uid]);
       }
     });
+  }
+  // User images have no printed leader lines (EDRefCard artwork does): suggest drawing them.
+  d.images.forEach((img, i) => {
+    const userImage = !img.file || d.baseSource !== 'edrefcard2';
+    if (!userImage) return;
+    const noLine = placeable.filter((c) => c.box && (c.image ?? 0) === i && !c.leader?.length);
+    if (noLine.length) {
+      add(
+        'hint',
+        'place',
+        `Optional: ${noLine.length} box(es)${d.images.length > 1 ? ` on image ${i + 1}` : ''} have no line to their control: ${names(noLine)}. Select a box and press L (or Alt-click the control) to draw one.`,
+        noLine.map((c) => c.uid),
+      );
+    }
+  });
+  // Groups.
+  for (const g of d.groups ?? []) {
+    const name = g.label.trim() || 'Unnamed group';
+    const uids = [g.uid];
+    if (!g.label.trim()) add('warning', 'inventory', 'A group has no label.', uids);
+    if (g.members.length < 2) add('error', 'inventory', `Group ${name} needs at least 2 controls (ungroup it otherwise).`, uids);
+    const missing = g.members.filter((m) => !m.marker.trim());
+    if (missing.length) add('error', 'inventory', `Group ${name}: ${missing.length} member(s) have no marker.`, uids);
+    const markers = g.members.map((m) => m.marker).filter(Boolean);
+    const dup = markers.filter((m, i) => markers.indexOf(m) !== i);
+    if (dup.length) add('error', 'inventory', `Group ${name}: marker ${[...new Set(dup)].join(' ')} is used twice.`, uids);
+    const boxed = g.members.map((m) => d.controls.find((c) => c.uid === m.control)).filter((c) => c?.box);
+    if (boxed.length) add('error', 'place', `Group ${name}: ${boxed.map((c) => c!.key).join(', ')} also have a box of their own.`, uids);
   }
   const orphan = d.controls.filter((c) => c.box && (c.image ?? 0) >= d.images.length);
   if (orphan.length) add('error', 'place', `Boxes on a removed image: ${names(orphan)}.`, orphan.map((c) => c.uid));

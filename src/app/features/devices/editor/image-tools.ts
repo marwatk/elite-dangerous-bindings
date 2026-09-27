@@ -1,6 +1,7 @@
 /** Image loading and re-encoding for the layout editor (browser canvas). */
-import { Box } from '../../../core/data/catalog.types';
+import { Box, ImagePoint } from '../../../core/data/catalog.types';
 import { MAX_IMAGE_SIDE } from '../../../core/devices/device-files';
+import { BorderColour, CanvasBackground, NO_PADDING, Padding, detectBackground, outputScale, paddedSize } from './canvas-padding';
 import { DraftImage, ImageType, newUid } from './draft';
 
 export const ACCEPTED_IMAGES = 'image/png,image/jpeg,image/webp,image/svg+xml,.png,.jpg,.jpeg,.webp,.svg';
@@ -94,6 +95,12 @@ export interface Adjustment {
   straighten: number;
   /** Crop in rotated-image pixels, or null for everything. */
   crop: Box | null;
+  /** Space added around the cropped image, in its pixels (before scaling). */
+  pad?: Padding | null;
+  /** Fill behind the image (added space, rotated corners). Default: transparent. */
+  background?: CanvasBackground | null;
+  /** Scale the result to this width (up or down); the longest side stays ≤ MAX_IMAGE_SIDE. */
+  outputWidth?: number | null;
 }
 
 /** Size of the image after rotation (bounding box). */
@@ -104,44 +111,77 @@ export function rotatedSize(w: number, h: number, degrees: number): { width: num
   return { width: Math.round(w * c + h * s), height: Math.round(w * s + h * c) };
 }
 
-/** Maps a point of the original image to the adjusted one. */
-export function adjustmentTransform(w: number, h: number, adj: Adjustment): { scale: number; width: number; height: number; map: (x: number, y: number) => { x: number; y: number } } {
+interface Geometry {
+  deg: number;
+  rot: { width: number; height: number };
+  crop: Box;
+  pad: Padding;
+  scale: number;
+  width: number;
+  height: number;
+}
+
+function geometry(w: number, h: number, adj: Adjustment, maxSide = MAX_IMAGE_SIDE): Geometry {
   const deg = adj.rotate + adj.straighten;
   const rot = rotatedSize(w, h, deg);
   const crop = adj.crop ?? { x: 0, y: 0, w: rot.width, h: rot.height };
-  const scale = Math.min(1, MAX_IMAGE_SIDE / Math.max(crop.w, crop.h));
-  const a = (deg * Math.PI) / 180;
+  const pad = adj.pad ?? NO_PADDING;
+  const size = paddedSize(crop.w, crop.h, pad);
+  const scale = outputScale(size.width, size.height, adj.outputWidth, maxSide);
+  return {
+    deg,
+    rot,
+    crop,
+    pad,
+    scale,
+    width: Math.max(1, Math.round(size.width * scale)),
+    height: Math.max(1, Math.round(size.height * scale)),
+  };
+}
+
+/** Output size of an adjustment. */
+export function adjustedSize(w: number, h: number, adj: Adjustment): { width: number; height: number } {
+  const g = geometry(w, h, adj);
+  return { width: g.width, height: g.height };
+}
+
+/** Maps a point of the original image to the adjusted one. */
+export function adjustmentTransform(w: number, h: number, adj: Adjustment): { scale: number; width: number; height: number; map: (x: number, y: number) => { x: number; y: number } } {
+  const g = geometry(w, h, adj);
+  const a = (g.deg * Math.PI) / 180;
   const cos = Math.cos(a);
   const sin = Math.sin(a);
   return {
-    scale,
-    width: Math.max(1, Math.round(crop.w * scale)),
-    height: Math.max(1, Math.round(crop.h * scale)),
+    scale: g.scale,
+    width: g.width,
+    height: g.height,
     map: (x, y) => {
       const dx = x - w / 2;
       const dy = y - h / 2;
-      const rx = dx * cos - dy * sin + rot.width / 2;
-      const ry = dx * sin + dy * cos + rot.height / 2;
-      return { x: (rx - crop.x) * scale, y: (ry - crop.y) * scale };
+      const rx = dx * cos - dy * sin + g.rot.width / 2;
+      const ry = dx * sin + dy * cos + g.rot.height / 2;
+      return { x: (rx - g.crop.x + g.pad.left) * g.scale, y: (ry - g.crop.y + g.pad.top) * g.scale };
     },
   };
 }
 
 /** Draw the adjusted image into a canvas (optionally scaled down for previews). */
 export function drawAdjusted(img: CanvasImageSource, w: number, h: number, adj: Adjustment, maxSide = MAX_IMAGE_SIDE): HTMLCanvasElement {
-  const deg = adj.rotate + adj.straighten;
-  const rot = rotatedSize(w, h, deg);
-  const crop = adj.crop ?? { x: 0, y: 0, w: rot.width, h: rot.height };
-  const scale = Math.min(1, maxSide / Math.max(crop.w, crop.h));
+  const g = geometry(w, h, adj, maxSide);
   const canvas = document.createElement('canvas');
-  canvas.width = Math.max(1, Math.round(crop.w * scale));
-  canvas.height = Math.max(1, Math.round(crop.h * scale));
+  canvas.width = g.width;
+  canvas.height = g.height;
   const ctx = canvas.getContext('2d')!;
+  // Without a background colour the canvas stays transparent (WebP/PNG keep alpha).
+  if (adj.background?.kind === 'color') {
+    ctx.fillStyle = adj.background.color;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
   ctx.imageSmoothingQuality = 'high';
-  ctx.scale(scale, scale);
-  ctx.translate(-crop.x, -crop.y);
-  ctx.translate(rot.width / 2, rot.height / 2);
-  ctx.rotate((deg * Math.PI) / 180);
+  ctx.scale(g.scale, g.scale);
+  ctx.translate(g.pad.left - g.crop.x, g.pad.top - g.crop.y);
+  ctx.translate(g.rot.width / 2, g.rot.height / 2);
+  ctx.rotate((g.deg * Math.PI) / 180);
   ctx.drawImage(img, -w / 2, -h / 2, w, h);
   return canvas;
 }
@@ -174,4 +214,23 @@ export function adjustBox(box: Box, image: { width: number; height: number }, ad
   const w = box.w * t.scale;
   const h = box.h * t.scale;
   return { x: Math.round(c.x - w / 2), y: Math.round(c.y - h / 2), w: Math.max(1, Math.round(w)), h: Math.max(1, Math.round(h)) };
+}
+
+/** Move a point (leader anchor or elbow) along with an adjustment. */
+export function adjustPoint(p: ImagePoint, image: { width: number; height: number }, adj: Adjustment): ImagePoint {
+  const q = adjustmentTransform(image.width, image.height, adj).map(p.x, p.y);
+  return { x: Math.round(q.x), y: Math.round(q.y) };
+}
+
+/** The photo's background colour, from its border (see detectBackground). */
+export async function detectImageBackground(image: Pick<DraftImage, 'blob' | 'width' | 'height'>, maxSide = 600): Promise<BorderColour> {
+  const url = URL.createObjectURL(image.blob);
+  try {
+    const img = await loadHtmlImage(url);
+    const small = drawAdjusted(img, image.width, image.height, { rotate: 0, straighten: 0, crop: null }, maxSide);
+    const data = small.getContext('2d')!.getImageData(0, 0, small.width, small.height).data;
+    return detectBackground(data, small.width, small.height);
+  } finally {
+    URL.revokeObjectURL(url);
+  }
 }

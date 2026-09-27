@@ -94,6 +94,8 @@
                   <td>
                     @if (c.box) {
                       <mat-icon class="ok" inline>check</mat-icon>{{ def.images.length > 1 ? ' ' + ((c.image ?? 0) + 1) : '' }}
+                    } @else if (groupOf(c); as grp) {
+                      <mat-icon class="ok" inline>check</mat-icon> {{ grp }}
                     }
                   </td>
                 </tr>
