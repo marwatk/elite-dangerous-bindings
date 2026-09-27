@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 interface Credit {
   name: string;
@@ -10,6 +11,7 @@ interface Credit {
 
 @Component({
   selector: 'app-about',
+  imports: [RouterLink],
   template: `
     <div class="page">
       <div class="page-header"><h1>About</h1></div>
@@ -20,7 +22,15 @@ interface Credit {
       <p class="note">
         This project is written entirely by AI ("vibe coded") with
         <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude</a>. Its own code is in the
-        public domain (Unlicense). Data and artwork from the projects below keep their MIT licences.
+        public domain (Unlicense). Data and artwork from the projects below keep their own licences.
+      </p>
+
+      <h2>Source code</h2>
+      <p>
+        <a [href]="repo" target="_blank" rel="noopener">{{ repoLabel }}</a> on GitHub. Report problems and ideas in its
+        <a [href]="repo + '/issues'" target="_blank" rel="noopener">issues</a>. To add a controller, map it on the
+        <a routerLink="/devices">Devices</a> page and open a pull request with the exported files; see
+        <a [href]="repo + '/blob/main/docs/adding-a-device.md'" target="_blank" rel="noopener">adding a device</a>.
       </p>
 
       <h2>Credits</h2>
@@ -51,6 +61,8 @@ interface Credit {
   `,
 })
 export class About {
+  protected readonly repo = 'https://github.com/marwatk/elite-dangerous-bindings';
+  protected readonly repoLabel = 'marwatk/elite-dangerous-bindings';
   protected readonly credits: Credit[] = [
     { name: 'EdBindings', url: 'https://github.com/ghorsey/EdBindings', who: 'Geoff (ghorsey)', licence: 'MIT', what: 'bindings table, action names, device label mappings, bindED variable names' },
     { name: 'EDRefCard 2', url: 'https://github.com/brammmers/edrefcard2', who: 'brammmers, forked from EDRefCard by Richard Buckle and CMDR jgm', licence: 'MIT', what: 'reference cards, controller artwork and layouts, command metadata' },
@@ -61,5 +73,6 @@ export class About {
     { name: 'EDBV', url: 'https://github.com/DRA6N/EDBV', who: 'DRA6N', licence: 'MIT', what: 'action area and category table' },
     { name: 'EliteBinding', url: 'https://github.com/trasa/EliteBinding', who: 'Tony Rasa', licence: 'MIT', what: 'short action labels, sample bindings file' },
     { name: 'EDRefKB', url: 'https://github.com/RealOfficialTurf/EDRefKB', who: 'RealOfficialTurf', licence: 'MIT', what: 'keyboard key names' },
+    { name: 'Material Symbols', url: 'https://github.com/google/material-design-icons', who: 'Google', licence: 'Apache 2.0', what: 'icons, including the joystick app icon' },
   ];
 }
