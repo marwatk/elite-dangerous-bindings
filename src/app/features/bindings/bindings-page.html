@@ -221,7 +221,7 @@
 
         <ng-container matColumnDef="secondary">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Secondary</th>
-          <td mat-cell *matCellDef="let r" class="c-slot">
+          <td mat-cell *matCellDef="let r" class="c-slot" [class.c-secondary]="r.kind !== 'axis'">
             @if (r.kind !== 'axis') {
               <app-slot-view [binding]="r.secondary?.binding" emptyText="–" />
             }
@@ -273,7 +273,7 @@
           [class.is-changed]="r.changed"
           tabindex="0"
           [attr.aria-label]="'Edit ' + r.name"
-          (click)="edit(r)"
+          (click)="edit(r, slotAt($event))"
           (keydown.enter)="rowKey($event, r)"
         ></tr>
         <tr class="mat-row no-rows" *matNoDataRow>

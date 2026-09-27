@@ -198,6 +198,11 @@ export class BindingsPage {
     this.dialogs.openEditor(row.code, slot);
   }
 
+  /** Clicking the Secondary cell edits the secondary binding; anywhere else in the row edits the primary. */
+  protected slotAt(e: Event): SlotName {
+    return (e.target as Element | null)?.closest('.c-secondary') ? 'Secondary' : 'Primary';
+  }
+
   protected rowKey(e: Event, row: BindingRow): void {
     if (e.target !== e.currentTarget) return;
     e.preventDefault();

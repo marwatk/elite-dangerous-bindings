@@ -272,3 +272,9 @@ th.mat-mdc-header-cell:first-child {
     max-width: none;
   }
 }
+
+// Show that clicking the Secondary cell edits the secondary binding.
+.row:hover td.c-secondary:hover {
+  background: var(--edb-accent-soft);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--edb-accent) 45%, transparent);
+}

@@ -164,3 +164,29 @@ test.describe('also apply to related commands', () => {
     await expect(rowFor(page, 'HumanoidForwardButton')).not.toContainText('F9');
   });
 });
+
+test('clicking the Secondary cell edits the secondary binding; anywhere else edits the primary', async ({ page }) => {
+  await page.addInitScript(() => {
+    delete (window as { showOpenFilePicker?: unknown }).showOpenFilePicker;
+    try {
+      localStorage.removeItem('edb.bindings.view');
+    } catch {
+      /* ignore */
+    }
+  });
+  await page.goto('/');
+  const chooser = page.waitForEvent('filechooser');
+  await page.getByRole('button', { name: /Open your bindings file/ }).click();
+  await (await chooser).setFiles({ name: 'Custom.4.2.binds', mimeType: 'application/xml', buffer: Buffer.from(FIXTURE) });
+  await page.getByLabel('Filter commands').fill('LandingGearToggle');
+  const row = page.getByRole('row', { name: 'Edit Landing Gear' });
+  const dialog = page.getByRole('dialog');
+
+  await row.locator('td.c-secondary').click();
+  await expect(dialog.getByRole('radio', { name: /Secondary/ })).toBeChecked();
+  await dialog.getByRole('button', { name: 'Cancel' }).click();
+  await expect(dialog).toHaveCount(0);
+
+  await row.getByText('Landing Gear', { exact: true }).click();
+  await expect(dialog.getByRole('radio', { name: /Primary/ })).toBeChecked();
+});
