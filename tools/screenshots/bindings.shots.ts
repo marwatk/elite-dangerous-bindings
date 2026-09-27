@@ -1,12 +1,11 @@
 import { Page, expect, test } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 
-// Visual check screenshots for the bindings feature. Skipped unless SHOTS=1:
-//   SHOTS=1 npx playwright test e2e/bindings-shots.spec.ts
+// Visual check screenshots for the bindings feature:
+//   npm run shots -- bindings
 const OUT = process.env['SHOTS_DIR'] ?? 'test-results/shots/bindings';
 const text = readFileSync('src/testing/fixtures/Custom.4.2.binds', 'utf-8');
 
-test.skip(!process.env['SHOTS'], 'screenshots only on demand');
 test.setTimeout(180_000);
 
 async function open(page: Page, light: boolean): Promise<void> {

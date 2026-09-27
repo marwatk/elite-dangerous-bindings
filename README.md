@@ -243,6 +243,7 @@ All development runs inside an [Apple container](https://github.com/apple/contai
 tools/dev.sh                 # start the dev container and the dev server at http://localhost:4200
 tools/dev.sh npm test        # unit tests (Vitest)
 tools/dev.sh npm run e2e     # end-to-end tests (Playwright + Chromium, in the container)
+tools/dev.sh npm run shots   # screenshot tooling for visual checks -> test-results/shots/
 tools/dev.sh npm run build   # production build in dist/
 tools/dev.sh shell           # shell inside the container
 ```

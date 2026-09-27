@@ -13,7 +13,8 @@
     "prebuild": "npm run devices",
     "pretest": "npm run devices",
     "import-data": "tools/fetch-upstream.sh && python3 tools/import_data.py && npm run devices",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "shots": "playwright test -c tools/screenshots/playwright.config.ts"
   },
   "private": true,
   "packageManager": "npm@11.19.0",

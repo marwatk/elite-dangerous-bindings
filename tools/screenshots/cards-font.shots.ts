@@ -1,21 +1,17 @@
 import { Page, expect, test } from '@playwright/test';
-import { readFileSync } from 'node:fs';
+import { fixture, remap } from './fixtures';
 
 // Before/after screenshots of EDRefCard device cards, for checking changes to
-// the card text sizing. Not part of the normal run:
-// `FONT_SHOTS=before npx playwright test e2e/cards-font-shots.spec.ts`
-// Screenshots go to test-results/shots/devices-leaders/font-<FONT_SHOTS>-*.png.
+// the card text sizing: `FONT_SHOTS=before npm run shots -- cards-font`, change
+// the code, then `FONT_SHOTS=after …`. Output:
+// test-results/shots/devices-leaders/font-<FONT_SHOTS>-*.png.
 
-const TAG = process.env['FONT_SHOTS'];
-test.skip(!TAG, 'Set FONT_SHOTS=before|after to take card screenshots');
-test.setTimeout(120_000);
+const TAG = process.env['FONT_SHOTS'] ?? 'current';
 test.use({ deviceScaleFactor: 2 });
 
-// Read lazily: upstream/ (tools/fetch-upstream.sh) isn't present in CI, where these tests are skipped.
-const x56 = () => readFileSync('upstream/edrefcard2/bindings/Defaults ODY patch 8/SaitekX56.binds', 'utf8');
-/** No Cougar file upstream: the X56 defaults moved onto a HOTAS Cougar. */
-const cougar = () =>
-  x56().replace(/SaitekX56Joystick|SaitekX56Throttle/g, '044F0400').replace(/PresetName="[^"]*"/, 'PresetName="Cougar test"');
+/** The tracked X52 fixture moved onto the X56 and HOTAS Cougar cards. */
+const x56 = () => remap(fixture('X52.4.2.binds'), 'SaitekX52', 'SaitekX56Joystick', 'X56 test');
+const cougar = () => remap(fixture('X52.4.2.binds'), 'SaitekX52', '044F0400', 'Cougar test');
 
 async function open(page: Page, name: string, text: string): Promise<void> {
   await page.addInitScript(() => delete (window as { showOpenFilePicker?: unknown }).showOpenFilePicker);

@@ -15,7 +15,8 @@ container exec edb-dev sh -c 'cd /workspace && npm test'
 
 - `npm start` – dev server on http://localhost:4200 (regenerates the device index first)
 - `npm run build` / `npm test` (Vitest via `ng test --watch=false`; limit with `-- --include 'src/app/features/x/**/*.spec.ts'`)
-- `npm run e2e` – Playwright smoke tests (Chromium inside the container)
+- `npm run e2e` – Playwright end-to-end tests in `e2e/` (Chromium inside the container)
+- `npm run shots [-- <name>]` – screenshot tooling in `tools/screenshots/*.shots.ts` for visual checks; not tests, never in CI. Output in `test-results/shots/`
 - `npm run devices:check` – validate every `devices/*/device.json` against `schemas/device.schema.json`
 - `npm run import-data` – re-import upstream data (`tools/fetch-upstream.sh` + `tools/import_data.py`)
 
@@ -31,6 +32,8 @@ container exec edb-dev sh -c 'cd /workspace && npm test'
 - `devices/<Id>/device.json` + artwork – one folder per controller; schema in `schemas/device.schema.json`.
 
 ## Conventions
+
+- Tests (`*.spec.ts`, `e2e/`) may only read tracked files, e.g. `src/testing/fixtures/`, `public/`. Never `upstream/` (git-ignored, absent in CI). Screenshot scripts go in `tools/screenshots/`, not `e2e/`; they may use `upstream/` only via `fixtures.ts#upstream()`, which skips when it's missing.
 
 - Standalone components, signals, `inject()`, new control flow (`@if/@for`), OnPush where practical.
 - Material 3 components; icons are Material Symbols (`<mat-icon>name</mat-icon>`, default font set configured).

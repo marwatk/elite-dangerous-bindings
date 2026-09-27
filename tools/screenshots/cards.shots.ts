@@ -1,30 +1,38 @@
 import { Page, expect, test } from '@playwright/test';
-import { readFileSync } from 'node:fs';
-import { basename } from 'node:path';
+import { fixture, remap, upstream } from './fixtures';
 
-// Visual check of the reference cards for several real files. Not part of the
-// normal run: `CARD_SHOTS=1 npx playwright test e2e/cards-shots.spec.ts`.
-// Screenshots go to test-results/shots/cards/.
+// Visual check of the reference cards for several controllers:
+// `npm run shots -- cards`. Screenshots go to test-results/shots/cards/.
+// Uses tracked fixtures (the X52 file moved onto other controllers' IDs);
+// EDRefCard's presets are added when upstream/ has been fetched.
 
-const FILES = [
-  'src/testing/fixtures/Custom.4.2.binds',
-  'upstream/edrefcard2/bindings/Defaults ODY patch 8/SaitekX56.binds',
-  'upstream/edrefcard2/bindings/Defaults ODY patch 8/ThrustMasterHOTASWarthog.binds',
-  'upstream/edrefcard2/bindings/working/VKB Gladiator NXT Premium Left and Right.binds',
-  'upstream/edrefcard2/bindings/Defaults ODY patch 8/ConsoleX360.binds',
-  'upstream/edrefcard2/bindings/Defaults ODY patch 8/T16000MHOTAS.binds',
+interface Sample {
+  name: string;
+  text: () => string | null;
+}
+
+const x52 = () => fixture('X52.4.2.binds');
+const FILES: Sample[] = [
+  { name: 'Custom.4.2.binds', text: () => fixture('Custom.4.2.binds') },
+  { name: 'X56.binds', text: () => remap(x52(), 'SaitekX52', 'SaitekX56Joystick', 'X56 test') },
+  { name: 'X52.4.2.binds', text: x52 },
+  { name: 'Warthog.binds', text: () => remap(x52(), 'SaitekX52', 'ThrustMasterWarthogJoystick', 'Warthog test') },
+  { name: 'VKB-NXT-Right.binds', text: () => remap(x52(), 'SaitekX52', '231D0200', 'VKB test') },
+  { name: 'T16000M.binds', text: () => remap(x52(), 'SaitekX52', 'T16000M', 'T.16000M test') },
+  // Gamepads use their own key names, so there's no fixture to remap: EDRefCard's preset if fetched.
+  { name: 'ConsoleX360.binds', text: () => upstream('edrefcard2/bindings/Defaults ODY patch 8/ConsoleX360.binds') },
 ];
 
-test.skip(!process.env['CARD_SHOTS'], 'Set CARD_SHOTS=1 to take card screenshots');
-test.setTimeout(180_000);
 test.use({ deviceScaleFactor: 2.5 });
 
-async function open(page: Page, path: string): Promise<void> {
+async function open(page: Page, sample: Sample): Promise<void> {
+  const text = sample.text();
+  test.skip(text === null, `${sample.name} needs upstream/ (run tools/fetch-upstream.sh)`);
   await page.addInitScript(() => delete (window as { showOpenFilePicker?: unknown }).showOpenFilePicker);
   await page.goto('/');
   const chooser = page.waitForEvent('filechooser');
   await page.getByRole('button', { name: /Open your bindings file/ }).click();
-  await (await chooser).setFiles({ name: basename(path), mimeType: 'application/xml', buffer: readFileSync(path) });
+  await (await chooser).setFiles({ name: sample.name, mimeType: 'application/xml', buffer: Buffer.from(text!) });
   await expect(page).toHaveURL(/\/bindings$/);
   await page.getByRole('link', { name: 'Reference cards' }).click();
   await expect(page).toHaveURL(/\/cards$/);
@@ -32,8 +40,8 @@ async function open(page: Page, path: string): Promise<void> {
   await page.waitForTimeout(1500);
 }
 
-for (const path of FILES) {
-  test(`cards for ${basename(path)}`, async ({ page }) => {
+for (const sample of FILES) {
+  test(`cards for ${sample.name}`, async ({ page }) => {
     await page.setViewportSize({ width: 1700, height: 1100 });
     const scheme = process.env['CARD_SCHEME'];
     if (scheme || process.env['CARD_OPTS']) {
@@ -46,8 +54,8 @@ for (const path of FILES) {
         [scheme ?? '', process.env['CARD_OPTS'] ?? ''],
       );
     }
-    await open(page, path);
-    const tag = basename(path).replace(/\W+/g, '_');
+    await open(page, sample);
+    const tag = sample.name.replace(/\W+/g, '_');
     await page.screenshot({ path: `test-results/shots/cards/${tag}-page.png` });
     const cards = page.locator('app-card-svg');
     const n = await cards.count();

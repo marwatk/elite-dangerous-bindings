@@ -3,10 +3,9 @@ import { crc32, deflateSync } from 'node:zlib';
 
 // Visual check of the Place step's canvas menu, boxes beside the photo, leader lines
 // and on a reference card. Not part of the normal run:
-// `LEADER_SHOTS=1 npx playwright test e2e/devices-leaders-shots.spec.ts`.
+// `npm run shots -- devices-leaders`.
 // Screenshots go to test-results/shots/devices-leaders/.
 
-test.skip(!process.env['LEADER_SHOTS'], 'Set LEADER_SHOTS=1 to take leader-line screenshots');
 test.setTimeout(120_000);
 
 const OUT = 'test-results/shots/devices-leaders';
